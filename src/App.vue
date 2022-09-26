@@ -7,8 +7,8 @@
 <script>
 
 import Vue from 'vue'
-
 import VueSweetalert2 from 'vue-sweetalert2'
+
 const options = {
   confirmButtonColor: '#1f2660',
   cancelButtonColor: '#1f2660',
