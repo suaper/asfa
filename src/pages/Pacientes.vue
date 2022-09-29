@@ -32,7 +32,7 @@
                     <tr v-for="(item, key) in patients" :key="key">
                         <td>
                             <q-icon name="person" class="azul_iconos" size="25px" />
-                            <span class="name_usuario">{{ item.field_json.identification }} - {{ item.field_json.names }}</span>
+                            <span class="name_usuario">{{ item.field_json.identification }} - {{ item.title }}</span>
                         </td>
                         <td class="action">
                             <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Editar" />
@@ -61,8 +61,13 @@ export default {
     this.getPatients()
   },
   methods: {
+    irCrearPaciente () {
+      localStorage.setItem('patientNid', '')
+      this.$router.push('/crear-paciente')
+    },
     editPage (nid) {
-
+      localStorage.setItem('patientNid', nid)
+      this.$router.push('/crear-paciente')
     },
     executeSearch () {
       var _this = this
