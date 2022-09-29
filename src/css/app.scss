@@ -349,3 +349,51 @@ h2{
         }
     }
 }
+.wrp_forms{
+    >.row{
+        width: 100%;
+        margin: 15px 0;
+        >.item{
+            >label{
+                color: #21609F;
+                margin-left: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+        }
+        .align_right{
+            text-align: right;
+        }
+    }
+    .dos_items{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        >.item{
+            width: 48%;
+        }
+    }
+    .tres_items{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        >.item{
+            width: 32%;
+            .q-field__control{
+                border-radius: 100px;
+            }
+        }
+    }
+    .un_item{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        >.item{
+            width: 100%;
+        }
+    }
+}

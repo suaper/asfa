@@ -20,7 +20,7 @@
                         </q-input>
                         <q-btn rounded class="bg_botn_verde" text-color="white" icon-right="search" label="Buscar" />
                     </div>
-                    <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="add" label="Crear paciente" />
+                    <q-btn rounded class="bg_botn_verde btn_crear" @click="irCrearPaciente" text-color="white" icon-right="add" label="Crear paciente" />
                 </div>
                 <div class="desc_seccion">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem</p>
@@ -69,6 +69,11 @@ export default {
   data () {
     return {
       sliders: true
+    }
+  },
+  methods: {
+    irCrearPaciente () {
+      this.$router.push('/crear-paciente')
     }
   }
 }
