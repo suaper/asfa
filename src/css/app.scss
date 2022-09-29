@@ -397,3 +397,32 @@ h2{
         }
     }
 }
+.grillas_tabs {
+    box-shadow: none;
+    .q-tabs {
+        width: 60%;
+        .q-tab {
+            margin: 0px 10px 0 0;
+            background: #8EB1D5;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 5px 5px 0 0;
+        }
+        .q-tab--active{
+            background: #21609F;
+            color: #fff;
+            .q-tab__label{
+                color: #fff;
+            }
+        }
+    }
+    >hr{
+        display: none;
+    }
+    .q-tab-panel{
+        border:1px solid #ccc;
+        .grilla{
+            border: none;
+        }
+    }
+}

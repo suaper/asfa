@@ -47,7 +47,7 @@
                 <q-icon name="send" />
               </q-item-section>
 
-              <q-item-section>
+              <q-item-section @click="irRegistros">
                 Registros
               </q-item-section>
             </q-item>
@@ -120,6 +120,9 @@ export default {
         // intended for switching drawer to "normal" mode only
         e.stopPropagation()
       }
+    },
+    irRegistros () {
+      this.$router.push('/registros')
     }
   }
 }

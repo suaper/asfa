@@ -201,7 +201,7 @@
 import configServices from '../services/config'
 
 export default {
-  name: 'pacientes',
+  name: 'crear-pacientes',
   data () {
     return {
       sliders: true,
