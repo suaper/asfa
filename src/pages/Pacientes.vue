@@ -16,9 +16,10 @@
                             rounded
                             standout
                             class="q-mb-sm"
+                            v-model="search"
                             >
                         </q-input>
-                        <q-btn rounded class="bg_botn_verde" text-color="white" icon-right="search" label="Buscar" />
+                        <q-btn rounded class="bg_botn_verde" @click="executeSearch" text-color="white" icon-right="search" label="Buscar" />
                     </div>
                     <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="add" label="Crear paciente" />
                 </div>
@@ -28,31 +29,13 @@
             </div>
             <div class="wrp_table tipo_grilla q-mt-xl">
                 <table class="grilla">
-                    <tr>
+                    <tr v-for="(item, key) in patients" :key="key">
                         <td>
                             <q-icon name="person" class="azul_iconos" size="25px" />
-                            <span class="name_usuario">Juan Lopez</span>
+                            <span class="name_usuario">{{ item.field_json.identification }} - {{ item.field_json.names }}</span>
                         </td>
                         <td class="action">
-                            <q-btn rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Editar" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <q-icon name="person" class="azul_iconos" size="25px" />
-                            <span class="name_usuario">Juan Lopez</span>
-                        </td>
-                        <td class="action">
-                            <q-btn rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Editar" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <q-icon name="person" class="azul_iconos" size="25px" />
-                            <span class="name_usuario">Juan Lopez</span>
-                        </td>
-                        <td class="action">
-                            <q-btn rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Editar" />
+                            <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Editar" />
                         </td>
                     </tr>
                 </table>
@@ -63,12 +46,56 @@
 </template>
 
 <script>
+import configServices from '../services/config'
 
 export default {
   name: 'pacientes',
   data () {
     return {
-      sliders: true
+      sliders: true,
+      patients: [],
+      search: ''
+    }
+  },
+  created () {
+    this.getPatients()
+  },
+  methods: {
+    editPage (nid) {
+
+    },
+    executeSearch () {
+      var _this = this
+
+      if (this.search !== '') {
+        configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
+          callBack: (data) => {
+            data.map((item, key) => {
+              var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+              data[key].field_json = JSON.parse(json)
+            })
+
+            _this.patients = data
+
+            _this.$q.loading.hide()
+          }
+        })
+      }
+    },
+    getPatients () {
+      var _this = this
+      configServices.loadData(this, 'pacientes/json/', {
+        callBack: (data) => {
+          data.map((item, key) => {
+            var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+            data[key].field_json = JSON.parse(json)
+          })
+
+          _this.patients = data
+
+          _this.$q.loading.hide()
+        }
+      })
     }
   }
 }
