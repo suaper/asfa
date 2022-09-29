@@ -87,7 +87,7 @@ export default {
           }
 
           localStorage.setItem('user', JSON.stringify(data.account))
-          _this.$router.push('/home')
+          _this.$router.push('/pacientes')
         }
       })
     }
