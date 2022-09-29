@@ -14,17 +14,18 @@
       <div class="wrap_form_login">
         <q-form
           class="form-login"
+          @submit="loginTrue"
         >
           <h4 class="title_login">Login</h4>
           <div class="row_user_login">
-            <span>Usuario o correo electrónico</span>
+            <span>Usuario</span>
             <q-input
               rounded
               standout
               v-model="name"
               lazy-rules
               :rules="[ val => val && val.length > 0 || 'Este campo no puede ir vacio']"
-              label="mail@mail.com"
+              label="Usuario"
               class="q-mb-sm"
               >
             </q-input>
@@ -43,7 +44,7 @@
             >
             </q-input>
           </div>
-          <q-btn unelevated rounded color="light-green-8" label="Iniciar Sesión" />
+          <q-btn type="submit" unelevated rounded color="light-green-8" label="Iniciar Sesión" />
           <div class="wrap-olvido-contrasenia text-center q-mt-md">
             <a  @click="irRecuperarClave" color="blue">¿Olvidaste tu contraseña?</a>
           </div>
@@ -58,6 +59,9 @@
 </template>
 
 <script>
+
+import configServices from '../services/config'
+
 export default {
   data () {
     return {
@@ -70,7 +74,22 @@ export default {
       this.$router.push('/recuperar_contrasenia')
     },
     loginTrue () {
-      this.$router.push('/home')
+      var _this = this
+      var data = {
+        type: 'login',
+        user: this.name,
+        pass: this.password
+      }
+      configServices.consumerStandar(this, 'asfa-rest/post', data, {
+        callBack: (data) => {
+          if (typeof data.error !== 'undefined') {
+            return _this.$swal('Advertencia', 'Usuario y/o contraseña incorrectos', 'error')
+          }
+
+          localStorage.setItem('user', JSON.stringify(data.account))
+          _this.$router.push('/home')
+        }
+      })
     }
   }
 }

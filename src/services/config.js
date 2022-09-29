@@ -1,9 +1,9 @@
 const datosConfiguracion = {
-  apiUrl: 'https://obt3.cl/administrador/',
+  apiUrl: 'http://saspdev.com/asfa/admin/',
   mensajeErrorServer: 'Tenemos problemas en nuestro sistemas :( por favor envianos un pantallazo de este mensaje para seguir mejorando',
   mensajeNoInternet: 'Tenemos problemas en nuestro sistemas :( por favor envianos un pantallazo de este mensaje para seguir mejorando',
-  user: 'pwcc_api',
-  password: 'Pwcc2022'
+  user: 'asfa_api',
+  password: 'Asfa2022'
 }
 
 const configService = {
