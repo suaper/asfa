@@ -43,7 +43,7 @@
             >
             </q-input>
           </div>
-          <q-btn unelevated rounded color="light-green-8" label="Iniciar Sesión" />
+          <q-btn unelevated rounded color="light-green-8" @click="irPacientes()" label="Iniciar Sesión" />
           <div class="wrap-olvido-contrasenia text-center q-mt-md">
             <a  @click="irRecuperarClave" color="blue">¿Olvidaste tu contraseña?</a>
           </div>
@@ -71,6 +71,9 @@ export default {
     },
     loginTrue () {
       this.$router.push('/home')
+    },
+    irPacientes () {
+      this.$router.push('/pacientes')
     }
   }
 }

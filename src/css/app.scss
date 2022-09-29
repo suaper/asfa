@@ -48,6 +48,9 @@ body{
 .text_normal{
     font-family: $font-text;
 }
+.azul_fondo{
+    background: #EEF6F7;
+}
 .titulos, .title{
     font-family: $font-title;
     font-size: 54px;
@@ -150,6 +153,12 @@ body{
 .bg_white_i{
     background: #fff!important;
 }
+.bg_botn_azul{
+    background: #8EB1D5;
+}
+.bg_botn_verde{
+    background: #A1BC31;
+}
 .slide-fade-enter-active {
     transition: all .3s ease;
 }
@@ -185,6 +194,9 @@ body{
 }
 .color_p{
     color: #7C7E91;
+}
+.azul_iconos{
+    color: #21609F;
 }
 .btn_bg_beige{
     background: #CA9E64 padding-box !important;
@@ -263,6 +275,31 @@ h5.style_title{
     }
 }
 //Estilos login
+h2{
+    font-size: 24px;
+    color: #21609F;
+    font-weight: bold;
+    margin-top: 0;
+}
+.header_two{
+    display: flex;
+    justify-content: space-between;
+
+    .w_50{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        .btn_crear{
+            margin-left: 20px;
+        }
+        .wrp_search{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
 .view_login{
     .cien{
         align-items: initial;
@@ -280,6 +317,35 @@ h5.style_title{
                 left: -200px;
                 top: 164px;
             }
+        }
+    }
+}
+
+.grilla{
+    width: 100%;
+    border: 1px solid #ccc;
+    tr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 96%;
+        border-bottom: 1px solid #ccc;
+        margin: 0px auto;
+
+        td{
+            padding: 4px;
+            span{
+                color: #656565;
+                margin-left: 5px;
+            }
+            .text-white {
+                span{
+                    color: #fff;
+                }
+            }
+        }
+        &:last-child{
+            border-bottom: none;
         }
     }
 }
