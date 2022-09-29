@@ -7,7 +7,6 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') }
     ]
   },
-<<<<<<< HEAD
   {
     path: '/pacientes',
     component: () => import('layouts/MainLayout.vue'),
@@ -16,9 +15,6 @@ const routes = [
     ]
   },
   // Always leave this as last one,
-=======
-  // Always leave this as last one, test
->>>>>>> 30d741e054c2940237b1edfb4855e91fb43e9025
   // but you can also remove it
   {
     path: '*',
