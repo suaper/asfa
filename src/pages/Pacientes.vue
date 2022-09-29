@@ -97,11 +97,6 @@ export default {
         }
       })
     }
-  },
-  methods: {
-    irCrearPaciente () {
-      this.$router.push('/crear-paciente')
-    }
   }
 }
 </script>
