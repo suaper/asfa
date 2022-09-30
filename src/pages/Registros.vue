@@ -120,6 +120,9 @@ export default {
     this.getRegistros()
   },
   methods: {
+    crearRegistro () {
+      this.$router.push('/crear-registro-vih')
+    },
     editPage (nid) {
 
     },
