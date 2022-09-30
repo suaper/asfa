@@ -47,34 +47,17 @@
                     <q-tab-panels v-model="tab" animated>
                         <q-tab-panel name="busquedas">
                             <div class="wrp_table tipo_grilla">
+                                <h4 v-if="patients.length === 0">Por favor busque un paciente</h4>
                                 <table class="grilla">
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
-                                        </td>
-                                    </tr>
+                                  <tr v-for="(item, key) in patients" :key="key">
+                                    <td>
+                                        <q-icon name="person" class="azul_iconos" size="25px" />
+                                        <span class="name_usuario">{{ item.field_json.identification }} - {{ item.title }}</span>
+                                    </td>
+                                    <td class="action">
+                                        <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                    </td>
+                                  </tr>
                                 </table>
                             </div>
                         </q-tab-panel>
@@ -82,32 +65,14 @@
                         <q-tab-panel name="borradores">
                             <div class="wrp_table tipo_grilla">
                                 <table class="grilla">
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" label="Ver Formulario" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" label="Ver Formulario" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" label="Ver Formulario" />
-                                        </td>
+                                    <tr v-for="(item, key) in drafts" :key="key">
+                                      <td>
+                                          <q-icon name="person" class="azul_iconos" size="25px" />
+                                          <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
+                                      </td>
+                                      <td class="action">
+                                          <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                      </td>
                                     </tr>
                                 </table>
                             </div>
@@ -116,32 +81,14 @@
                         <q-tab-panel name="pendiente">
                             <div class="wrp_table tipo_grilla">
                                 <table class="grilla">
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" label="Ver Formulario" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" label="Ver Formulario" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <q-icon name="person" class="azul_iconos" size="25px" />
-                                            <span class="name_usuario">Juan Lopez</span>
-                                        </td>
-                                        <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" label="Ver Formulario" />
-                                        </td>
+                                    <tr v-for="(item, key) in fixes" :key="key">
+                                      <td>
+                                          <q-icon name="person" class="azul_iconos" size="25px" />
+                                          <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
+                                      </td>
+                                      <td class="action">
+                                          <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                      </td>
                                     </tr>
                                 </table>
                             </div>
@@ -163,49 +110,117 @@ export default {
     return {
       sliders: true,
       patients: [],
-      search: '',
-      tab: 'busquedas'
+      search: null,
+      tab: 'busquedas',
+      drafts: [],
+      fixes: []
     }
   },
   created () {
-    this.getPatients()
+    this.getRegistros()
   },
   methods: {
     editPage (nid) {
 
     },
-    executeSearch () {
+    getRegistros () {
       var _this = this
-
-      if (this.search !== '') {
-        configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
-          callBack: (data) => {
-            data.map((item, key) => {
-              var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
-              data[key].field_json = JSON.parse(json)
-            })
-
-            _this.patients = data
-
-            _this.$q.loading.hide()
-          }
-        })
-      }
-    },
-    getPatients () {
-      var _this = this
-      configServices.loadData(this, 'pacientes/json/', {
+      configServices.loadData(this, 'registros/borrador/json/', {
         callBack: (data) => {
           data.map((item, key) => {
             var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
             data[key].field_json = JSON.parse(json)
+
+            var jsonPatient = data[key].field_json_1.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+            data[key].field_json_1 = JSON.parse(jsonPatient)
           })
 
-          _this.patients = data
+          _this.drafts = data
+        }
+      })
+
+      configServices.loadData(this, 'registros/correcion/json/', {
+        callBack: (data) => {
+          data.map((item, key) => {
+            var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+            data[key].field_json = JSON.parse(json)
+
+            var jsonPatient = data[key].field_json_1.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+            data[key].field_json_1 = JSON.parse(jsonPatient)
+          })
+
+          _this.fixes = data
 
           _this.$q.loading.hide()
         }
       })
+    },
+    executeSearch () {
+      var _this = this
+      switch (this.tab) {
+        case 'busquedas':
+          configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
+            callBack: (data) => {
+              _this.search = null
+              if (data.length === 0) {
+                _this.$q.loading.hide()
+                return _this.$swal('Advertencia', 'No se encontraron pacientes relacionados a su búsqueda', 'error')
+              }
+
+              data.map((item, key) => {
+                var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+                data[key].field_json = JSON.parse(json)
+              })
+
+              _this.patients = data
+
+              _this.$q.loading.hide()
+            }
+          })
+          break
+        case 'borradores':
+          configServices.loadData(this, 'registros/borrador/json/?field_json_value=' + this.search, {
+            callBack: (data) => {
+              _this.search = null
+              if (data.length === 0) {
+                _this.$q.loading.hide()
+                return _this.$swal('Advertencia', 'No se encontraron registros relacionados a su búsqueda', 'error')
+              }
+              data.map((item, key) => {
+                var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+                data[key].field_json = JSON.parse(json)
+
+                var jsonPatient = data[key].field_json_1.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+                data[key].field_json_1 = JSON.parse(jsonPatient)
+              })
+
+              _this.drafts = data
+              _this.$q.loading.hide()
+            }
+          })
+          break
+        case 'pendiente':
+          configServices.loadData(this, 'registros/correcion/json/?field_json_value=' + this.search, {
+            callBack: (data) => {
+              _this.search = null
+              if (data.length === 0) {
+                _this.$q.loading.hide()
+                return _this.$swal('Advertencia', 'No se encontraron registros relacionados a su búsqueda', 'error')
+              }
+              data.map((item, key) => {
+                var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+                data[key].field_json = JSON.parse(json)
+
+                var jsonPatient = data[key].field_json_1.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+                data[key].field_json_1 = JSON.parse(jsonPatient)
+              })
+
+              _this.fixes = data
+              _this.$q.loading.hide()
+            }
+          })
+          break
+      }
     }
   }
 }

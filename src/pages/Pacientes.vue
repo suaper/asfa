@@ -75,6 +75,9 @@ export default {
       if (this.search !== '') {
         configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
           callBack: (data) => {
+            if (data.length === 0) {
+              return _this.$swal('Advertencia', 'No se encontraron pacientes relacionados a su búsqueda', 'error')
+            }
             data.map((item, key) => {
               var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
               data[key].field_json = JSON.parse(json)
