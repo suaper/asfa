@@ -113,6 +113,16 @@ body{
 .w_25{
     width: 24%;
 }
+.w_50{
+    width: 50%;
+}
+.w_70{
+    width: 69%;
+}
+.w_28{
+    width: 31%;
+}
+
 .w_800{
     max-width: 800px;
     width: 96%;
@@ -138,7 +148,7 @@ body{
     width: 96%;
 }
 .w_1200{
-    max-width: 1200px;
+    max-width: 1350px;
     width: 100%;
     margin: 0px auto;
 }
@@ -219,6 +229,9 @@ body{
 .azul_iconos{
     color: #21609F;
 }
+.blanco_iconos{
+    color: #fff;
+}
 .btn_bg_beige{
     background: #CA9E64 padding-box !important;
     color: #fff;
@@ -295,6 +308,20 @@ h5.style_title{
         width: 49%;
     }
 }
+.q-field--standout.q-field--rounded .q-field__control{
+    background: #ccc;
+}
+.q-field--standout.q-field--focused .q-field__native {
+    color: #2a2a2a;
+}
+.q-field--filled.q-field--rounded .q-field__control{
+    border-radius: 100px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    background: #EDEDED;
+}
 //Estilos login
 h2{
     font-size: 24px;
@@ -347,6 +374,24 @@ h2{
     }
 }
 .view_login{
+    .w_1000px{
+        width: 1000px;
+        margin: 10px auto;
+    }
+    .header_login   {
+       text-align: left;
+       p{
+           font-size: 24px;
+           color: #21609F;
+           display: block;
+           width: 400px;
+           text-align: justify;
+       }
+    }
+    .fots_login{
+        background: url("../assets/fondo-login2.png") bottom left no-repeat;
+        position: relative;
+    }
     .cien{
         align-items: initial;
         .espacio_azul{
@@ -362,6 +407,39 @@ h2{
                 z-index: 9;
                 left: -200px;
                 top: 164px;
+
+                .title_login{
+                    background: #21609F;
+                    color: #fff;
+                    padding: 9px;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    line-height: 1;
+                }
+                .row_user_login{
+                    font-size: 16px;
+                    color: #707070;
+                    text-align: left;
+                    >span{
+                        padding-left: 15px;
+                        font-weight: bold;
+                    }
+                }
+                .row_user_pass{
+                    font-size: 16px;
+                    color: #707070;
+                    text-align: left;
+                    >span{
+                        padding-left: 15px;
+                        font-weight: bold;
+                    }
+                }
+                input:-internal-autofill-selected
             }
         }
     }
@@ -401,16 +479,19 @@ h2{
         margin: 20px 0;
         >.item{
             >label{
-                color: #21609F;
-                margin-left: 10px;
-                font-size: 16px;
-                font-weight: 400;
-                font-family: 'Source Sans Pro', sans-serif;
-                line-height: 1;
-                text-align: justify;
-                display: block;
-                padding-left: 5px;
                 padding-bottom: 0;
+                &:first-child{
+                    color: #21609F;
+                    margin-left: 8px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    line-height: 1;
+                    text-align: justify;
+                    display: block;
+                    padding-left: 0px;
+                    padding-bottom: 0;
+                }
             }
         }
         .align_right{
@@ -487,4 +568,36 @@ h2{
 }
 .provicional{
     max-width: 100%;
+}
+.titulo_fondo{
+    background: #588ECC;
+    color: #fff;
+    padding: 9px 50px 9px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    line-height: 1;
+}
+.list_resumen{
+    padding: 10px;
+    li{
+        margin: 10px 0;
+        list-style: none;
+        a{
+            background: #588ECC;
+            padding: 5px 8px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    }
+}
+.align_right{
+    text-align: right;
 }

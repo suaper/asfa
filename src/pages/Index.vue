@@ -1,13 +1,15 @@
 <template>
   <q-page class="flex flex-center column justify-between view_login bg-image ">
   <div class="cien flex flex-center">
-    <div class="ochenta text-center">
-      <img alt="logo" src="../assets/logo-asfa.png"/>
-      <div class="desc_login">
-        <p><strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</strong></p>
+    <div class="ochenta text-center header_login">
+      <div class="w_1000px">
+        <img alt="logo" src="../assets/logo-asfa.png"/>
+        <div class="desc_login">
+          <p><strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</strong></p>
+        </div>
       </div>
       <div class="fots_login">
-        <img alt="logo" src="../assets/fondo-login2.png"/>
+        <img alt="logo" src="../assets/img-personas.png"/>
       </div>
     </div>
     <div class="veinte text-center espacio_azul">
@@ -21,7 +23,7 @@
             <span>Usuario</span>
             <q-input
               rounded
-              standout
+              filled
               v-model="name"
               lazy-rules
               :rules="[ val => val && val.length > 0 || 'Este campo no puede ir vacio']"
@@ -44,7 +46,7 @@
             >
             </q-input>
           </div>
-          <q-btn type="submit" unelevated rounded color="light-green-8" label="Iniciar Sesión" />
+          <q-btn type="submit" unelevated rounded class="bg_botn_verde" text-color="white" label="Iniciar Sesión" />
           <div class="wrap-olvido-contrasenia text-center q-mt-md">
             <a  @click="irRecuperarClave" color="blue">¿Olvidaste tu contraseña?</a>
           </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="row flex cien">
-        <h4 class="titulo_fondo">Información de mujeres gestantes</h4>
-        <div class="wrp_forms w_73">
+        <h4 class="titulo_fondo w_50">Información de mujeres gestantes</h4>
+        <div class="wrp_forms w_70">
             <div class="row un_item">
                 <div class="item">
                     <label>Mujer gestenta</label>
@@ -180,7 +180,7 @@
                 </div>
             </div>
         </div>
-        <div class="w_25">
+        <div class="w_28">
             <img class="provicional" alt="logo" src="../../assets/simulapdf.png"/>
         </div>
     </div>
