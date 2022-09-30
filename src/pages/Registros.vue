@@ -54,7 +54,7 @@
                                             <span class="name_usuario">Juan Lopez</span>
                                         </td>
                                         <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
+                                            <q-btn @click="crearRegistro" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -63,7 +63,7 @@
                                             <span class="name_usuario">Juan Lopez</span>
                                         </td>
                                         <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
+                                            <q-btn @click="crearRegistro" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -72,7 +72,7 @@
                                             <span class="name_usuario">Juan Lopez</span>
                                         </td>
                                         <td class="action">
-                                            <q-btn @click="editPage" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
+                                            <q-btn @click="crearRegistro" rounded class="bg_botn_azul" text-color="white" icon-right="add" label="Crear Registro" />
                                         </td>
                                     </tr>
                                 </table>
@@ -171,6 +171,9 @@ export default {
     this.getPatients()
   },
   methods: {
+    crearRegistro () {
+      this.$router.push('/crear-registro-vih')
+    },
     editPage (nid) {
 
     },
