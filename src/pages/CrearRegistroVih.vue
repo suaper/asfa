@@ -30,7 +30,7 @@
                                     <ul>
                                         <li><img alt="logo" src="../assets/iconos/perfil-paciente1.png"/></li>
                                         <li>
-                                            <strong>Maria Lopez</strong>
+                                            <strong>{{ patient.title }}</strong>
                                             <span class="edad">25 años</span>
                                             <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="person" label="Ver perfil" />
                                         </li>
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <FormularioVih currentItem="/deportes/tennis" />
+                            <FormularioVih />
                         </q-tab-panel>
 
                         <q-tab-panel name="registro_cancer">
@@ -75,47 +75,32 @@ export default {
   data () {
     return {
       sliders: true,
-      patients: [],
+      patient: {},
       search: '',
       tab: 'registro_vih'
     }
   },
   created () {
-    this.getPatients()
+    this.patientNid = localStorage.getItem('patientNid')
+
+    if (this.patientNid !== '') {
+      this.getPatient()
+    }
   },
   methods: {
     editPage (nid) {
 
     },
-    executeSearch () {
+    getPatient () {
       var _this = this
-
-      if (this.search !== '') {
-        configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
-          callBack: (data) => {
-            data.map((item, key) => {
-              var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
-              data[key].field_json = JSON.parse(json)
-            })
-
-            _this.patients = data
-
-            _this.$q.loading.hide()
-          }
-        })
-      }
-    },
-    getPatients () {
-      var _this = this
-      configServices.loadData(this, 'pacientes/json/', {
+      configServices.loadData(this, 'pacientes/json/' + this.patientNid, {
         callBack: (data) => {
           data.map((item, key) => {
             var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
             data[key].field_json = JSON.parse(json)
           })
 
-          _this.patients = data
-
+          _this.patient = data[0]
           _this.$q.loading.hide()
         }
       })

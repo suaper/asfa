@@ -31,19 +31,19 @@
                           standout
                           v-model="data.entity"
                           lazy-rules
-                          :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']"
+                          :rules="[val => !!val || 'Campo requerido']"
                         >
                       </q-input>
                     </div>
                     <div class="item">
                         <label>Vinculacion de la entidad reportante al SGSSS</label>
-                        <q-select rounded standout v-model="data.bonding" :options="bondings" :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']" label="Seleccionar" />
+                        <q-select rounded standout v-model="data.bonding" :options="bondings" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
                     </div>
                 </div>
                 <div class="row dos_items">
                     <div class="item">
                         <label>Tipo de documento de identidad</label>
-                        <q-select rounded standout v-model="data.documentType" :options="documentTypes" :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']" label="Seleccionar" />
+                        <q-select rounded standout v-model="data.documentType" :options="documentTypes" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
                     </div>
                     <div class="item">
                         <label>Número de documento de identidad</label>
@@ -52,7 +52,7 @@
                         standout
                         v-model="data.identification"
                         lazy-rules
-                        :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']"
+                        :rules="[val => !!val || 'Campo requerido']"
                         >
                       </q-input>
                     </div>
@@ -65,7 +65,7 @@
                         standout
                         v-model="data.firstLastname"
                         lazy-rules
-                        :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']"
+                        :rules="[val => !!val || 'Campo requerido']"
                         >
                       </q-input>
                     </div>
@@ -88,7 +88,7 @@
                         standout
                         v-model="data.firstName"
                         lazy-rules
-                        :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']"
+                        :rules="[val => !!val || 'Campo requerido']"
                         >
                       </q-input>
                     </div>
@@ -106,13 +106,13 @@
                 <div class="row tres_items">
                     <div class="item">
                       <label>Fecha de nacimiento</label>
-                        <q-input filled v-model="data.birthdate" mask="date" :rules="['date']">
+                        <q-input filled v-model="data.birthdate" :rules="['date']">
                             <template v-slot:append>
                               <q-icon name="event" class="cursor-pointer">
                                 <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                                  <q-date v-model="data.birthdate">
+                                  <q-date v-model="data.birthdate" mask="YYYY-MM-DD">
                                     <div class="row items-center justify-end">
-                                      <q-btn v-close-popup label="Close" color="primary" flat />
+                                      <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                     </div>
                                   </q-date>
                                 </q-popup-proxy>
@@ -122,17 +122,17 @@
                     </div>
                     <div class="item">
                         <label>Sexo</label>
-                        <q-select rounded standout v-model="data.sex" :options="sexs" :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']" label="Seleccionar" />
+                        <q-select rounded standout v-model="data.sex" :options="sexs" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
                     </div>
                     <div class="item">
                         <label>Fecha de afiliacion</label>
-                        <q-input filled  v-model="data.membershipDate" mask="date" :rules="['date']">
+                        <q-input filled  v-model="data.membershipDate" :rules="['date']">
                             <template v-slot:append>
                               <q-icon name="event" class="cursor-pointer">
                                 <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                                  <q-date v-model="data.membershipDate">
+                                  <q-date v-model="data.membershipDate" mask="YYYY-MM-DD">
                                     <div class="row items-center justify-end">
-                                      <q-btn v-close-popup label="Close" color="primary" flat />
+                                      <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                     </div>
                                   </q-date>
                                 </q-popup-proxy>
@@ -144,11 +144,11 @@
                 <div class="row dos_items">
                     <div class="item">
                         <label>Codigo de pertenencia etnica</label>
-                        <q-select rounded standout v-model="data.ethnicity" :options="ethnicity" :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']" label="Seleccionar" />
+                        <q-select rounded standout v-model="data.ethnicity" :options="ethnicity" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
                     </div>
                     <div class="item">
                         <label>Poblacion Clave</label>
-                        <q-select rounded standout v-model="data.poblation" :options="poblations" :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']" label="Seleccionar" />
+                        <q-select rounded standout v-model="data.poblation" :options="poblations" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
                     </div>
                 </div>
                 <div class="row dos_items">
@@ -159,19 +159,19 @@
                         standout
                         v-model="data.municipality"
                         lazy-rules
-                        :rules="[ val => val && val.length > 0 || 'Por favor diligencie el campo']"
+                        :rules="[val => !!val || 'Campo requerido']"
                         >
                       </q-input>
                     </div>
                     <div class="item">
                         <label>Fecha de afiliación a la entidad reportante</label>
-                        <q-input filled  v-model="data.entityMembership" mask="date" :rules="['date']">
+                        <q-input filled  v-model="data.entityMembership" :rules="['date']">
                             <template v-slot:append>
                               <q-icon name="event" class="cursor-pointer">
                                 <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                                  <q-date v-model="data.entityMembership">
+                                  <q-date v-model="data.entityMembership" mask="YYYY-MM-DD">
                                     <div class="row items-center justify-end">
-                                      <q-btn v-close-popup label="Close" color="primary" flat />
+                                      <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                     </div>
                                   </q-date>
                                 </q-popup-proxy>
@@ -212,7 +212,7 @@ export default {
       sliders: true,
       user: {},
       patientNid: '',
-      date: '2019/02/01',
+      date: '2019-02-01',
       data: {},
       bondings: [
         { id: 'C', label: 'Contributibo' },

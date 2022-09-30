@@ -55,7 +55,7 @@
                                         <span class="name_usuario">{{ item.field_json.identification }} - {{ item.title }}</span>
                                     </td>
                                     <td class="action">
-                                        <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                        <q-btn @click="crearRegistro(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
                                     </td>
                                   </tr>
                                 </table>
@@ -120,7 +120,8 @@ export default {
     this.getRegistros()
   },
   methods: {
-    crearRegistro () {
+    crearRegistro (nid) {
+      localStorage.setItem('patientNid', nid)
       this.$router.push('/crear-registro-vih')
     },
     editPage (nid) {
