@@ -71,7 +71,7 @@
                                           <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
                                       </td>
                                       <td class="action">
-                                          <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                          <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Completar Registro" />
                                       </td>
                                     </tr>
                                 </table>
@@ -87,7 +87,7 @@
                                           <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
                                       </td>
                                       <td class="action">
-                                          <q-btn @click="editPage(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                          <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
                                       </td>
                                     </tr>
                                 </table>
@@ -118,14 +118,19 @@ export default {
   },
   created () {
     this.getRegistros()
+
+    localStorage.setItem('registerNid', '')
+    localStorage.setItem('patientNid', '')
   },
   methods: {
     crearRegistro (nid) {
       localStorage.setItem('patientNid', nid)
       this.$router.push('/crear-registro-vih')
     },
-    editPage (nid) {
-
+    editPage (nid, patient) {
+      localStorage.setItem('registerNid', nid)
+      localStorage.setItem('patientNid', patient)
+      this.$router.push('/crear-registro-vih')
     },
     getRegistros () {
       var _this = this
