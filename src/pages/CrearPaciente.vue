@@ -2,12 +2,12 @@
   <q-page class="flex flex-center azul_fondo">
     <div class="q-pb-md cien">
         <div class="w_1200 q-pd-md">
-            <h3>Bienvenido Dashboard</h3>
+            <h3 class="title_out_content">Bienvenido Dashboard</h3>
         </div>
         <div class="w_1200 bg_white q-pa-xl">
             <div class="row cien flex header_two">
-                <div class="col-3">
-                    <h2 class="con_fonfo">Informacion del paciente</h2>
+                <div class="col-4">
+                    <h2 class="con_fonfo titulo_fondo">Informacion del paciente</h2>
                 </div>
 
                 <div class="w_50">

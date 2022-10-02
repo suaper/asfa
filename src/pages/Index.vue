@@ -36,7 +36,7 @@
             <span>Contraseña</span>
             <q-input
               rounded
-              standout
+              filled
               type="password"
               class="q-my-sm"
               v-model="password"
@@ -45,13 +45,15 @@
               :rules="[ val => val && val.length > 0 || 'Este campo no puede ir vacio']"
             >
             </q-input>
+            <div class="wrap-olvido-contrasenia text-left ">
+              <a  @click="irRecuperarClave" color="blue">¿Olvidaste tu contraseña?</a>
+            </div>
           </div>
-          <q-btn type="submit" unelevated rounded class="bg_botn_verde" text-color="white" label="Iniciar Sesión" />
-          <div class="wrap-olvido-contrasenia text-center q-mt-md">
-            <a  @click="irRecuperarClave" color="blue">¿Olvidaste tu contraseña?</a>
-          </div>
-          <div class="desc">
-            <span>Si necesitas ayuda con el acceso o registro a la oficina virtual escríbenos al correo mail@mail.com enviando copia del documento de identidad, teléfono de contacto, imagen y detalle de la inconsistencia.</span>
+          <div class="row_bottom_login">
+            <q-btn type="submit" unelevated rounded class="bg_botn_verde" text-color="white" label="Iniciar Sesión" />
+            <div class="desc">
+              <span>Si necesitas ayuda con el acceso o registro a la oficina virtual escríbenos al correo mail@mail.com enviando copia del documento de identidad, teléfono de contacto, imagen y detalle de la inconsistencia.</span>
+            </div>
           </div>
         </q-form>
       </div>

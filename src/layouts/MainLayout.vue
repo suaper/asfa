@@ -24,7 +24,7 @@
           <q-list padding>
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="inbox" />
+                <img alt="logo" src="../assets/iconos/i-inicio.png"/>
               </q-item-section>
 
               <q-item-section>
@@ -34,17 +34,17 @@
 
             <q-item active clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="star" />
+                <img alt="logo" src="../assets/iconos/i-paciente.png"/>
               </q-item-section>
 
-              <q-item-section>
+              <q-item-section @click="irPacientes">
                 Pacientes
               </q-item-section>
             </q-item>
 
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="send" />
+                <img alt="logo" src="../assets/iconos/i-registro.png"/>
               </q-item-section>
 
               <q-item-section @click="irRegistros">
@@ -54,7 +54,7 @@
 
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="drafts" />
+                <img alt="logo" src="../assets/iconos/i-reporte.png"/>
               </q-item-section>
 
               <q-item-section>
@@ -64,7 +64,7 @@
 
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="drafts" />
+                <img alt="logo" src="../assets/iconos/i-doc.png"/>
               </q-item-section>
 
               <q-item-section>
@@ -136,6 +136,9 @@ export default {
     },
     irResumen () {
       this.$router.push('/resumen')
+    },
+    irPacientes () {
+      this.$router.push('/pacientes')
     }
   }
 }
