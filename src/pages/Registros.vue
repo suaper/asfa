@@ -2,15 +2,16 @@
   <q-page class="flex flex-center azul_fondo">
     <div class="q-pb-md all_width ">
         <div class="w_1200 q-pd-md">
-            <h3>Bienvenido Dashboard</h3>
+            <h3 class="title_out_content">Bienvenido Dashboard</h3>
         </div>
         <div class="w_1200 bg_white q-pa-xl">
             <div class="row cien flex header_two">
-                <div class="col-3">
+                <div class="col-3 flex wrp_title_icon">
+                    <q-icon name="post_add" class="azul_iconos" size="25px" />
                     <h2>Registros</h2>
                 </div>
 
-                <div class="w_50">
+                <div class="w_60 flex-end">
                     <div class="wrp_search">
                         <q-input
                             rounded
@@ -47,7 +48,7 @@
                     <q-tab-panels v-model="tab" animated>
                         <q-tab-panel name="busquedas">
                             <div class="wrp_table tipo_grilla">
-                                <h4 v-if="patients.length === 0">Por favor busque un paciente</h4>
+                                <h4 class="aviso_busque" v-if="patients.length === 0">Por favor busque un paciente</h4>
                                 <table class="grilla">
                                   <tr v-for="(item, key) in patients" :key="key">
                                     <td>
