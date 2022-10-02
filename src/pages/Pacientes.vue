@@ -2,15 +2,16 @@
   <q-page class="flex flex-center azul_fondo">
     <div class="q-pb-md all_width ">
         <div class="w_1200 q-pd-md">
-            <h3>Bienvenido Dashboard</h3>
+            <h3 class="title_out_content">Bienvenido Dashboard</h3>
         </div>
         <div class="w_1200 bg_white q-pa-xl">
             <div class="row cien flex header_two">
-                <div class="col-3">
+                <div class="col-3 flex wrp_title_icon">
+                    <q-icon name="person_outline" class="azul_iconos" size="25px" />
                     <h2>Pacientes</h2>
                 </div>
 
-                <div class="w_50">
+                <div class="w_60">
                     <div class="wrp_search">
                         <q-input
                             rounded

@@ -232,6 +232,9 @@ body{
 .blanco_iconos{
     color: #fff;
 }
+.q-btn{
+    text-transform: none;
+}
 .btn_bg_beige{
     background: #CA9E64 padding-box !important;
     color: #fff;
@@ -309,7 +312,7 @@ h5.style_title{
     }
 }
 .q-field--standout.q-field--rounded .q-field__control{
-    background: #ccc;
+    background: #F2F2F2;
 }
 .q-field--standout.q-field--focused .q-field__native {
     color: #2a2a2a;
@@ -320,6 +323,9 @@ h5.style_title{
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
+    background: #EDEDED;
+}
+input:-webkit-internal-autofill-selected {
     background: #EDEDED;
 }
 //Estilos login
@@ -338,6 +344,16 @@ h2{
         display: flex;
         justify-content: flex-end;
         align-items: baseline;
+    }
+
+    .w_60{
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn_crear{
+            margin-left: 20px;
+        }
         .btn_crear{
             margin-left: 20px;
         }
@@ -345,6 +361,18 @@ h2{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            >label{
+                margin-bottom: 0;
+            }
+            .q-input{
+                .q-field__control{
+                    width: 244px;
+                    height: 40px;
+                }
+            }
+            button{
+                margin-left: -37px;
+            }
         }
     }
     .info_user_top{
@@ -371,6 +399,21 @@ h2{
                 flex-direction: column;
             }
         }
+    }
+    .desc_seccion{
+        margin-top: 15px;
+    }
+}
+.wrp_title_icon{
+    .q-icon{
+        font-size: 45px !important;
+        background: #EEF6F7;
+        border-radius: 6px;
+        padding: 3px;
+        margin-right: 9px;
+    }
+    h2{
+        margin: 0;
     }
 }
 .view_login{
@@ -399,10 +442,10 @@ h2{
             position: relative;
 
             .wrap_form_login{
-                width: 400px;
-                box-shadow: 0px 0px 3px #000;
+                width: 410px;
+                box-shadow: 0px 0px 10px #0000006e;
                 background-color: #fff;
-                padding: 4px;
+                padding-top: 4px;
                 position: absolute;
                 z-index: 9;
                 left: -200px;
@@ -412,7 +455,8 @@ h2{
                     background: #21609F;
                     color: #fff;
                     padding: 9px;
-                    width: 100%;
+                    width: 95%;
+                    margin: 0px auto;
                     text-align: center;
                     display: block;
                     margin-top: 10px;
@@ -425,6 +469,7 @@ h2{
                     font-size: 16px;
                     color: #707070;
                     text-align: left;
+                    padding: 0px 10px;
                     >span{
                         padding-left: 15px;
                         font-weight: bold;
@@ -434,14 +479,55 @@ h2{
                     font-size: 16px;
                     color: #707070;
                     text-align: left;
+                    padding: 0px 10px;
                     >span{
                         padding-left: 15px;
                         font-weight: bold;
                     }
+                    label{
+                        padding-bottom: 0;
+                    }
                 }
-                input:-internal-autofill-selected
+            }
+            .wrap-olvido-contrasenia{
+                color: #21609F;
+                font-weight: bold;
+                margin-top: 0;
+                padding-left: 15px;
+                a{
+                    color: #21609F;
+                    font-size: 15px;
+                    text-decoration: underline;
+                }
             }
         }
+    }
+}
+.title_out_content{
+    font-size: 25px;
+    color: #21609F;
+    margin: 10px 0;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.row_bottom_login{
+    background: url("../assets/fondo-azul-login.png") bottom center no-repeat;
+    padding: 10px;
+
+    .desc{
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.2;
+        width: 90%;
+        margin: 5px auto;
+    }
+    .q-btn__content{
+        padding: 9px;
+        width: 300px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 17px;
     }
 }
 
@@ -476,7 +562,7 @@ h2{
 .wrp_forms{
     >.row{
         width: 100%;
-        margin: 20px 0;
+        margin: 24px 0;
         >.item{
             >label{
                 padding-bottom: 0;
@@ -600,4 +686,38 @@ h2{
 }
 .align_right{
     text-align: right;
+}
+
+.wrp_search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >label{
+        margin-bottom: 0;
+    }
+    .q-input{
+        .q-field__control{
+            width: 244px;
+            height: 40px;
+        }
+    }
+    button{
+        margin-left: -37px;
+    }
+}
+.flex-end{
+    justify-content: flex-end!important;
+}
+.aviso_busque{
+    font-size: 25px;
+    color: #21609F;
+    margin: 10px 0;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: block;
+    text-align: center;
+}
+.q-field--error .q-field__bottom{
+    padding: 2px 10px 2px;
 }
