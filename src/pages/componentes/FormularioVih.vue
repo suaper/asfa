@@ -136,7 +136,14 @@
                   </div>
                   <div class="item">
                       <label>Edad gestacional al momento del diagnóstico de VIH durante la gestación reportada.</label>
-                      <q-select rounded standout v-model="data.ageVihReported" :options="ageVihReported" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.ageVihReported"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
@@ -146,7 +153,14 @@
                   </div>
                   <div class="item">
                       <label>Edad gestacional al inicio de la terapia antirretroviral (TAR) en la gestación reportada.</label>
-                      <q-select rounded standout v-model="data.ageInitTar" :options="ageInitTars" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.ageInitTar"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
@@ -195,7 +209,7 @@
                           standout
                           v-model="data.identificationNewborn"
                           lazy-rules
-
+                          type="number"
                           >
                         </q-input>
                   </div>
@@ -238,6 +252,9 @@ import configServices from '../../services/config'
 
 export default {
   name: 'FormularioVih',
+  props: {
+    patient: Object
+  },
   data () {
     return {
       data: {
@@ -314,10 +331,11 @@ export default {
     this.user = JSON.parse(localStorage.getItem('user'))
 
     this.registerNid = localStorage.getItem('registerNid')
-
     if (this.registerNid !== '') {
       this.getRegister()
     }
+
+    console.log(this.patient)
   },
   methods: {
     getRegister () {
@@ -339,6 +357,326 @@ export default {
     },
     saveRegister () {
       var _this = this
+
+      if (this.patient.sex.id === 'H' && this.data.fum !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.dateScreeningFirst !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.dateReportedPregnancy !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.dateScreeningSecond !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.dateScreeningThird !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.dateScreeningBirth !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.womanVihReported.id !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.ageVihReported.id !== '99') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.receivedTreatmentVih.id !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.ageInitTar.id !== '99') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.tarIntraBirth.id !== '99') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.resultVihReported.id !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.dateCulminationReported !== '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.pharmacologicalSuppression.id !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.identificationTypeNewbor.id !== 'NA') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.identificationNewborn !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+      }
+
+      if (this.patient.sex.id === 'H' && this.data.pregnantWoman.id !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
+      }
+
+      if (parseInt(this.data.pregnantWoman.id) < 3) {
+        var currentDate = new Date('2020-04-01')
+        if (this.data.dateReportedPregnancy !== '1845-01-01') {
+          if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(currentDate)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2890', 'error')
+          }
+        }
+
+        if (this.data.dateScreeningFirst === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.dateScreeningSecond === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.dateScreeningThird === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.dateScreeningBirth === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.womanVihReported.id === '9') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.ageVihReported.id === '99') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.receivedTreatmentVih.id === '9') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.ageInitTar.id === '99') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.tarIntraBirth.id === '9') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.resultVihReported.id === '9') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.dateCulminationReported === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+
+        if (this.data.pharmacologicalSuppression.id === '9') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+        }
+      }
+
+      var maxDate = new Date('2020-04-01')
+      if (this.data.dateReportedPregnancy !== '1845-01-01' && this.data.dateReportedPregnancy !== '1846-01-01') {
+        if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(maxDate)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+        }
+
+        if (this.data.dateScreeningFirst === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+
+        if (this.data.dateScreeningSecond === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+
+        if (this.data.dateScreeningThird === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+
+        if (this.data.dateScreeningBirth === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+      }
+
+      if (this.data.dateScreeningFirst !== '1799-01-01' && this.data.dateScreeningFirst !== '1822-02-01' && this.data.dateScreeningFirst !== '1833-03-03' && this.data.dateScreeningFirst !== '1845-01-01' && this.data.dateScreeningFirst !== '1846-01-01') {
+        if (Date.parse(this.data.dateScreeningFirst) < Date.parse(this.data.dateReportedPregnancy)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2902', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.dateScreeningFirst) > Date.parse(this.data.dateReportedPregnancy)) {
+        if (this.data.dateScreeningSecond === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+
+        if (this.data.dateScreeningThird === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+
+        if (this.data.dateScreeningBirth === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.dateScreeningFirst) > Date.parse(maxDate)) {
+        if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
+          if (Date.parse(this.data.dateScreeningSecond) <= Date.parse(this.data.dateScreeningFirst)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+          }
+        }
+
+        if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01') {
+          if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningFirst)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+          }
+        }
+
+        if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01') {
+          if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningFirst)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+          }
+        }
+
+        if (this.data.dateScreeningBirth === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+        }
+      }
+
+      if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
+        if (Date.parse(this.data.dateScreeningSecond) < Date.parse(this.data.dateReportedPregnancy)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.dateScreeningSecond) > Date.parse(maxDate)) {
+        if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningSecond)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+        }
+
+        var dateMaxThird = new Date('1845-01-01')
+
+        if (Date.parse(this.data.dateScreeningThird) <= Date.parse(dateMaxThird)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+        }
+
+        if (this.date.dateScreeningBirth === this.data.dateScreeningSecond) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+        }
+
+        if (this.date.dateScreeningBirth === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+        }
+      }
+
+      if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01') {
+        if (Date.parse(this.data.dateScreeningThird) < Date.parse(this.data.dateReportedPregnancy)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2908', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.dateScreeningThird) > Date.parse(maxDate)) {
+        if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningSecond)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
+        }
+
+        if (this.date.dateScreeningThird === '1845-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
+        }
+      }
+
+      if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01') {
+        if (Date.parse(this.data.dateScreeningBirth) < Date.parse(this.data.dateReportedPregnancy)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2911', 'error')
+        }
+      }
+
+      if (this.data.womanVihReported.id === '1') {
+        if (parseInt(this.data.ageVihReported) < 2 || parseInt(this.data.ageVihReported) > 44) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3261', 'error')
+        }
+      }
+
+      if (this.data.ageVihReported === '1' && this.data.womanVihReported.id !== '3') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B3219', 'error')
+      }
+
+      if (parseInt(this.data.pregnantWoman) > 3 && parseInt(this.data.ageVihReported) < 45) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4146', 'error')
+      }
+
+      if (this.data.receivedTreatmentVih.id === '1' && this.data.womanVihReported.id !== '3') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B3222', 'error')
+      }
+
+      if (this.data.receivedTreatmentVih.id === '1' && this.data.ageInitTar !== '1') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+      }
+
+      if (this.data.receivedTreatmentVih.id === '3' && this.data.ageInitTar !== '98') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+      }
+
+      if (this.data.receivedTreatmentVih.id === '4' && this.data.ageInitTar !== '98') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+      }
+
+      if (this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) <= 1) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+      }
+
+      if (this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) > 98) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+      }
+
+      if (this.data.tarIntraBirth.id === '4' && this.data.pregnantWoman !== '1') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4150', 'error')
+      }
+
+      if (parseInt(this.data.tarIntraBirth.id) < 6 && parseInt(this.data.pregnantWoman) > 3) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4151', 'error')
+      }
+
+      if (this.data.resultVihReported.id === '4' && this.data.pregnantWoman !== '1') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
+      }
+
+      if (this.data.resultVihReported.id === '4' && this.data.dateCulminationReported !== '1811-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
+      }
+
+      if (parseInt(this.data.resultVihReported.id) < 5 && parseInt(this.data.pregnantWoman) > 3) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4153', 'error')
+      }
+
+      if (this.data.resultVihReported.id === '1' && this.data.identificationTypeNewbor.id !== 'CN' && this.data.identificationTypeNewbor.id !== 'RC' && this.data.identificationTypeNewbor.id !== 'MS') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4162', 'error')
+      }
+
+      if (this.data.dateCulminationReported !== '1811-01-01' && this.data.dateCulminationReported !== '1800-01-01' && this.data.dateCulminationReported !== '1833-03-03' && this.data.dateCulminationReported !== '1845-01-01' && this.data.dateCulminationReported !== '1846-01-01') {
+        if (Date.parse(this.data.dateCulminationReported) < Date.parse(this.data.dateReportedPregnancy)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2921', 'error')
+        }
+      }
+
+      if (this.data.dateCulminationReported !== '1845-01-01' && parseInt(this.data.pregnantWoman) > 3) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4154', 'error')
+      }
+
+      if (parseInt(this.data.pharmacologicalSuppression) < 9 && parseInt(this.data.pregnantWoman) > 3) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4156', 'error')
+      }
+
+      if (this.data.identificationTypeNewbor.id === 'NA' && this.data.identificationNewborn !== '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
+      }
 
       var data = {
         type: 'saveRegister',

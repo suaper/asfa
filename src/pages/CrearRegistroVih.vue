@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <FormularioVih />
+                            <FormularioVih :patient="patient" v-if="loadedPatient"/>
                         </q-tab-panel>
 
                         <q-tab-panel name="registro_cancer">
@@ -77,7 +77,8 @@ export default {
       sliders: true,
       patient: {},
       search: '',
-      tab: 'registro_vih'
+      tab: 'registro_vih',
+      loadedPatient: false
     }
   },
   created () {
@@ -101,6 +102,7 @@ export default {
           })
 
           _this.patient = data[0]
+          _this.loadedPatient = true
           _this.$q.loading.hide()
         }
       })
