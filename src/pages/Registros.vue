@@ -88,7 +88,7 @@
                                           <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
                                       </td>
                                       <td class="action">
-                                          <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
+                                          <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Ver Formulario" />
                                       </td>
                                     </tr>
                                 </table>

@@ -334,8 +334,6 @@ export default {
     if (this.registerNid !== '') {
       this.getRegister()
     }
-
-    console.log(this.patient)
   },
   methods: {
     getRegister () {
