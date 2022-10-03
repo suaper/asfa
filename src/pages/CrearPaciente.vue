@@ -106,7 +106,7 @@
                 <div class="row tres_items">
                     <div class="item">
                       <label>Fecha de nacimiento</label>
-                        <q-input filled v-model="data.birthdate" :rules="['date']">
+                        <q-input filled v-model="data.birthdate">
                             <template v-slot:append>
                               <q-icon name="event" class="cursor-pointer">
                                 <q-popup-proxy cover transition-show="scale" transition-hide="scale">
@@ -126,7 +126,7 @@
                     </div>
                     <div class="item">
                         <label>Fecha de afiliacion</label>
-                        <q-input filled  v-model="data.membershipDate" :rules="['date']">
+                        <q-input filled  v-model="data.membershipDate">
                             <template v-slot:append>
                               <q-icon name="event" class="cursor-pointer">
                                 <q-popup-proxy cover transition-show="scale" transition-hide="scale">
@@ -165,7 +165,7 @@
                     </div>
                     <div class="item">
                         <label>Fecha de afiliación a la entidad reportante</label>
-                        <q-input filled  v-model="data.entityMembership" :rules="['date']">
+                        <q-input filled  v-model="data.entityMembership">
                             <template v-slot:append>
                               <q-icon name="event" class="cursor-pointer">
                                 <q-popup-proxy cover transition-show="scale" transition-hide="scale">
