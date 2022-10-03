@@ -328,6 +328,56 @@ input:-webkit-autofill:focus {
 input:-webkit-internal-autofill-selected {
     background: #EDEDED;
 }
+aside.q-drawer{
+    background: transparent linear-gradient(180deg, #009DC3 0%, #21609F 100%) 0% 0% no-repeat padding-box;
+    &.q-drawer--mini{
+        width: 76px!important;
+        >.overflow-auto{
+            margin-left: 10px;
+        }
+    }
+    .q-item__section--avatar{
+        background: #EEF6F7;
+        width: 50px;
+        height: 40px;
+        text-align: center;
+        border-radius: 7px;
+        padding: 0;
+        display: block;
+        min-width: 40px;
+        margin-right: 18px;
+        img{
+            margin: 9px auto;
+        }
+    }
+    .q-list{
+        >.q-item{
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            .q-item__section--main{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: inherit;
+            }
+            &:first-child{
+                img{
+                    background: transparent;
+                    padding: none;
+                    border-radius: 0;
+                }
+                .q-item__section--avatar{
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+.event_nav{
+    margin-bottom: 50px;
+}
 //Estilos login
 h2{
     font-size: 24px;
@@ -338,6 +388,7 @@ h2{
 .header_two{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
 
     .w_50{
         width: 50%;
@@ -349,7 +400,7 @@ h2{
     .w_60{
         width: 65%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         .btn_crear{
             margin-left: 20px;
@@ -380,12 +431,14 @@ h2{
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            padding-left: 0;
             li{
                 padding: 3px;
                 line-height: 1.5;
+
                 strong{
                     color: #21609F;
-                    font-size: 22px;
+                    font-size: 20px;
                     font-weight: bold;
                     padding-left: 5px;
                 }
@@ -394,6 +447,10 @@ h2{
                     font-size: 19px;
                     font-weight: bold;
                     padding-left: 5px;
+                }
+                button{
+                    width: 150px;
+                    text-transform: uppercase;
                 }
                 display: flex;
                 flex-direction: column;
@@ -449,14 +506,14 @@ h2{
                 position: absolute;
                 z-index: 9;
                 left: -200px;
-                top: 164px;
+                top: 134px;
 
                 .title_login{
                     background: #21609F;
                     color: #fff;
                     padding: 9px;
                     width: 95%;
-                    margin: 0px auto;
+                    margin: 0px auto 40px;
                     text-align: center;
                     display: block;
                     margin-top: 10px;
@@ -472,7 +529,7 @@ h2{
                     padding: 0px 10px;
                     >span{
                         padding-left: 15px;
-                        font-weight: bold;
+                        font-weight: 400;
                     }
                 }
                 .row_user_pass{
@@ -480,9 +537,10 @@ h2{
                     color: #707070;
                     text-align: left;
                     padding: 0px 10px;
+                    margin-bottom: 15px;
                     >span{
                         padding-left: 15px;
-                        font-weight: bold;
+                        font-weight: 400;
                     }
                     label{
                         padding-bottom: 0;
@@ -524,7 +582,7 @@ h2{
     }
     .q-btn__content{
         padding: 9px;
-        width: 300px;
+        width: 250px;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 17px;
@@ -559,6 +617,9 @@ h2{
         }
     }
 }
+.space-betwen{
+    justify-content: space-between;
+}
 .wrp_forms{
     >.row{
         width: 100%;
@@ -569,14 +630,14 @@ h2{
                 &:first-child{
                     color: #21609F;
                     margin-left: 8px;
-                    font-size: 16px;
+                    font-size: 15px;
                     font-weight: 400;
                     font-family: 'Source Sans Pro', sans-serif;
                     line-height: 1;
                     text-align: justify;
                     display: block;
                     padding-left: 0px;
-                    padding-bottom: 0;
+                    padding-bottom: 6px;
                 }
             }
         }
@@ -612,9 +673,11 @@ h2{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-
         >.item{
             width: 100%;
+            .q-field__control{
+                border-radius: 100px;
+            }
         }
     }
 }

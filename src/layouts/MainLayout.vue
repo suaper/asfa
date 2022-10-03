@@ -15,13 +15,21 @@
         :mini="!drawer || miniState"
         @click.capture="drawerClick"
 
-        :width="200"
+        :width="250"
         :breakpoint="1000"
         bordered
         class="bg-grey-3"
       >
         <q-scroll-area class="fit">
           <q-list padding>
+            <!-- <span @click="miniState = true"> <img alt="logo" src="../assets/iconos/i-corazon.png"/></span> -->
+
+            <q-item class="event_nav" clickable v-ripple>
+              <q-item-section @click="miniState = true" avatar>
+                <img alt="logo" src="../assets/iconos/i-corazon.png"/>
+              </q-item-section>
+            </q-item>
+
             <q-item clickable v-ripple>
               <q-item-section avatar>
                 <img alt="logo" src="../assets/iconos/i-inicio.png"/>
@@ -29,6 +37,7 @@
 
               <q-item-section>
                 Inicio
+                <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
             </q-item>
 
@@ -39,6 +48,7 @@
 
               <q-item-section @click="irPacientes">
                 Pacientes
+                <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
             </q-item>
 
@@ -49,6 +59,7 @@
 
               <q-item-section @click="irRegistros">
                 Registros
+                <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
             </q-item>
 
@@ -59,6 +70,7 @@
 
               <q-item-section>
                 Reportes
+                <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
             </q-item>
 
@@ -69,6 +81,7 @@
 
               <q-item-section>
                 Documentos
+                <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
             </q-item>
 
@@ -89,16 +102,6 @@
           so that user can switch back
           to mini-mode
         -->
-        <div class="q-mini-drawer-hide absolute" style="top: 15px; right: -17px">
-          <q-btn
-            dense
-            round
-            unelevated
-            color="accent"
-            icon="chevron_left"
-            @click="miniState = true"
-          />
-        </div>
       </q-drawer>
 
       <q-page-container>

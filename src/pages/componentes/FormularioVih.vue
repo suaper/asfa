@@ -1,6 +1,6 @@
 <template>
     <q-form @submit="saveRegister">
-      <div class="row flex cien">
+      <div class="row flex cien space-betwen">
           <h4 class="titulo_fondo">Información de mujeres gestantes</h4>
           <div class="wrp_forms w_73">
               <div class="row un_item">
