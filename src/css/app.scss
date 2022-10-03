@@ -644,6 +644,9 @@ h2{
         .align_right{
             text-align: right;
         }
+        .q-textarea .q-field__native{
+            padding-left: 20px;
+        }
     }
     .dos_items{
         display: flex;
