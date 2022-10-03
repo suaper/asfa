@@ -28,6 +28,10 @@
               <q-item-section @click="miniState = true" avatar>
                 <img alt="logo" src="../assets/iconos/i-corazon.png"/>
               </q-item-section>
+
+              <q-item-section @click="miniState = true" avatar >
+                <img alt="logo" src="../assets/logo-asfa-blanco.png"/>
+              </q-item-section>
             </q-item>
 
             <q-item clickable v-ripple>
