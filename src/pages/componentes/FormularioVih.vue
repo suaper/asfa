@@ -357,71 +357,71 @@ export default {
       var _this = this
 
       if (typeof this.patient.field_json.sex !== 'undefined') {
-        if (this.patient.sex.id === 'H' && this.data.fum !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.fum !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.dateScreeningFirst !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningFirst !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.dateReportedPregnancy !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.dateReportedPregnancy !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.dateScreeningSecond !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningSecond !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.dateScreeningThird !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningThird !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.dateScreeningBirth !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningBirth !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.womanVihReported.id !== '9') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.womanVihReported.id !== '9') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.ageVihReported.id !== '99') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.ageVihReported.id !== '99') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.receivedTreatmentVih.id !== '9') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.receivedTreatmentVih.id !== '9') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.ageInitTar.id !== '99') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.ageInitTar.id !== '99') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.tarIntraBirth.id !== '99') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.tarIntraBirth.id !== '99') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.resultVihReported.id !== '9') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.resultVihReported.id !== '9') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.dateCulminationReported !== '1845-01-01') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.dateCulminationReported !== '1845-01-01') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.pharmacologicalSuppression.id !== '9') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.pharmacologicalSuppression.id !== '9') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.identificationTypeNewbor.id !== 'NA') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.identificationTypeNewbor.id !== 'NA') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.identificationNewborn !== '9') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.identificationNewborn !== '9') {
           return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
         }
 
-        if (this.patient.sex.id === 'H' && this.data.pregnantWoman.id !== '9') {
+        if (this.patient.field_json.sex.id === 'H' && this.data.pregnantWoman.id !== '9') {
           return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
         }
       }
