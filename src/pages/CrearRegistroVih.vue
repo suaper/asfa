@@ -60,7 +60,7 @@
                 <q-dialog v-model="popperfil" full-width>
                     <q-card class="pop_perfil">
                       <q-card-section class="q-pa-none">
-                        <PopPerfil />
+                        <PopPerfil :patient="patient" v-if="loadedPatient"/>
                       </q-card-section>
                     </q-card>
                 </q-dialog>
@@ -112,6 +112,7 @@ export default {
           })
 
           _this.patient = data[0]
+          console.log(_this.patient)
           _this.loadedPatient = true
           _this.$q.loading.hide()
         }
