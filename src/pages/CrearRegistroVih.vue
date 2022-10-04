@@ -32,7 +32,7 @@
                                         <li>
                                             <strong>{{ patient.title }}</strong>
                                             <span class="edad">25 años</span>
-                                            <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="person" label="Ver perfil" />
+                                            <q-btn rounded class="bg_botn_verde btn_crear" @click="popperfil = true" text-color="white" icon-right="person" label="Ver perfil" />
                                         </li>
                                     </ul>
                                 </div>
@@ -57,6 +57,13 @@
                         </q-tab-panel>
                     </q-tab-panels>
                 </q-card>
+                <q-dialog v-model="popperfil" full-width>
+                    <q-card class="pop_perfil">
+                      <q-card-section class="q-pa-none">
+                        <PopPerfil />
+                      </q-card-section>
+                    </q-card>
+                </q-dialog>
             </div>
         </div>
     </div>
@@ -65,12 +72,14 @@
 
 <script>
 import FormularioVih from 'pages/componentes/FormularioVih'
+import PopPerfil from 'pages/componentes/PopPerfil'
 import configServices from '../services/config'
 
 export default {
   name: 'registros',
   components: {
-    FormularioVih
+    FormularioVih,
+    PopPerfil
   },
   data () {
     return {
@@ -78,7 +87,8 @@ export default {
       patient: {},
       search: '',
       tab: 'registro_vih',
-      loadedPatient: false
+      loadedPatient: false,
+      popperfil: false
     }
   },
   created () {
