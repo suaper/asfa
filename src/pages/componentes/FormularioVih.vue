@@ -5,7 +5,9 @@
           <div class="wrp_forms w_73">
               <div class="row un_item">
                   <div class="item">
-                      <label>Mujer gestante</label>
+                      <label class="toltip">Mujer gestante
+                          <q-icon @click="tool = true" name="help_outline" class="cursor-pointer"></q-icon>
+                        </label>
                       <q-select rounded standout v-model="data.pregnantWoman" :options="pregnantWomans"  label="Seleccionar" :rules="[val => !!val || 'Campo requerido']"/>
                   </div>
               </div>
@@ -244,6 +246,21 @@
               <img class="provicional" alt="logo" src="../../assets/simulapdf.png"/>
           </div>
       </div>
+      <q-dialog v-model="tool">
+        <q-card>
+          <q-card-section>
+            <div class="text-h6 title_pop" align="center">Ejermplo</div>
+          </q-card-section>
+
+          <q-card-section class="q-pt-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
+          </q-card-section>
+
+          <q-card-actions align="center">
+            <q-btn flat label="OK" color="primary" v-close-popup />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
     </q-form>
 </template>
 
@@ -260,6 +277,7 @@ export default {
       data: {
         pregnantWoman: ''
       },
+      tool: false,
       registerNid: '',
       date: 'YYYY-MM-DD',
       pregnantWomans: [

@@ -461,6 +461,10 @@ h2{
         margin-top: 15px;
     }
 }
+.title_pop{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #21609F;
+}
 .wrp_title_icon{
     .q-icon{
         font-size: 45px !important;
@@ -786,4 +790,92 @@ h2{
 }
 .q-field--error .q-field__bottom{
     padding: 2px 10px 2px;
+}
+.pop_perfil{
+    .row_cien{
+        display: flex;
+        justify-content: space-between;
+        .wrp_forms{
+            width: 100%;
+        }
+        .w_20{
+            width: 20%;
+            background: transparent linear-gradient(180deg, #009DC3 0%, #21609F 100%) 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            ul{
+                flex-direction: column;
+                padding: 20px 10px;
+                li{
+                    color: #fff;
+                    list-style: none;
+                    p{
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                    &.info_top{
+                        padding-bottom: 15px;
+                        border-bottom: 2px solid #fff;
+                        text-align: center;
+                        p{
+                            font-size: 22px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .w_78{
+            width: 78%;
+        }
+        .row{
+            width: 100%;
+            margin: 24px 0;
+            .item{
+                label{
+                    color: #21609F;
+                    margin-left: 8px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    line-height: 1;
+                    text-align: justify;
+                    display: block;
+                    padding-left: 0px;
+                    padding-bottom: 6px;
+                }
+            }
+            .input_lectura{
+                background: #EBEBEBA3 0% 0% no-repeat padding-box;
+                border-radius: 100px;
+                padding: 8px 10px;
+                color: #707070;
+                font-size: 16px;
+            }
+        }
+        .dos_items{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .item{
+                width: 48%;
+            }
+        }
+        .tres_items{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            >.item{
+                width: 32%;
+            }
+        }
+        .un_item{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            >.item{
+                width: 100%;
+            }
+        }
+    }
 }
