@@ -1,8 +1,8 @@
 <template>
     <q-form @submit="saveRegister">
       <div class="row flex cien space-betwen">
-          <h4 class="titulo_fondo">Información de mujeres gestantes</h4>
-          <div class="wrp_forms w_73">
+          <h4 class="titulo_fondo w_100">Información de mujeres gestantes</h4>
+          <div class="wrp_forms w_50">
               <div class="row un_item">
                   <div class="item">
                       <label>Mujer gestante</label>
@@ -240,8 +240,14 @@
                   </div>
               </div>
           </div>
-          <div class="w_25">
-              <img class="provicional" alt="logo" src="../../assets/simulapdf.png"/>
+          <div class="w_50">
+            <q-pdfviewer
+              v-model="show"
+              type="html5"
+              src="http://saspdev.com/asfa/admin/sites/default/files/2022-10/Propuesta Forja Empresas.pdf"
+              content-class="container"
+              inner-content-class="container"
+            />
           </div>
       </div>
     </q-form>
@@ -249,7 +255,6 @@
 
 <script>
 import configServices from '../../services/config'
-
 export default {
   name: 'FormularioVih',
   props: {
@@ -257,6 +262,7 @@ export default {
   },
   data () {
     return {
+      show: true,
       data: {
         pregnantWoman: ''
       },
@@ -338,6 +344,7 @@ export default {
   methods: {
     getRegister () {
       var _this = this
+
       configServices.loadData(this, 'registros/json/' + this.registerNid, {
         callBack: (data) => {
           data.map((item, key) => {
