@@ -244,6 +244,7 @@
           </div>
           <div class="w_25">
               <img class="provicional" alt="logo" src="../../assets/simulapdf.png"/>
+              <p>Formulario PDF</p>
               <q-btn rounded class="bg_botn_verde btn_crear" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
           </div>
       </div>
