@@ -242,7 +242,7 @@
                   </div>
               </div>
           </div>
-          <div class="w_50">
+          <div class="w_25">
             <q-pdfviewer
               v-model="show"
               type="html5"
@@ -250,6 +250,7 @@
               content-class="container"
               inner-content-class="container"
             />
+              <q-btn rounded class="bg_botn_verde btn_crear" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
           </div>
       </div>
       <q-dialog v-model="tool">
