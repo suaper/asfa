@@ -244,6 +244,7 @@
           </div>
           <div class="w_25">
               <img class="provicional" alt="logo" src="../../assets/simulapdf.png"/>
+              <q-btn rounded class="bg_botn_verde btn_crear" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
           </div>
       </div>
       <q-dialog v-model="tool">
@@ -261,6 +262,34 @@
           </q-card-actions>
         </q-card>
       </q-dialog>
+
+      <q-dialog v-model="popcambiarpdf">
+          <q-card style="width: 700px; max-width: 80vw;" class="pop_cambiarpsf">
+            <q-card-section class="q-pa-md">
+              <h4>Listado de pdf</h4>
+              <div class="desc_pop">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+              </div>
+              <q-btn class="close_pop" icon="close" flat round dense v-close-popup />
+            </q-card-section>
+            <q-card-section class="q-pa-sm listado">
+              <ul class="list_pdf">
+                <li>
+                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
+                </li>
+                <li>
+                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
+                </li>
+                <li>
+                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
+                </li>
+                <li>
+                  <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
+                </li>
+              </ul>
+            </q-card-section>
+          </q-card>
+      </q-dialog>
     </q-form>
 </template>
 
@@ -277,6 +306,7 @@ export default {
       data: {
         pregnantWoman: ''
       },
+      popcambiarpdf: false,
       tool: false,
       registerNid: '',
       date: 'YYYY-MM-DD',

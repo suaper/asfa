@@ -1,6 +1,6 @@
 <template>
 <div class="row_cien flex">
-    <div class="w_20">
+    <div class="w_20 q-pa-md">
         <ul>
             <li class="info_top">
                 <img alt="logo" src="../../assets/iconos/perfil-paciente1.png"/>
@@ -14,12 +14,12 @@
                 </p>
             </li>
             <li class="action">
-                <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" type="submit" label="Editar" />
+                <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="edit" type="submit" label="Editar" />
             </li>
         </ul>
     </div>
 
-    <div class="w_78">
+    <div class="w_78 q-pa-xl">
         <div class="wrp_forms w_73">
             <div class="row ">
                 <div class="item">

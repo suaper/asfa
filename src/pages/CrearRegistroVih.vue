@@ -59,7 +59,8 @@
                 </q-card>
                 <q-dialog v-model="popperfil" full-width>
                     <q-card class="pop_perfil">
-                      <q-card-section class="q-pa-none">
+                      <q-card-section class="q-pa-md">
+                        <q-btn class="close_pop" icon="close" flat round dense v-close-popup />
                         <PopPerfil />
                       </q-card-section>
                     </q-card>
