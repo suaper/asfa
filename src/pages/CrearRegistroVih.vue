@@ -59,7 +59,9 @@
                 </q-card>
                 <q-dialog v-model="popperfil" full-width>
                     <q-card class="pop_perfil">
+
                       <q-card-section class="q-pa-none">
+                        <q-btn class="close_pop" icon="close" flat round dense v-close-popup />
                         <PopPerfil :patient="patient" v-if="loadedPatient"/>
                       </q-card-section>
                     </q-card>

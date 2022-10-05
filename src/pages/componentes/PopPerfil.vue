@@ -1,6 +1,6 @@
 <template>
 <div class="row_cien flex">
-    <div class="w_20">
+    <div class="w_20 q-pa-md">
         <ul>
             <li class="info_top">
                 <img alt="logo" src="../../assets/iconos/perfil-paciente1.png"/>
@@ -19,7 +19,7 @@
         </ul>
     </div>
 
-    <div class="w_78">
+    <div class="w_78 q-pa-xl">
         <div class="wrp_forms w_73">
             <div class="row dos_items">
                 <div class="item">
