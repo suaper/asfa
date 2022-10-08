@@ -62,7 +62,16 @@
                                     <a href="#"><span>Terapia Antirretroviral (TAR) Inicial</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                             </ul>
-                            <div class="row un_item cien">
+                            <div class="row un_item cien resumen_note">
+                              <div class="anotaciones_pdf doc-note">
+                                <h5 class="titulo_nota resalta">
+                                  ¡ Importante !
+                                </h5>
+                                <ul>
+                                  <li>En la sección de Información de Mujeres Gestantes hay campos con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
+                                  <li>En la sección de Terapia Antirretroviral (TAR) Inicial hay campos con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
+                                </ul>
+                              </div>
                                 <div class="item align_right cien">
                                     <q-btn rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                                 </div>

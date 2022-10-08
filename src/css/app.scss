@@ -152,6 +152,9 @@ body{
     width: 100%;
     margin: 0px auto;
 }
+.w_45{
+    width: 45%;
+}
 .w_sesenta{
     max-width: 60%;
     width: 100%;
@@ -936,5 +939,48 @@ h2{
                 width: 100%;
             }
         }
+    }
+}
+.doc-note{
+    background-color: #EEF6F7;
+    padding: 10px;
+    min-height: 15%;
+    .titulo_nota{
+        color: #21609F;
+        text-align: left;
+        display: block;
+        margin: 5px 0;
+    }
+    ul{
+        padding: 0;
+        li{
+            list-style: none;
+            position: relative;
+            color: #292929;
+            font-size: 14px;
+            padding-left: 15px;
+            &:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 5px;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                background: #21609F;
+            }
+        }
+    }
+    .resalta{
+        color: #C23832;
+    }
+}
+.w_48{
+    width: 48%;
+    .q-pdfviewer{
+        height: 70%;
+    }
+    .cambiar_pdf{
+        margin: 20px 0;
     }
 }

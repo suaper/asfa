@@ -1,8 +1,8 @@
 <template>
     <q-form @submit="saveRegister">
       <div class="row flex cien space-betwen">
-          <h4 class="titulo_fondo w_100">Información de mujeres gestantes</h4>
           <div class="wrp_forms w_50">
+            <h4 class="titulo_fondo w_100">Información de mujeres gestantes</h4>
               <div class="row un_item">
                   <div class="item">
                       <label class="toltip">Mujer gestante
@@ -242,7 +242,7 @@
                   </div>
               </div>
           </div>
-          <div class="w_25">
+          <div class="w_48">
             <q-pdfviewer
               v-model="show"
               type="html5"
@@ -250,8 +250,17 @@
               content-class="container"
               inner-content-class="container"
             />
-              <q-btn rounded class="bg_botn_verde btn_crear" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
-          </div>
+            <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
+            <div class="anotaciones_pdf doc-note">
+              <h5 class="titulo_nota">
+                Campos sin diligenciar o con información predeterminada
+              </h5>
+              <ul>
+                <li>24.5 Resultado de la gestación reportada en gestantes con VIH </li>
+                <li>24.7 Supresión farmacológica de la lactancia materna en gestantes con VIH.</li>
+              </ul>
+            </div>
+        </div>
       </div>
       <q-dialog v-model="tool">
         <q-card>
