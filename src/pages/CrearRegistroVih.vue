@@ -115,7 +115,6 @@ export default {
           })
 
           _this.patient = data[0]
-          console.log(_this.patient)
           _this.loadedPatient = true
           _this.$q.loading.hide()
         }

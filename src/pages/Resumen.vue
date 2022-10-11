@@ -44,32 +44,22 @@
                             <hr>
                             <ul class="list_resumen">
                                 <li>
-                                    <a href="#"><span>Información de mujeres gestantes</span>  <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                    <a href="#" @click="goToStep($event, 'FirstStep')"><span>Información de mujeres gestantes</span>  <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                                 <li>
-                                    <a href="#"><span>Información de mujeres gestantes 2</span><q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                    <a href="#" @click="goToStep($event, 'SecondStep')"><span>Información de menores de 12 meses hijos o hijas de madres que viven con VIH </span><q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                                 <li>
-                                    <a href="#"><span>Información de personas que viven con VIH</span><q-icon name="edit" class="blanco_iconos" size="25px" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><span>Información de menores de 12 meses hijos o hijas de madres que viven con VIH </span><q-icon name="edit" class="blanco_iconos" size="25px" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><span>Información de personas con tuberculosis activa</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><span>Terapia Antirretroviral (TAR) Inicial</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                    <a href="#" @click="goToStep($event, 'SecondStep')"><span>Información de personas con tuberculosis activa</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                             </ul>
-                            <div class="row un_item cien resumen_note">
+                            <div class="row un_item cien resumen_note" v-if="comodines.length !== 0">
                               <div class="anotaciones_pdf doc-note">
                                 <h5 class="titulo_nota resalta">
                                   ¡ Importante !
                                 </h5>
                                 <ul>
-                                  <li>En la sección de Información de Mujeres Gestantes hay campos con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
-                                  <li>En la sección de Terapia Antirretroviral (TAR) Inicial hay campos con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
+                                  <li v-for="(item, key) in comodines" :key="key">En la sección de Información de {{ item.section }} el campo {{ item.field }} esta con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
                                 </ul>
                               </div>
                                 <div class="item align_right cien">
@@ -97,7 +87,6 @@
 </template>
 
 <script>
-import configServices from '../services/config'
 
 export default {
   name: 'resumen',
@@ -106,48 +95,26 @@ export default {
       sliders: true,
       patients: [],
       search: '',
-      tab: 'registro_vih'
+      tab: 'registro_vih',
+      comodines: []
     }
   },
   created () {
-    this.getPatients()
+    const comodines = localStorage.getItem('comodines')
+
+    if (typeof comodines !== 'undefined' && comodines !== '' && comodines !== null) {
+      this.comodines = JSON.parse(comodines)
+    }
   },
   methods: {
+    goToStep (e, step) {
+      e.preventDefault()
+
+      localStorage.setItem('step', step)
+      this.$router.push('/crear-registro-vih')
+    },
     editPage (nid) {
 
-    },
-    executeSearch () {
-      var _this = this
-
-      if (this.search !== '') {
-        configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
-          callBack: (data) => {
-            data.map((item, key) => {
-              var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
-              data[key].field_json = JSON.parse(json)
-            })
-
-            _this.patients = data
-
-            _this.$q.loading.hide()
-          }
-        })
-      }
-    },
-    getPatients () {
-      var _this = this
-      configServices.loadData(this, 'pacientes/json/', {
-        callBack: (data) => {
-          data.map((item, key) => {
-            var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
-            data[key].field_json = JSON.parse(json)
-          })
-
-          _this.patients = data
-
-          _this.$q.loading.hide()
-        }
-      })
     }
   }
 }

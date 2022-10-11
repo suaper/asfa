@@ -1,7 +1,7 @@
 <template>
     <q-form @submit="saveRegister">
-      <div class="row flex cien space-betwen">
-          <div class="wrp_forms w_50">
+      <div class="row flex cien space-betwen" >
+          <div class="wrp_forms w_50" v-if="firstStep">
             <h4 class="titulo_fondo w_100">Información de mujeres gestantes</h4>
               <div class="row un_item">
                   <div class="item">
@@ -29,17 +29,17 @@
                       </q-input>
                   </div>
               </div>
-              <!--<div class="row dos_items">
+              <div class="row dos_items">
                   <div class="item">
                       <label>Niño o niña menor de 12 meses que es hijo(a) de madre que vive con VIH</label>
-                      <q-select rounded standout v-model="model" :options="options" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.children" :options="childrens" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>Persona con tuberculosis activa</label>
-                      <q-select rounded standout v-model="model" :options="options" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.tuberculosis" :options="optionsTuberculosis" label="Seleccionar" />
                   </div>
               </div>
-              <div class="row un_item">
+              <!--<div class="row un_item">
                   <div class="item">
                       <label>Condición respecto al diagnóstico de infección por VIH</label>
                       <q-select rounded standout v-model="model" :options="options" label="Seleccionar" />
@@ -236,31 +236,203 @@
                       <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
                     </div>
                     <div class="item cien align_right cien q-mt-md">
-                      <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" />
-                      <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'finalizar'" type="submit" label="Finalizar" />
+                      <!-- <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'finalizar'" type="submit" label="Finalizar" />-->
+                      <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'siguiente'" type="submit" label="Siguiente" />
                     </div>
                   </div>
               </div>
           </div>
+          <div class="wrp_forms w_50" v-if="secondStep">
+          <h4 class="titulo_fondo w_100" v-if="data.children.id !== '0'">Información de menores de 12 meses hijos o hijas de madres que viven con VIH</h4>
+          <div class="row dos_items" v-if="data.children.id !== '0'">
+            <div class="item">
+                <label>Tipo de identificación de la madre del menor de 12 meses expuesto al VIH</label>
+                <q-select rounded standout v-model="data.documentTypeChildren" :options="documentTypesChildres" label="Seleccionar" />
+            </div>
+            <div class="item">
+              <label>Número de identificación de la madre del menor de 12 meses expuesto al VIH..</label>
+              <q-input
+                  rounded
+                  standout
+                  v-model="data.documentNumberChildren"
+                  lazy-rules
+                  type="number"
+                  >
+                </q-input>
+            </div>
+          </div>
+          <div class="row dos_items" v-if="data.children.id !== '0'">
+            <div class="item">
+                <label>¿La madre del menor de 12 meses expuesto al VIH tiene confirmado el diagnóstico de VIH?</label>
+                <q-select rounded standout v-model="data.haveConfirmedVihDx" :options="answersConfirmedDx" label="Seleccionar" />
+            </div>
+            <div class="item">
+              <label>Profilaxis con antirretrovirales para el recién nacido vivo expuesto al VIH.</label>
+              <q-select rounded standout v-model="data.profilaxis" :options="profilaxisOptions" label="Seleccionar" />
+            </div>
+          </div>
+          <div class="row dos_items" v-if="data.children.id !== '0'">
+            <div class="item">
+                <label>Suministro de fórmula láctea.</label>
+                <q-select rounded standout v-model="data.suministroViaLactea" :options="viaLacteaOptions" label="Seleccionar" />
+            </div>
+            <div class="item">
+              <label>Fecha de la primera carga viral para VIH en el menor de 12 meses expuesto al VIH.</label>
+              <q-input filled v-model="data.firstViralChargeVih">
+                  <template v-slot:append>
+                  <q-icon name="event" class="cursor-pointer">
+                      <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
+                      <q-date v-model="data.firstViralChargeVih">
+                          <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                          </div>
+                      </q-date>
+                      </q-popup-proxy>
+                  </q-icon>
+                  </template>
+              </q-input>
+            </div>
+          </div>
+          <div class="row dos_items" v-if="data.children.id !== '0'">
+            <div class="item">
+                <label>Resultado de la primera carga viral en el menor de 12 meses expuesto al VIH.</label>
+                <q-input
+                  rounded
+                  standout
+                  v-model="data.resultFirstViralChargeVih"
+                  lazy-rules
+                  type="number"
+                  >
+                </q-input>
+            </div>
+            <div class="item">
+              <label>Fecha de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
+              <q-input filled v-model="data.secondViralChargeVih">
+                <template v-slot:append>
+                <q-icon name="event" class="cursor-pointer">
+                    <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
+                    <q-date v-model="data.secondViralChargeVih">
+                        <div class="row items-center justify-end">
+                        <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                        </div>
+                    </q-date>
+                    </q-popup-proxy>
+                </q-icon>
+                </template>
+            </q-input>
+            </div>
+          </div>
+          <div class="row dos_items" v-if="data.children.id !== '0'">
+            <div class="item">
+                <label>Resultado de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
+                <q-input
+                  rounded
+                  standout
+                  v-model="data.resultSecondViralChargeVih"
+                  lazy-rules
+                  type="number"
+                  >
+                </q-input>
+            </div>
+            <div class="item">
+              <label>Fecha de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
+              <q-input filled v-model="data.thirdViralChargeVih">
+                  <template v-slot:append>
+                  <q-icon name="event" class="cursor-pointer">
+                      <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
+                      <q-date v-model="data.thirdViralChargeVih">
+                          <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                          </div>
+                      </q-date>
+                      </q-popup-proxy>
+                  </q-icon>
+                  </template>
+              </q-input>
+            </div>
+          </div>
+          <div class="row dos_items" v-if="data.children.id !== '0'">
+            <div class="item">
+                <label>Resultado de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
+                <q-input
+                  rounded
+                  standout
+                  v-model="data.resultThirdViralChargeVih"
+                  lazy-rules
+                  type="number"
+                  >
+                </q-input>
+            </div>
+            <div class="item">
+              <label>Condición final del menor de 12 meses expuesto al VIH.</label>
+              <q-select rounded standout v-model="data.conditionFinalChild" :options="conditionFinalChildOptions" label="Seleccionar" />
+            </div>
+          </div>
+          <h4 class="titulo_fondo w_100" v-if="data.tuberculosis.id !== '3'">Información de personas con tuberculosis activa</h4>
+          <div class="row dos_items" v-if="data.tuberculosis.id !== '3'">
+            <div class="item">
+                <label>Fecha del diagnóstico de la tuberculosis activa reportada.</label>
+                <q-input filled v-model="data.dateDxTuberculosisActiva">
+                    <template v-slot:append>
+                    <q-icon name="event" class="cursor-pointer">
+                        <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
+                        <q-date v-model="data.dateDxTuberculosisActiva">
+                            <div class="row items-center justify-end">
+                            <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                            </div>
+                        </q-date>
+                        </q-popup-proxy>
+                    </q-icon>
+                    </template>
+                </q-input>
+            </div>
+            <div class="item">
+              <label>Fecha de realización de tamizaje para VIH a la persona con tuberculosis activa reportada.</label>
+              <q-input filled v-model="data.dateTamizajeTuberculosis">
+                    <template v-slot:append>
+                    <q-icon name="event" class="cursor-pointer">
+                        <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
+                        <q-date v-model="data.dateTamizajeTuberculosis">
+                            <div class="row items-center justify-end">
+                            <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                            </div>
+                        </q-date>
+                        </q-popup-proxy>
+                    </q-icon>
+                    </template>
+                </q-input>
+            </div>
+          </div>
+          <div class="row actions cien q-mt-xl">
+            <div class="item align_right cien">
+              <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+            </div>
+            <div class="item cien align_right cien q-mt-md">
+              <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
+              <!-- <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'finalizar'" type="submit" label="Finalizar" />-->
+              <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'siguiente'" type="submit" label="Siguiente" />
+            </div>
+          </div>
+        </div>
           <div class="w_48">
             <q-pdfviewer
               v-model="show"
               type="html5"
-              src="http://saspdev.com/asfa/admin/sites/default/files/2022-10/Propuesta Forja Empresas.pdf"
+              :src="urlSite + pdf"
               content-class="container"
               inner-content-class="container"
+              v-if="pdfs.length !== 0"
             />
             <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
-            <div class="anotaciones_pdf doc-note">
+            <div class="anotaciones_pdf doc-note" v-if="anotations.length !== 0">
               <h5 class="titulo_nota">
-                Campos sin diligenciar o con información predeterminada
+                Anotaciones
               </h5>
               <ul>
-                <li>24.5 Resultado de la gestación reportada en gestantes con VIH </li>
-                <li>24.7 Supresión farmacológica de la lactancia materna en gestantes con VIH.</li>
+                <li v-for="(item, key) in anotations" :key="key"><span>{{ item.title }}</span><q-btn @click="openPopupAnotations(item)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Ver" /></li>
               </ul>
             </div>
-        </div>
+          </div>
       </div>
       <q-dialog v-model="tool">
         <q-card>
@@ -289,19 +461,22 @@
             </q-card-section>
             <q-card-section class="q-pa-sm listado">
               <ul class="list_pdf">
-                <li>
-                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
-                </li>
-                <li>
-                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
-                </li>
-                <li>
-                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
-                </li>
-                <li>
-                  <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>Información de mujeres gestantes</span> </p><a href="#">Seleccionar</a>
+                <li v-for="(item, key) in pdfs" :key="key">
+                    <p><q-icon name="article" class="blanco_iconos" size="25px" /><span>{{ item.title }}</span> </p><a href="#" @click="setPdf($event, item)">Seleccionar</a>
                 </li>
               </ul>
+            </q-card-section>
+          </q-card>
+      </q-dialog>
+
+      <q-dialog v-model="popupanotacion">
+          <q-card style="width: 700px; max-width: 80vw;" class="pop_cambiarpsf">
+            <q-card-section class="q-pa-md">
+              <h4>{{ anotation.title }}</h4>
+              <div class="desc_pop">
+                <p v-html="anotation.body"></p>
+              </div>
+              <q-btn class="close_pop" icon="close" flat round dense v-close-popup />
             </q-card-section>
           </q-card>
       </q-dialog>
@@ -317,11 +492,15 @@ export default {
   },
   data () {
     return {
+      urlSite: 'http://saspdev.com',
       show: true,
+      firstStep: true,
+      secondStep: false,
       data: {
         pregnantWoman: ''
       },
       popcambiarpdf: false,
+      popupanotacion: false,
       tool: false,
       registerNid: '',
       date: 'YYYY-MM-DD',
@@ -340,6 +519,29 @@ export default {
         { id: '6', label: 'No, aún sin diagnóstico definitivo de infección por el VIH.' },
         { id: '7', label: 'No se realizó prueba de VIH durante la gestación reportada.' },
         { id: '9', label: 'No aplica (hombre o mujer no gestante en el periodo de observación reportado).' }
+      ],
+      documentTypesChildres: [
+        { id: 'CC', label: 'Cédula ciudadanía' },
+        { id: 'CE', label: 'Cédula de extranjería' },
+        { id: 'CD', label: 'Carné diplomático' },
+        { id: 'PA', label: 'Pasaporte' },
+        { id: 'SC', label: 'Salvoconducto' },
+        { id: 'PE', label: 'Permiso Especial de Permanencia' },
+        { id: 'RC', label: 'Registro civil' },
+        { id: 'TI', label: 'Tarjeta de identidad' },
+        { id: 'CN', label: 'Certificado de nacido vivo' },
+        { id: 'AS', label: 'Adulto sin identificar' },
+        { id: 'MS', label: 'Menor sin identificar' },
+        { id: 'NA', label: 'No aplica (no es menor de 12 meses expuesto al VIH)' }
+      ],
+      childrens: [
+        { id: '0', label: 'No' },
+        { id: '1', label: 'Si' }
+      ],
+      optionsTuberculosis: [
+        { id: '1', label: 'Tiene tuberculosis activa al corte del periodo de observación.' },
+        { id: '2', label: 'Tuvo tuberculosis activa en el periodo de observación.' },
+        { id: '3', label: 'No tuvo tuberculosis activa en el período de observación.' }
       ],
       ageVihReported: [
         { id: '1', label: 'Si ya tenía diagnóstico de VIH confirmado previo a la gestación' },
@@ -387,7 +589,37 @@ export default {
         { id: 'MS', label: 'Menor sin identificación' },
         { id: 'NA', label: 'No aplica (No ha culminado la gestación o el producto de la gestación fue un aborto o un óbito fetal, hombre, mujer no gestante o gestante sin VIH)' }
       ],
-      type: ''
+      type: '',
+      pdfs: [],
+      pdf: '',
+      anotations: [],
+      anotation: [],
+      answersConfirmedDx: [
+        { id: '0', label: 'No' },
+        { id: '1', label: 'Si' },
+        { id: '9', label: 'No aplica (no es menor de 12 meses expuesto al VIH)' }
+      ],
+      profilaxisOptions: [
+        { id: '1', label: 'Sí, recibió profilaxis por 42 días con Zidovudina.' },
+        { id: '2', label: 'Sí, recibió profilaxis con Nevirapina 3 dosis al nacimiento más Zidovudina por 42 días.' },
+        { id: '3', label: 'Sí, recibió profilaxis, pero incompleta.' },
+        { id: '4', label: 'Actualmente está recibiendo profilaxis.' },
+        { id: '5', label: 'No recibió profilaxis con antirretrovirales.' },
+        { id: '9', label: 'No aplica (no es menor de 12 meses expuesto al VIH)' }
+      ],
+      viaLacteaOptions: [
+        { id: '1', label: 'Recibió fórmula láctea de forma continua desde el nacimiento hasta los 12 meses de vida.' },
+        { id: '2', label: 'Recibió fórmula láctea por menos de 12 meses.' },
+        { id: '3', label: 'Está recibiendo fórmula láctea (es menor de 12 meses).' },
+        { id: '4', label: 'No recibió fórmula láctea.' },
+        { id: '9', label: 'No aplica (no es menor de 12 meses expuesto al VIH).' }
+      ],
+      conditionFinalChildOptions: [
+        { id: '1', label: 'Diagnóstico confirmado de VIH.' },
+        { id: '2', label: 'Se descartó infección por VIH.' },
+        { id: '3', label: 'Aún no se ha definido la condición final del menor.' },
+        { id: '9', label: 'No aplica (no es menor de 12 meses expuesto al VIH)' }
+      ]
     }
   },
   created () {
@@ -396,9 +628,55 @@ export default {
     this.registerNid = localStorage.getItem('registerNid')
     if (this.registerNid !== '') {
       this.getRegister()
+      this.getAnotations()
     }
+
+    var step = localStorage.getItem('step')
+    console.log(step)
+    if (step !== '' && step !== null) {
+      switch (step) {
+        case 'FirstStep':
+          this.firstStep = true
+          break
+        case 'SecondStep':
+          this.secondStep = true
+          this.firstStep = false
+          break
+      }
+    }
+    this.getPdfs()
   },
   methods: {
+    openPopupAnotations (item) {
+      this.anotation = item
+      this.popupanotacion = true
+    },
+    setPdf (e, item) {
+      e.preventDefault()
+      this.pdf = item.field_pdf
+      this.popcambiarpdf = false
+    },
+    getPdfs () {
+      var _this = this
+      configServices.loadData(this, 'pdfs/' + this.patient.nid + '/json', {
+        callBack: (data) => {
+          if (data.length !== 0) {
+            _this.pdfs = data
+            _this.pdf = data[0].field_pdf
+          }
+          _this.$q.loading.hide()
+        }
+      })
+    },
+    getAnotations () {
+      var _this = this
+      configServices.loadData(this, 'anotaciones/' + this.registerNid + '/json', {
+        callBack: (data) => {
+          _this.anotations = data
+          _this.$q.loading.hide()
+        }
+      })
+    },
     getRegister () {
       var _this = this
 
@@ -416,6 +694,12 @@ export default {
           _this.$q.loading.hide()
         }
       })
+    },
+    previousStep () {
+      if (this.secondStep) {
+        this.firstStep = true
+        this.secondStep = false
+      }
     },
     saveRegister () {
       var _this = this
@@ -742,6 +1026,84 @@ export default {
         return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
       }
 
+      var comodines = []
+
+      if (this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1822-02-01' || this.data.dateCulminationReported === '1799-01-01' || this.data.dateCulminationReported === '1811-01-01' || this.data.dateCulminationReported === '1800-01-01' || this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1845-01-01' || this.data.dateCulminationReported === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Fecha de culminación de la gestación reportada en gestantes con VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.fum === '1833-03-03' || this.data.fum === '1822-02-01' || this.data.fum === '1799-01-01' || this.data.fum === '1811-01-01' || this.data.fum === '1800-01-01' || this.data.fum === '1833-03-03' || this.data.fum === '1845-01-01' || this.data.fum === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'FUM (Fecha de última menstruación confiable)'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1822-02-01' || this.data.dateReportedPregnancy === '1799-01-01' || this.data.dateReportedPregnancy === '1811-01-01' || this.data.dateReportedPregnancy === '1800-01-01' || this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1845-01-01' || this.data.dateReportedPregnancy === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Fecha del diagnóstico de la gestación reportada'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1822-02-01' || this.data.dateScreeningFirst === '1799-01-01' || this.data.dateScreeningFirst === '1811-01-01' || this.data.dateScreeningFirst === '1800-01-01' || this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1845-01-01' || this.data.dateScreeningFirst === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1822-02-01' || this.data.dateScreeningSecond === '1799-01-01' || this.data.dateScreeningSecond === '1811-01-01' || this.data.dateScreeningSecond === '1800-01-01' || this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1845-01-01' || this.data.dateScreeningSecond === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1822-02-01' || this.data.dateScreeningThird === '1799-01-01' || this.data.dateScreeningThird === '1811-01-01' || this.data.dateScreeningThird === '1800-01-01' || this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1845-01-01' || this.data.dateScreeningThird === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1822-02-01' || this.data.dateScreeningBirth === '1799-01-01' || this.data.dateScreeningBirth === '1811-01-01' || this.data.dateScreeningBirth === '1800-01-01' || this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1845-01-01' || this.data.dateScreeningBirth === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Fecha de realización de tamizaje para VIH en el momento del parto'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1822-02-01' || this.data.resultElisaVih === '1799-01-01' || this.data.resultElisaVih === '1811-01-01' || this.data.resultElisaVih === '1800-01-01' || this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1845-01-01' || this.data.resultElisaVih === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Resultado Elisa para VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (comodines.length !== 0) {
+        localStorage.setItem('comodines', JSON.stringify(comodines))
+      }
+
       var data = {
         type: 'saveRegister',
         data: this.data,
@@ -750,6 +1112,10 @@ export default {
       }
 
       if (this.type === 'borrador') {
+        data.status = 'Borrador'
+      }
+
+      if (this.type === 'siguiente') {
         data.status = 'Borrador'
       }
 
@@ -768,11 +1134,29 @@ export default {
           if (typeof data.error !== 'undefined') {
             return _this.$swal('Advertencia', 'Error al crear registro verifique que no haya un registro previamente creado para el paciente', 'error')
           }
+          if (_this.type === 'borrador') {
+            _this.registerNid = data.id
+          }
+          if (_this.type === 'siguiente') {
+            if (typeof _this.data.children === 'undefined' || typeof _this.data.tuberculosis === 'undefined') {
+              localStorage.setItem('registerNid', _this.registerNid)
+              _this.$router.push('/resumen')
+              return
+            }
 
-          this.registerNid = data.id
-          _this.$swal('', 'Registro guardado correctamente', 'success')
-
-          if (this.type !== 'borrador') {
+            if (_this.secondStep === false) {
+              if (_this.data.children.id !== '0' || _this.data.tuberculosis.id !== '3') {
+                _this.firstStep = false
+                _this.secondStep = true
+              }
+            } else {
+              _this.$router.push('/resumen')
+            }
+          }
+          if (_this.type === 'borrador' || _this.type === 'finalizado') {
+            _this.$swal('', 'Registro guardado correctamente', 'success')
+          }
+          if (_this.type === 'finalizado') {
             _this.$router.push('/registros')
           }
         }
