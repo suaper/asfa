@@ -1026,6 +1026,200 @@ export default {
         return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
       }
 
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.documentNumberChildren === '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.haveConfirmedVihDx !== 'undefined' && this.data.haveConfirmedVihDx.id === '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.profilaxis !== 'undefined' && this.data.profilaxis.id === '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.suministroViaLactea !== 'undefined' && this.data.suministroViaLactea.id === '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.firstViralChargeVih === '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.secondViralChargeVih === '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.thirdViralChargeVih === '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.conditionFinalChild !== 'undefined' && this.data.conditionFinalChild.id === '9') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+      }
+
+      if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.pregnantWoman !== 'undefined' && parseInt(this.data.pregnantWoman.id) < 3) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4083', 'error')
+      }
+
+      if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateDxTuberculosisActiva === '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
+      }
+
+      if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateTamizajeTuberculosis === '1845-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
+      }
+
+      if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateScreeningSecond !== '1799-01-01') {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4084', 'error')
+      }
+
+      if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && (this.data.documentNumberChildren !== '55' && this.data.documentNumberChildren !== '9')) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+      }
+
+      if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) <= 1) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+      }
+
+      if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.profilaxis !== 'undefined' && parseInt(this.data.profilaxis.id) <= 5) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+      }
+
+      if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) <= 4) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+      }
+
+      if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) <= 3) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+      }
+
+      if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id !== 'NA' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B5329', 'error')
+      }
+
+      if (this.data.documentNumberChildren === '9' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 0) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4159', 'error')
+      }
+
+      if (typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) < 2 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
+      }
+
+      if (typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) < 5 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
+      }
+
+      if (this.data.firstViralChargeVih === '1800-01-01') {
+        if (this.data.resultFirstViralChargeVih !== '99999999') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+        }
+
+        if (this.data.secondViralChargeVih !== '1800-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+        }
+
+        if (this.data.thirdViralChargeVih !== '1800-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+        }
+      }
+
+      if (this.data.firstViralChargeVih === '1846-01-01') {
+        if (this.data.resultFirstViralChargeVih !== '55555555') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2933', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
+        if (this.data.secondViralChargeVih !== '1800-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+        }
+
+        if (this.data.thirdViralChargeVih !== '1833-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+        }
+
+        if (this.data.firstViralChargeVih === this.data.thirdViralChargeVih) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2934', 'error')
+        }
+
+        if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.firstViralChargeVih)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+        }
+
+        if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+        }
+      }
+
+      if (this.data.secondViralChargeVih === '1800-01-01') {
+        if (this.data.resultSecondViralChargeVih !== '99999999') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2937', 'error')
+        }
+      }
+
+      if (this.data.secondViralChargeVih === '1846-01-01') {
+        if (this.data.resultSecondViralChargeVih !== '55555555') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2938', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
+        if (Date.parse(this.data.thirdViralChargeVih) < Date.parse('1800-01-01')) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+        }
+
+        if (this.data.resultSecondViralChargeVih === '99999999') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+        }
+
+        if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+        }
+      }
+
+      if (this.data.thirdViralChargeVih === '1800-01-01') {
+        if (this.data.resultThirdViralChargeVih !== '99999999') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2943', 'error')
+        }
+      }
+
+      if (this.data.thirdViralChargeVih === '1846-01-01') {
+        if (this.data.resultThirdViralChargeVih !== '55555555') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2944', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.thirdViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
+        if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+        }
+
+        if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+        }
+      }
+
+      if (typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) === 1 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+        return _this.$swal('Advertencia', 'Error en la validación No. B4128', 'error')
+      }
+
+      if (Date.parse(this.data.dateDxTuberculosisActiva) > Date.parse(this.patient.field_json.birthdate)) {
+        if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+        }
+      }
+
+      if (Date.parse(this.data.dateTamizajeTuberculosis) > Date.parse(this.patient.field_json.birthdate)) {
+        if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+        }
+      }
+
       var comodines = []
 
       if (this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1822-02-01' || this.data.dateCulminationReported === '1799-01-01' || this.data.dateCulminationReported === '1811-01-01' || this.data.dateCulminationReported === '1800-01-01' || this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1845-01-01' || this.data.dateCulminationReported === '1846-01-01') {
@@ -1092,6 +1286,51 @@ export default {
       }
 
       if (this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1822-02-01' || this.data.resultElisaVih === '1799-01-01' || this.data.resultElisaVih === '1811-01-01' || this.data.resultElisaVih === '1800-01-01' || this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1845-01-01' || this.data.resultElisaVih === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Resultado Elisa para VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1822-02-01' || this.data.firstViralChargeVih === '1799-01-01' || this.data.firstViralChargeVih === '1811-01-01' || this.data.firstViralChargeVih === '1800-01-01' || this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1845-01-01' || this.data.firstViralChargeVih === '1846-01-01' || this.data.firstViralChargeVih === '1833-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Resultado Elisa para VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1822-02-01' || this.data.secondViralChargeVih === '1799-01-01' || this.data.secondViralChargeVih === '1811-01-01' || this.data.secondViralChargeVih === '1800-01-01' || this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1845-01-01' || this.data.secondViralChargeVih === '1846-01-01' || this.data.secondViralChargeVih === '1833-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Resultado Elisa para VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1822-02-01' || this.data.thirdViralChargeVih === '1799-01-01' || this.data.thirdViralChargeVih === '1811-01-01' || this.data.thirdViralChargeVih === '1800-01-01' || this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1845-01-01' || this.data.thirdViralChargeVih === '1846-01-01' || this.data.thirdViralChargeVih === '1833-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Resultado Elisa para VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1822-02-01' || this.data.dateDxTuberculosisActiva === '1799-01-01' || this.data.dateDxTuberculosisActiva === '1811-01-01' || this.data.dateDxTuberculosisActiva === '1800-01-01' || this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1845-01-01' || this.data.dateDxTuberculosisActiva === '1846-01-01') {
+        const comodin = {
+          section: 'Mujeres Gestantes',
+          field: 'Resultado Elisa para VIH.'
+        }
+
+        comodines.push(comodin)
+      }
+
+      if (this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1822-02-01' || this.data.dateTamizajeTuberculosis === '1799-01-01' || this.data.dateTamizajeTuberculosis === '1811-01-01' || this.data.dateTamizajeTuberculosis === '1800-01-01' || this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1845-01-01' || this.data.dateTamizajeTuberculosis === '1846-01-01') {
         const comodin = {
           section: 'Mujeres Gestantes',
           field: 'Resultado Elisa para VIH.'
