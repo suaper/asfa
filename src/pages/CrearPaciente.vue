@@ -22,8 +22,6 @@
                     <div class="item">
                         <img alt="logo" src="../assets/iconos/perfil-paciente1.png"/>
                     </div>
-                </div>
-                <div class="row dos_items">
                     <div class="item">
                         <label>Entidad Reportante</label>
                         <q-input
@@ -35,6 +33,8 @@
                         >
                       </q-input>
                     </div>
+                </div>
+                <div class="row un_item">
                     <div class="item">
                         <label>Vinculacion de la entidad reportante al SGSSS</label>
                         <q-select rounded standout v-model="data.bonding" :options="bondings" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
