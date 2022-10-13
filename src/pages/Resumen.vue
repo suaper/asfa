@@ -62,7 +62,7 @@
                                   <li v-for="(item, key) in comodines" :key="key">En la sección de Información de {{ item.section }} el campo {{ item.field }} esta con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
                                 </ul>
                               </div>
-                                <div class="item align_right cien">
+                                <div class="item align_right cien q-mt-xl">
                                     <q-btn rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                                 </div>
                             </div>
