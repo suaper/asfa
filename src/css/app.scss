@@ -837,6 +837,10 @@ h2{
     top: 0;
     background: #21609F;
     color: #fff;
+    .q-btn__wrapper{
+        min-height: 1.4em;
+        min-width: 1.4em;
+    }
 }
 .pop_perfil{
     .row_cien{
@@ -954,16 +958,21 @@ h2{
     ul{
         padding: 0;
         li{
+            align-items: center;
             list-style: none;
             position: relative;
             color: #292929;
             font-size: 14px;
-            padding-left: 15px;
+            padding-left: 20px !important;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
             &:before{
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 5px;
+                top: 22px;
                 border-radius: 50%;
                 width: 10px;
                 height: 10px;

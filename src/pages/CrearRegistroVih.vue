@@ -3,7 +3,6 @@
     <div class="q-pb-md all_width cien">
         <div class="w_1200 q-pd-md cien">
             <h3 class="title_out_content">Bienvenido Dashboard</h3>
-            <h2>prueba</h2>
         </div>
         <div class="w_1200 bg_white q-pa-xl cien">
             <div class="wrp_table tipo_grilla q-mt-xl">
