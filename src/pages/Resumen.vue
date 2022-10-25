@@ -52,6 +52,30 @@
                                 <li>
                                     <a href="#" @click="goToStep($event, 'SecondStep')"><span>Información de personas con tuberculosis activa</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'ThirdStep')"><span>Información de personas que viven con VIH</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'FourthStep')"><span>Terapia Antirretroviral (TAR) Inicial</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'FiveStep')"><span>Patologías definitorias de SIDA (diagnosticadas durante o después del diagnóstico de VIH)</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'SixStep')"><span>Condición actual de la persona que vive con VIH</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'SevenStep')"><span>Terapia Antirretroviral (TAR) Actual</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'EightStep')"><span>Intervenciones de prevención en la persona que vive con VIH</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'NineStep')"><span>Profilaxis en el período de reporte</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" @click="goToStep($event, 'NineStep')"><span>Situación administrativa a la fecha de corte</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                </li>
                             </ul>
                             <div class="row un_item cien resumen_note" v-if="comodines.length !== 0">
                               <div class="anotaciones_pdf doc-note">

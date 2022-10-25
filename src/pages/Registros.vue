@@ -119,6 +119,7 @@ export default {
   },
   created () {
     this.getRegistros()
+    localStorage.setItem('step', '')
 
     localStorage.setItem('registerNid', '')
     localStorage.setItem('patientNid', '')
