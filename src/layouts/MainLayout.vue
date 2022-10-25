@@ -72,7 +72,7 @@
                 <img alt="logo" src="../assets/iconos/i-reporte.png"/>
               </q-item-section>
 
-              <q-item-section>
+              <q-item-section @click="irReportes">
                 Reportes
                 <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
@@ -140,6 +140,9 @@ export default {
     },
     irRegistros () {
       this.$router.push('/registros')
+    },
+    irReportes () {
+      this.$router.push('/reportes')
     },
     irResumen () {
       this.$router.push('/resumen')

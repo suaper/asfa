@@ -29,6 +29,13 @@ const routes = [
     ]
   },
   {
+    path: '/reportes',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Reportes.vue') }
+    ]
+  },
+  {
     path: '/crear-registro-vih',
     component: () => import('layouts/MainLayout.vue'),
     children: [
