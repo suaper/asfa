@@ -231,15 +231,17 @@
                           </template>
                       </q-input>
                   </div>
-                  <div class="row actions cien q-mt-xl">
-                    <div class="item align_right cien">
-                      <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
-                    </div>
-                    <div class="item cien align_right cien q-mt-md">
-                      <!-- <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'finalizar'" type="submit" label="Finalizar" />-->
-                      <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'siguiente'" type="submit" label="Siguiente" />
-                    </div>
+              </div>
+              <div class="row dos_items">
+                <div class="row actions cien q-mt-xl">
+                  <div class="item align_right cien">
+                    <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
                   </div>
+                  <div class="item cien align_right cien q-mt-md">
+                    <!-- <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'finalizar'" type="submit" label="Finalizar" />-->
+                    <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'siguiente'" type="submit" label="Siguiente" />
+                  </div>
+                </div>
               </div>
           </div>
           <div class="wrp_forms w_50" v-if="secondStep">
