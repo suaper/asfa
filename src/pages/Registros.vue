@@ -132,6 +132,8 @@ export default {
     editPage (nid, patient) {
       localStorage.setItem('registerNid', nid)
       localStorage.setItem('patientNid', patient)
+      localStorage.setItem('step', '')
+
       this.$router.push('/crear-registro-vih')
     },
     getRegistros () {

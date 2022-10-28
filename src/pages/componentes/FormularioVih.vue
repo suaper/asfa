@@ -235,7 +235,7 @@
               <div class="row dos_items">
                 <div class="row actions cien q-mt-xl">
                   <div class="item align_right cien">
-                    <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                    <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                   </div>
                   <div class="item cien align_right cien q-mt-md">
                     <!-- <q-btn rounded class="bg_botn_verde btn_crear" text-color="white" icon-right="chevron_right" @click="type = 'finalizar'" type="submit" label="Finalizar" />-->
@@ -407,7 +407,7 @@
             </div>
             <div class="row actions cien q-mt-xl">
               <div class="item align_right cien">
-                <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
               </div>
               <div class="item cien align_right cien q-mt-md">
                 <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -543,7 +543,7 @@
               </div>
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -750,7 +750,7 @@
 
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -885,7 +885,7 @@
 
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -1485,7 +1485,7 @@
 
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -1611,7 +1611,7 @@
 
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -1717,7 +1717,7 @@
 
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -1878,7 +1878,7 @@
 
               <div class="row actions cien q-mt-xl">
                 <div class="item align_right cien">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit" @click="type = 'borrador'" v-if="status !== 'finalizado'"/>
                 </div>
                 <div class="item cien align_right cien q-mt-md">
                   <q-btn rounded class="bg_botn_white_border_green btn_crear q-mr-md" text-color="white" icon="chevron_left" label="Atrás" @click="previousStep()" />
@@ -2719,11 +2719,21 @@ export default {
         { id: '2', label: 'Muerte por otra patología no definitoria de SIDA. ' },
         { id: '3', label: 'Muerte por causa externa.' },
         { id: '4', label: 'La persona no ha fallecido.' }
-      ]
+      ],
+      auditor: false,
+      status: ''
     }
   },
   created () {
     this.user = JSON.parse(localStorage.getItem('user'))
+
+    if (this.user !== {}) {
+      this.user.roles.map((item, key) => {
+        if (item === 'auditor') {
+          this.auditor = true
+        }
+      })
+    }
 
     this.registerNid = localStorage.getItem('registerNid')
     if (this.registerNid !== '') {
@@ -2837,6 +2847,10 @@ export default {
 
       configServices.loadData(this, 'registros/json/' + this.registerNid, {
         callBack: (data) => {
+          if (data[0].field_status === 'Finalizado') {
+            _this.status = 'finalizado'
+          }
+
           data.map((item, key) => {
             var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
             data[key].field_json = JSON.parse(json)
@@ -2864,144 +2878,164 @@ export default {
     saveRegister () {
       var _this = this
 
-      if (typeof this.patient.field_json.sex !== 'undefined') {
-        if (this.patient.field_json.sex.id === 'H' && this.data.fum !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+      if (this.status !== 'finalizado') {
+        if (typeof this.patient.field_json.sex !== 'undefined') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.fum !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningFirst !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningFirst !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.dateReportedPregnancy !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateReportedPregnancy !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningSecond !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningSecond !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningThird !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningThird !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningBirth !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningBirth !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.womanVihReported.id !== '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.womanVihReported.id !== '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.ageVihReported.id !== '99') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.ageVihReported.id !== '99') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.receivedTreatmentVih.id !== '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.receivedTreatmentVih.id !== '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.ageInitTar.id !== '99') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.ageInitTar.id !== '99') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.tarIntraBirth.id !== '99') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.tarIntraBirth.id !== '99') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.resultVihReported.id !== '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.resultVihReported.id !== '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.dateCulminationReported !== '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateCulminationReported !== '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.pharmacologicalSuppression.id !== '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.pharmacologicalSuppression.id !== '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.identificationTypeNewbor.id !== 'NA') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.identificationTypeNewbor.id !== 'NA') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.identificationNewborn !== '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-        }
+          if (this.patient.field_json.sex.id === 'H' && this.data.identificationNewborn !== '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          }
 
-        if (this.patient.field_json.sex.id === 'H' && this.data.pregnantWoman.id !== '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
-        }
-      }
-
-      if (parseInt(this.data.pregnantWoman.id) < 3) {
-        var currentDate = new Date('2020-04-01')
-        if (this.data.dateReportedPregnancy !== '1845-01-01') {
-          if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(currentDate)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2890', 'error')
+          if (this.patient.field_json.sex.id === 'H' && this.data.pregnantWoman.id !== '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
           }
         }
 
-        if (this.data.dateScreeningFirst === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (this.data.dateScreeningSecond === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (this.data.dateScreeningThird === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (this.data.dateScreeningBirth === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.ageVihReported !== 'undefined' && this.data.ageVihReported.id === '99') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.ageInitTar !== 'undefined' && this.data.ageInitTar.id === '99') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (this.data.dateCulminationReported === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-
-        if (typeof this.data.pharmacologicalSuppression !== 'undefined' && this.data.pharmacologicalSuppression.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-        }
-      }
-
-      var maxDate = new Date('2020-04-01')
-      if (this.data.dateScreeningFirst !== '1799-01-01' && this.data.dateScreeningFirst !== '1822-02-01' && this.data.dateScreeningFirst !== '1833-03-03' && this.data.dateScreeningFirst !== '1845-01-01' && this.data.dateScreeningFirst !== '1846-01-01') {
-        if (this.data.dateReportedPregnancy !== '1845-01-01' && this.data.dateReportedPregnancy !== '1846-01-01') {
-          if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(maxDate)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+        if (parseInt(this.data.pregnantWoman.id) < 3) {
+          var currentDate = new Date('2020-04-01')
+          if (this.data.dateReportedPregnancy !== '1845-01-01') {
+            if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(currentDate)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2890', 'error')
+            }
           }
 
           if (this.data.dateScreeningFirst === '1845-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
+          if (this.data.dateScreeningSecond === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (this.data.dateScreeningThird === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (this.data.dateScreeningBirth === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.ageVihReported !== 'undefined' && this.data.ageVihReported.id === '99') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.ageInitTar !== 'undefined' && this.data.ageInitTar.id === '99') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (this.data.dateCulminationReported === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+
+          if (typeof this.data.pharmacologicalSuppression !== 'undefined' && this.data.pharmacologicalSuppression.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+          }
+        }
+
+        var maxDate = new Date('2020-04-01')
+        if (this.data.dateScreeningFirst !== '1799-01-01' && this.data.dateScreeningFirst !== '1822-02-01' && this.data.dateScreeningFirst !== '1833-03-03' && this.data.dateScreeningFirst !== '1845-01-01' && this.data.dateScreeningFirst !== '1846-01-01') {
+          if (this.data.dateReportedPregnancy !== '1845-01-01' && this.data.dateReportedPregnancy !== '1846-01-01') {
+            if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(maxDate)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+            }
+
+            if (this.data.dateScreeningFirst === '1845-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            }
+
+            if (this.data.dateScreeningSecond === '1845-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            }
+
+            if (this.data.dateScreeningThird === '1845-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            }
+
+            if (this.data.dateScreeningBirth === '1845-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            }
+          }
+
+          if (Date.parse(this.data.dateScreeningFirst) < Date.parse(this.data.dateReportedPregnancy)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2902', 'error')
+          }
+        }
+
+        if (Date.parse(this.data.dateScreeningFirst) > Date.parse(this.data.dateReportedPregnancy)) {
           if (this.data.dateScreeningSecond === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
           }
@@ -3015,1093 +3049,1121 @@ export default {
           }
         }
 
-        if (Date.parse(this.data.dateScreeningFirst) < Date.parse(this.data.dateReportedPregnancy)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2902', 'error')
-        }
-      }
+        if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
+          if (Date.parse(this.data.dateScreeningFirst) > Date.parse(maxDate)) {
+            if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
+              if (Date.parse(this.data.dateScreeningSecond) <= Date.parse(this.data.dateScreeningFirst)) {
+                return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+              }
+            }
 
-      if (Date.parse(this.data.dateScreeningFirst) > Date.parse(this.data.dateReportedPregnancy)) {
-        if (this.data.dateScreeningSecond === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
-        }
+            if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01') {
+              if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningFirst)) {
+                return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+              }
+            }
 
-        if (this.data.dateScreeningThird === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
-        }
+            if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01') {
+              if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningFirst)) {
+                return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+              }
+            }
 
-        if (this.data.dateScreeningBirth === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
-        }
-      }
-
-      if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
-        if (Date.parse(this.data.dateScreeningFirst) > Date.parse(maxDate)) {
-          if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
-            if (Date.parse(this.data.dateScreeningSecond) <= Date.parse(this.data.dateScreeningFirst)) {
+            if (this.data.dateScreeningBirth === '1845-01-01') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
             }
           }
 
-          if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01') {
-            if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningFirst)) {
-              return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+          if (Date.parse(this.data.dateScreeningSecond) < Date.parse(this.data.dateReportedPregnancy)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+          }
+        }
+
+        if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01' && this.data.dateScreeningThird !== '1811-01-01') {
+          if (Date.parse(this.data.dateScreeningSecond) > Date.parse(maxDate)) {
+            if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningSecond)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+
+            var dateMaxThird = new Date('1845-01-01')
+
+            if (Date.parse(this.data.dateScreeningThird) <= Date.parse(dateMaxThird)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+
+            if (this.date.dateScreeningBirth === this.data.dateScreeningSecond) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+
+            if (this.date.dateScreeningBirth === '1845-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
             }
           }
 
-          if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01') {
-            if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningFirst)) {
-              return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+          if (Date.parse(this.data.dateScreeningThird) < Date.parse(this.data.dateReportedPregnancy)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2908', 'error')
+          }
+        }
+
+        if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01' && this.data.dateScreeningBirth !== '1811-01-01') {
+          if (Date.parse(this.data.dateScreeningThird) > Date.parse(maxDate)) {
+            if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningSecond)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
+            }
+
+            if (this.date.dateScreeningThird === '1845-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
             }
           }
 
-          if (this.data.dateScreeningBirth === '1845-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+          if (Date.parse(this.data.dateScreeningBirth) < Date.parse(this.data.dateReportedPregnancy)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2911', 'error')
           }
         }
 
-        if (Date.parse(this.data.dateScreeningSecond) < Date.parse(this.data.dateReportedPregnancy)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
-        }
-      }
-
-      if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01' && this.data.dateScreeningThird !== '1811-01-01') {
-        if (Date.parse(this.data.dateScreeningSecond) > Date.parse(maxDate)) {
-          if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningSecond)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-          }
-
-          var dateMaxThird = new Date('1845-01-01')
-
-          if (Date.parse(this.data.dateScreeningThird) <= Date.parse(dateMaxThird)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-          }
-
-          if (this.date.dateScreeningBirth === this.data.dateScreeningSecond) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-          }
-
-          if (this.date.dateScreeningBirth === '1845-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+        if (typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '1') {
+          if (parseInt(this.data.ageVihReported) < 2 || parseInt(this.data.ageVihReported) > 44) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3261', 'error')
           }
         }
 
-        if (Date.parse(this.data.dateScreeningThird) < Date.parse(this.data.dateReportedPregnancy)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2908', 'error')
-        }
-      }
-
-      if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01' && this.data.dateScreeningBirth !== '1811-01-01') {
-        if (Date.parse(this.data.dateScreeningThird) > Date.parse(maxDate)) {
-          if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningSecond)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
-          }
-
-          if (this.date.dateScreeningThird === '1845-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
-          }
+        if (typeof this.data.womanVihReported !== 'undefined' && this.data.ageVihReported === '1' && this.data.womanVihReported.id !== '3') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3219', 'error')
         }
 
-        if (Date.parse(this.data.dateScreeningBirth) < Date.parse(this.data.dateReportedPregnancy)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2911', 'error')
-        }
-      }
-
-      if (typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '1') {
-        if (parseInt(this.data.ageVihReported) < 2 || parseInt(this.data.ageVihReported) > 44) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3261', 'error')
-        }
-      }
-
-      if (typeof this.data.womanVihReported !== 'undefined' && this.data.ageVihReported === '1' && this.data.womanVihReported.id !== '3') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B3219', 'error')
-      }
-
-      if (parseInt(this.data.pregnantWoman) > 3 && parseInt(this.data.ageVihReported) < 45) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4146', 'error')
-      }
-
-      if (typeof this.data.womanVihReported !== 'undefined' && typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '1' && this.data.womanVihReported.id !== '3') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B3222', 'error')
-      }
-
-      if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '1' && this.data.ageInitTar !== '1') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-      }
-
-      if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '3' && this.data.ageInitTar !== '98') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-      }
-
-      if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '4' && this.data.ageInitTar !== '98') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-      }
-
-      if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) <= 1) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-      }
-
-      if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) > 98) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-      }
-
-      if (typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '4' && this.data.pregnantWoman !== '1') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4150', 'error')
-      }
-
-      if (typeof this.data.tarIntraBirth !== 'undefined' && parseInt(this.data.tarIntraBirth.id) < 6 && parseInt(this.data.pregnantWoman) > 3) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4151', 'error')
-      }
-
-      if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '4' && this.data.pregnantWoman !== '1') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
-      }
-
-      if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '4' && this.data.dateCulminationReported !== '1811-01-01') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
-      }
-
-      if (typeof this.data.resultVihReported !== 'undefined' && parseInt(this.data.resultVihReported.id) < 5 && parseInt(this.data.pregnantWoman) > 3) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4153', 'error')
-      }
-
-      if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '1' && this.data.identificationTypeNewbor.id !== 'CN' && this.data.identificationTypeNewbor.id !== 'RC' && this.data.identificationTypeNewbor.id !== 'MS') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4162', 'error')
-      }
-
-      if (this.data.dateCulminationReported !== '1811-01-01' && this.data.dateCulminationReported !== '1800-01-01' && this.data.dateCulminationReported !== '1833-03-03' && this.data.dateCulminationReported !== '1845-01-01' && this.data.dateCulminationReported !== '1846-01-01') {
-        if (Date.parse(this.data.dateCulminationReported) < Date.parse(this.data.dateReportedPregnancy)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2921', 'error')
-        }
-      }
-
-      if (this.data.dateCulminationReported !== '1845-01-01' && parseInt(this.data.pregnantWoman) > 3) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4154', 'error')
-      }
-
-      if (parseInt(this.data.pharmacologicalSuppression) < 9 && parseInt(this.data.pregnantWoman) > 3) {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4156', 'error')
-      }
-
-      if (typeof this.data.identificationTypeNewbor !== 'undefined' && this.data.identificationTypeNewbor.id === 'NA' && this.data.identificationNewborn !== '9') {
-        return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
-      }
-
-      if (this.secondStep === true) {
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (parseInt(this.data.pregnantWoman) > 3 && parseInt(this.data.ageVihReported) < 45) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4146', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.documentNumberChildren === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.womanVihReported !== 'undefined' && typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '1' && this.data.womanVihReported.id !== '3') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3222', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.haveConfirmedVihDx !== 'undefined' && this.data.haveConfirmedVihDx.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '1' && this.data.ageInitTar !== '1') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.profilaxis !== 'undefined' && this.data.profilaxis.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '3' && this.data.ageInitTar !== '98') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.suministroViaLactea !== 'undefined' && this.data.suministroViaLactea.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '4' && this.data.ageInitTar !== '98') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.firstViralChargeVih === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) <= 1) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.secondViralChargeVih === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) > 98) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.thirdViralChargeVih === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '4' && this.data.pregnantWoman !== '1') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4150', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.conditionFinalChild !== 'undefined' && this.data.conditionFinalChild.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+        if (typeof this.data.tarIntraBirth !== 'undefined' && parseInt(this.data.tarIntraBirth.id) < 6 && parseInt(this.data.pregnantWoman) > 3) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4151', 'error')
         }
 
-        if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.pregnantWoman !== 'undefined' && parseInt(this.data.pregnantWoman.id) < 3) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4083', 'error')
+        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '4' && this.data.pregnantWoman !== '1') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
         }
 
-        if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateDxTuberculosisActiva === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
+        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '4' && this.data.dateCulminationReported !== '1811-01-01') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
         }
 
-        if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateTamizajeTuberculosis === '1845-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
+        if (typeof this.data.resultVihReported !== 'undefined' && parseInt(this.data.resultVihReported.id) < 5 && parseInt(this.data.pregnantWoman) > 3) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4153', 'error')
         }
 
-        if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateScreeningSecond !== '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4084', 'error')
+        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '1' && this.data.identificationTypeNewbor.id !== 'CN' && this.data.identificationTypeNewbor.id !== 'RC' && this.data.identificationTypeNewbor.id !== 'MS') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4162', 'error')
         }
 
-        if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && (this.data.documentNumberChildren !== '55' && this.data.documentNumberChildren !== '9')) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
-        }
-
-        if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) <= 1) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
-        }
-
-        if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.profilaxis !== 'undefined' && parseInt(this.data.profilaxis.id) <= 5) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
-        }
-
-        if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) <= 4) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
-        }
-
-        if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) <= 3) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
-        }
-
-        if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id !== 'NA' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5329', 'error')
-        }
-
-        if (this.data.documentNumberChildren === '9' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 0) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4159', 'error')
-        }
-
-        if (typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) < 2 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
-        }
-
-        if (typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) < 5 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
-        }
-
-        if (this.data.firstViralChargeVih === '1800-01-01') {
-          if (this.data.resultFirstViralChargeVih !== '99999999') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
-          }
-
-          if (this.data.secondViralChargeVih !== '1800-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
-          }
-
-          if (this.data.thirdViralChargeVih !== '1800-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+        if (this.data.dateCulminationReported !== '1811-01-01' && this.data.dateCulminationReported !== '1800-01-01' && this.data.dateCulminationReported !== '1833-03-03' && this.data.dateCulminationReported !== '1845-01-01' && this.data.dateCulminationReported !== '1846-01-01') {
+          if (Date.parse(this.data.dateCulminationReported) < Date.parse(this.data.dateReportedPregnancy)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2921', 'error')
           }
         }
 
-        if (this.data.firstViralChargeVih === '1846-01-01') {
-          if (this.data.resultFirstViralChargeVih !== '55555555') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2933', 'error')
+        if (this.data.dateCulminationReported !== '1845-01-01' && parseInt(this.data.pregnantWoman) > 3) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4154', 'error')
+        }
+
+        if (parseInt(this.data.pharmacologicalSuppression) < 9 && parseInt(this.data.pregnantWoman) > 3) {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4156', 'error')
+        }
+
+        if (typeof this.data.identificationTypeNewbor !== 'undefined' && this.data.identificationTypeNewbor.id === 'NA' && this.data.identificationNewborn !== '9') {
+          return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
+        }
+
+        if (this.secondStep === true) {
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.documentNumberChildren === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.haveConfirmedVihDx !== 'undefined' && this.data.haveConfirmedVihDx.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.profilaxis !== 'undefined' && this.data.profilaxis.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.suministroViaLactea !== 'undefined' && this.data.suministroViaLactea.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.firstViralChargeVih === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.secondViralChargeVih === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.thirdViralChargeVih === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.conditionFinalChild !== 'undefined' && this.data.conditionFinalChild.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
+          }
+
+          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.pregnantWoman !== 'undefined' && parseInt(this.data.pregnantWoman.id) < 3) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4083', 'error')
+          }
+
+          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateDxTuberculosisActiva === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
+          }
+
+          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateTamizajeTuberculosis === '1845-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
+          }
+
+          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateScreeningSecond !== '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4084', 'error')
+          }
+
+          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && (this.data.documentNumberChildren !== '55' && this.data.documentNumberChildren !== '9')) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+          }
+
+          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) <= 1) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+          }
+
+          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.profilaxis !== 'undefined' && parseInt(this.data.profilaxis.id) <= 5) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+          }
+
+          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) <= 4) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+          }
+
+          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) <= 3) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
+          }
+
+          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id !== 'NA' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5329', 'error')
+          }
+
+          if (this.data.documentNumberChildren === '9' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 0) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4159', 'error')
+          }
+
+          if (typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) < 2 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
+          }
+
+          if (typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) < 5 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
+          }
+
+          if (this.data.firstViralChargeVih === '1800-01-01') {
+            if (this.data.resultFirstViralChargeVih !== '99999999') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+            }
+
+            if (this.data.secondViralChargeVih !== '1800-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+            }
+
+            if (this.data.thirdViralChargeVih !== '1800-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
+            }
+          }
+
+          if (this.data.firstViralChargeVih === '1846-01-01') {
+            if (this.data.resultFirstViralChargeVih !== '55555555') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2933', 'error')
+            }
+          }
+
+          if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
+            if (this.data.secondViralChargeVih !== '1800-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+            }
+
+            if (this.data.thirdViralChargeVih !== '1833-01-01') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+            }
+
+            if (this.data.firstViralChargeVih === this.data.thirdViralChargeVih) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2934', 'error')
+            }
+
+            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.firstViralChargeVih)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+            }
+
+            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+            }
+          }
+
+          if (this.data.secondViralChargeVih === '1800-01-01') {
+            if (this.data.resultSecondViralChargeVih !== '99999999') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2937', 'error')
+            }
+          }
+
+          if (this.data.secondViralChargeVih === '1846-01-01') {
+            if (this.data.resultSecondViralChargeVih !== '55555555') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2938', 'error')
+            }
+          }
+
+          if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
+            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse('1800-01-01')) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+            }
+
+            if (this.data.resultSecondViralChargeVih === '99999999') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+            }
+
+            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+            }
+          }
+
+          if (this.data.thirdViralChargeVih === '1800-01-01') {
+            if (this.data.resultThirdViralChargeVih !== '99999999') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2943', 'error')
+            }
+          }
+
+          if (this.data.thirdViralChargeVih === '1846-01-01') {
+            if (this.data.resultThirdViralChargeVih !== '55555555') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2944', 'error')
+            }
+          }
+
+          if (Date.parse(this.data.thirdViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
+            if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+            }
+
+            if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+            }
+          }
+
+          if (typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) === 1 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4128', 'error')
+          }
+
+          if (Date.parse(this.data.dateDxTuberculosisActiva) > Date.parse(this.patient.field_json.birthdate)) {
+            if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+            }
+          }
+
+          if (Date.parse(this.data.dateTamizajeTuberculosis) > Date.parse(this.patient.field_json.birthdate)) {
+            if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
+            }
           }
         }
 
-        if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
-          if (this.data.secondViralChargeVih !== '1800-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+        if (this.thirdStep === true) {
+          if (this.data.fechaPruebaPresuntiva !== '1799-01-01' || this.data.fechaPruebaPresuntiva !== '1811-11-01' || this.data.fechaPruebaPresuntiva !== '1822-02-01' || this.data.fechaPruebaPresuntiva !== '1846-01-01') {
+            if (Date.parse(this.data.fechaPruebaPresuntiva) < Date.parse(this.patient.field_json.birthdate)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2954', 'error')
+            }
+
+            if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.data.fechaCongirmacionDiagnostico)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2954', 'error')
+            }
           }
 
-          if (this.data.thirdViralChargeVih !== '1833-01-01') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.patient.field_json.birthdate) && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4163', 'error')
           }
 
-          if (this.data.firstViralChargeVih === this.data.thirdViralChargeVih) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2934', 'error')
+          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse('1846-01-01') && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5330', 'error')
           }
 
-          if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.firstViralChargeVih)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
+          if (parseInt(this.data.comoLlegoLaPrueba.id) <= 13 && this.data.fechaPruebaPresuntiva === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4401', 'error')
           }
 
-          if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
-          }
-        }
-
-        if (this.data.secondViralChargeVih === '1800-01-01') {
-          if (this.data.resultSecondViralChargeVih !== '99999999') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2937', 'error')
-          }
-        }
-
-        if (this.data.secondViralChargeVih === '1846-01-01') {
-          if (this.data.resultSecondViralChargeVih !== '55555555') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2938', 'error')
-          }
-        }
-
-        if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
-          if (Date.parse(this.data.thirdViralChargeVih) < Date.parse('1800-01-01')) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+          if (this.data.fechaCongirmacionDiagnostico !== '1846-01-01') {
+            if (Date.parse(this.data.fechaCongirmacionDiagnostico) < Date.parse(this.patient.field_json.birthdate)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2958', 'error')
+            }
           }
 
-          if (this.data.resultSecondViralChargeVih === '99999999') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
+          if (this.data.fechaInicioAtencionVih !== '1800-01-01' || this.data.fechaInicioAtencionVih !== '1846-01-01') {
+            if (Date.parse(this.data.fechaInicioAtencionVih) < Date.parse(this.data.fechaCongirmacionDiagnostico)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2963', 'error')
+            }
           }
 
-          if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
-          }
-        }
-
-        if (this.data.thirdViralChargeVih === '1800-01-01') {
-          if (this.data.resultThirdViralChargeVih !== '99999999') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2943', 'error')
-          }
-        }
-
-        if (this.data.thirdViralChargeVih === '1846-01-01') {
-          if (this.data.resultThirdViralChargeVih !== '55555555') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2944', 'error')
-          }
-        }
-
-        if (Date.parse(this.data.thirdViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
-          if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
-          }
-
-          if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
-          }
-        }
-
-        if (typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) === 1 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4128', 'error')
-        }
-
-        if (Date.parse(this.data.dateDxTuberculosisActiva) > Date.parse(this.patient.field_json.birthdate)) {
-          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
-          }
-        }
-
-        if (Date.parse(this.data.dateTamizajeTuberculosis) > Date.parse(this.patient.field_json.birthdate)) {
-          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
-          }
-        }
-      }
-
-      if (this.thirdStep === true) {
-        if (this.data.fechaPruebaPresuntiva !== '1799-01-01' || this.data.fechaPruebaPresuntiva !== '1811-11-01' || this.data.fechaPruebaPresuntiva !== '1822-02-01' || this.data.fechaPruebaPresuntiva !== '1846-01-01') {
-          if (Date.parse(this.data.fechaPruebaPresuntiva) < Date.parse(this.patient.field_json.birthdate)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2954', 'error')
-          }
-
-          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.data.fechaCongirmacionDiagnostico)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2954', 'error')
-          }
-        }
-
-        if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.patient.field_json.birthdate) && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4163', 'error')
-        }
-
-        if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse('1846-01-01') && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5330', 'error')
-        }
-
-        if (parseInt(this.data.comoLlegoLaPrueba.id) <= 13 && this.data.fechaPruebaPresuntiva === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4401', 'error')
-        }
-
-        if (this.data.fechaCongirmacionDiagnostico !== '1846-01-01') {
-          if (Date.parse(this.data.fechaCongirmacionDiagnostico) < Date.parse(this.patient.field_json.birthdate)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2958', 'error')
-          }
-        }
-
-        if (this.data.fechaInicioAtencionVih !== '1800-01-01' || this.data.fechaInicioAtencionVih !== '1846-01-01') {
-          if (Date.parse(this.data.fechaInicioAtencionVih) < Date.parse(this.data.fechaCongirmacionDiagnostico)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2963', 'error')
-          }
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '4' && parseInt(this.data.conteoLinfocitosCd4) <= 3000) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '2') {
-          if ((parseInt(this.data.conteoLinfocitosCd4) < 200 || parseInt(this.data.conteoLinfocitosCd4) >= 500)) {
+          if (this.data.estadoClinicoAlMomento.id === '4' && parseInt(this.data.conteoLinfocitosCd4) <= 3000) {
             return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
           }
-        }
 
-        if (this.data.estadoClinicoAlMomento.id === '1') {
-          if ((parseInt(this.data.conteoLinfocitosCd4) < 500 || parseInt(this.data.conteoLinfocitosCd4) > 3000)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B5331', 'error')
-          }
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && parseInt(this.data.conteoLinfocitosCd4) >= 200) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.verificacionConteoLinfocitos.id === '1' && (parseInt(this.data.conteoLinfocitosCd4) === 9999 || parseInt(this.data.conteoLinfocitosCd4) === 9998)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3224', 'error')
-        }
-
-        if (parseInt(this.verificacionConteoLinfocitos.id) > 1 && parseInt(this.data.conteoLinfocitosCd4) < 5555) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4402', 'error')
-        }
-
-        if (this.data.verificacionCargaViral === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2968', 'error')
-        }
-
-        if (this.data.verificacionCargaViral !== '9') {
-          if (this.data.verificacionCargaViral.id === '1' && parseInt(this.data.cargaViralEnresultado) >= 1000000) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4169', 'error')
+          if (this.data.estadoClinicoAlMomento.id === '2') {
+            if ((parseInt(this.data.conteoLinfocitosCd4) < 200 || parseInt(this.data.conteoLinfocitosCd4) >= 500)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
+            }
           }
 
-          if (parseInt(this.data.verificacionCargaViral.id) > 1 && parseInt(this.data.cargaViralEnresultado) < 5555555) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4403', 'error')
-          }
-        }
-      }
-
-      if (this.fourthStep === true) {
-        if (this.data.inicioTerapiaAntirretroviral !== '1788-01-01' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01' && this.data.inicioTerapiaAntirretroviral !== '1846-01-01') {
-          if (Date.parse(this.data.inicioTerapiaAntirretroviral) < Date.parse(this.data.fechaCongirmacionDiagnostico)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2976', 'error')
-          }
-        }
-
-        if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento1InicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
-        }
-
-        if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento2InicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
-        }
-
-        if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento3InicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
-        }
-
-        if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento4InicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
-        }
-
-        if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento5InicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
-        }
-
-        if (this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          if (this.data.medicamento1InicioTar.id !== '9') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B2978', 'error')
+          if (this.data.estadoClinicoAlMomento.id === '1') {
+            if ((parseInt(this.data.conteoLinfocitosCd4) < 500 || parseInt(this.data.conteoLinfocitosCd4) > 3000)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B5331', 'error')
+            }
           }
 
-          if (this.data.linfocitosCD4InicioTar.id !== '5') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+          if (this.data.estadoClinicoAlMomento.id === '3' && parseInt(this.data.conteoLinfocitosCd4) >= 200) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.valorLinfocitosCD4InicioTar !== '9996') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+          if (this.verificacionConteoLinfocitos.id === '1' && (parseInt(this.data.conteoLinfocitosCd4) === 9999 || parseInt(this.data.conteoLinfocitosCd4) === 9998)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3224', 'error')
           }
 
-          if (this.data.cargaMomentoInicioTar.id !== '5') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+          if (parseInt(this.verificacionConteoLinfocitos.id) > 1 && parseInt(this.data.conteoLinfocitosCd4) < 5555) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4402', 'error')
           }
 
-          if (this.data.cargaViralInicioTar !== '99999996') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+          if (this.data.verificacionCargaViral === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2968', 'error')
           }
 
-          if (this.data.motivoInicioTar.id !== '16') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
-          }
-
-          if (this.data.hepatitisBInicioTar.id !== '6') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
-          }
-
-          if (this.data.hepatitisCInicioTar.id !== '6') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
-          }
-
-          if (this.data.tuberculosisInicioTar.id !== '5') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
-          }
-        }
-
-        if (this.data.linfocitosCD4InicioTar.id === '1' && parseInt(this.data.valorLinfocitosCD4InicioTar) > 3000) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4172', 'error')
-        }
-
-        if (parseInt(this.data.linfocitosCD4InicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5335', 'error')
-        }
-
-        if (parseInt(this.data.valorLinfocitosCD4InicioTar) <= 3000 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5338', 'error')
-        }
-
-        if (this.data.cargaMomentoInicioTar === '1') {
-          if (parseInt(this.data.cargaViralInicioTar) > 10000000 || this.data.cargaViralInicioTar !== '99999994' || this.data.cargaViralInicioTar !== '99999995') {
-            return _this.$swal('Advertencia', 'Error en la validación No. B3226', 'error')
-          }
-        }
-
-        if (this.data.motivoInicioTar.id === '16' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3255', 'error')
-        }
-
-        if (parseInt(this.data.motivoInicioTar.id) < 16 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5341', 'error')
-        }
-
-        if (this.data.motivoInicioTar.id === '17' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5342', 'error')
-        }
-
-        if (this.data.hepatitisBInicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2996', 'error')
-        }
-
-        if (this.data.hepatitisBInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3256', 'error')
-        }
-
-        if (parseInt(this.data.hepatitisBInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5343', 'error')
-        }
-
-        if (this.data.hepatitisBInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5344', 'error')
-        }
-
-        if (this.data.hepatitisCInicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B2998', 'error')
-        }
-
-        if (this.data.hepatitisCInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3257', 'error')
-        }
-
-        if (parseInt(this.data.hepatitisCInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5345', 'error')
-        }
-
-        if (this.data.hepatitisCInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5346', 'error')
-        }
-
-        if (this.data.tuberculosisInicioTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3000', 'error')
-        }
-
-        if (this.data.tuberculosisInicioTar.id === '5' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3258', 'error')
-        }
-
-        if (parseInt(this.data.tuberculosisInicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5347', 'error')
-        }
-
-        if (this.data.cambiosEsquemaInicialTar.id === '9') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3006', 'error')
-        }
-
-        if (this.data.cambiosEsquemaInicialTar.id === '1' && this.data.medicamentoEsquemaInicialTar === '1800-01-01') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
-        }
-
-        if (this.data.cambiosEsquemaInicialTar.id === '1' && (parseInt(this.data.cambioMedicamentoTar) > 7 || this.data.cambioMedicamentoTar !== '55')) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
-        }
-
-        if (this.data.medicamentoEsquemaInicialTar !== '1777-01-01' && this.data.medicamentoEsquemaInicialTar !== '1788-01-01' && this.data.medicamentoEsquemaInicialTar !== '1800-01-01' && this.data.medicamentoEsquemaInicialTar !== '1845-01-01' && this.data.medicamentoEsquemaInicialTar !== '1846-01-01') {
-          if (Date.parse(this.data.medicamentoEsquemaInicialTar) < Date.parse(this.data.inicioTerapiaAntirretroviral)) {
-            return _this.$swal('Advertencia', 'Error en la validación No. B3008', 'error')
-          }
-        }
-      }
-
-      if (this.fiveStep === true) {
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionBacteriana !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.candidiasisETBP !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.tuberculosisPulmonar !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.cancerCervix !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.coccidioidomicosis !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.citomegalovirus1Mes !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.retinitisCitomegalovirus !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.herpesMayor1Mes !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.diarreaIsospora1Mes !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.histoplasmosisDiseminada !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.linfomaBurkitt !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaPneumocystis !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaRecurrente !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.septicemiaSalmonella !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionKansasiiOtras !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.criptococosisExtrapulmonar !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.sarcamoKaposi !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.sindromeDesgasteVih !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.leucoencefalopatiaMultifocalVih !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.toxoplasmosisCerebral1Mes !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.demenciaAsociadaVih !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-
-        if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaIntersticialLinfoidea !== '1') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-        }
-      }
-
-      if (this.sixStep === true) {
-        if (this.data.estadoClinicoActual.id !== '3' && this.data.estadoClinicoAlMomento.id === '3') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B3260', 'error')
-        }
-
-        if ((parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4) && this.data.estadoClinicoAlMomento.id === '2') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B4168', 'error')
-        }
-
-        if (parseInt(this.data.valorLinfocitosCD4InicioTar) < 500 && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4)) {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5336', 'error')
-        }
-
-        if (parseInt(this.data.valorLinfocitosCD4InicioTar) < 200 && this.data.estadoClinicoActual.id !== '3') {
-          return _this.$swal('Advertencia', 'Error en la validación No. B5337', 'error')
-        }
-      }
-
-      var comodines = []
-
-      if (this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1822-02-01' || this.data.dateCulminationReported === '1799-01-01' || this.data.dateCulminationReported === '1811-01-01' || this.data.dateCulminationReported === '1800-01-01' || this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1845-01-01' || this.data.dateCulminationReported === '1846-01-01' || this.data.dateCulminationReported === '1777-01-01' || this.data.dateCulminationReported === '1788-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Fecha de culminación de la gestación reportada en gestantes con VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.fum === '1833-03-03' || this.data.fum === '1822-02-01' || this.data.fum === '1799-01-01' || this.data.fum === '1811-01-01' || this.data.fum === '1800-01-01' || this.data.fum === '1833-03-03' || this.data.fum === '1845-01-01' || this.data.fum === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'FUM (Fecha de última menstruación confiable)'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1822-02-01' || this.data.dateReportedPregnancy === '1799-01-01' || this.data.dateReportedPregnancy === '1811-01-01' || this.data.dateReportedPregnancy === '1800-01-01' || this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1845-01-01' || this.data.dateReportedPregnancy === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Fecha del diagnóstico de la gestación reportada'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1822-02-01' || this.data.dateScreeningFirst === '1799-01-01' || this.data.dateScreeningFirst === '1811-01-01' || this.data.dateScreeningFirst === '1800-01-01' || this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1845-01-01' || this.data.dateScreeningFirst === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1822-02-01' || this.data.dateScreeningSecond === '1799-01-01' || this.data.dateScreeningSecond === '1811-01-01' || this.data.dateScreeningSecond === '1800-01-01' || this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1845-01-01' || this.data.dateScreeningSecond === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1822-02-01' || this.data.dateScreeningThird === '1799-01-01' || this.data.dateScreeningThird === '1811-01-01' || this.data.dateScreeningThird === '1800-01-01' || this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1845-01-01' || this.data.dateScreeningThird === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1822-02-01' || this.data.dateScreeningBirth === '1799-01-01' || this.data.dateScreeningBirth === '1811-01-01' || this.data.dateScreeningBirth === '1800-01-01' || this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1845-01-01' || this.data.dateScreeningBirth === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Fecha de realización de tamizaje para VIH en el momento del parto'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1822-02-01' || this.data.resultElisaVih === '1799-01-01' || this.data.resultElisaVih === '1811-01-01' || this.data.resultElisaVih === '1800-01-01' || this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1845-01-01' || this.data.resultElisaVih === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Resultado Elisa para VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1822-02-01' || this.data.firstViralChargeVih === '1799-01-01' || this.data.firstViralChargeVih === '1811-01-01' || this.data.firstViralChargeVih === '1800-01-01' || this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1845-01-01' || this.data.firstViralChargeVih === '1846-01-01' || this.data.firstViralChargeVih === '1833-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Resultado Elisa para VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1822-02-01' || this.data.secondViralChargeVih === '1799-01-01' || this.data.secondViralChargeVih === '1811-01-01' || this.data.secondViralChargeVih === '1800-01-01' || this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1845-01-01' || this.data.secondViralChargeVih === '1846-01-01' || this.data.secondViralChargeVih === '1833-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Resultado Elisa para VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1822-02-01' || this.data.thirdViralChargeVih === '1799-01-01' || this.data.thirdViralChargeVih === '1811-01-01' || this.data.thirdViralChargeVih === '1800-01-01' || this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1845-01-01' || this.data.thirdViralChargeVih === '1846-01-01' || this.data.thirdViralChargeVih === '1833-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Resultado Elisa para VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1822-02-01' || this.data.dateDxTuberculosisActiva === '1799-01-01' || this.data.dateDxTuberculosisActiva === '1811-01-01' || this.data.dateDxTuberculosisActiva === '1800-01-01' || this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1845-01-01' || this.data.dateDxTuberculosisActiva === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Resultado Elisa para VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1822-02-01' || this.data.dateTamizajeTuberculosis === '1799-01-01' || this.data.dateTamizajeTuberculosis === '1811-01-01' || this.data.dateTamizajeTuberculosis === '1800-01-01' || this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1845-01-01' || this.data.dateTamizajeTuberculosis === '1846-01-01') {
-        const comodin = {
-          section: 'Mujeres Gestantes',
-          field: 'Resultado Elisa para VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.fechaCongirmacionDiagnostico === '1833-03-03' || this.data.fechaCongirmacionDiagnostico === '1822-02-01' || this.data.fechaCongirmacionDiagnostico === '1799-01-01' || this.data.fechaCongirmacionDiagnostico === '1811-01-01' || this.data.fechaCongirmacionDiagnostico === '1800-01-01' || this.data.fechaCongirmacionDiagnostico === '1833-03-03' || this.data.fechaCongirmacionDiagnostico === '1845-01-01' || this.data.fechaCongirmacionDiagnostico === '1846-01-01' || this.data.fechaCongirmacionDiagnostico === '1777-01-01' || this.data.fechaCongirmacionDiagnostico === '1788-01-01') {
-        const comodin = {
-          section: 'Información de personas que viven con VIH',
-          field: 'Fecha de confirmación del diagnóstico de infección por VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.fechaInicioAtencionVih === '1833-03-03' || this.data.fechaInicioAtencionVih === '1822-02-01' || this.data.fechaInicioAtencionVih === '1799-01-01' || this.data.fechaInicioAtencionVih === '1811-01-01' || this.data.fechaInicioAtencionVih === '1800-01-01' || this.data.fechaInicioAtencionVih === '1833-03-03' || this.data.fechaInicioAtencionVih === '1845-01-01' || this.data.fechaInicioAtencionVih === '1846-01-01' || this.data.fechaInicioAtencionVih === '1777-01-01' || this.data.fechaInicioAtencionVih === '1788-01-01') {
-        const comodin = {
-          section: 'Información de personas que viven con VIH',
-          field: 'Fecha de inicio de la atención por VIH.'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.inicioTerapiaAntirretroviral === '1833-03-03' || this.data.inicioTerapiaAntirretroviral === '1822-02-01' || this.data.inicioTerapiaAntirretroviral === '1799-01-01' || this.data.inicioTerapiaAntirretroviral === '1811-01-01' || this.data.inicioTerapiaAntirretroviral === '1800-01-01' || this.data.inicioTerapiaAntirretroviral === '1833-03-03' || this.data.inicioTerapiaAntirretroviral === '1845-01-01' || this.data.inicioTerapiaAntirretroviral === '1846-01-01' || this.data.inicioTerapiaAntirretroviral === '1777-01-01' || this.data.inicioTerapiaAntirretroviral === '1788-01-01') {
-        const comodin = {
-          section: 'Terapia Antirretroviral (TAR) Inicial',
-          field: 'Fecha de inicio de la terapia antirretroviral (TAR).'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.medicamentoEsquemaInicialTar === '1833-03-03' || this.data.medicamentoEsquemaInicialTar === '1822-02-01' || this.data.medicamentoEsquemaInicialTar === '1799-01-01' || this.data.medicamentoEsquemaInicialTar === '1811-01-01' || this.data.medicamentoEsquemaInicialTar === '1800-01-01' || this.data.medicamentoEsquemaInicialTar === '1833-03-03' || this.data.medicamentoEsquemaInicialTar === '1845-01-01' || this.data.medicamentoEsquemaInicialTar === '1846-01-01' || this.data.medicamentoEsquemaInicialTar === '1777-01-01' || this.data.medicamentoEsquemaInicialTar === '1788-01-01') {
-        const comodin = {
-          section: 'Terapia Antirretroviral (TAR) Inicial',
-          field: 'Fecha del primer cambio de cualquier medicamento del esquema inicial de TAR'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ingresoIpsAtencionViH === '1833-03-03' || this.data.ingresoIpsAtencionViH === '1822-02-01' || this.data.ingresoIpsAtencionViH === '1799-01-01' || this.data.ingresoIpsAtencionViH === '1811-01-01' || this.data.ingresoIpsAtencionViH === '1800-01-01' || this.data.ingresoIpsAtencionViH === '1833-03-03' || this.data.ingresoIpsAtencionViH === '1845-01-01' || this.data.ingresoIpsAtencionViH === '1846-01-01' || this.data.ingresoIpsAtencionViH === '1777-01-01' || this.data.ingresoIpsAtencionViH === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de ingreso a la IPS actual para seguimiento y atención de la infección por el VIH'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaGenotipificación === '1833-03-03' || this.data.ultimaGenotipificación === '1822-02-01' || this.data.ultimaGenotipificación === '1799-01-01' || this.data.ultimaGenotipificación === '1811-01-01' || this.data.ultimaGenotipificación === '1800-01-01' || this.data.ultimaGenotipificación === '1833-03-03' || this.data.ultimaGenotipificación === '1845-01-01' || this.data.ultimaGenotipificación === '1846-01-01' || this.data.ultimaGenotipificación === '1777-01-01' || this.data.ultimaGenotipificación === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de la última genotipificación realizada'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimoColesterolLdl === '1833-03-03' || this.data.ultimoColesterolLdl === '1822-02-01' || this.data.ultimoColesterolLdl === '1799-01-01' || this.data.ultimoColesterolLdl === '1811-01-01' || this.data.ultimoColesterolLdl === '1800-01-01' || this.data.ultimoColesterolLdl === '1833-03-03' || this.data.ultimoColesterolLdl === '1845-01-01' || this.data.ultimoColesterolLdl === '1846-01-01' || this.data.ultimoColesterolLdl === '1777-01-01' || this.data.ultimoColesterolLdl === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de último colesterol LDL'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaHemoglobinaSerica === '1833-03-03' || this.data.ultimaHemoglobinaSerica === '1822-02-01' || this.data.ultimaHemoglobinaSerica === '1799-01-01' || this.data.ultimaHemoglobinaSerica === '1811-01-01' || this.data.ultimaHemoglobinaSerica === '1800-01-01' || this.data.ultimaHemoglobinaSerica === '1833-03-03' || this.data.ultimaHemoglobinaSerica === '1845-01-01' || this.data.ultimaHemoglobinaSerica === '1846-01-01' || this.data.ultimaHemoglobinaSerica === '1777-01-01' || this.data.ultimaHemoglobinaSerica === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de última hemoglobina sérica'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaEnzimaAlanina === '1833-03-03' || this.data.ultimaEnzimaAlanina === '1822-02-01' || this.data.ultimaEnzimaAlanina === '1799-01-01' || this.data.ultimaEnzimaAlanina === '1811-01-01' || this.data.ultimaEnzimaAlanina === '1800-01-01' || this.data.ultimaEnzimaAlanina === '1833-03-03' || this.data.ultimaEnzimaAlanina === '1845-01-01' || this.data.ultimaEnzimaAlanina === '1846-01-01' || this.data.ultimaEnzimaAlanina === '1777-01-01' || this.data.ultimaEnzimaAlanina === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de la última enzima alanina aminotransferasa'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaCreatininaSerica === '1833-03-03' || this.data.ultimaCreatininaSerica === '1822-02-01' || this.data.ultimaCreatininaSerica === '1799-01-01' || this.data.ultimaCreatininaSerica === '1811-01-01' || this.data.ultimaCreatininaSerica === '1800-01-01' || this.data.ultimaCreatininaSerica === '1833-03-03' || this.data.ultimaCreatininaSerica === '1845-01-01' || this.data.ultimaCreatininaSerica === '1846-01-01' || this.data.ultimaCreatininaSerica === '1777-01-01' || this.data.ultimaCreatininaSerica === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de última creatinina sérica'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaGlucemiaSericaAyuno === '1833-03-03' || this.data.ultimaGlucemiaSericaAyuno === '1822-02-01' || this.data.ultimaGlucemiaSericaAyuno === '1799-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1811-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1800-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1833-03-03' || this.data.ultimaGlucemiaSericaAyuno === '1845-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1846-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1777-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de última glucemia sérica en ayuno'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaMedicionPesoPeriodo === '1833-03-03' || this.data.ultimaMedicionPesoPeriodo === '1822-02-01' || this.data.ultimaMedicionPesoPeriodo === '1799-01-01' || this.data.ultimaMedicionPesoPeriodo === '1811-01-01' || this.data.ultimaMedicionPesoPeriodo === '1800-01-01' || this.data.ultimaMedicionPesoPeriodo === '1833-03-03' || this.data.ultimaMedicionPesoPeriodo === '1845-01-01' || this.data.ultimaMedicionPesoPeriodo === '1846-01-01' || this.data.ultimaMedicionPesoPeriodo === '1777-01-01' || this.data.ultimaMedicionPesoPeriodo === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de última medición del peso corporal en el periodo'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.inicioTratamientoAntituberculosos === '1833-03-03' || this.data.inicioTratamientoAntituberculosos === '1822-02-01' || this.data.inicioTratamientoAntituberculosos === '1799-01-01' || this.data.inicioTratamientoAntituberculosos === '1811-01-01' || this.data.inicioTratamientoAntituberculosos === '1800-01-01' || this.data.inicioTratamientoAntituberculosos === '1833-03-03' || this.data.inicioTratamientoAntituberculosos === '1845-01-01' || this.data.inicioTratamientoAntituberculosos === '1846-01-01' || this.data.inicioTratamientoAntituberculosos === '1777-01-01' || this.data.inicioTratamientoAntituberculosos === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.terminoTratamientoantituberculoso12 === '1833-03-03' || this.data.terminoTratamientoantituberculoso12 === '1822-02-01' || this.data.terminoTratamientoantituberculoso12 === '1799-01-01' || this.data.terminoTratamientoantituberculoso12 === '1811-01-01' || this.data.terminoTratamientoantituberculoso12 === '1800-01-01' || this.data.terminoTratamientoantituberculoso12 === '1833-03-03' || this.data.terminoTratamientoantituberculoso12 === '1845-01-01' || this.data.terminoTratamientoantituberculoso12 === '1846-01-01' || this.data.terminoTratamientoantituberculoso12 === '1777-01-01' || this.data.terminoTratamientoantituberculoso12 === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha en que terminó el tratamiento antituberculoso en los últimos 12 meses'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimoConteoLinfocitosCd4 === '1833-03-03' || this.data.ultimoConteoLinfocitosCd4 === '1822-02-01' || this.data.ultimoConteoLinfocitosCd4 === '1799-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1811-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1800-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1833-03-03' || this.data.ultimoConteoLinfocitosCd4 === '1845-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1846-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1777-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha del último conteo de linfocitos T CD4 realizado en el período de observación'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.ultimaCargaViralVih === '1833-03-03' || this.data.ultimaCargaViralVih === '1822-02-01' || this.data.ultimaCargaViralVih === '1799-01-01' || this.data.ultimaCargaViralVih === '1811-01-01' || this.data.ultimaCargaViralVih === '1800-01-01' || this.data.ultimaCargaViralVih === '1833-03-03' || this.data.ultimaCargaViralVih === '1845-01-01' || this.data.ultimaCargaViralVih === '1846-01-01' || this.data.ultimaCargaViralVih === '1777-01-01' || this.data.ultimaCargaViralVih === '1788-01-01') {
-        const comodin = {
-          section: 'Condición actual de la persona que vive con VIH',
-          field: 'Fecha de la última carga viral para VIH realizada en el período de observación'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.inicioMedicamentosTarPersonaViven === '1833-03-03' || this.data.inicioMedicamentosTarPersonaViven === '1822-02-01' || this.data.inicioMedicamentosTarPersonaViven === '1799-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1811-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1800-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1833-03-03' || this.data.inicioMedicamentosTarPersonaViven === '1845-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1846-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1777-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1788-01-01') {
-        const comodin = {
-          section: 'Terapia Antirretroviral (TAR) Actual',
-          field: 'Fecha de inicio de los medicamentos de la TAR que recibe actualmente la persona que viven con VIH'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.desafiliacionEntidad === '1833-03-03' || this.data.desafiliacionEntidad === '1822-02-01' || this.data.desafiliacionEntidad === '1799-01-01' || this.data.desafiliacionEntidad === '1811-01-01' || this.data.desafiliacionEntidad === '1800-01-01' || this.data.desafiliacionEntidad === '1833-03-03' || this.data.desafiliacionEntidad === '1845-01-01' || this.data.desafiliacionEntidad === '1846-01-01' || this.data.desafiliacionEntidad === '1777-01-01' || this.data.desafiliacionEntidad === '1788-01-01') {
-        const comodin = {
-          section: 'Situación administrativa a la fecha de corte',
-          field: 'Fecha de desafiliación de la entidad'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.fechaMuerte === '1833-03-03' || this.data.fechaMuerte === '1822-02-01' || this.data.fechaMuerte === '1799-01-01' || this.data.fechaMuerte === '1811-01-01' || this.data.fechaMuerte === '1800-01-01' || this.data.fechaMuerte === '1833-03-03' || this.data.fechaMuerte === '1845-01-01' || this.data.fechaMuerte === '1846-01-01' || this.data.fechaMuerte === '1777-01-01' || this.data.fechaMuerte === '1788-01-01') {
-        const comodin = {
-          section: 'Situación administrativa a la fecha de corte',
-          field: 'Fecha de muerte'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (this.data.fechaCorte === '1833-03-03' || this.data.fechaCorte === '1822-02-01' || this.data.fechaCorte === '1799-01-01' || this.data.fechaCorte === '1811-01-01' || this.data.fechaCorte === '1800-01-01' || this.data.fechaCorte === '1833-03-03' || this.data.fechaCorte === '1845-01-01' || this.data.fechaCorte === '1846-01-01' || this.data.fechaCorte === '1777-01-01' || this.data.fechaCorte === '1788-01-01') {
-        const comodin = {
-          section: 'Situación administrativa a la fecha de corte',
-          field: 'Fecha de corte'
-        }
-
-        comodines.push(comodin)
-      }
-
-      if (comodines.length !== 0) {
-        localStorage.setItem('comodines', JSON.stringify(comodines))
-      }
-
-      var data = {
-        type: 'saveRegister',
-        data: this.data,
-        user: this.user.uid,
-        status: 'Finalizado'
-      }
-
-      if (this.type === 'borrador') {
-        data.status = 'Borrador'
-      }
-
-      if (this.type === 'siguiente') {
-        data.status = 'Borrador'
-      }
-
-      if (this.registerNid !== '') {
-        data.id = this.registerNid
-      }
-
-      var patient = localStorage.getItem('patientNid')
-
-      if (patient !== '') {
-        data.patient = patient
-      }
-
-      configServices.consumerStandar(this, 'asfa-rest/post', data, {
-        callBack: (data) => {
-          if (typeof data.error !== 'undefined') {
-            return _this.$swal('Advertencia', 'Error al crear registro verifique que no haya un registro previamente creado para el paciente', 'error')
-          }
-          if (_this.type === 'borrador') {
-            _this.registerNid = data.id
-          }
-          if (_this.type === 'siguiente') {
-            if (typeof _this.data.children === 'undefined' || typeof _this.data.tuberculosis === 'undefined') {
-              localStorage.setItem('registerNid', _this.registerNid)
-              _this.$router.push('/resumen')
-              return
+          if (this.data.verificacionCargaViral !== '9') {
+            if (this.data.verificacionCargaViral.id === '1' && parseInt(this.data.cargaViralEnresultado) >= 1000000) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4169', 'error')
             }
 
-            console.log(_this.nineStep)
+            if (parseInt(this.data.verificacionCargaViral.id) > 1 && parseInt(this.data.cargaViralEnresultado) < 5555555) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4403', 'error')
+            }
+          }
+        }
 
-            if (_this.secondStep === false) {
-              if (_this.data.children.id !== '0' || _this.data.tuberculosis.id !== '3') {
-                _this.firstStep = false
-                _this.secondStep = true
+        if (this.fourthStep === true) {
+          if (this.data.inicioTerapiaAntirretroviral !== '1788-01-01' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01' && this.data.inicioTerapiaAntirretroviral !== '1846-01-01') {
+            if (Date.parse(this.data.inicioTerapiaAntirretroviral) < Date.parse(this.data.fechaCongirmacionDiagnostico)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2976', 'error')
+            }
+          }
+
+          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento1InicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
+          }
+
+          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento2InicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
+          }
+
+          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento3InicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
+          }
+
+          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento4InicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
+          }
+
+          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento5InicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
+          }
+
+          if (this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            if (this.data.medicamento1InicioTar.id !== '9') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B2978', 'error')
+            }
+
+            if (this.data.linfocitosCD4InicioTar.id !== '5') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.valorLinfocitosCD4InicioTar !== '9996') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.cargaMomentoInicioTar.id !== '5') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.cargaViralInicioTar !== '99999996') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.motivoInicioTar.id !== '16') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.hepatitisBInicioTar.id !== '6') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.hepatitisCInicioTar.id !== '6') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.tuberculosisInicioTar.id !== '5') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+          }
+
+          if (this.data.linfocitosCD4InicioTar.id === '1' && parseInt(this.data.valorLinfocitosCD4InicioTar) > 3000) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4172', 'error')
+          }
+
+          if (parseInt(this.data.linfocitosCD4InicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5335', 'error')
+          }
+
+          if (parseInt(this.data.valorLinfocitosCD4InicioTar) <= 3000 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5338', 'error')
+          }
+
+          if (this.data.cargaMomentoInicioTar === '1') {
+            if (parseInt(this.data.cargaViralInicioTar) > 10000000 || this.data.cargaViralInicioTar !== '99999994' || this.data.cargaViralInicioTar !== '99999995') {
+              return _this.$swal('Advertencia', 'Error en la validación No. B3226', 'error')
+            }
+          }
+
+          if (this.data.motivoInicioTar.id === '16' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3255', 'error')
+          }
+
+          if (parseInt(this.data.motivoInicioTar.id) < 16 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5341', 'error')
+          }
+
+          if (this.data.motivoInicioTar.id === '17' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5342', 'error')
+          }
+
+          if (this.data.hepatitisBInicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2996', 'error')
+          }
+
+          if (this.data.hepatitisBInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3256', 'error')
+          }
+
+          if (parseInt(this.data.hepatitisBInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5343', 'error')
+          }
+
+          if (this.data.hepatitisBInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5344', 'error')
+          }
+
+          if (this.data.hepatitisCInicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B2998', 'error')
+          }
+
+          if (this.data.hepatitisCInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3257', 'error')
+          }
+
+          if (parseInt(this.data.hepatitisCInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5345', 'error')
+          }
+
+          if (this.data.hepatitisCInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5346', 'error')
+          }
+
+          if (this.data.tuberculosisInicioTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3000', 'error')
+          }
+
+          if (this.data.tuberculosisInicioTar.id === '5' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3258', 'error')
+          }
+
+          if (parseInt(this.data.tuberculosisInicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5347', 'error')
+          }
+
+          if (this.data.cambiosEsquemaInicialTar.id === '9') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3006', 'error')
+          }
+
+          if (this.data.cambiosEsquemaInicialTar.id === '1' && this.data.medicamentoEsquemaInicialTar === '1800-01-01') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
+          }
+
+          if (this.data.cambiosEsquemaInicialTar.id === '1' && (parseInt(this.data.cambioMedicamentoTar) > 7 || this.data.cambioMedicamentoTar !== '55')) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
+          }
+
+          if (this.data.medicamentoEsquemaInicialTar !== '1777-01-01' && this.data.medicamentoEsquemaInicialTar !== '1788-01-01' && this.data.medicamentoEsquemaInicialTar !== '1800-01-01' && this.data.medicamentoEsquemaInicialTar !== '1845-01-01' && this.data.medicamentoEsquemaInicialTar !== '1846-01-01') {
+            if (Date.parse(this.data.medicamentoEsquemaInicialTar) < Date.parse(this.data.inicioTerapiaAntirretroviral)) {
+              return _this.$swal('Advertencia', 'Error en la validación No. B3008', 'error')
+            }
+          }
+        }
+
+        if (this.fiveStep === true) {
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionBacteriana !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.candidiasisETBP !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.tuberculosisPulmonar !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.cancerCervix !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.coccidioidomicosis !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.citomegalovirus1Mes !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.retinitisCitomegalovirus !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.herpesMayor1Mes !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.diarreaIsospora1Mes !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.histoplasmosisDiseminada !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.linfomaBurkitt !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaPneumocystis !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaRecurrente !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.septicemiaSalmonella !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionKansasiiOtras !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.criptococosisExtrapulmonar !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.sarcamoKaposi !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.sindromeDesgasteVih !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.leucoencefalopatiaMultifocalVih !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.toxoplasmosisCerebral1Mes !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.demenciaAsociadaVih !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+
+          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaIntersticialLinfoidea !== '1') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+          }
+        }
+
+        if (this.sixStep === true) {
+          if (this.data.estadoClinicoActual.id !== '3' && this.data.estadoClinicoAlMomento.id === '3') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B3260', 'error')
+          }
+
+          if ((parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4) && this.data.estadoClinicoAlMomento.id === '2') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B4168', 'error')
+          }
+
+          if (parseInt(this.data.valorLinfocitosCD4InicioTar) < 500 && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4)) {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5336', 'error')
+          }
+
+          if (parseInt(this.data.valorLinfocitosCD4InicioTar) < 200 && this.data.estadoClinicoActual.id !== '3') {
+            return _this.$swal('Advertencia', 'Error en la validación No. B5337', 'error')
+          }
+        }
+
+        var comodines = []
+
+        if (this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1822-02-01' || this.data.dateCulminationReported === '1799-01-01' || this.data.dateCulminationReported === '1811-01-01' || this.data.dateCulminationReported === '1800-01-01' || this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1845-01-01' || this.data.dateCulminationReported === '1846-01-01' || this.data.dateCulminationReported === '1777-01-01' || this.data.dateCulminationReported === '1788-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Fecha de culminación de la gestación reportada en gestantes con VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.fum === '1833-03-03' || this.data.fum === '1822-02-01' || this.data.fum === '1799-01-01' || this.data.fum === '1811-01-01' || this.data.fum === '1800-01-01' || this.data.fum === '1833-03-03' || this.data.fum === '1845-01-01' || this.data.fum === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'FUM (Fecha de última menstruación confiable)'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1822-02-01' || this.data.dateReportedPregnancy === '1799-01-01' || this.data.dateReportedPregnancy === '1811-01-01' || this.data.dateReportedPregnancy === '1800-01-01' || this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1845-01-01' || this.data.dateReportedPregnancy === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Fecha del diagnóstico de la gestación reportada'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1822-02-01' || this.data.dateScreeningFirst === '1799-01-01' || this.data.dateScreeningFirst === '1811-01-01' || this.data.dateScreeningFirst === '1800-01-01' || this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1845-01-01' || this.data.dateScreeningFirst === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1822-02-01' || this.data.dateScreeningSecond === '1799-01-01' || this.data.dateScreeningSecond === '1811-01-01' || this.data.dateScreeningSecond === '1800-01-01' || this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1845-01-01' || this.data.dateScreeningSecond === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1822-02-01' || this.data.dateScreeningThird === '1799-01-01' || this.data.dateScreeningThird === '1811-01-01' || this.data.dateScreeningThird === '1800-01-01' || this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1845-01-01' || this.data.dateScreeningThird === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1822-02-01' || this.data.dateScreeningBirth === '1799-01-01' || this.data.dateScreeningBirth === '1811-01-01' || this.data.dateScreeningBirth === '1800-01-01' || this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1845-01-01' || this.data.dateScreeningBirth === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Fecha de realización de tamizaje para VIH en el momento del parto'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1822-02-01' || this.data.resultElisaVih === '1799-01-01' || this.data.resultElisaVih === '1811-01-01' || this.data.resultElisaVih === '1800-01-01' || this.data.resultElisaVih === '1833-03-03' || this.data.resultElisaVih === '1845-01-01' || this.data.resultElisaVih === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Resultado Elisa para VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1822-02-01' || this.data.firstViralChargeVih === '1799-01-01' || this.data.firstViralChargeVih === '1811-01-01' || this.data.firstViralChargeVih === '1800-01-01' || this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1845-01-01' || this.data.firstViralChargeVih === '1846-01-01' || this.data.firstViralChargeVih === '1833-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Resultado Elisa para VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1822-02-01' || this.data.secondViralChargeVih === '1799-01-01' || this.data.secondViralChargeVih === '1811-01-01' || this.data.secondViralChargeVih === '1800-01-01' || this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1845-01-01' || this.data.secondViralChargeVih === '1846-01-01' || this.data.secondViralChargeVih === '1833-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Resultado Elisa para VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1822-02-01' || this.data.thirdViralChargeVih === '1799-01-01' || this.data.thirdViralChargeVih === '1811-01-01' || this.data.thirdViralChargeVih === '1800-01-01' || this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1845-01-01' || this.data.thirdViralChargeVih === '1846-01-01' || this.data.thirdViralChargeVih === '1833-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Resultado Elisa para VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1822-02-01' || this.data.dateDxTuberculosisActiva === '1799-01-01' || this.data.dateDxTuberculosisActiva === '1811-01-01' || this.data.dateDxTuberculosisActiva === '1800-01-01' || this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1845-01-01' || this.data.dateDxTuberculosisActiva === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Resultado Elisa para VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1822-02-01' || this.data.dateTamizajeTuberculosis === '1799-01-01' || this.data.dateTamizajeTuberculosis === '1811-01-01' || this.data.dateTamizajeTuberculosis === '1800-01-01' || this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1845-01-01' || this.data.dateTamizajeTuberculosis === '1846-01-01') {
+          const comodin = {
+            section: 'Mujeres Gestantes',
+            field: 'Resultado Elisa para VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.fechaCongirmacionDiagnostico === '1833-03-03' || this.data.fechaCongirmacionDiagnostico === '1822-02-01' || this.data.fechaCongirmacionDiagnostico === '1799-01-01' || this.data.fechaCongirmacionDiagnostico === '1811-01-01' || this.data.fechaCongirmacionDiagnostico === '1800-01-01' || this.data.fechaCongirmacionDiagnostico === '1833-03-03' || this.data.fechaCongirmacionDiagnostico === '1845-01-01' || this.data.fechaCongirmacionDiagnostico === '1846-01-01' || this.data.fechaCongirmacionDiagnostico === '1777-01-01' || this.data.fechaCongirmacionDiagnostico === '1788-01-01') {
+          const comodin = {
+            section: 'Información de personas que viven con VIH',
+            field: 'Fecha de confirmación del diagnóstico de infección por VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.fechaInicioAtencionVih === '1833-03-03' || this.data.fechaInicioAtencionVih === '1822-02-01' || this.data.fechaInicioAtencionVih === '1799-01-01' || this.data.fechaInicioAtencionVih === '1811-01-01' || this.data.fechaInicioAtencionVih === '1800-01-01' || this.data.fechaInicioAtencionVih === '1833-03-03' || this.data.fechaInicioAtencionVih === '1845-01-01' || this.data.fechaInicioAtencionVih === '1846-01-01' || this.data.fechaInicioAtencionVih === '1777-01-01' || this.data.fechaInicioAtencionVih === '1788-01-01') {
+          const comodin = {
+            section: 'Información de personas que viven con VIH',
+            field: 'Fecha de inicio de la atención por VIH.'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.inicioTerapiaAntirretroviral === '1833-03-03' || this.data.inicioTerapiaAntirretroviral === '1822-02-01' || this.data.inicioTerapiaAntirretroviral === '1799-01-01' || this.data.inicioTerapiaAntirretroviral === '1811-01-01' || this.data.inicioTerapiaAntirretroviral === '1800-01-01' || this.data.inicioTerapiaAntirretroviral === '1833-03-03' || this.data.inicioTerapiaAntirretroviral === '1845-01-01' || this.data.inicioTerapiaAntirretroviral === '1846-01-01' || this.data.inicioTerapiaAntirretroviral === '1777-01-01' || this.data.inicioTerapiaAntirretroviral === '1788-01-01') {
+          const comodin = {
+            section: 'Terapia Antirretroviral (TAR) Inicial',
+            field: 'Fecha de inicio de la terapia antirretroviral (TAR).'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.medicamentoEsquemaInicialTar === '1833-03-03' || this.data.medicamentoEsquemaInicialTar === '1822-02-01' || this.data.medicamentoEsquemaInicialTar === '1799-01-01' || this.data.medicamentoEsquemaInicialTar === '1811-01-01' || this.data.medicamentoEsquemaInicialTar === '1800-01-01' || this.data.medicamentoEsquemaInicialTar === '1833-03-03' || this.data.medicamentoEsquemaInicialTar === '1845-01-01' || this.data.medicamentoEsquemaInicialTar === '1846-01-01' || this.data.medicamentoEsquemaInicialTar === '1777-01-01' || this.data.medicamentoEsquemaInicialTar === '1788-01-01') {
+          const comodin = {
+            section: 'Terapia Antirretroviral (TAR) Inicial',
+            field: 'Fecha del primer cambio de cualquier medicamento del esquema inicial de TAR'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ingresoIpsAtencionViH === '1833-03-03' || this.data.ingresoIpsAtencionViH === '1822-02-01' || this.data.ingresoIpsAtencionViH === '1799-01-01' || this.data.ingresoIpsAtencionViH === '1811-01-01' || this.data.ingresoIpsAtencionViH === '1800-01-01' || this.data.ingresoIpsAtencionViH === '1833-03-03' || this.data.ingresoIpsAtencionViH === '1845-01-01' || this.data.ingresoIpsAtencionViH === '1846-01-01' || this.data.ingresoIpsAtencionViH === '1777-01-01' || this.data.ingresoIpsAtencionViH === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de ingreso a la IPS actual para seguimiento y atención de la infección por el VIH'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaGenotipificación === '1833-03-03' || this.data.ultimaGenotipificación === '1822-02-01' || this.data.ultimaGenotipificación === '1799-01-01' || this.data.ultimaGenotipificación === '1811-01-01' || this.data.ultimaGenotipificación === '1800-01-01' || this.data.ultimaGenotipificación === '1833-03-03' || this.data.ultimaGenotipificación === '1845-01-01' || this.data.ultimaGenotipificación === '1846-01-01' || this.data.ultimaGenotipificación === '1777-01-01' || this.data.ultimaGenotipificación === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de la última genotipificación realizada'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimoColesterolLdl === '1833-03-03' || this.data.ultimoColesterolLdl === '1822-02-01' || this.data.ultimoColesterolLdl === '1799-01-01' || this.data.ultimoColesterolLdl === '1811-01-01' || this.data.ultimoColesterolLdl === '1800-01-01' || this.data.ultimoColesterolLdl === '1833-03-03' || this.data.ultimoColesterolLdl === '1845-01-01' || this.data.ultimoColesterolLdl === '1846-01-01' || this.data.ultimoColesterolLdl === '1777-01-01' || this.data.ultimoColesterolLdl === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de último colesterol LDL'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaHemoglobinaSerica === '1833-03-03' || this.data.ultimaHemoglobinaSerica === '1822-02-01' || this.data.ultimaHemoglobinaSerica === '1799-01-01' || this.data.ultimaHemoglobinaSerica === '1811-01-01' || this.data.ultimaHemoglobinaSerica === '1800-01-01' || this.data.ultimaHemoglobinaSerica === '1833-03-03' || this.data.ultimaHemoglobinaSerica === '1845-01-01' || this.data.ultimaHemoglobinaSerica === '1846-01-01' || this.data.ultimaHemoglobinaSerica === '1777-01-01' || this.data.ultimaHemoglobinaSerica === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de última hemoglobina sérica'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaEnzimaAlanina === '1833-03-03' || this.data.ultimaEnzimaAlanina === '1822-02-01' || this.data.ultimaEnzimaAlanina === '1799-01-01' || this.data.ultimaEnzimaAlanina === '1811-01-01' || this.data.ultimaEnzimaAlanina === '1800-01-01' || this.data.ultimaEnzimaAlanina === '1833-03-03' || this.data.ultimaEnzimaAlanina === '1845-01-01' || this.data.ultimaEnzimaAlanina === '1846-01-01' || this.data.ultimaEnzimaAlanina === '1777-01-01' || this.data.ultimaEnzimaAlanina === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de la última enzima alanina aminotransferasa'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaCreatininaSerica === '1833-03-03' || this.data.ultimaCreatininaSerica === '1822-02-01' || this.data.ultimaCreatininaSerica === '1799-01-01' || this.data.ultimaCreatininaSerica === '1811-01-01' || this.data.ultimaCreatininaSerica === '1800-01-01' || this.data.ultimaCreatininaSerica === '1833-03-03' || this.data.ultimaCreatininaSerica === '1845-01-01' || this.data.ultimaCreatininaSerica === '1846-01-01' || this.data.ultimaCreatininaSerica === '1777-01-01' || this.data.ultimaCreatininaSerica === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de última creatinina sérica'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaGlucemiaSericaAyuno === '1833-03-03' || this.data.ultimaGlucemiaSericaAyuno === '1822-02-01' || this.data.ultimaGlucemiaSericaAyuno === '1799-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1811-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1800-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1833-03-03' || this.data.ultimaGlucemiaSericaAyuno === '1845-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1846-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1777-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de última glucemia sérica en ayuno'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaMedicionPesoPeriodo === '1833-03-03' || this.data.ultimaMedicionPesoPeriodo === '1822-02-01' || this.data.ultimaMedicionPesoPeriodo === '1799-01-01' || this.data.ultimaMedicionPesoPeriodo === '1811-01-01' || this.data.ultimaMedicionPesoPeriodo === '1800-01-01' || this.data.ultimaMedicionPesoPeriodo === '1833-03-03' || this.data.ultimaMedicionPesoPeriodo === '1845-01-01' || this.data.ultimaMedicionPesoPeriodo === '1846-01-01' || this.data.ultimaMedicionPesoPeriodo === '1777-01-01' || this.data.ultimaMedicionPesoPeriodo === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de última medición del peso corporal en el periodo'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.inicioTratamientoAntituberculosos === '1833-03-03' || this.data.inicioTratamientoAntituberculosos === '1822-02-01' || this.data.inicioTratamientoAntituberculosos === '1799-01-01' || this.data.inicioTratamientoAntituberculosos === '1811-01-01' || this.data.inicioTratamientoAntituberculosos === '1800-01-01' || this.data.inicioTratamientoAntituberculosos === '1833-03-03' || this.data.inicioTratamientoAntituberculosos === '1845-01-01' || this.data.inicioTratamientoAntituberculosos === '1846-01-01' || this.data.inicioTratamientoAntituberculosos === '1777-01-01' || this.data.inicioTratamientoAntituberculosos === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.terminoTratamientoantituberculoso12 === '1833-03-03' || this.data.terminoTratamientoantituberculoso12 === '1822-02-01' || this.data.terminoTratamientoantituberculoso12 === '1799-01-01' || this.data.terminoTratamientoantituberculoso12 === '1811-01-01' || this.data.terminoTratamientoantituberculoso12 === '1800-01-01' || this.data.terminoTratamientoantituberculoso12 === '1833-03-03' || this.data.terminoTratamientoantituberculoso12 === '1845-01-01' || this.data.terminoTratamientoantituberculoso12 === '1846-01-01' || this.data.terminoTratamientoantituberculoso12 === '1777-01-01' || this.data.terminoTratamientoantituberculoso12 === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha en que terminó el tratamiento antituberculoso en los últimos 12 meses'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimoConteoLinfocitosCd4 === '1833-03-03' || this.data.ultimoConteoLinfocitosCd4 === '1822-02-01' || this.data.ultimoConteoLinfocitosCd4 === '1799-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1811-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1800-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1833-03-03' || this.data.ultimoConteoLinfocitosCd4 === '1845-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1846-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1777-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha del último conteo de linfocitos T CD4 realizado en el período de observación'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.ultimaCargaViralVih === '1833-03-03' || this.data.ultimaCargaViralVih === '1822-02-01' || this.data.ultimaCargaViralVih === '1799-01-01' || this.data.ultimaCargaViralVih === '1811-01-01' || this.data.ultimaCargaViralVih === '1800-01-01' || this.data.ultimaCargaViralVih === '1833-03-03' || this.data.ultimaCargaViralVih === '1845-01-01' || this.data.ultimaCargaViralVih === '1846-01-01' || this.data.ultimaCargaViralVih === '1777-01-01' || this.data.ultimaCargaViralVih === '1788-01-01') {
+          const comodin = {
+            section: 'Condición actual de la persona que vive con VIH',
+            field: 'Fecha de la última carga viral para VIH realizada en el período de observación'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.inicioMedicamentosTarPersonaViven === '1833-03-03' || this.data.inicioMedicamentosTarPersonaViven === '1822-02-01' || this.data.inicioMedicamentosTarPersonaViven === '1799-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1811-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1800-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1833-03-03' || this.data.inicioMedicamentosTarPersonaViven === '1845-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1846-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1777-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1788-01-01') {
+          const comodin = {
+            section: 'Terapia Antirretroviral (TAR) Actual',
+            field: 'Fecha de inicio de los medicamentos de la TAR que recibe actualmente la persona que viven con VIH'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.desafiliacionEntidad === '1833-03-03' || this.data.desafiliacionEntidad === '1822-02-01' || this.data.desafiliacionEntidad === '1799-01-01' || this.data.desafiliacionEntidad === '1811-01-01' || this.data.desafiliacionEntidad === '1800-01-01' || this.data.desafiliacionEntidad === '1833-03-03' || this.data.desafiliacionEntidad === '1845-01-01' || this.data.desafiliacionEntidad === '1846-01-01' || this.data.desafiliacionEntidad === '1777-01-01' || this.data.desafiliacionEntidad === '1788-01-01') {
+          const comodin = {
+            section: 'Situación administrativa a la fecha de corte',
+            field: 'Fecha de desafiliación de la entidad'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.fechaMuerte === '1833-03-03' || this.data.fechaMuerte === '1822-02-01' || this.data.fechaMuerte === '1799-01-01' || this.data.fechaMuerte === '1811-01-01' || this.data.fechaMuerte === '1800-01-01' || this.data.fechaMuerte === '1833-03-03' || this.data.fechaMuerte === '1845-01-01' || this.data.fechaMuerte === '1846-01-01' || this.data.fechaMuerte === '1777-01-01' || this.data.fechaMuerte === '1788-01-01') {
+          const comodin = {
+            section: 'Situación administrativa a la fecha de corte',
+            field: 'Fecha de muerte'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (this.data.fechaCorte === '1833-03-03' || this.data.fechaCorte === '1822-02-01' || this.data.fechaCorte === '1799-01-01' || this.data.fechaCorte === '1811-01-01' || this.data.fechaCorte === '1800-01-01' || this.data.fechaCorte === '1833-03-03' || this.data.fechaCorte === '1845-01-01' || this.data.fechaCorte === '1846-01-01' || this.data.fechaCorte === '1777-01-01' || this.data.fechaCorte === '1788-01-01') {
+          const comodin = {
+            section: 'Situación administrativa a la fecha de corte',
+            field: 'Fecha de corte'
+          }
+
+          comodines.push(comodin)
+        }
+
+        if (comodines.length !== 0) {
+          localStorage.setItem('comodines', JSON.stringify(comodines))
+        }
+
+        var data = {
+          type: 'saveRegister',
+          data: this.data,
+          user: this.user.uid,
+          status: 'Finalizado'
+        }
+
+        if (this.type === 'borrador') {
+          data.status = 'Borrador'
+        }
+
+        if (this.type === 'siguiente') {
+          data.status = 'Borrador'
+        }
+
+        if (this.registerNid !== '') {
+          data.id = this.registerNid
+        }
+
+        var patient = localStorage.getItem('patientNid')
+
+        if (patient !== '') {
+          data.patient = patient
+        }
+
+        configServices.consumerStandar(this, 'asfa-rest/post', data, {
+          callBack: (data) => {
+            if (typeof data.error !== 'undefined') {
+              return _this.$swal('Advertencia', 'Error al crear registro verifique que no haya un registro previamente creado para el paciente', 'error')
+            }
+            if (_this.type === 'borrador') {
+              _this.registerNid = data.id
+            }
+            if (_this.type === 'siguiente') {
+              if (typeof _this.data.children === 'undefined' || typeof _this.data.tuberculosis === 'undefined') {
+                localStorage.setItem('registerNid', _this.registerNid)
+                _this.$router.push('/resumen')
+                return
               }
-            } else if (_this.thirdStep === false && _this.secondStep === true) {
-              _this.thirdStep = true
-            } else if (_this.fourthStep === false && _this.thirdStep === true) {
-              _this.fourthStep = true
-            } else if (_this.fiveStep === false && _this.fourthStep === true) {
-              _this.fiveStep = true
-            } else if (_this.sixStep === false && _this.fiveStep === true) {
-              _this.sixStep = true
-            } else if (_this.sevenStep === false && _this.sixStep === true) {
-              _this.sevenStep = true
-            } else if (_this.eightStep === false && _this.sevenStep === true) {
-              _this.eightStep = true
-            } else if (_this.nineStep === false && _this.eightStep === true) {
-              _this.nineStep = true
-            } else {
-              _this.$router.push('/resumen')
+
+              if (_this.secondStep === false && _this.firstStep === true) {
+                if (_this.data.children.id !== '0' || _this.data.tuberculosis.id !== '3') {
+                  _this.firstStep = false
+                  _this.secondStep = true
+                } else {
+                  _this.thirdStep = true
+                  _this.firstStep = false
+                }
+              } else if (_this.thirdStep === false && _this.secondStep === true) {
+                _this.secondStep = false
+                _this.thirdStep = true
+              } else if (_this.fourthStep === false && _this.thirdStep === true) {
+                _this.thirdStep = false
+                _this.fourthStep = true
+              } else if (_this.fiveStep === false && _this.fourthStep === true) {
+                _this.fourthStep = false
+                _this.fiveStep = true
+              } else if (_this.sixStep === false && _this.fiveStep === true) {
+                _this.sixStep = true
+                _this.fiveStep = false
+              } else if (_this.sevenStep === false && _this.sixStep === true) {
+                _this.sixStep = false
+                _this.sevenStep = true
+              } else if (_this.eightStep === false && _this.sevenStep === true) {
+                _this.sevenStep = false
+                _this.eightStep = true
+              } else if (_this.nineStep === false && _this.eightStep === true) {
+                _this.eightStep = false
+                _this.nineStep = true
+              } else {
+                _this.$router.push('/resumen')
+              }
+            }
+            if (_this.type === 'borrador' || _this.type === 'finalizado') {
+              _this.$swal('', 'Registro guardado correctamente', 'success')
+            }
+            if (_this.type === 'finalizado') {
+              _this.$router.push('/registros')
             }
           }
-          if (_this.type === 'borrador' || _this.type === 'finalizado') {
-            _this.$swal('', 'Registro guardado correctamente', 'success')
+        })
+      } else {
+        if (_this.secondStep === false && _this.firstStep === true) {
+          if (typeof _this.data.children === 'undefined' || typeof _this.data.tuberculosis === 'undefined') {
+            _this.thirdStep = true
+            _this.firstStep = false
+          } else {
+            if (_this.data.children.id !== '0' || _this.data.tuberculosis.id !== '3') {
+              _this.firstStep = false
+              _this.secondStep = true
+            } else {
+              _this.thirdStep = true
+              _this.firstStep = false
+            }
           }
-          if (_this.type === 'finalizado') {
-            _this.$router.push('/registros')
-          }
+        } else if (_this.thirdStep === false && _this.secondStep === true) {
+          _this.secondStep = false
+          _this.thirdStep = true
+        } else if (_this.fourthStep === false && _this.thirdStep === true) {
+          _this.thirdStep = false
+          _this.fourthStep = true
+        } else if (_this.fiveStep === false && _this.fourthStep === true) {
+          _this.fourthStep = false
+          _this.fiveStep = true
+        } else if (_this.sixStep === false && _this.fiveStep === true) {
+          _this.sixStep = true
+          _this.fiveStep = false
+        } else if (_this.sevenStep === false && _this.sixStep === true) {
+          _this.sixStep = false
+          _this.sevenStep = true
+        } else if (_this.eightStep === false && _this.sevenStep === true) {
+          _this.sevenStep = false
+          _this.eightStep = true
+        } else if (_this.nineStep === false && _this.eightStep === true) {
+          _this.eightStep = false
+          _this.nineStep = true
+        } else {
+          _this.$router.push('/resumen')
         }
-      })
+      }
     }
   }
 }

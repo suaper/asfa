@@ -77,8 +77,8 @@
                                     <a href="#" @click="goToStep($event, 'NineStep')"><span>Situación administrativa a la fecha de corte</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                             </ul>
-                            <div class="row un_item cien resumen_note" v-if="comodines.length !== 0">
-                              <div class="anotaciones_pdf doc-note">
+                            <div class="row un_item cien resumen_note" v-if="comodines.length !== 0 && !auditor">
+                              <div class="anotaciones_pdf doc-note" >
                                 <h5 class="titulo_nota resalta">
                                   ¡ Importante !
                                 </h5>
@@ -86,9 +86,9 @@
                                   <li v-for="(item, key) in comodines" :key="key">En la sección de Información de {{ item.section }} el campo {{ item.field }} esta con información predeterminada o sin diligenciar, realizar cambios correspondientes.</li>
                                 </ul>
                               </div>
-                                <div class="item align_right cien q-mt-xl">
-                                    <q-btn rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
-                                </div>
+                            </div>
+                            <div class="item align_right cien q-mt-xl">
+                                <q-btn v-if="!auditor" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                             </div>
                         </q-tab-panel>
 
@@ -111,6 +111,7 @@
 </template>
 
 <script>
+import configServices from '../services/config'
 
 export default {
   name: 'resumen',
@@ -120,10 +121,22 @@ export default {
       patients: [],
       search: '',
       tab: 'registro_vih',
-      comodines: []
+      comodines: [],
+      auditor: false
     }
   },
   created () {
+    this.user = JSON.parse(localStorage.getItem('user'))
+    if (this.user !== {}) {
+      this.user.roles.map((item, key) => {
+        if (item === 'auditor') {
+          this.auditor = true
+        }
+      })
+    }
+
+    this.registerNid = localStorage.getItem('registerNid')
+
     const comodines = localStorage.getItem('comodines')
 
     if (typeof comodines !== 'undefined' && comodines !== '' && comodines !== null) {
@@ -137,8 +150,33 @@ export default {
       localStorage.setItem('step', step)
       this.$router.push('/crear-registro-vih')
     },
-    editPage (nid) {
+    finishRegister (nid) {
+      var _this = this
+      var data = {
+        type: 'saveRegister',
+        user: this.user.uid,
+        status: 'Finalizado'
+      }
 
+      if (this.registerNid !== '') {
+        data.id = this.registerNid
+      }
+
+      var patient = localStorage.getItem('patientNid')
+
+      if (patient !== '') {
+        data.patient = patient
+      }
+
+      configServices.consumerStandar(this, 'asfa-rest/post', data, {
+        callBack: (data) => {
+          if (typeof data.error !== 'undefined') {
+            return _this.$swal('Advertencia', 'Error al crear registro verifique que no haya un registro previamente creado para el paciente', 'error')
+          }
+
+          return _this.$router.push('/resumen')
+        }
+      })
     }
   }
 }
