@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center azul_fondo">
+  <q-page class="flex flex-center azul_fondo wiew_reportes">
     <div class="q-pb-md all_width ">
         <div class="w_1200 q-pd-md">
             <h3 class="title_out_content">Bienvenido Dashboard</h3>
