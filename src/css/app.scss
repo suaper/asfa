@@ -998,3 +998,45 @@ h2{
         width: 30%;
     }
 }
+.flex-end{
+      justify-content: flex-end;
+      display: flex;
+}
+.wiew_reportes{
+    .tipo_grilla{
+        .flex-end{
+            .q-field--filled .q-field__control{
+                border-radius: 100px;
+            }
+            .labele{
+                color: #21609F;
+                font-size: 14px;
+            }
+            .dos_items{
+                margin-bottom: 20px;
+                .item{
+                    max-width: 190px;
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+}
+.azul{
+    color: #21609F;
+}
+.radius_30{
+    border-radius: 30px;
+    .q-field--filled .q-field__control{
+        border-radius: 15px;
+    }
+}
+.content_input_anota{
+    border-bottom: 1px solid #21609F;
+    padding: 10px;
+}
+.vertical{
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}

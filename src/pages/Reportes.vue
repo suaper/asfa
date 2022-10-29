@@ -38,7 +38,7 @@
                               <div class="wrp_search rango_fechas">
                                 <div class="row dos_items">
                                   <div class="item">
-                                    <label>Fecha inicial: </label>
+                                    <label class="labele">Seleccionar fecha de inicio</label>
                                     <q-input filled v-model="initialDate" >
                                       <template v-slot:append>
                                       <q-icon name="event" class="cursor-pointer">
@@ -54,7 +54,7 @@
                                     </q-input>
                                   </div>
                                   <div class="item">
-                                    <label>Fecha final: </label>
+                                    <label class="labele">Seleccionar fecha de final</label>
                                     <q-input filled v-model="finalDate">
                                       <template v-slot:append>
                                       <q-icon name="event" class="cursor-pointer">

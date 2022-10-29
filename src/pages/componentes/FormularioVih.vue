@@ -1887,7 +1887,7 @@
                 </div>
               </div>
           </div>
-          <div class="w_48">
+          <div class="w_48 ">
             <q-pdfviewer
               v-model="show"
               type="html5"
@@ -1896,7 +1896,10 @@
               inner-content-class="container"
               v-if="pdfs.length !== 0"
             />
-            <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
+            <div class="lista_botones vertical">
+              <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
+              <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popuprealizaranotacion = true" text-color="white" icon-right="border_color" label="Realizar anotación" />
+            </div>
             <div class="anotaciones_pdf doc-note" v-if="anotations.length !== 0">
               <h5 class="titulo_nota">
                 Anotaciones
@@ -1953,6 +1956,32 @@
             </q-card-section>
           </q-card>
       </q-dialog>
+
+      <q-dialog v-model="popuprealizaranotacion">
+          <q-card style="width: 700px; max-width: 80vw;" class="pop_cambiarpsf">
+            <q-card-section class="q-pa-md">
+              <h4>Crear Anotaciones</h4>
+              <div class="desc_pop">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+              </div>
+              <q-form>
+                <div class="content_input_anota">
+                  <span class="azul">Observación*</span>
+                  <q-input
+                    v-model="text"
+                    filled
+                    class="cien radius_30"
+                    type="textarea"
+                  />
+                </div>
+                <div class="wrp_button flex-end q-py-md">
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit"/>
+                </div>
+              </q-form>
+              <q-btn class="close_pop" icon="close" flat round dense v-close-popup />
+            </q-card-section>
+          </q-card>
+      </q-dialog>
     </q-form>
 </template>
 
@@ -1981,6 +2010,7 @@ export default {
       },
       popcambiarpdf: false,
       popupanotacion: false,
+      popuprealizaranotacion: false,
       tool: false,
       registerNid: '',
       date: 'YYYY-MM-DD',
