@@ -84,6 +84,7 @@
                                 </tr>
                             </table>
                             </div>
+                            <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="file_download" label="Descargar Excel" />
                         </q-tab-panel>
                     </q-tab-panels>
                 </q-card>

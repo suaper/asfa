@@ -1968,14 +1968,14 @@
                 <div class="content_input_anota">
                   <span class="azul">Observación*</span>
                   <q-input
-                    v-model="text"
+                    v-model="annotationText"
                     filled
                     class="cien radius_30"
                     type="textarea"
                   />
                 </div>
                 <div class="wrp_button flex-end q-py-md">
-                  <q-btn rounded class="azul_boton btn_crear" text-color="white" icon-right="save" label="Guardar" type="submit"/>
+                  <q-btn rounded class="azul_boton btn_crear" text-color="white" type="button" icon-right="save" label="Guardar" @click="saveAnnotation"/>
                 </div>
               </q-form>
               <q-btn class="close_pop" icon="close" flat round dense v-close-popup />
@@ -1997,6 +1997,7 @@ export default {
       urlSite: 'http://saspdev.com',
       show: true,
       firstStep: true,
+      annotationText: '',
       secondStep: false,
       thirdStep: false,
       fourthStep: false,
@@ -2860,6 +2861,29 @@ export default {
             _this.pdf = data[0].field_pdf
           }
           _this.$q.loading.hide()
+        }
+      })
+    },
+    saveAnnotation () {
+      var _this = this
+      var data = {
+        type: 'saveAnnotation',
+        data: { comment: this.annotationText },
+        user: this.user.uid,
+        status: 'Finalizado'
+      }
+      if (this.registerNid !== '') {
+        data.id = this.registerNid
+      }
+
+      configServices.consumerStandar(this, 'asfa-rest/post', data, {
+        callBack: (data) => {
+          if (typeof data.error !== 'undefined') {
+            return _this.$swal('Advertencia', 'Error al crear registro verifique que no haya un registro previamente creado para el paciente', 'error')
+          }
+          _this.getAnotations()
+          _this.popuprealizaranotacion = false
+          return _this.$swal('Advertencia', 'Anotación guardada correctamente', 'success')
         }
       })
     },
