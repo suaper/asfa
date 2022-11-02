@@ -84,7 +84,7 @@
                                 </tr>
                             </table>
                             </div>
-                            <q-btn @click="downloadExcel()" rounded class="bg_botn_azul" text-color="white" icon-right="file_download" label="Descargar Excel" />
+                            <q-btn @click="downloadExcel()" rounded class="bg_botn_green q-mt-xl" text-color="white" icon-right="file_download" label="Descargar Excel" />
                         </q-tab-panel>
                     </q-tab-panels>
                 </q-card>

@@ -606,6 +606,7 @@ h2{
         width: 96%;
         border-bottom: 1px solid #ccc;
         margin: 0px auto;
+        padding: 6px 0px;
 
         td{
             padding: 4px;
@@ -1039,4 +1040,7 @@ h2{
     flex-direction: column;
     display: flex;
     align-items: flex-start;
+}
+.bg_botn_green{
+    background: #A1BC31;
 }
