@@ -84,7 +84,7 @@
                                 </tr>
                             </table>
                             </div>
-                            <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="file_download" label="Descargar Excel" />
+                            <q-btn @click="downloadExcel()" rounded class="bg_botn_azul" text-color="white" icon-right="file_download" label="Descargar Excel" />
                         </q-tab-panel>
                     </q-tab-panels>
                 </q-card>
@@ -150,6 +150,19 @@ export default {
           this.$swal('Advertencia', 'No hay registros para los filtros seleccionados', 'error')
         }
       }
+    },
+    downloadExcel () {
+      var data = {
+        type: 'downloadExcel',
+        finisheds: JSON.stringify(this.finished)
+      }
+
+      configServices.consumerStandar(this, 'asfa-rest/post', data, {
+        callBack: (data) => {
+          console.log(data)
+          window.open(data.url)
+        }
+      })
     },
     getRegistros () {
       var _this = this
