@@ -180,7 +180,11 @@
                         </q-input>
                     </div>
                 </div>
-                <div class="row un_item">
+                <div class="row dos_items">
+                  <div class="item">
+                        <label>Programa</label>
+                        <q-select rounded standout v-model="data.program" :options="['VIH', 'Cancer', 'ERC', 'Reumatoide']" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
+                    </div>
                     <div class="item">
                         <label>Informacion detallada del paciente</label>
                         <q-input

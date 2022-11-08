@@ -1898,7 +1898,7 @@
             />
             <div class="lista_botones vertical">
               <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popcambiarpdf = true" text-color="white" icon-right="autorenew" label="Cambiar pdf" />
-              <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" @click="popuprealizaranotacion = true" text-color="white" icon-right="border_color" label="Realizar anotación" />
+              <q-btn rounded class="bg_botn_verde btn_crear cambiar_pdf" v-if="auditor" @click="popuprealizaranotacion = true" text-color="white" icon-right="border_color" label="Realizar anotación" />
             </div>
             <div class="anotaciones_pdf doc-note" v-if="anotations.length !== 0">
               <h5 class="titulo_nota">
@@ -2934,71 +2934,71 @@ export default {
 
       if (this.status !== 'finalizado') {
         if (typeof this.patient.field_json.sex !== 'undefined') {
-          if (this.patient.field_json.sex.id === 'H' && this.data.fum !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.fum === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningFirst !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningFirst === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateReportedPregnancy !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateReportedPregnancy === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningSecond !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningSecond === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningThird !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningThird === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningBirth !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningBirth === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.womanVihReported.id !== '9') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.ageVihReported.id !== '99') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.ageVihReported !== 'undefined' && this.data.ageVihReported.id === '99') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.receivedTreatmentVih.id !== '9') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.ageInitTar.id !== '99') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.ageInitTar !== 'undefined' && this.data.ageInitTar.id === '99') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.tarIntraBirth.id !== '99') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '99') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.resultVihReported.id !== '9') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateCulminationReported !== '1845-01-01') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.dateCulminationReported === '1845-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.pharmacologicalSuppression.id !== '9') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.pharmacologicalSuppression !== 'undefined' && this.data.pharmacologicalSuppression.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.identificationTypeNewbor.id !== 'NA') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.identificationTypeNewbor !== 'undefined' && this.data.identificationTypeNewbor.id === 'NA') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.identificationNewborn !== '9') {
+          if (this.patient.field_json.sex.id === 'H' && this.data.identificationNewborn === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.pregnantWoman.id !== '9') {
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.pregnantWoman !== 'undefined' && this.data.pregnantWoman.id !== '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
           }
         }
@@ -3462,15 +3462,15 @@ export default {
             }
           }
 
-          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.patient.field_json.birthdate) && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
+          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.comoLlegoLaPrueba !== 'undefined' && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
             return _this.$swal('Advertencia', 'Error en la validación No. B4163', 'error')
           }
 
-          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse('1846-01-01') && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
+          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse('1846-01-01') && typeof this.data.comoLlegoLaPrueba !== 'undefined' && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
             return _this.$swal('Advertencia', 'Error en la validación No. B5330', 'error')
           }
 
-          if (parseInt(this.data.comoLlegoLaPrueba.id) <= 13 && this.data.fechaPruebaPresuntiva === '1799-01-01') {
+          if (typeof this.data.comoLlegoLaPrueba !== 'undefined' && parseInt(this.data.comoLlegoLaPrueba.id) <= 13 && this.data.fechaPruebaPresuntiva === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B4401', 'error')
           }
 
@@ -3486,44 +3486,44 @@ export default {
             }
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '4' && parseInt(this.data.conteoLinfocitosCd4) <= 3000) {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '4' && parseInt(this.data.conteoLinfocitosCd4) <= 3000) {
             return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '2') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '2') {
             if ((parseInt(this.data.conteoLinfocitosCd4) < 200 || parseInt(this.data.conteoLinfocitosCd4) >= 500)) {
               return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
             }
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '1') {
             if ((parseInt(this.data.conteoLinfocitosCd4) < 500 || parseInt(this.data.conteoLinfocitosCd4) > 3000)) {
               return _this.$swal('Advertencia', 'Error en la validación No. B5331', 'error')
             }
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && parseInt(this.data.conteoLinfocitosCd4) >= 200) {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && parseInt(this.data.conteoLinfocitosCd4) >= 200) {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.verificacionConteoLinfocitos.id === '1' && (parseInt(this.data.conteoLinfocitosCd4) === 9999 || parseInt(this.data.conteoLinfocitosCd4) === 9998)) {
+          if (typeof this.data.verificacionConteoLinfocitos !== 'undefined' && this.verificacionConteoLinfocitos.id === '1' && (parseInt(this.data.conteoLinfocitosCd4) === 9999 || parseInt(this.data.conteoLinfocitosCd4) === 9998)) {
             return _this.$swal('Advertencia', 'Error en la validación No. B3224', 'error')
           }
 
-          if (parseInt(this.verificacionConteoLinfocitos.id) > 1 && parseInt(this.data.conteoLinfocitosCd4) < 5555) {
+          if (typeof this.data.verificacionConteoLinfocitos !== 'undefined' && parseInt(this.verificacionConteoLinfocitos.id) > 1 && parseInt(this.data.conteoLinfocitosCd4) < 5555) {
             return _this.$swal('Advertencia', 'Error en la validación No. B4402', 'error')
           }
 
-          if (this.data.verificacionCargaViral === '9') {
+          if (typeof this.data.verificacionCargaViral !== 'undefined' && this.data.verificacionCargaViral.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B2968', 'error')
           }
 
-          if (this.data.verificacionCargaViral !== '9') {
-            if (this.data.verificacionCargaViral.id === '1' && parseInt(this.data.cargaViralEnresultado) >= 1000000) {
+          if (typeof this.data.verificacionCargaViral !== 'undefined' && this.data.verificacionCargaViral.id !== '9') {
+            if (typeof this.data.verificacionCargaViral !== 'undefined' && this.data.verificacionCargaViral.id === '1' && parseInt(this.data.cargaViralEnresultado) >= 1000000) {
               return _this.$swal('Advertencia', 'Error en la validación No. B4169', 'error')
             }
 
-            if (parseInt(this.data.verificacionCargaViral.id) > 1 && parseInt(this.data.cargaViralEnresultado) < 5555555) {
+            if (typeof this.data.verificacionCargaViral !== 'undefined' && parseInt(this.data.verificacionCargaViral.id) > 1 && parseInt(this.data.cargaViralEnresultado) < 5555555) {
               return _this.$swal('Advertencia', 'Error en la validación No. B4403', 'error')
             }
           }
@@ -3557,19 +3557,19 @@ export default {
           }
 
           if (this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            if (this.data.medicamento1InicioTar.id !== '9') {
+            if (typeof this.data.medicamento1InicioTar !== 'undefined' && this.data.medicamento1InicioTar.id !== '9') {
               return _this.$swal('Advertencia', 'Error en la validación No. B2978', 'error')
             }
 
-            if (this.data.linfocitosCD4InicioTar.id !== '5') {
+            if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.linfocitosCD4InicioTar.id !== '5') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.valorLinfocitosCD4InicioTar !== '9996') {
+            if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.valorLinfocitosCD4InicioTar.id !== '9996') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.cargaMomentoInicioTar.id !== '5') {
+            if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.cargaMomentoInicioTar.id !== '5') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
@@ -3577,28 +3577,28 @@ export default {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.motivoInicioTar.id !== '16') {
+            if (typeof this.data.motivoInicioTar !== 'undefined' && this.data.motivoInicioTar.id !== '16') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.hepatitisBInicioTar.id !== '6') {
+            if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id !== '6') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.hepatitisCInicioTar.id !== '6') {
+            if (typeof this.data.hepatitisCInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id !== '6') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.tuberculosisInicioTar.id !== '5') {
+            if (typeof this.data.tuberculosisInicioTar !== 'undefined' && this.data.tuberculosisInicioTar.id !== '5') {
               return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
           }
 
-          if (this.data.linfocitosCD4InicioTar.id === '1' && parseInt(this.data.valorLinfocitosCD4InicioTar) > 3000) {
+          if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.linfocitosCD4InicioTar.id === '1' && parseInt(this.data.valorLinfocitosCD4InicioTar) > 3000) {
             return _this.$swal('Advertencia', 'Error en la validación No. B4172', 'error')
           }
 
-          if (parseInt(this.data.linfocitosCD4InicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && parseInt(this.data.linfocitosCD4InicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5335', 'error')
           }
 
@@ -3612,71 +3612,71 @@ export default {
             }
           }
 
-          if (this.data.motivoInicioTar.id === '16' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+          if (typeof this.data.motivoInicioTar !== 'undefined' && this.data.motivoInicioTar.id === '16' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3255', 'error')
           }
 
-          if (parseInt(this.data.motivoInicioTar.id) < 16 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.motivoInicioTar !== 'undefined' && parseInt(this.data.motivoInicioTar.id) < 16 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5341', 'error')
           }
 
-          if (this.data.motivoInicioTar.id === '17' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.motivoInicioTar !== 'undefined' && this.data.motivoInicioTar.id === '17' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5342', 'error')
           }
 
-          if (this.data.hepatitisBInicioTar.id === '9') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B2996', 'error')
           }
 
-          if (this.data.hepatitisBInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3256', 'error')
           }
 
-          if (parseInt(this.data.hepatitisBInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && parseInt(this.data.hepatitisBInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5343', 'error')
           }
 
-          if (this.data.hepatitisBInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5344', 'error')
           }
 
-          if (this.data.hepatitisCInicioTar.id === '9') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B2998', 'error')
           }
 
-          if (this.data.hepatitisCInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3257', 'error')
           }
 
-          if (parseInt(this.data.hepatitisCInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && parseInt(this.data.hepatitisCInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5345', 'error')
           }
 
-          if (this.data.hepatitisCInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5346', 'error')
           }
 
-          if (this.data.tuberculosisInicioTar.id === '9') {
+          if (typeof this.data.tuberculosisInicioTar !== 'undefined' && this.data.tuberculosisInicioTar.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3000', 'error')
           }
 
-          if (this.data.tuberculosisInicioTar.id === '5' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
+          if (typeof this.data.tuberculosisInicioTar !== 'undefined' && this.data.tuberculosisInicioTar.id === '5' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3258', 'error')
           }
 
-          if (parseInt(this.data.tuberculosisInicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
+          if (typeof this.data.tuberculosisInicioTar !== 'undefined' && parseInt(this.data.tuberculosisInicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5347', 'error')
           }
 
-          if (this.data.cambiosEsquemaInicialTar.id === '9') {
+          if (typeof this.data.cambiosEsquemaInicialTar !== 'undefined' && this.data.cambiosEsquemaInicialTar.id === '9') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3006', 'error')
           }
 
-          if (this.data.cambiosEsquemaInicialTar.id === '1' && this.data.medicamentoEsquemaInicialTar === '1800-01-01') {
+          if (typeof this.data.cambiosEsquemaInicialTar !== 'undefined' && this.data.cambiosEsquemaInicialTar.id === '1' && this.data.medicamentoEsquemaInicialTar === '1800-01-01') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
           }
 
-          if (this.data.cambiosEsquemaInicialTar.id === '1' && (parseInt(this.data.cambioMedicamentoTar) > 7 || this.data.cambioMedicamentoTar !== '55')) {
+          if (typeof this.data.cambiosEsquemaInicialTar !== 'undefined' && this.data.cambiosEsquemaInicialTar.id === '1' && (parseInt(this.data.cambioMedicamentoTar) > 7 || this.data.cambioMedicamentoTar !== '55')) {
             return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
           }
 
@@ -3688,109 +3688,109 @@ export default {
         }
 
         if (this.fiveStep === true) {
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionBacteriana !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionBacteriana !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.candidiasisETBP !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.candidiasisETBP !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.tuberculosisPulmonar !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.tuberculosisPulmonar !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.cancerCervix !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.cancerCervix !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.coccidioidomicosis !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.coccidioidomicosis !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.citomegalovirus1Mes !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.citomegalovirus1Mes !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.retinitisCitomegalovirus !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.retinitisCitomegalovirus !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.herpesMayor1Mes !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.herpesMayor1Mes !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.diarreaIsospora1Mes !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.diarreaIsospora1Mes !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.histoplasmosisDiseminada !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.histoplasmosisDiseminada !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.linfomaBurkitt !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.linfomaBurkitt !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaPneumocystis !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaPneumocystis !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaRecurrente !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaRecurrente !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.septicemiaSalmonella !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.septicemiaSalmonella !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionKansasiiOtras !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionKansasiiOtras !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.criptococosisExtrapulmonar !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.criptococosisExtrapulmonar !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.sarcamoKaposi !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.sarcamoKaposi !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.sindromeDesgasteVih !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.sindromeDesgasteVih !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.leucoencefalopatiaMultifocalVih !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.leucoencefalopatiaMultifocalVih !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.toxoplasmosisCerebral1Mes !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.toxoplasmosisCerebral1Mes !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.demenciaAsociadaVih !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.demenciaAsociadaVih !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaIntersticialLinfoidea !== '1') {
+          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaIntersticialLinfoidea !== '1') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
         }
 
         if (this.sixStep === true) {
-          if (this.data.estadoClinicoActual.id !== '3' && this.data.estadoClinicoAlMomento.id === '3') {
+          if (typeof this.data.estadoClinicoActual !== 'undefined' && this.data.estadoClinicoActual.id !== '3' && this.data.estadoClinicoAlMomento.id === '3') {
             return _this.$swal('Advertencia', 'Error en la validación No. B3260', 'error')
           }
 
-          if ((parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4) && this.data.estadoClinicoAlMomento.id === '2') {
+          if (typeof this.data.estadoClinicoActual !== 'undefined' && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4) && this.data.estadoClinicoAlMomento.id === '2') {
             return _this.$swal('Advertencia', 'Error en la validación No. B4168', 'error')
           }
 
-          if (parseInt(this.data.valorLinfocitosCD4InicioTar) < 500 && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4)) {
+          if (typeof this.data.estadoClinicoActual !== 'undefined' && parseInt(this.data.valorLinfocitosCD4InicioTar) < 500 && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4)) {
             return _this.$swal('Advertencia', 'Error en la validación No. B5336', 'error')
           }
 
-          if (parseInt(this.data.valorLinfocitosCD4InicioTar) < 200 && this.data.estadoClinicoActual.id !== '3') {
+          if (typeof this.data.estadoClinicoActual !== 'undefined' && parseInt(this.data.valorLinfocitosCD4InicioTar) < 200 && this.data.estadoClinicoActual.id !== '3') {
             return _this.$swal('Advertencia', 'Error en la validación No. B5337', 'error')
           }
         }

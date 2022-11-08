@@ -14,11 +14,12 @@
                     active-color="primary"
                     indicator-color="primary"
                     align="justify"
+                    v-if="loadedPatient"
                     >
-                    <q-tab name="registro_vih" label="Registro Paciente VIH" />
-                    <q-tab name="registro_cancer" label="Registro paciente Cancer" />
-                    <q-tab name="registro_reumatoide" label="Registro paciente reumatoide" />
-                    <q-tab name="registro_erc" label="Registro paciente ERC" />
+                    <q-tab name="registro_vih" label="Registro Paciente VIH" v-if="patient.field_json.program === 'VIH'" />
+                    <q-tab name="registro_cancer" label="Registro paciente Cancer" v-if="patient.field_json.program === 'Cancer'"  />
+                    <q-tab name="registro_reumatoide" label="Registro paciente reumatoide" v-if="patient.field_json.program === 'Reumatoide'"  />
+                    <q-tab name="registro_erc" label="Registro paciente ERC" v-if="patient.field_json.program === 'ERC'"  />
                     </q-tabs>
 
                     <q-separator />
@@ -46,6 +47,7 @@
                         </q-tab-panel>
 
                         <q-tab-panel name="registro_cancer">
+                          <FormularioCancer :patient="patient" v-if="loadedPatient"/>
 
                         </q-tab-panel>
 
@@ -74,6 +76,7 @@
 
 <script>
 import FormularioVih from 'pages/componentes/FormularioVih'
+import FormularioCancer from 'pages/componentes/FormularioCancer'
 import PopPerfil from 'pages/componentes/PopPerfil'
 import configServices from '../services/config'
 
@@ -81,6 +84,7 @@ export default {
   name: 'registros',
   components: {
     FormularioVih,
+    FormularioCancer,
     PopPerfil
   },
   data () {
@@ -112,6 +116,18 @@ export default {
             var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
             data[key].field_json = JSON.parse(json)
           })
+
+          switch (data[0].field_json.program) {
+            case 'Cancer':
+              this.tab = 'registro_cancer'
+              break
+            case 'Reumatoide':
+              this.tab = 'registro_reumatoide'
+              break
+            case 'ERC':
+              this.tab = 'registro_erc'
+              break
+          }
 
           _this.patient = data[0]
           _this.loadedPatient = true
