@@ -32,7 +32,7 @@
                                         <li><img alt="logo" src="../assets/iconos/perfil-paciente1.png"/></li>
                                         <li>
                                             <strong>{{ patient.title }}</strong>
-                                            <span class="edad">25 años</span>
+                                            <span class="edad">{{ patient.age }} años</span>
                                             <q-btn rounded class="bg_botn_verde btn_crear" @click="popperfil = true" text-color="white" icon-right="person" label="Ver perfil" />
                                         </li>
                                     </ul>
@@ -47,15 +47,66 @@
                         </q-tab-panel>
 
                         <q-tab-panel name="registro_cancer">
+                          <div class="row cien flex header_two">
+                                <div class="info_user_top">
+                                    <ul>
+                                        <li><img alt="logo" src="../assets/iconos/perfil-paciente1.png"/></li>
+                                        <li>
+                                            <strong>{{ patient.title }}</strong>
+                                            <span class="edad">{{ patient.age }} años</span>
+                                            <q-btn rounded class="bg_botn_verde btn_crear" @click="popperfil = true" text-color="white" icon-right="person" label="Ver perfil" />
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="w_50">
+                                    <img alt="logo" src="../assets/sellos-icontec.png"/>
+                                </div>
+                            </div>
+                            <hr>
                           <FormularioCancer :patient="patient" v-if="loadedPatient"/>
 
                         </q-tab-panel>
 
                         <q-tab-panel name="registro_reumatoide">
+                          <div class="row cien flex header_two">
+                                <div class="info_user_top">
+                                    <ul>
+                                        <li><img alt="logo" src="../assets/iconos/perfil-paciente1.png"/></li>
+                                        <li>
+                                            <strong>{{ patient.title }}</strong>
+                                            <span class="edad">{{ patient.age }} años</span>
+                                            <q-btn rounded class="bg_botn_verde btn_crear" @click="popperfil = true" text-color="white" icon-right="person" label="Ver perfil" />
+                                        </li>
+                                    </ul>
+                                </div>
 
+                                <div class="w_50">
+                                    <img alt="logo" src="../assets/sellos-icontec.png"/>
+                                </div>
+                            </div>
+                            <hr>
+                          <FormularioReumatoide :patient="patient" v-if="loadedPatient"/>
                         </q-tab-panel>
                         <q-tab-panel name="registro_erc">
+                          <div class="row cien flex header_two">
+                                <div class="info_user_top">
+                                    <ul>
+                                        <li><img alt="logo" src="../assets/iconos/perfil-paciente1.png"/></li>
+                                        <li>
+                                            <strong>{{ patient.title }}</strong>
+                                            <span class="edad">{{ patient.age }} años</span>
+                                            <q-btn rounded class="bg_botn_verde btn_crear" @click="popperfil = true" text-color="white" icon-right="person" label="Ver perfil" />
+                                        </li>
+                                    </ul>
+                                </div>
 
+                                <div class="w_50">
+                                    <img alt="logo" src="../assets/sellos-icontec.png"/>
+                                </div>
+                            </div>
+                            <hr>
+                          <FormularioErc :patient="patient" v-if="loadedPatient"/>
                         </q-tab-panel>
                     </q-tab-panels>
                 </q-card>
@@ -77,6 +128,8 @@
 <script>
 import FormularioVih from 'pages/componentes/FormularioVih'
 import FormularioCancer from 'pages/componentes/FormularioCancer'
+import FormularioErc from 'pages/componentes/FormularioErc'
+import FormularioReumatoide from 'pages/componentes/FormularioReumatoide'
 import PopPerfil from 'pages/componentes/PopPerfil'
 import configServices from '../services/config'
 
@@ -85,6 +138,8 @@ export default {
   components: {
     FormularioVih,
     FormularioCancer,
+    FormularioErc,
+    FormularioReumatoide,
     PopPerfil
   },
   data () {
@@ -129,7 +184,17 @@ export default {
               break
           }
 
+          var birthdate = data[0].field_json.birthdate.split('-')
+          var date = birthdate[1] + '/' + birthdate[2] + '/' + birthdate[0]
+
+          var dob = new Date(date)
+          var monthDiff = Date.now() - dob.getTime()
+          var ageDt = new Date(monthDiff)
+          var year = ageDt.getUTCFullYear()
+          var age = Math.abs(year - 1970)
+
           _this.patient = data[0]
+          _this.patient.age = age
           _this.loadedPatient = true
           _this.$q.loading.hide()
         }

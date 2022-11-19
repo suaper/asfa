@@ -123,6 +123,7 @@ export default {
 
     localStorage.setItem('registerNid', '')
     localStorage.setItem('patientNid', '')
+    localStorage.setItem('comodines', '')
   },
   methods: {
     crearRegistro (nid) {

@@ -103,7 +103,7 @@
                       </q-input>
                     </div>
                 </div>
-                <div class="row tres_items">
+                <div class="row dos_items">
                     <div class="item">
                       <label>Fecha de nacimiento</label>
                         <q-input filled v-model="data.birthdate">
@@ -123,22 +123,6 @@
                     <div class="item">
                         <label>Sexo</label>
                         <q-select rounded standout v-model="data.sex" :options="sexs" :rules="[val => !!val || 'Campo requerido']" label="Seleccionar" />
-                    </div>
-                    <div class="item">
-                        <label>Fecha de afiliacion</label>
-                        <q-input filled  v-model="data.membershipDate">
-                            <template v-slot:append>
-                              <q-icon name="event" class="cursor-pointer">
-                                <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                                  <q-date v-model="data.membershipDate" mask="YYYY-MM-DD">
-                                    <div class="row items-center justify-end">
-                                      <q-btn v-close-popup label="Cerrar" color="primary" flat />
-                                    </div>
-                                  </q-date>
-                                </q-popup-proxy>
-                              </q-icon>
-                            </template>
-                        </q-input>
                     </div>
                 </div>
                 <div class="row dos_items">
