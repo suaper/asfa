@@ -25,13 +25,16 @@
                     align="justify"
                     narrow-indicator
                     >
-                    <q-tab name="finalizados" label="Finalizados" />
+                    <q-tab name="registro_vih" label="VIH" />
+                    <q-tab name="registro_cancer" label="Cancer"  />
+                    <q-tab name="registro_reumatoide" label="Reumatoide"  />
+                    <q-tab name="registro_erc" label="ERC"  />
                     </q-tabs>
 
                     <q-separator />
 
                     <q-tab-panels v-model="tab" animated>
-                        <q-tab-panel name="finalizados">
+                        <q-tab-panel name="registro_vih">
                           <div class="wrp_table tipo_grilla">
                             <h4 class="aviso_busque">Listado Reportes</h4>
                             <div class="w_60 flex-end">
@@ -104,7 +107,7 @@ export default {
       sliders: true,
       patients: [],
       search: null,
-      tab: 'finalizados',
+      tab: 'registro_vih',
       finished: [],
       initialDate: '',
       finalDate: '',
