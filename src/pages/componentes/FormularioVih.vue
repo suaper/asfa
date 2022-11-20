@@ -5,7 +5,7 @@
             <h4 class="titulo_fondo w_100">Información de mujeres gestantes</h4>
               <div class="row un_item">
                   <div class="item">
-                      <label class="toltip">Mujer gestante
+                      <label class="toltip">15. Mujer gestante
                           <q-icon @click="tool = true" name="help_outline" class="cursor-pointer"></q-icon>
                         </label>
                       <q-select rounded standout v-model="data.pregnantWoman" :options="pregnantWomans"  label="Seleccionar" :rules="[val => !!val || 'Campo requerido']"/>
@@ -31,11 +31,11 @@
               </div>
               <div class="row dos_items">
                   <div class="item">
-                      <label>Niño o niña menor de 12 meses que es hijo(a) de madre que vive con VIH</label>
+                      <label>16. Niño o niña menor de 12 meses que es hijo(a) de madre que vive con VIH</label>
                       <q-select rounded standout v-model="data.children" :options="childrens" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Persona con tuberculosis activa</label>
+                      <label>17.  Persona con tuberculosis activa</label>
                       <q-select rounded standout v-model="data.tuberculosis" :options="optionsTuberculosis" label="Seleccionar" />
                   </div>
               </div>
@@ -47,7 +47,7 @@
               </div>-->
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>Fecha del diagnóstico de la gestación reportada</label>
+                      <label>19. Fecha del diagnóstico de la gestación reportada</label>
                       <q-input filled v-model="data.dateReportedPregnancy">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -63,7 +63,7 @@
                       </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación</label>
+                      <label>20. Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación</label>
                       <q-input filled v-model="data.dateScreeningFirst">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -81,7 +81,7 @@
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación</label>
+                      <label>21. Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación</label>
                       <q-input filled v-model="data.dateScreeningSecond">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -97,7 +97,7 @@
                       </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación</label>
+                      <label>22. Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación</label>
                       <q-input filled v-model="data.dateScreeningThird">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -115,7 +115,7 @@
               </div>
               <div class="row un_item" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                    <label>Fecha de realización de tamizaje para VIH en el momento del parto</label>
+                    <label>23. Fecha de realización de tamizaje para VIH en el momento del parto</label>
                       <q-input filled v-model="data.dateScreeningBirth">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -133,11 +133,11 @@
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>¿Mujer con diagnóstico de VIH en cualquier momento de la gestación reportada?</label>
+                      <label>24. ¿Mujer con diagnóstico de VIH en cualquier momento de la gestación reportada?</label>
                       <q-select rounded standout v-model="data.womanVihReported" :options="womanVihReporteds" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Edad gestacional al momento del diagnóstico de VIH durante la gestación reportada.</label>
+                      <label>24.1. Edad gestacional al momento del diagnóstico de VIH durante la gestación reportada.</label>
                       <q-input
                           rounded
                           standout
@@ -150,11 +150,11 @@
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>¿Recibió tratamiento para VIH durante la gestación reportada?</label>
+                      <label>24.2. ¿Recibió tratamiento para VIH durante la gestación reportada?</label>
                       <q-select rounded standout v-model="data.receivedTreatmentVih" :options="receivedTreatmentVihs" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Edad gestacional al inicio de la terapia antirretroviral (TAR) en la gestación reportada.</label>
+                      <label>24.3. Edad gestacional al inicio de la terapia antirretroviral (TAR) en la gestación reportada.</label>
                       <q-input
                           rounded
                           standout
@@ -167,17 +167,17 @@
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>Terapia antirretroviral (TAR) durante el intraparto en la gestación reportada.</label>
+                      <label>24.4. Terapia antirretroviral (TAR) durante el intraparto en la gestación reportada.</label>
                       <q-select rounded standout v-model="data.tarIntraBirth" :options="tarIntraBirths" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Resultado de la gestación reportada en gestantes con VIH</label>
+                      <label>24.5. Resultado de la gestación reportada en gestantes con VIH</label>
                       <q-select rounded standout v-model="data.resultVihReported" :options="resultVihReporteds" label="Seleccionar" />
                   </div>
               </div>
               <div class="row un_item" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>Fecha de culminación de la gestación reportada en gestantes con VIH.</label>
+                      <label>24.6. Fecha de culminación de la gestación reportada en gestantes con VIH.</label>
                       <q-input filled v-model="data.dateCulminationReported">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -195,17 +195,17 @@
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>Supresión farmacológica de la lactancia materna en gestantes con VIH.</label>
+                      <label>24.7. Supresión farmacológica de la lactancia materna en gestantes con VIH.</label>
                       <q-select rounded standout v-model="data.pharmacologicalSuppression" :options="pharmacologicalSuppressions" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Tipo de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada.</label>
+                      <label>24.8. Tipo de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada.</label>
                       <q-select rounded standout v-model="data.identificationTypeNewbor" :options="identificationsNewbord" label="Seleccionar" />
                   </div>
               </div>
               <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
                   <div class="item">
-                      <label>Número de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada</label>
+                      <label>24.9. Número de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada</label>
                       <q-input
                           rounded
                           standout
@@ -248,11 +248,11 @@
             <h4 class="titulo_fondo w_100" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">Información de menores de 12 meses hijos o hijas de madres que viven con VIH</h4>
             <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
               <div class="item">
-                  <label>Tipo de identificación de la madre del menor de 12 meses expuesto al VIH</label>
+                  <label>25. Tipo de identificación de la madre del menor de 12 meses expuesto al VIH</label>
                   <q-select rounded standout v-model="data.documentTypeChildren" :options="documentTypesChildres" label="Seleccionar" />
               </div>
               <div class="item">
-                <label>Número de identificación de la madre del menor de 12 meses expuesto al VIH..</label>
+                <label>25.1 Número de identificación de la madre del menor de 12 meses expuesto al VIH..</label>
                 <q-input
                     rounded
                     standout
@@ -265,21 +265,21 @@
             </div>
             <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
               <div class="item">
-                  <label>¿La madre del menor de 12 meses expuesto al VIH tiene confirmado el diagnóstico de VIH?</label>
+                  <label>25.2 ¿La madre del menor de 12 meses expuesto al VIH tiene confirmado el diagnóstico de VIH?</label>
                   <q-select rounded standout v-model="data.haveConfirmedVihDx" :options="answersConfirmedDx" label="Seleccionar" />
               </div>
               <div class="item">
-                <label>Profilaxis con antirretrovirales para el recién nacido vivo expuesto al VIH.</label>
+                <label>26. Profilaxis con antirretrovirales para el recién nacido vivo expuesto al VIH.</label>
                 <q-select rounded standout v-model="data.profilaxis" :options="profilaxisOptions" label="Seleccionar" />
               </div>
             </div>
             <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
               <div class="item">
-                  <label>Suministro de fórmula láctea.</label>
+                  <label>27. Suministro de fórmula láctea.</label>
                   <q-select rounded standout v-model="data.suministroViaLactea" :options="viaLacteaOptions" label="Seleccionar" />
               </div>
               <div class="item">
-                <label>Fecha de la primera carga viral para VIH en el menor de 12 meses expuesto al VIH.</label>
+                <label>28. Fecha de la primera carga viral para VIH en el menor de 12 meses expuesto al VIH.</label>
                 <q-input filled v-model="data.firstViralChargeVih">
                     <template v-slot:append>
                     <q-icon name="event" class="cursor-pointer">
@@ -297,7 +297,7 @@
             </div>
             <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
               <div class="item">
-                  <label>Resultado de la primera carga viral en el menor de 12 meses expuesto al VIH.</label>
+                  <label>28.1 Resultado de la primera carga viral en el menor de 12 meses expuesto al VIH.</label>
                   <q-input
                     rounded
                     standout
@@ -308,7 +308,7 @@
                   </q-input>
               </div>
               <div class="item">
-                <label>Fecha de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
+                <label>29. Fecha de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
                 <q-input filled v-model="data.secondViralChargeVih">
                   <template v-slot:append>
                   <q-icon name="event" class="cursor-pointer">
@@ -326,7 +326,7 @@
             </div>
             <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
               <div class="item">
-                  <label>Resultado de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
+                  <label>29.1 Resultado de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
                   <q-input
                     rounded
                     standout
@@ -337,7 +337,7 @@
                   </q-input>
               </div>
               <div class="item">
-                <label>Fecha de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
+                <label>30. Fecha de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
                 <q-input filled v-model="data.thirdViralChargeVih">
                     <template v-slot:append>
                     <q-icon name="event" class="cursor-pointer">
@@ -355,7 +355,7 @@
             </div>
             <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
               <div class="item">
-                  <label>Resultado de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
+                  <label>30.1 Resultado de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
                   <q-input
                     rounded
                     standout
@@ -366,14 +366,14 @@
                   </q-input>
               </div>
               <div class="item">
-                <label>Condición final del menor de 12 meses expuesto al VIH.</label>
+                <label>31. Condición final del menor de 12 meses expuesto al VIH.</label>
                 <q-select rounded standout v-model="data.conditionFinalChild" :options="conditionFinalChildOptions" label="Seleccionar" />
               </div>
             </div>
             <h4 class="titulo_fondo w_100" v-if="typeof data.tuberculosis !== 'undefined' && data.tuberculosis.id !== '3'">Información de personas con tuberculosis activa</h4>
             <div class="row dos_items" v-if="typeof data.tuberculosis !== 'undefined' && data.tuberculosis.id !== '3'">
               <div class="item">
-                  <label>Fecha del diagnóstico de la tuberculosis activa reportada.</label>
+                  <label>32. Fecha del diagnóstico de la tuberculosis activa reportada.</label>
                   <q-input filled v-model="data.dateDxTuberculosisActiva">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -389,7 +389,7 @@
                   </q-input>
               </div>
               <div class="item">
-                <label>Fecha de realización de tamizaje para VIH a la persona con tuberculosis activa reportada.</label>
+                <label>33. Fecha de realización de tamizaje para VIH a la persona con tuberculosis activa reportada.</label>
                 <q-input filled v-model="data.dateTamizajeTuberculosis">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -421,7 +421,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                        <label>Fecha de la prueba presuntiva (prueba rápida, autotest o Elisa, según guía de práctica clínica vigente) para infección por VIH.</label>
+                        <label>34. Fecha de la prueba presuntiva (prueba rápida, autotest o Elisa, según guía de práctica clínica vigente) para infección por VIH.</label>
                         <q-input filled v-model="data.fechaPruebaPresuntiva">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -437,14 +437,14 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Cómo llegó a la prueba presuntiva para el VIH</label>
+                      <label>35. Cómo llegó a la prueba presuntiva para el VIH</label>
                       <q-select rounded standout v-model="data.comoLlegoLaPrueba" :options="comoLlegoLaPrueba" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Fecha de confirmación del diagnóstico de infección por VIH.</label>
+                      <label>36. Fecha de confirmación del diagnóstico de infección por VIH.</label>
                       <q-input filled v-model="data.fechaCongirmacionDiagnostico">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -460,14 +460,14 @@
                       </q-input>
                   </div>
                   <div class="item">
-                      <label>¿La entidad que reporta a la persona que vive con VIH es la misma en la cual estaba afiliada al momento del diagnóstico? </label>
+                      <label>36.1 ¿La entidad que reporta a la persona que vive con VIH es la misma en la cual estaba afiliada al momento del diagnóstico? </label>
                       <q-select rounded standout v-model="data.entidadReportaVih" :options="entidadReportaVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items" >
                   <div class="item">
-                      <label>Entidad reportante anterior </label>
+                      <label>36.2 Entidad reportante anterior </label>
                       <q-input
                           rounded
                           standout
@@ -478,7 +478,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                    <label>Fecha de inicio de la atención por VIH.</label>
+                    <label>37. Fecha de inicio de la atención por VIH.</label>
                       <q-input filled v-model="data.fechaInicioAtencionVih">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -497,22 +497,22 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Mecanismo o vía de transmisión del VIH.</label>
+                      <label>38. Mecanismo o vía de transmisión del VIH.</label>
                       <q-select rounded standout v-model="data.mecanismoTransmisionVih" :options="mecanismoTransmisionVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Estado clínico al momento del diagnóstico (para niños, niñas, adolescentes y adultos.</label>
+                      <label>39. Estado clínico al momento del diagnóstico (para niños, niñas, adolescentes y adultos.</label>
                       <q-select rounded standout v-model="data.estadoClinicoAlMomento" :options="estadoClinicoAlMomento" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Se realizó conteo de linfocitos T CD4 al momento del diagnóstico? </label>
+                      <label>40. ¿Se realizó conteo de linfocitos T CD4 al momento del diagnóstico? </label>
                       <q-select rounded standout v-model="data.verificacionConteoLinfocitos" :options="verificacionConteoLinfocitos" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Conteo de linfocitos T CD4 al momento del diagnóstico.</label>
+                      <label>40.1 Conteo de linfocitos T CD4 al momento del diagnóstico.</label>
                       <q-input
                           rounded
                           standout
@@ -526,11 +526,11 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Se realizó carga viral al momento del diagnóstico? </label>
+                      <label>41. ¿Se realizó carga viral al momento del diagnóstico? </label>
                       <q-select rounded standout v-model="data.verificacionCargaViral" :options="verificacionCargaViral" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Carga viral al momento del diagnóstico.</label>
+                      <label>41.1 Carga viral al momento del diagnóstico.</label>
                       <q-input
                           rounded
                           standout
@@ -557,7 +557,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                        <label>Fecha de inicio de la terapia antirretroviral (TAR). </label>
+                        <label>42 Fecha de inicio de la terapia antirretroviral (TAR). </label>
                         <q-input filled v-model="data.inicioTerapiaAntirretroviral">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -573,41 +573,41 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 1 con el que inició la TAR</label>
+                      <label>42.1 Medicamento 1 con el que inició la TAR</label>
                       <q-select rounded standout v-model="data.medicamento1InicioTar" :options="medicamento1InicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 2 con el que inició la TAR</label>
+                      <label>42.2 Medicamento 2 con el que inició la TAR</label>
                       <q-select rounded standout v-model="data.medicamento2InicioTar" :options="medicamento2InicioTar" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Medicamento 3 con el que inició la TAR</label>
+                      <label>42.3 Medicamento 3 con el que inició la TAR</label>
                       <q-select rounded standout v-model="data.medicamento3InicioTar" :options="medicamento3InicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 4 con el que inició la TAR</label>
+                      <label>42.4 Medicamento 4 con el que inició la TAR</label>
                       <q-select rounded standout v-model="data.medicamento4InicioTar" :options="medicamento4InicioTar" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Medicamento 5 con el que inició la TAR</label>
+                      <label>42.5 Medicamento 5 con el que inició la TAR</label>
                       <q-select rounded standout v-model="data.medicamento5InicioTar" :options="medicamento5InicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Conteo de linfocitos T CD4 al momento del inicio de la TAR?</label>
+                      <label>43. ¿Conteo de linfocitos T CD4 al momento del inicio de la TAR?</label>
                       <q-select rounded standout v-model="data.linfocitosCD4InicioTar" :options="linfocitosCD4InicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Valor conteo de linfocitos T CD4 al momento del inicio de la TAR</label>
+                      <label>43.1 Valor conteo de linfocitos T CD4 al momento del inicio de la TAR</label>
                       <q-input
                           rounded
                           standout
@@ -621,12 +621,12 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Carga viral al momento del inicio de la TAR? </label>
+                      <label>44. ¿Carga viral al momento del inicio de la TAR? </label>
                       <q-select rounded standout v-model="data.cargaMomentoInicioTar" :options="cargaMomentoInicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Carga viral al inicio de la TAR.</label>
+                      <label>44.1 Carga viral al inicio de la TAR.</label>
                       <q-input
                           rounded
                           standout
@@ -640,48 +640,48 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Motivo de inicio de la TAR</label>
+                      <label>45. Motivo de inicio de la TAR</label>
                       <q-select rounded standout v-model="data.motivoInicioTar" :options="motivoInicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Tenía coinfección con el virus de la hepatitis B (VHB) al iniciar la TAR</label>
+                      <label>46. Tenía coinfección con el virus de la hepatitis B (VHB) al iniciar la TAR</label>
                       <q-select rounded standout v-model="data.hepatitisBInicioTar" :options="hepatitisBInicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Tenía coinfección con hepatitis C (VHC) crónica al iniciar TAR</label>
+                      <label>47. Tenía coinfección con hepatitis C (VHC) crónica al iniciar TAR</label>
                       <q-select rounded standout v-model="data.hepatitisCInicioTar" :options="hepatitisCInicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Tenía coinfección con tuberculosis activa al iniciar TAR</label>
+                      <label>48. Tenía coinfección con tuberculosis activa al iniciar TAR</label>
                       <q-select rounded standout v-model="data.tuberculosisInicioTar" :options="tuberculosisInicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Número de meses que se dispensó la fórmula completa de TAR durante los primeros 12 meses de iniciada la TAR:</label>
+                      <label>49. Número de meses que se dispensó la fórmula completa de TAR durante los primeros 12 meses de iniciada la TAR:</label>
                       <q-select rounded standout v-model="data.dispensoFormulaTar" :options="dispensoFormulaTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Número de consultas médicas a las que asistió la persona que vive con VIH durante los primeros 12 meses luego de iniciar la TAR: </label>
+                      <label>50. Número de consultas médicas a las que asistió la persona que vive con VIH durante los primeros 12 meses luego de iniciar la TAR: </label>
                       <q-select rounded standout v-model="data.consultasAsistirTarVih" :options="consultasAsistirTarVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Ha tenido cambios en el esquema inicial de TAR?: </label>
+                      <label>51. ¿Ha tenido cambios en el esquema inicial de TAR?: </label>
                       <q-select rounded standout v-model="data.cambiosEsquemaInicialTar" :options="cambiosEsquemaInicialTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Fecha del primer cambio de cualquier medicamento del esquema inicial de TAR</label>
+                      <label>51.1 Fecha del primer cambio de cualquier medicamento del esquema inicial de TAR</label>
                       <q-input filled v-model="data.medicamentoEsquemaInicialTar">
                         <template v-slot:append>
                         <q-icon name="event" class="cursor-pointer">
@@ -700,43 +700,43 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Causa del cambio de medicamento con el que inicio la TAR</label>
+                      <label>51.2 Causa del cambio de medicamento con el que inicio la TAR</label>
                       <q-select rounded standout v-model="data.cambioMedicamentoTar" :options="cambioMedicamentoTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Medicamento 1 que ocasionó el cambio: </label>
+                      <label>51.3 Medicamento 1 que ocasionó el cambio: </label>
                       <q-select rounded standout v-model="data.medicamento1Cambio" :options="medicamento1Cambio" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 2 que ocasionó el cambio: </label>
+                      <label>51.4 Medicamento 2 que ocasionó el cambio: </label>
                       <q-select rounded standout v-model="data.medicamento2Cambio" :options="medicamento2Cambio" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>Medicamento 3 que ocasionó el cambio: </label>
+                      <label>51.5 Medicamento 3 que ocasionó el cambio: </label>
                       <q-select rounded standout v-model="data.medicamento3ambio" :options="medicamento3Cambio" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 4 que ocasionó el cambio: </label>
+                      <label>51.6 Medicamento 4 que ocasionó el cambio: </label>
                       <q-select rounded standout v-model="data.medicamento4Cambio" :options="medicamento4Cambio" label="Seleccionar" />
                   </div>
 
                   <div class="item">
-                      <label>¿Fallas desde el inicio de la TAR hasta el reporte actual?  </label>
+                      <label>51.7 ¿Fallas desde el inicio de la TAR hasta el reporte actual?  </label>
                       <q-select rounded standout v-model="data.fallasInicioTarAnual" :options="fallasInicioTarAnual" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row un_item">
                   <div class="item">
-                      <label>Número de fallas desde el inicio de la TAR hasta el reporte actual (0 a 20)</label>
+                      <label>51.8 Número de fallas desde el inicio de la TAR hasta el reporte actual (0 a 20)</label>
                       <q-input
                           rounded
                           standout
@@ -764,121 +764,121 @@
             <h4 class="titulo_fondo w_100">¿Infecciones bacterianas múltiples o recurrentes?</h4>
             <div class="row dos_items">
                   <div class="item">
-                      <label>¿Infecciones bacterianas múltiples o recurrentes? </label>
+                      <label>52.1 ¿Infecciones bacterianas múltiples o recurrentes? </label>
                       <q-select rounded standout v-model="data.infeccionBacteriana" :options="infeccionBacteriana" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Candidiasis esofágica, traqueal, bronquial o pulmonar?  </label>
+                      <label>52.2 ¿Candidiasis esofágica, traqueal, bronquial o pulmonar?  </label>
                       <q-select rounded standout v-model="data.candidiasisETBP" :options="candidiasisETBP" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Tuberculosis pulmonar (solo en personas mayores o iguales a 6 años de edad) o extrapulmonar? </label>
+                      <label>52.3 ¿Tuberculosis pulmonar (solo en personas mayores o iguales a 6 años de edad) o extrapulmonar? </label>
                       <q-select rounded standout v-model="data.tuberculosisPulmonar" :options="tuberculosisPulmonar" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Cáncer de cérvix invasivo? (solo para personas mayores o iguales a 6 años de edad) </label>
+                      <label>52.4 ¿Cáncer de cérvix invasivo? (solo para personas mayores o iguales a 6 años de edad) </label>
                       <q-select rounded standout v-model="data.cancerCervix" :options="cancerCervix" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Coccidioidomicosis diseminada o extrapulmonar?</label>
+                      <label>52.5 ¿Coccidioidomicosis diseminada o extrapulmonar?</label>
                       <q-select rounded standout v-model="data.coccidioidomicosis" :options="coccidioidomicosis" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Citomegalovirus de cualquier órgano excepto hígado, bazo, o ganglios linfáticos? En mayores de 1 mes de edad.  </label>
+                      <label>52.6 ¿Citomegalovirus de cualquier órgano excepto hígado, bazo, o ganglios linfáticos? En mayores de 1 mes de edad.  </label>
                       <q-select rounded standout v-model="data.citomegalovirus1Mes" :options="citomegalovirus1Mes" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Retinitis por citomegalovirus (con pérdida de la visión)? </label>
+                      <label>52.7 ¿Retinitis por citomegalovirus (con pérdida de la visión)? </label>
                       <q-select rounded standout v-model="data.retinitisCitomegalovirus" :options="retinitisCitomegalovirus" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Herpes simple con úlceras mucocutáneas de más de un mes de duración o causando bronquitis, neumonitis o esofagitis? (en mayores de 1 mes de edad)  </label>
+                      <label>52.8 ¿Herpes simple con úlceras mucocutáneas de más de un mes de duración o causando bronquitis, neumonitis o esofagitis? (en mayores de 1 mes de edad)  </label>
                       <q-select rounded standout v-model="data.herpesMayor1Mes" :options="herpesMayor1Mes" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Diarrea por isospora belli o cryptosporidium de más de un mes de duración? </label>
+                      <label>52.9 ¿Diarrea por isospora belli o cryptosporidium de más de un mes de duración? </label>
                       <q-select rounded standout v-model="data.diarreaIsospora1Mes" :options="diarreaIsospora1Mes" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Histoplasmosis diseminada o extrapulmonar? </label>
+                      <label>52.10 ¿Histoplasmosis diseminada o extrapulmonar? </label>
                       <q-select rounded standout v-model="data.histoplasmosisDiseminada" :options="histoplasmosisDiseminada" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Linfoma de Burkitt, inmunoblástico, o primario del sistema nervioso central? </label>
+                      <label>52.11 ¿Linfoma de Burkitt, inmunoblástico, o primario del sistema nervioso central? </label>
                       <q-select rounded standout v-model="data.linfomaBurkitt" :options="linfomaBurkitt" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Neumonía por pneumocystis jiroveci? </label>
+                      <label>52.12 ¿Neumonía por pneumocystis jiroveci? </label>
                       <q-select rounded standout v-model="data.neumoniaPneumocystis" :options="neumoniaPneumocystis" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Neumonía recurrente?  </label>
+                      <label>52.13 ¿Neumonía recurrente?  </label>
                       <q-select rounded standout v-model="data.neumoniaRecurrente" :options="neumoniaRecurrente" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Septicemia por salmonella recurrente? </label>
+                      <label>52.14 ¿Septicemia por salmonella recurrente? </label>
                       <q-select rounded standout v-model="data.septicemiaSalmonella" :options="septicemiaSalmonella" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Infección diseminada o extrapulmonar por micobacterium avium, kansasii u otras especies de micobacterias? </label>
+                      <label>52.15 ¿Infección diseminada o extrapulmonar por micobacterium avium, kansasii u otras especies de micobacterias? </label>
                       <q-select rounded standout v-model="data.infeccionKansasiiOtras" :options="infeccionKansasiiOtras" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Criptococosis extrapulmonar? </label>
+                      <label>52.16 ¿Criptococosis extrapulmonar? </label>
                       <q-select rounded standout v-model="data.criptococosisExtrapulmonar" :options="criptococosisExtrapulmonar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Sarcoma de Kaposi?  </label>
+                      <label>52.17 ¿Sarcoma de Kaposi?  </label>
                       <q-select rounded standout v-model="data.sarcamoKaposi" :options="sarcamoKaposi" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Síndrome de desgaste asociado al VIH? </label>
+                      <label>52.18 ¿Síndrome de desgaste asociado al VIH? </label>
                       <q-select rounded standout v-model="data.sindromeDesgasteVih" :options="sindromeDesgasteVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Leucoencefalopatía multifocal progresiva o encefalopatía por VIH? </label>
+                      <label>52.19 ¿Leucoencefalopatía multifocal progresiva o encefalopatía por VIH? </label>
                       <q-select rounded standout v-model="data.leucoencefalopatiaMultifocalVih" :options="leucoencefalopatiaMultifocalVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Toxoplasmosis cerebral? (solo en personas mayores de 1 mes de edad): </label>
+                      <label>52.2 ¿Toxoplasmosis cerebral? (solo en personas mayores de 1 mes de edad): </label>
                       <q-select rounded standout v-model="data.toxoplasmosisCerebral1Mes" :options="toxoplasmosisCerebral1Mes" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Demencia asociada al VIH? (solo para personas con diagnóstico de VIH antes de 2017) </label>
+                      <label>52.21 ¿Demencia asociada al VIH? (solo para personas con diagnóstico de VIH antes de 2017) </label>
                       <q-select rounded standout v-model="data.demenciaAsociadaVih" :options="demenciaAsociadaVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Neumonía intersticial linfoidea? (solo para personas con diagnóstico de VIH antes de 2017) </label>
+                      <label>52.22 ¿Neumonía intersticial linfoidea? (solo para personas con diagnóstico de VIH antes de 2017) </label>
                       <q-select rounded standout v-model="data.neumoniaIntersticialLinfoidea" :options="neumoniaIntersticialLinfoidea" label="Seleccionar" />
                   </div>
               </div>
@@ -900,7 +900,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Código de habilitación de la sede de la IPS donde se hace el seguimiento y atención al usuario actualmente: </label>
+                      <label>53 Código de habilitación de la sede de la IPS donde se hace el seguimiento y atención al usuario actualmente: </label>
                       <q-input
                           rounded
                           standout
@@ -911,7 +911,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de ingreso a la IPS actual para seguimiento y atención de la infección por el VIH: </label>
+                      <label>53.1 Fecha de ingreso a la IPS actual para seguimiento y atención de la infección por el VIH: </label>
                         <q-input filled v-model="data.ingresoIpsAtencionViH">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -930,7 +930,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Municipio de la IPS:  </label>
+                      <label>53.2 Municipio de la IPS:  </label>
                       <q-input
                           rounded
                           standout
@@ -941,18 +941,18 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Quién hace la atención clínica y formulación para la infección por el VIH al usuario actualmente</label>
+                      <label>53.3 Quién hace la atención clínica y formulación para la infección por el VIH al usuario actualmente</label>
                       <q-select rounded standout v-model="data.atencionClinicaVihUsuario" :options="atencionClinicaVihUsuario" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Valoración por infectólogo en los últimos 12 meses</label>
+                      <label>53.4 Valoración por infectólogo en los últimos 12 meses</label>
                       <q-select rounded standout v-model="data.valoracionInfectologo" :options="valoracionInfectologo" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Fecha de la última genotipificación realizada.</label>
+                      <label>54. Fecha de la última genotipificación realizada.</label>
                         <q-input filled v-model="data.ultimaGenotipificación">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -971,11 +971,11 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Estado clínico actual  </label>
+                      <label>55. Estado clínico actual  </label>
                       <q-select rounded standout v-model="data.estadoClinicoActual" :options="estadoClinicoActual" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Fecha de último colesterol LDL  </label>
+                      <label>56. Fecha de último colesterol LDL  </label>
                         <q-input filled v-model="data.ultimoColesterolLdl">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -994,7 +994,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado del último colesterol LDL: </label>
+                      <label>56.1 Resultado del último colesterol LDL: </label>
                       <q-input
                           rounded
                           standout
@@ -1005,7 +1005,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de último nivel de triglicéridos: </label>
+                      <label>57. Fecha de último nivel de triglicéridos: </label>
                         <q-input filled v-model="data.ultimoNivelTrigliceridos">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1024,7 +1024,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado del último nivel de triglicéridos: </label>
+                      <label>57.1 Resultado del último nivel de triglicéridos: </label>
                       <q-input
                           rounded
                           standout
@@ -1035,7 +1035,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de última hemoglobina sérica</label>
+                      <label>58. Fecha de última hemoglobina sérica</label>
                         <q-input filled v-model="data.ultimaHemoglobinaSerica">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1054,7 +1054,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado de la última hemoglobina sérica: </label>
+                      <label>58.1 Resultado de la última hemoglobina sérica: </label>
                       <q-input
                           rounded
                           standout
@@ -1065,7 +1065,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de la última enzima alanina aminotransferasa </label>
+                      <label>59. Fecha de la última enzima alanina aminotransferasa </label>
                         <q-input filled v-model="data.ultimaEnzimaAlanina">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1084,7 +1084,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado de la última ALT o TGP sérica: </label>
+                      <label>59.1 Resultado de la última ALT o TGP sérica: </label>
                       <q-input
                           rounded
                           standout
@@ -1095,7 +1095,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de última creatinina sérica</label>
+                      <label>60. Fecha de última creatinina sérica</label>
                         <q-input filled v-model="data.ultimaCreatininaSerica">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1114,7 +1114,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado de la última creatinina sérica: </label>
+                      <label>60.1 Resultado de la última creatinina sérica: </label>
                       <q-input
                           rounded
                           standout
@@ -1125,7 +1125,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de última glucemia sérica en ayuno:</label>
+                      <label>61. Fecha de última glucemia sérica en ayuno:</label>
                         <q-input filled v-model="data.ultimaGlucemiaSericaAyuno">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1144,7 +1144,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado de la última glucemia sérica en ayuno: </label>
+                      <label>61.1 Resultado de la última glucemia sérica en ayuno: </label>
                       <q-input
                           rounded
                           standout
@@ -1155,7 +1155,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de última medición del peso corporal en el periodo</label>
+                      <label>62. Fecha de última medición del peso corporal en el periodo</label>
                         <q-input filled v-model="data.ultimaMedicionPesoPeriodo">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1174,7 +1174,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Resultado de la última medición del peso corporal: </label>
+                      <label>62.1 Resultado de la última medición del peso corporal: </label>
                       <q-input
                           rounded
                           standout
@@ -1185,7 +1185,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Talla: </label>
+                      <label>63. Talla: </label>
                       <q-input
                           rounded
                           standout
@@ -1199,44 +1199,44 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Tiene neuropatía periférica?: </label>
+                      <label>64. ¿Tiene neuropatía periférica?: </label>
                       <q-select rounded standout v-model="data.tieneNeuropatiaPeriferica" :options="tieneNeuropatiaPeriferica" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Tiene lipoatrofia o lipodistrofia?: </label>
+                      <label>65. ¿Tiene lipoatrofia o lipodistrofia?: </label>
                       <q-select rounded standout v-model="data.tieneLipotrofiaLipodistrofia" :options="tieneLipotrofiaLipodistrofia" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Tiene coinfección con hepatitis B crónica?: </label>
+                      <label>66. ¿Tiene coinfección con hepatitis B crónica?: </label>
                       <q-select rounded standout v-model="data.coinfeccionHepatitisBCronica" :options="coinfeccionHepatitisBCronica" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Tiene coinfección con hepatitis C crónica?:  </label>
+                      <label>67. ¿Tiene coinfección con hepatitis C crónica?:  </label>
                       <q-select rounded standout v-model="data.coinfeccionHepatitisCCronica" :options="coinfeccionHepatitisCCronica" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Tiene o tuvo coinfección con tuberculosis activa en los últimos 12 meses? </label>
+                      <label>68. ¿Tiene o tuvo coinfección con tuberculosis activa en los últimos 12 meses? </label>
                       <q-select rounded standout v-model="data.coinfeccionTuberculosisUltimo12" :options="coinfeccionTuberculosisUltimo12" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Tipo de tuberculosis activa que presenta o presentó la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.1 Tipo de tuberculosis activa que presenta o presentó la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-select rounded standout v-model="data.tuberculosisActivaTbVih12" :options="tuberculosisActivaTbVih12" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿La persona con coinfección TB/VIH recibe o recibió tratamiento para tuberculosis activa en los últimos 12 meses? </label>
+                      <label>68.2 ¿La persona con coinfección TB/VIH recibe o recibió tratamiento para tuberculosis activa en los últimos 12 meses? </label>
                       <q-select rounded standout v-model="data.coinfeccionTuberculosisTratamiento12" :optionsa="coinfeccionTuberculosisTratamiento12" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses</label>
+                      <label>68.3 Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses</label>
                         <q-input filled v-model="data.inicioTratamientoAntituberculosos">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1255,7 +1255,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 1 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.4 Medicamento 1 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1266,7 +1266,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 2 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.5 Medicamento 2 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1280,7 +1280,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 3 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.6 Medicamento 3 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1291,7 +1291,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 4 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.7 Medicamento 4 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1305,7 +1305,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 5 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.8 Medicamento 5 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1316,7 +1316,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 6 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.9 Medicamento 6 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1330,7 +1330,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 7 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.10 Medicamento 7 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1341,7 +1341,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 8 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.11 M Medicamento 8 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1355,7 +1355,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 9 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
+                      <label>68.12 Medicamento 9 del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1366,7 +1366,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha en que terminó el tratamiento antituberculoso en los últimos 12 meses</label>
+                      <label>68.13 Fecha en que terminó el tratamiento antituberculoso en los últimos 12 meses</label>
                         <q-input filled v-model="data.terminoTratamientoantituberculoso12">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1385,44 +1385,44 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Condición de egreso del tratamiento antituberculoso</label>
+                      <label>68.14 Condición de egreso del tratamiento antituberculoso</label>
                       <q-select rounded standout v-model="data.condicionEgresoAntituberculosos" :options="condicionEgresoAntituberculosos" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Tiene cirrosis hepática?: </label>
+                      <label>69. ¿Tiene cirrosis hepática?: </label>
                       <q-select rounded standout v-model="data.cirrosisHepatica" :options="cirrosisHepatica" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Tiene enfermedad renal crónica por VIH? </label>
+                      <label>70. ¿Tiene enfermedad renal crónica por VIH? </label>
                       <q-select rounded standout v-model="data.enfermedadRenalVih" :options="enfermedadRenalVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Tiene enfermedad coronaria?  </label>
+                      <label>71. ¿Tiene enfermedad coronaria?  </label>
                       <q-select rounded standout v-model="data.enfermedadCoronaria" :options="enfermedadCoronaria" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Tiene o ha tenido otras infecciones de transmisión sexual diferentes a sífilis o hepatitis B en los últimos 12 meses? </label>
+                      <label>72. ¿Tiene o ha tenido otras infecciones de transmisión sexual diferentes a sífilis o hepatitis B en los últimos 12 meses? </label>
                       <q-select rounded standout v-model="data.infeccionTransmisionSexual12" :options="infeccionTransmisionSexual12" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>¿Tiene neoplasia no relacionada con Sida?  </label>
+                      <label>73. ¿Tiene neoplasia no relacionada con Sida?  </label>
                       <q-select rounded standout v-model="data.neoplasiaNoSida" :options="neoplasiaNoSida" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>¿Discapacidad funcional? </label>
+                      <label>74. ¿Discapacidad funcional? </label>
                       <q-select rounded standout v-model="data.discapacidadFuncional" :options="discapacidadFuncional" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Fecha del último conteo de linfocitos T CD4 realizado en el período de observación: </label>
+                      <label>75. Fecha del último conteo de linfocitos T CD4 realizado en el período de observación: </label>
                         <q-input filled v-model="data.ultimoConteoLinfocitosCd4">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1441,7 +1441,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Valor del último conteo de linfocitos T CD4 realizado en el período de observación</label>
+                      <label>75.1 Valor del último conteo de linfocitos T CD4 realizado en el período de observación</label>
                       <q-input
                           rounded
                           standout
@@ -1452,7 +1452,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Fecha de la última carga viral para VIH realizada en el período de observación: </label>
+                      <label>76. Fecha de la última carga viral para VIH realizada en el período de observación: </label>
                         <q-input filled v-model="data.ultimaCargaViralVih">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1471,7 +1471,7 @@
 
               <div class="row uno_item">
                   <div class="item">
-                      <label>Valor de la última carga viral para VIH realizada en el período de observación </label>
+                      <label>76.1 Valor de la última carga viral para VIH realizada en el período de observación </label>
                       <q-input
                           rounded
                           standout
@@ -1499,11 +1499,11 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Recibe TAR</label>
+                      <label>77. Recibe TAR</label>
                       <q-select rounded standout v-model="data.RecibeTar" :options="RecibeTar" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Fecha de inicio de los medicamentos de la TAR que recibe actualmente la persona que viven con VIH: </label>
+                      <label>77.1 Fecha de inicio de los medicamentos de la TAR que recibe actualmente la persona que viven con VIH: </label>
                         <q-input filled v-model="data.inicioMedicamentosTarPersonaViven">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1522,7 +1522,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 1 de la TAR actual: </label>
+                      <label>77.2 Medicamento 1 de la TAR actual: </label>
                       <q-input
                           rounded
                           standout
@@ -1533,7 +1533,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 2 de la TAR actual:</label>
+                      <label>77.3 Medicamento 2 de la TAR actual:</label>
                       <q-input
                           rounded
                           standout
@@ -1547,7 +1547,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 3 de la TAR actual: </label>
+                      <label>77.4 Medicamento 3 de la TAR actual: </label>
                       <q-input
                           rounded
                           standout
@@ -1558,7 +1558,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 4 de la TAR actual:</label>
+                      <label>77.5 Medicamento 4 de la TAR actual:</label>
                       <q-input
                           rounded
                           standout
@@ -1572,7 +1572,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Medicamento 5 de la TAR actual: </label>
+                      <label>77.6 Medicamento 5 de la TAR actual: </label>
                       <q-input
                           rounded
                           standout
@@ -1583,7 +1583,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Medicamento 6 de la TAR actual:</label>
+                      <label>77.7 Medicamento 6 de la TAR actual:</label>
                       <q-input
                           rounded
                           standout
@@ -1597,7 +1597,7 @@
 
               <div class="row uno_items">
                   <div class="item">
-                      <label>Número de meses que se dispensó la fórmula completa de TAR durante los 12 meses: </label>
+                      <label>77.8 Número de meses que se dispensó la fórmula completa de TAR durante los 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1626,7 +1626,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Número de condones suministrados en el último año</label>
+                      <label>78. Número de condones suministrados en el último año</label>
                       <q-input
                           rounded
                           standout
@@ -1637,73 +1637,73 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Método de planificación familiar de la persona que vive con VIH (diferente al condón como método de protección) </label>
+                      <label>79. Método de planificación familiar de la persona que vive con VIH (diferente al condón como método de protección) </label>
                       <q-select rounded standout v-model="data.metodoPlanificacionViveVih" :options="metodoPlanificacionViveVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Vacunación contra la hepatitis A</label>
+                      <label>80. Vacunación contra la hepatitis A</label>
                       <q-select rounded standout v-model="data.vacunacionHepatitisA" :options="vacunacionHepatitisA" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Vacunación contra la hepatitis B: </label>
+                      <label>81. Vacunación contra la hepatitis B: </label>
                       <q-select rounded standout v-model="data.vacunacionHepatitisB" :options="vacunacionHepatitisB" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Vacunación contra neumococo: </label>
+                      <label>82. Vacunación contra neumococo: </label>
                       <q-select rounded standout v-model="data.vacunacionNeumococo" :options="vacunacionNeumococo" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Tamizaje clínico para tuberculosis (TB) activa en la última consulta: </label>
+                      <label>83. Tamizaje clínico para tuberculosis (TB) activa en la última consulta: </label>
                       <q-select rounded standout v-model="data.tamizajeTuberculosisUltima" :options="tamizajeTuberculosisUltima" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Se hizo PPD o pruebas equivalentes para la identificación de tuberculosis latente en los últimos 12 meses: </label>
+                      <label>84. Se hizo PPD o pruebas equivalentes para la identificación de tuberculosis latente en los últimos 12 meses: </label>
                       <q-select rounded standout v-model="data.ppdTuberculosis12" :options="ppdTuberculosis12" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Recibió tratamiento para tuberculosis latente en los últimos 12 meses: </label>
+                      <label>85. Recibió tratamiento para tuberculosis latente en los últimos 12 meses: </label>
                       <q-select rounded standout v-model="data.tratamientoTuberculosisLatente" :options="tratamientoTuberculosisLatente" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Se hizo tamizaje para sífilis en la persona que vive con VIH en los últimos 12 meses: </label>
+                      <label>86. Se hizo tamizaje para sífilis en la persona que vive con VIH en los últimos 12 meses: </label>
                       <q-select rounded standout v-model="data.tamizajeSifilis12" :options="tamizajeSifilis12" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Recibió tratamiento para Sífilis: </label>
+                      <label>86.1 Recibió tratamiento para Sífilis: </label>
                       <q-select rounded standout v-model="data.tratamientoSifilis" :options="tratamientoSifilis" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Se hizo tamizaje para VPH anal (hombre/mujer) en la persona que vive con VIH, en los últimos 12 meses: </label>
+                      <label>87. Se hizo tamizaje para VPH anal (hombre/mujer) en la persona que vive con VIH, en los últimos 12 meses: </label>
                       <q-select rounded standout v-model="data.tamizajeVphViveVih" :options="tamizajeVphViveVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>88.  Se hizo tamizaje para hepatitis B en la persona que vive con VIH en los últimos 12 meses: </label>
+                      <label>88. Se hizo tamizaje para hepatitis B en la persona que vive con VIH en los últimos 12 meses: </label>
                       <q-select rounded standout v-model="data.tamizajeHepatitisBViveVih" :options="tamizajeHepatitisBViveVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Se hizo tamizaje para hepatitis C en la persona que vive con VIH en los últimos 12 meses </label>
+                      <label>89. Se hizo tamizaje para hepatitis C en la persona que vive con VIH en los últimos 12 meses </label>
                       <q-select rounded standout v-model="data.tamizajeHepatitisCViveVih" :options="tamizajeHepatitisBViveVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Resultado de la evaluación de riesgo cardiovascular en la persona que vive con VIH en los últimos 12 meses: </label>
+                      <label>90. Resultado de la evaluación de riesgo cardiovascular en la persona que vive con VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
@@ -1732,18 +1732,18 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Profilaxis para MAC (Mycobacterium avium complex). </label>
+                      <label>91. Profilaxis para MAC (Mycobacterium avium complex). </label>
                       <q-select rounded standout v-model="data.profilaxisMac" :options="profilaxisMac" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>Profilaxis para Criptococo neoformans. </label>
+                      <label>92. Profilaxis para Criptococo neoformans. </label>
                       <q-select rounded standout v-model="data.profilaxisCriptococo" :options="profilaxisCriptococo" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row uno_items">
                   <div class="item">
-                      <label>Profilaxis para pneumocystis jirovecii. </label>
+                      <label>93. Profilaxis para pneumocystis jirovecii. </label>
                       <q-select rounded standout v-model="data.profilaxisJirovecii" :options="profilaxisJirovecii" label="Seleccionar" />
                   </div>
               </div>
@@ -1752,7 +1752,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Costo total de la atención no hospitalaria de la persona viviendo con VIH en relación con la atención del VIH: </label>
+                      <label>94. Costo total de la atención no hospitalaria de la persona viviendo con VIH en relación con la atención del VIH: </label>
                       <q-input
                           rounded
                           standout
@@ -1763,7 +1763,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Costo total de la atención hospitalaria de la persona viviendo con VIH en relación con la atención del VIH:  </label>
+                      <label>95. Costo total de la atención hospitalaria de la persona viviendo con VIH en relación con la atención del VIH:  </label>
                       <q-input
                           rounded
                           standout
@@ -1777,7 +1777,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Número de hospitalizaciones en el periodo relacionadas con el VIH</label>
+                      <label>96. Número de hospitalizaciones en el periodo relacionadas con el VIH</label>
                       <q-input
                           rounded
                           standout
@@ -1788,14 +1788,14 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Novedad del usuario respecto al reporte anterior: </label>
+                      <label>97. Novedad del usuario respecto al reporte anterior: </label>
                       <q-select rounded standout v-model="data.novedadUsuarioReporteAnterior" :options="novedadUsuarioReporteAnterior" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Fecha de desafiliación de la entidad</label>
+                      <label>97.1 Fecha de desafiliación de la entidad</label>
                         <q-input filled v-model="data.desafiliacionEntidad">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1811,7 +1811,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Entidad a la cual se trasladó el usuario con VIH desafiliado: </label>
+                      <label>97.2 Entidad a la cual se trasladó el usuario con VIH desafiliado: </label>
                       <q-input
                           rounded
                           standout
@@ -1825,7 +1825,7 @@
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Fecha de Muerte: </label>
+                      <label>97.3 Fecha de Muerte: </label>
                         <q-input filled v-model="data.fechaMuerte">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1841,14 +1841,14 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Causa de Muerte </label>
+                      <label>97.4 Causa de Muerte </label>
                       <q-select rounded standout v-model="data.causaMuerte" :options="causaMuerte" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
-                      <label>Fecha de Corte: </label>
+                      <label>98. Fecha de Corte: </label>
                         <q-input filled v-model="data.fechaCorte">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
@@ -1864,7 +1864,7 @@
                         </q-input>
                   </div>
                   <div class="item">
-                      <label>Código Único BDUA BDEX PVS MSPS</label>
+                      <label>99. Código Único BDUA BDEX PVS MSPS</label>
                       <q-input
                           rounded
                           standout
