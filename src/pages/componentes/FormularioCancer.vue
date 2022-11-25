@@ -6,11 +6,11 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código CIE - 10 de la neoplasia (cáncer o tumor) maligna reportada (Primario) </label>
+                  <label>17. Código CIE - 10 de la neoplasia (cáncer o tumor) maligna reportada (Primario) </label>
                   <q-input rounded standout v-model="data.novedadUsuarioReporteAnterior" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Fecha de diagnóstico del cáncer reportado:  </label>
+                  <label>18. Fecha de diagnóstico del cáncer reportado:  </label>
                     <q-input filled v-model="data.codigoNeoplasiaPrimario">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -29,7 +29,7 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de la nota de remisión o interconsulta del médico o institución general hacia la institución o médico que hizo el diagnóstico: </label>
+                  <label>19. Fecha de la nota de remisión o interconsulta del médico o institución general hacia la institución o médico que hizo el diagnóstico: </label>
                     <q-input filled v-model="data.remisionMedicoCancer">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -45,7 +45,7 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Fecha de ingreso a la institución que realizó el diagnóstico luego de la remisión o interconsulta: </label>
+                  <label>20. Fecha de ingreso a la institución que realizó el diagnóstico luego de la remisión o interconsulta: </label>
                     <q-input filled v-model="data.ingresoDiagnosticoRemision">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -64,18 +64,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Tipo de estudio con el que se realizó el diagnóstico de cáncer:</label>
+                  <label>21. Tipo de estudio con el que se realizó el diagnóstico de cáncer:</label>
                   <q-select rounded standout v-model="data.diagnosticoCancer" :options="diagnosticoCancer" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Motivo por el cual el usuario no tuvo diagnóstico por histopatología (aplica para registros con respuesta igual a 7 en la variable anterior):</label>
+                  <label>22. Motivo por el cual el usuario no tuvo diagnóstico por histopatología (aplica para registros con respuesta igual a 7 en la variable anterior):</label>
                   <q-select rounded standout v-model="data.noDiagnosticoCancer" :options="noDiagnosticoCancer" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de recolección de muestra para estudio histopatológico de diagnóstico:</label>
+                  <label>23. Fecha de recolección de muestra para estudio histopatológico de diagnóstico:</label>
                     <q-input filled v-model="data.recoleccionHistipatologico">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -91,7 +91,7 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Fecha de primero o único informe histopatológico válido de diagnóstico: </label>
+                  <label>24. Fecha de primero o único informe histopatológico válido de diagnóstico: </label>
                     <q-input filled v-model="data.unicoInformeHistopatologico">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -110,11 +110,11 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código válido de habilitación de la IPS donde se realiza la confirmación diagnóstica: </label>
+                  <label>25. Código válido de habilitación de la IPS donde se realiza la confirmación diagnóstica: </label>
                   <q-select rounded standout v-model="data.codigoIpsConfirma" :options="codigoIpsConfirma" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Fecha de primera consulta con médico tratante de la enfermedad maligna </label>
+                  <label>26. Fecha de primera consulta con médico tratante de la enfermedad maligna </label>
                     <q-input filled v-model="data.primeraEnfermedadMaligna">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -133,18 +133,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Histología del tumor en muestra de biopsia o quirúrgica: </label>
+                  <label>27. Histología del tumor en muestra de biopsia o quirúrgica: </label>
                   <q-select rounded standout v-model="data.histologiaTumorBiopsia" :options="histologiaTumorBiopsia" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Grado de diferenciación del tumor sólido maligno según la biopsia o informe de primera cirugía:  </label>
+                  <label>28. Grado de diferenciación del tumor sólido maligno según la biopsia o informe de primera cirugía:  </label>
                   <q-select rounded standout v-model="data.gradoTumorBiopsia" :options="gradoTumorBiopsia" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row un_item">
               <div class="item">
-                <label>Si es tumor sólido, cuál fue la primera estadificación basada en TNM, FIGO, u otras compatibles con esta numeración según tumor:</label>
+                <label>29. Si es tumor sólido, cuál fue la primera estadificación basada en TNM, FIGO, u otras compatibles con esta numeración según tumor:</label>
                 <q-select rounded standout v-model="data.tumorSolidoCompatibles" :options="tumorSolidoCompatibles" label="Seleccionar" />
               </div>
             </div>
@@ -185,7 +185,7 @@
             </div>
             <div class="row un_item">
               <div class="item">
-                  <label>Fecha en que se realizó esta estadificación  </label>
+                  <label>30. Fecha en que se realizó esta estadificación  </label>
                     <q-input filled v-model="data.realizoEstadificacion">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -204,11 +204,11 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Para cáncer de mama, ¿se le realizó a este usuario la prueba HER2 (llamado también receptor 2 del factor de crecimiento epidérmico humano, también llamado erb-B2) antes del inicio del tratamiento?: </label>
+                  <label>31. Para cáncer de mama, ¿se le realizó a este usuario la prueba HER2 (llamado también receptor 2 del factor de crecimiento epidérmico humano, también llamado erb-B2) antes del inicio del tratamiento?: </label>
                   <q-select rounded standout v-model="data.cancerCrecimientoAntes" :options="cancerCrecimientoAntes" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Para cáncer de mama, fecha de realización de la única o última prueba HER2:</label>
+                  <label>32. Para cáncer de mama, fecha de realización de la única o última prueba HER2:</label>
                     <q-input filled v-model="data.cancerMamaUltimaHer2">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -227,18 +227,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Para cáncer de mama, resultado de la única o última prueba HER2:  </label>
+                  <label>33. Para cáncer de mama, resultado de la única o última prueba HER2:  </label>
                   <q-select rounded standout v-model="data.cancerMamaResultadoHer2" :options="cancerMamaResultadoHer2" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Para cáncer colorrectal, estadificación de Dukes </label>
+                  <label>34. Para cáncer colorrectal, estadificación de Dukes </label>
                   <q-select rounded standout v-model="data.cancerColorrectalDukes" :options="cancerColorrectalDukes" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha en que se realizó la estadificación de Dukes: </label>
+                  <label>35. Fecha en que se realizó la estadificación de Dukes: </label>
                     <q-input filled v-model="data.realizoDukes">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -254,18 +254,18 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Estadificación clínica en linfoma no Hodgkin y linfoma Hodgkin adulto y pediátrico (Ann Arbor -Lugano) </label>
+                  <label>36. Estadificación clínica en linfoma no Hodgkin y linfoma Hodgkin adulto y pediátrico (Ann Arbor -Lugano) </label>
                   <q-select rounded standout v-model="data.clinicaLinfomaHodgkin" :options="clinicaLinfomaHodgkin" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Para cáncer de próstata, valor de clasificación de la escala Gleason en el momento del diagnóstico:  </label>
+                  <label>37. Para cáncer de próstata, valor de clasificación de la escala Gleason en el momento del diagnóstico:  </label>
                   <q-select rounded standout v-model="data.cancerProstataGleason" :options="cancerProstataGleason" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Clasificación del riesgo leucemias o linfomas (para toda la población), y sólidos pediátricos: </label>
+                  <label>38. Clasificación del riesgo leucemias o linfomas (para toda la población), y sólidos pediátricos: </label>
                   <q-select rounded standout v-model="data.riesgosLeucemiaPediatra" :options="riesgosLeucemiaPediatra" label="Seleccionar" />
               </div>
           </div>
@@ -294,7 +294,7 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de clasificación de riesgo: </label>
+                  <label>39. Fecha de clasificación de riesgo: </label>
                     <q-input filled v-model="data.clasificacionRiesgoCan">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -310,14 +310,14 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Objetivo (o intención) del tratamiento médico inicial (al diagnóstico)  </label>
+                  <label>40. Objetivo (o intención) del tratamiento médico inicial (al diagnóstico)  </label>
                   <q-select rounded standout v-model="data.objetivoTratamientoInicial" :options="objetivoTratamientoInicial" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row un_item">
               <div class="item">
-                <label>Intervención médica durante el periodo de reporte </label>
+                <label>41. Intervención médica durante el periodo de reporte </label>
                 <q-input filled v-model="data.intervencionPeriodoReporte" />
               </div>
           </div>
@@ -339,11 +339,11 @@
 
           <div class="row dos_items">
             <div class="item numero">
-                <label>Tiene antecedente o padece de otro cáncer primario (es decir, tiene o tuvo otro tumor maligno diferente al que está notificando): </label>
+                <label>42. Tiene antecedente o padece de otro cáncer primario (es decir, tiene o tuvo otro tumor maligno diferente al que está notificando): </label>
                   <q-select rounded standout v-model="data.otroCancerPrimario" :options="otroCancerPrimario" label="Seleccionar" />
             </div>
             <div class="item">
-                <label>Fecha de diagnóstico del otro cáncer primario: </label>
+                <label>43. Fecha de diagnóstico del otro cáncer primario: </label>
                   <q-input filled v-model="data.fechaOtroCancerPrimario">
                     <template v-slot:append>
                     <q-icon name="event" class="cursor-pointer">
@@ -362,7 +362,7 @@
 
           <div class="row uno_items">
               <div class="item numero">
-                  <label>Tipo (CIE-10) de ese cáncer antecedente o concurrente</label>
+                  <label>44. Tipo (CIE-10) de ese cáncer antecedente o concurrente</label>
                     <q-select rounded standout v-model="data.tipoCancerAntecendente" :options="tipoCancerAntecendente" label="Seleccionar" />
               </div>
           </div>
@@ -383,73 +383,73 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>¿Recibió el usuario quimioterapia u otra terapia sistémica (incluye quimioterapia, hormonoterapia, inmunoterapia y terapia dirigida) dentro del periodo de reporte?</label>
+                  <label>45. ¿Recibió el usuario quimioterapia u otra terapia sistémica (incluye quimioterapia, hormonoterapia, inmunoterapia y terapia dirigida) dentro del periodo de reporte?</label>
                   <q-select rounded standout v-model="data.usuarioQuimioTerapia" :options="usuarioQuimioTerapia" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>¿Cuántas fases de quimioterapia recibió el usuario en este periodo de reporte? (aplica para hematolinfáticos con los siguientes códigos de clasificación diagnóstica CIE-10; C835 Linfoma no Hodgkin linfoblástico (difuso), C910 Leucemia linfoblástica aguda, C920 Leucemia mieloide aguda, C924 Leucemia promielocitica aguda y C925 Leucemia mielomonocítica aguda): </label>
+                  <label>46. ¿Cuántas fases de quimioterapia recibió el usuario en este periodo de reporte? (aplica para hematolinfáticos con los siguientes códigos de clasificación diagnóstica CIE-10; C835 Linfoma no Hodgkin linfoblástico (difuso), C910 Leucemia linfoblástica aguda, C920 Leucemia mieloide aguda, C924 Leucemia promielocitica aguda y C925 Leucemia mielomonocítica aguda): </label>
                   <q-select rounded standout v-model="data.usuarioQuimioFasesPeriodo" :options="usuarioQuimioFasesPeriodo" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Prefase o Citorreducción inicial (aplica solo para leucemia linfoide aguda y linfoma linfoblástico, puede haber recibido más de una fase): </label>
+                  <label>46.1 El usuario recibió en este periodo la fase de quimioterapia denominada Prefase o Citorreducción inicial (aplica solo para leucemia linfoide aguda y linfoma linfoblástico, puede haber recibido más de una fase): </label>
                   <q-select rounded standout v-model="data.uQuimioPrefase" :options="uQuimioPrefase" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Inducción (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
+                  <label>46.2 El usuario recibió en este periodo la fase de quimioterapia denominada Inducción (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
                   <q-select rounded standout v-model="data.uQuimioInduccionPeriodo" :options="uQuimioInduccionPeriodo" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Intensificación (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase): </label>
+                  <label>46.3 El usuario recibió en este periodo la fase de quimioterapia denominada Intensificación (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase): </label>
                   <q-select rounded standout v-model="data.uQuimioIntensificacion" :options="uQuimioIntensificacion" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Consolidación (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase): : </label>
+                  <label>46.4 El usuario recibió en este periodo la fase de quimioterapia denominada Consolidación (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase): : </label>
                   <q-select rounded standout v-model="data.uQuimioConsolidacion" :options="uQuimioConsolidacion" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Reinducción (aplica solo para leucemia linfoide aguda y linfoma linfoblástico, puede haber recibido más de una fase): </label>
+                  <label>46.5 El usuario recibió en este periodo la fase de quimioterapia denominada Reinducción (aplica solo para leucemia linfoide aguda y linfoma linfoblástico, puede haber recibido más de una fase): </label>
                   <q-select rounded standout v-model="data.uQuimioReinduccion" :options="uQuimioReinduccion" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Mantenimiento (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
+                  <label>46.6 El usuario recibió en este periodo la fase de quimioterapia denominada Mantenimiento (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
                   <q-select rounded standout v-model="data.uQuimioMantenimiento" :options="uQuimioMantenimiento" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió en este periodo la fase de quimioterapia denominada Mantenimiento largo o final (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
+                  <label>46.7 El usuario recibió en este periodo la fase de quimioterapia denominada Mantenimiento largo o final (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
                   <q-select rounded standout v-model="data.uQuimioMantenimientoLargo" :options="uQuimioMantenimientoLargo" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió en este periodo Otra fase de quimioterapia denominada diferente a las anteriores (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
+                  <label>46.8 El usuario recibió en este periodo Otra fase de quimioterapia denominada diferente a las anteriores (aplica solo para leucemia linfoide o mieloide aguda y linfoma linfoblástico, puede haber recibido más de una fase):  </label>
                   <q-select rounded standout v-model="data.uQuimioOtraFase" :options="uQuimioOtraFase" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item numero">
-                  <label>Número de ciclos iniciados y administrados en el periodo de reporte, incluyendo el que aún recibe en la fecha de finalización del periodo (aplica para todos los cánceres): </label>
+                  <label>47. Número de ciclos iniciados y administrados en el periodo de reporte, incluyendo el que aún recibe en la fecha de finalización del periodo (aplica para todos los cánceres): </label>
                     <q-input rounded standout v-model="data.ciclosReporteCanceres" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Ubicación temporal del primer o único esquema de quimioterapia o terapia sistémica en el periodo en relación al manejo oncológico: </label>
+                  <label>48. Ubicación temporal del primer o único esquema de quimioterapia o terapia sistémica en el periodo en relación al manejo oncológico: </label>
                   <q-select rounded standout v-model="data.ubicacionPrimerQuimio" :options="ubicacionPrimerQuimio" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de inicio del primer o único esquema de quimioterapia o terapia sistémica que recibió en este periodo. Este esquema pudo haber sido iniciado antes de periodo de reporte. </label>
+                  <label>49. Fecha de inicio del primer o único esquema de quimioterapia o terapia sistémica que recibió en este periodo. Este esquema pudo haber sido iniciado antes de periodo de reporte. </label>
                     <q-input filled v-model="data.fechaPrimerQuimioReporte">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -465,102 +465,102 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Número de IPS que suministran el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte:  </label>
+                  <label>50. Número de IPS que suministran el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte:  </label>
                     <q-input rounded standout v-model="data.numeroPrimerIps" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de la IPS1 que suministra el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte</label>
+                  <label>51. Código de la IPS1 que suministra el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte</label>
                     <q-input rounded standout v-model="data.codigoIps1PrimerQuimio" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Código de la IPS2 que suministra el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte:  </label>
+                  <label>52. Código de la IPS2 que suministra el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte:  </label>
                     <q-input rounded standout v-model="data.codigoIps2PrimerQuimio" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Cuantos medicamentos antineoplásicos o terapia hormonal, el (los) especialista(s) tratante(s) del cáncer propusieron como manejo en el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte</label>
+                  <label>53. Cuantos medicamentos antineoplásicos o terapia hormonal, el (los) especialista(s) tratante(s) del cáncer propusieron como manejo en el primer o único esquema de quimioterapia o terapia sistémica de este periodo de reporte</label>
                     <q-input rounded standout v-model="data.cantidadMedicamentosCancer" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(1) </label>
+                  <label>53.1 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(1) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico1" :options="medicamentoAntiplasico1" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(2) </label>
+                  <label>53.2 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(2) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico2" :options="medicamentoAntiplasico2" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(3) </label>
+                  <label>53.3 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(3) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico3" :options="medicamentoAntiplasico3" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(4) </label>
+                  <label>53.4 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(4) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico4" :options="medicamentoAntiplasico4" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(5) </label>
+                  <label>53.5 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(5) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico5" :options="medicamentoAntiplasico5" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(6) </label>
+                  <label>53.6 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(6) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico6" :options="medicamentoAntiplasico6" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(7) </label>
+                  <label>53.7 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(7) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico7" :options="medicamentoAntiplasico7" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(8) </label>
+                  <label>53.8 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(8) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico8" :options="medicamentoAntiplasico8" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(9) </label>
+                  <label>53.9 Medicamento antineoplásico administrado al usuario- PRIMER o único esquema del periodo de reporte.(9) </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasico9" :options="medicamentoAntiplasico9" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento Antineoplásico o terapia hormonal para el cáncer, adicional a los reportados en las variables 53.1 a 53.9 - 1 administrado al usuario- primer o único esquema del periodo de reporte: </label>
+                  <label>54. Medicamento Antineoplásico o terapia hormonal para el cáncer, adicional a los reportados en las variables 53.1 a 53.9 - 1 administrado al usuario- primer o único esquema del periodo de reporte: </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasicoVariable" :options="medicamentoAntiplasicoVariable" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento Antineoplásico o terapia hormonal para el cáncer, adicional a los reportados en las variables 53.1 a 53.9 - 2 administrado al usuario- primer o único esquema del periodo de reporte: </label>
+                  <label>55. Medicamento Antineoplásico o terapia hormonal para el cáncer, adicional a los reportados en las variables 53.1 a 53.9 - 2 administrado al usuario- primer o único esquema del periodo de reporte: </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasicoVariable2" :options="medicamentoAntiplasicoVariable2" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento Antineoplásico o terapia hormonal para el cáncer, adicional a los reportados en las variables 53.1 a 53.9 - 3 administrado al usuario- primer o único esquema del periodo de reporte: </label>
+                  <label>56. Medicamento Antineoplásico o terapia hormonal para el cáncer, adicional a los reportados en las variables 53.1 a 53.9 - 3 administrado al usuario- primer o único esquema del periodo de reporte: </label>
                     <q-select rounded standout v-model="data.medicamentoAntiplasicoVariable3" :options="medicamentoAntiplasicoVariable3" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>¿Recibió quimioterapia intratecal en el primer o único esquema de este periodo de reporte?:</label>
+                  <label>57. ¿Recibió quimioterapia intratecal en el primer o único esquema de este periodo de reporte?:</label>
                     <q-select rounded standout v-model="data.quimioIntratecalPrimer" :options="quimioIntratecalPrimer" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de finalización del primer o único esquema de este periodo de reporte. Si es hormonoterapia terminada o esquema terminado en este periodo reporte la fecha de finalización del tratamiento actual: </label>
+                  <label>58. Fecha de finalización del primer o único esquema de este periodo de reporte. Si es hormonoterapia terminada o esquema terminado en este periodo reporte la fecha de finalización del tratamiento actual: </label>
                     <q-input filled v-model="data.fechaFinalHormonoterapia">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -576,25 +576,25 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>59.  Características actuales del primer o único esquema de este periodo de reporte:</label>
+                  <label>59. Características actuales del primer o único esquema de este periodo de reporte:</label>
                     <q-select rounded standout v-model="data.cartePrimerReporte" :options="cartePrimerReporte" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label> Motivo de la finalización (prematura) de este primer o único esquema (Aplica si registró la opción 2 de la variable anterior). Seleccione un sólo número (lo que primero ocurrió):  </label>
+                  <label>60. Motivo de la finalización (prematura) de este primer o único esquema (Aplica si registró la opción 2 de la variable anterior). Seleccione un sólo número (lo que primero ocurrió):  </label>
                     <q-select rounded standout v-model="data.prematuraEsquemaOp2" :options="prematuraEsquemaOp2" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Ubicación temporal del ÚLTIMO esquema de quimioterapia o terapia sistémica de este periodo de reporte en relación al manejo oncológico: </label>
+                  <label>61. Ubicación temporal del ÚLTIMO esquema de quimioterapia o terapia sistémica de este periodo de reporte en relación al manejo oncológico: </label>
                     <q-select rounded standout v-model="data.ultimoEsquemaOncologico" :options="ultimoEsquemaOncologico" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de inicio del último esquema de quimioterapia o terapia sistémica de este periodo de reporte. Si es hormonoterapia reporte la fecha de inicio del tratamiento actual, así haya sido iniciada previo al reporte actual:  </label>
+                  <label>62. Fecha de inicio del último esquema de quimioterapia o terapia sistémica de este periodo de reporte. Si es hormonoterapia reporte la fecha de inicio del tratamiento actual, así haya sido iniciada previo al reporte actual:  </label>
                     <q-input filled v-model="data.fechaFinalHormonoterapia">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -610,102 +610,102 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Número de IPS que suministran el último esquema de este periodo de reporte: </label>
+                  <label>63. Número de IPS que suministran el último esquema de este periodo de reporte: </label>
                     <q-input rounded standout v-model="data.numeroIpsUltimoReporte" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de la IPS1 que suministra el último esquema en este periodo de reporte: </label>
+                  <label>64. Código de la IPS1 que suministra el último esquema en este periodo de reporte: </label>
                     <q-input rounded standout v-model="data.codigoReporteIps1" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Código de la IPS2 que suministra el último esquema en este periodo de reporte: </label>
+                  <label>65. Código de la IPS2 que suministra el último esquema en este periodo de reporte: </label>
                     <q-input rounded standout v-model="data.codigoReporteIps2" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Cuantos medicamentos antineoplásicos o terapia hormonal, el (los) especialista(s) tratante(s) del cáncer propusieron como manejo en ÚLTIMO esquema de quimioterapia o terapia sistémica de este periodo de reporte: </label>
+                  <label>66. Cuantos medicamentos antineoplásicos o terapia hormonal, el (los) especialista(s) tratante(s) del cáncer propusieron como manejo en ÚLTIMO esquema de quimioterapia o terapia sistémica de este periodo de reporte: </label>
                     <q-input rounded standout v-model="data.medicamentoAntiplasicoEspecial" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte. </label>
+                  <label>66.1 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte. </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte" :options="medicamentoAntineplasicoReporte" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(2)  </label>
+                  <label>66.2 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(2)  </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte2" :options="medicamentoAntineplasicoReporte2" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(3) </label>
+                  <label>66.3 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(3) </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte3" :options="medicamentoAntineplasicoReporte3" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(4)  </label>
+                  <label>66.4 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(4)  </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte4" :options="medicamentoAntineplasicoReporte4" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(5) </label>
+                  <label>66.5 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(5) </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte5" :options="medicamentoAntineplasicoReporte5" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(6)  </label>
+                  <label>66.6 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(6)  </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte6" :options="medicamentoAntineplasicoReporte6" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(7) </label>
+                  <label>66.7 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(7) </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte7" :options="medicamentoAntineplasicoReporte7" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(8)  </label>
+                  <label>66.8 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(8)  </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte8" :options="medicamentoAntineplasicoReporte8" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(9) </label>
+                  <label>66.9 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(9) </label>
                     <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte9" :options="medicamentoAntineplasicoReporte9" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -1 administrado al usuario- último esquema: </label>
+                  <label>67. Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -1 administrado al usuario- último esquema: </label>
                     <q-select rounded standout v-model="data.terapiaHormonalCancerVariable" :options="terapiaHormonalCancerVariable" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -2 administrado al usuario- último esquema:</label>
+                  <label>68. Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -2 administrado al usuario- último esquema:</label>
                     <q-select rounded standout v-model="data.terapiaHormonalCancerVariable2" :options="terapiaHormonalCancerVariable2" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -3 administrado al usuario- último esquema:</label>
+                  <label>69. Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -3 administrado al usuario- último esquema:</label>
                     <q-select rounded standout v-model="data.terapiaHormonalCancerVariable3" :options="terapiaHormonalCancerVariable3" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>¿Recibió quimioterapia intratecal en el último esquema de este periodo de reporte</label>
+                  <label>70. ¿Recibió quimioterapia intratecal en el último esquema de este periodo de reporte</label>
                     <q-select rounded standout v-model="data.quimioIntratecalUltimo" :options="quimioIntratecalUltimo" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de finalización del último esquema de quimioterapia o terapia sistémica este periodo de reporte. Si es hormonoterapia terminada o esquema terminado en este periodo reporte la fecha de finalización del tratamiento actual: </label>
+                  <label>71. Fecha de finalización del último esquema de quimioterapia o terapia sistémica este periodo de reporte. Si es hormonoterapia terminada o esquema terminado en este periodo reporte la fecha de finalización del tratamiento actual: </label>
                     <q-input filled v-model="data.fechaEsquemaQuimioFin">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -721,14 +721,14 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Características actuales del último esquema de este periodo:</label>
+                  <label>72. Características actuales del último esquema de este periodo:</label>
                     <q-select rounded standout v-model="data.actualEsquemaUltimoPeriodo" :options="actualEsquemaUltimoperiodo" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row un_item">
               <div class="item">
-                  <label>Motivo de la finalización (prematura) de este último esquema (Aplica si registró la opción 2 de la pregunta anterior) Seleccione un sólo número (lo que primero ocurrió): </label>
+                  <label>73. Motivo de la finalización (prematura) de este último esquema (Aplica si registró la opción 2 de la pregunta anterior) Seleccione un sólo número (lo que primero ocurrió): </label>
                     <q-select rounded standout v-model="data.motivoPrematuraEsquema" :options="motivoPrematuraEsquema" label="Seleccionar" />
               </div>
           </div>
@@ -749,18 +749,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>¿Fue sometido el usuario a una o más cirugías curativas o paliativas como parte del manejo del cáncer durante este periodo de reporte?:</label>
+                  <label>74. ¿Fue sometido el usuario a una o más cirugías curativas o paliativas como parte del manejo del cáncer durante este periodo de reporte?:</label>
                   <q-select rounded standout v-model="data.usuarioCirugiasCancer" :options="usuarioCirugiasCancer" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Número de cirugías a las que fue sometido el usuario durante el periodo de reporte actual:  </label>
+                  <label>75. Número de cirugías a las que fue sometido el usuario durante el periodo de reporte actual:  </label>
                     <q-input rounded standout v-model="data.numeroCirugiaUsuario" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de realización de la primera cirugía en este periodo de reporte: </label>
+                  <label>76. Fecha de realización de la primera cirugía en este periodo de reporte: </label>
                     <q-input filled v-model="data.fechaPrimeraCirugiaReporte">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -776,25 +776,63 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Código de la IPS que realizó la primera cirugía de este periodo de reporte:  </label>
-                  <q-select rounded standout v-model="data.codigoIpsPrimerCirugia" :options="codigoIpsPrimerCirugia" label="Seleccionar" />
+                  <label>77. Código de la IPS que realizó la primera cirugía de este periodo de reporte:  </label>
+                  <q-input rounded standout v-model="data.codigoIpsPrimerCirugia" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de primera cirugía en este periodo de reporte: </label>
-                  <q-select rounded standout v-model="data.codigoPrimerCirugiaReporte" :options="codigoPrimerCirugiaReporte" label="Seleccionar" />
+                  <label>78. Código de primera cirugía en este periodo de reporte: </label>
+                  <q-input rounded standout v-model="data.codigoPrimerCirugiaReporte" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Ubicación temporal de esta primera cirugía en relación al manejo oncológico: Código de la IPS que realizó la primera cirugía de este periodo de reporte:  </label>
+                  <label>79. Ubicación temporal de esta primera cirugía en relación al manejo oncológico: </label>
                   <q-select rounded standout v-model="data.ubiPrimerCirugiaOnco" :options="ubiPrimerCirugiaOnco" label="Seleccionar" />
+              </div>
+          </div>
+
+          <div class="row dos_items">
+              <div class="item">
+                  <label>80. Fecha de realización de la última cirugía o cirugía de reintervención en este periodo de reporte:</label>
+                    <q-input filled v-model="data.fechaUltimaCirugia">
+                      <template v-slot:append>
+                      <q-icon name="event" class="cursor-pointer">
+                          <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
+                          <q-date v-model="data.fechaUltimaCirugia">
+                              <div class="row items-center justify-end">
+                              <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                              </div>
+                          </q-date>
+                          </q-popup-proxy>
+                      </q-icon>
+                      </template>
+                    </q-input>
+              </div>
+              <div class="item">
+                  <label>81. Motivo de haber realizado la última cirugía de este periodo de reporte:</label>
+                  <q-select rounded standout v-model="data.motivoUltimaCirugia" :options="motivoUltimaCirugia" label="Seleccionar" />
+              </div>
+          </div>
+
+          <div class="row dos_items">
+              <div class="item">
+                  <label>82. Código de la IPS que realiza la última cirugía en este periodo de reporte:</label>
+                  <q-input rounded standout v-model="data.codigoIpsUlimaCirugia" lazy-rules type="number"></q-input>
+              </div>
+              <div class="item">
+                  <label>83. Código de última cirugía en este periodo de reporte:</label>
+                  <q-input rounded standout v-model="data.codigoUltimaCirugia" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row uno_items">
               <div class="item">
-                  <label>Estado vital al finalizar la única o última cirugía de este periodo de reporte:</label>
+                  <label>84. Ubicación temporal de esta última cirugía en relación al manejo oncológico, en este periodo de reporte: </label>
+                  <q-select rounded standout v-model="data.ubiUltimaCirugia" :options="ubiPrimerCirugiaOnco" label="Seleccionar" />
+              </div>
+              <div class="item">
+                  <label>85. Estado vital al finalizar la única o última cirugía de este periodo de reporte:</label>
                   <q-select rounded standout v-model="data.estadoVitalUnica" :options="estadoVitalUnica" label="Seleccionar" />
               </div>
           </div>
@@ -817,18 +855,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>¿Recibió el usuario algún tipo de radioterapia en el periodo de reporte actual?:</label>
+                  <label>86. ¿Recibió el usuario algún tipo de radioterapia en el periodo de reporte actual?:</label>
                   <q-select rounded standout v-model="data.uTipoRadioterapia" :options="uTipoRadioterapia" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Número de sesiones de radioterapia recibidas en el periodo</label>
+                  <label>87. Número de sesiones de radioterapia recibidas en el periodo</label>
                     <q-input rounded standout v-model="data.nSesionRadioterapia" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de inicio de primer o único esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual. Reporte la fecha de inicio del tratamiento actual, así haya sido iniciada previo al reporte actual: </label>
+                  <label>88. Fecha de inicio de primer o único esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual. Reporte la fecha de inicio del tratamiento actual, así haya sido iniciada previo al reporte actual: </label>
                     <q-input filled v-model="data.fechaUnicaRadioterapia">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -844,36 +882,36 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Ubicación temporal del primer o único esquema de cualquier tipo de radioterapia en este periodo de reporte en relación al tratamiento oncológico: </label>
+                  <label>89. Ubicación temporal del primer o único esquema de cualquier tipo de radioterapia en este periodo de reporte en relación al tratamiento oncológico: </label>
                   <q-select rounded standout v-model="data.ubiEsquemaRadioterapia" :options="ubiEsquemaRadioterapia" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Tipo de radioterapia aplicada en este primer o único esquema:  </label>
+                  <label>90. Tipo de radioterapia aplicada en este primer o único esquema:  </label>
                   <q-select rounded standout v-model="data.tipoRadioEsquema" :options="tipoRadioEsquema" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Número de IPS que suministran este primer o único esquema de radioterapia: </label>
+                  <label>91. Número de IPS que suministran este primer o único esquema de radioterapia: </label>
                     <q-input rounded standout v-model="data.novedadUsuarioReporteAnterior" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row uno_items">
               <div class="item">
-                  <label>Código de la IPS1 que suministra la radioterapia de este primer o único esquema</label>
-                  <q-select rounded standout v-model="data.cdIps1RadioteUnico" :options="cdIps1RadioteUnico" label="Seleccionar" />
+                  <label>92. Código de la IPS1 que suministra la radioterapia de este primer o único esquema</label>
+                  <q-input rounded standout v-model="data.cdIps1RadioteUnico" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de la IPS2 que suministra la radioterapia de este primer o único esquema:</label>
-                  <q-select rounded standout v-model="data.cdIps2Radiote" :options="cdIps2Radiote" label="Seleccionar" />
+                  <label>93. Código de la IPS2 que suministra la radioterapia de este primer o único esquema:</label>
+                  <q-input rounded standout v-model="data.cdIps2Radiote" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Fecha de finalización de primer o único esquema de radioterapia: </label>
+                  <label>94. Fecha de finalización de primer o único esquema de radioterapia: </label>
                     <q-input filled v-model="data.fechaFinRadioterapia">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -892,18 +930,18 @@
 
           <div class="row uno_items">
               <div class="item">
-                  <label>Características actuales de este primer o único esquema de radioterapia:</label>
+                  <label>95. Características actuales de este primer o único esquema de radioterapia:</label>
                   <q-select rounded standout v-model="data.ctActualRadiaote" :options="ctActualRadiaote" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Motivo de la finalización de este primer o único esquema de radioterapia (aplica si registró la opción 2 de la pregunta anterior). Seleccione un sólo número (lo que primero ocurrió):</label>
+                  <label>96. Motivo de la finalización de este primer o único esquema de radioterapia (aplica si registró la opción 2 de la pregunta anterior). Seleccione un sólo número (lo que primero ocurrió):</label>
                   <q-select rounded standout v-model="data.motivoFinRadiote" :options="motivoFinRadiote" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Fecha de inicio del último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual: </label>
+                  <label>97. Fecha de inicio del último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual: </label>
                     <q-input filled v-model="data.inicioUltimoRadiote">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -922,33 +960,33 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Ubicación temporal/intención del ÚLTIMO esquema de cualquier tipo de radioterapia suministrado en el periodo actual en relación al tratamiento oncológico:</label>
+                  <label>98. Ubicación temporal/intención del ÚLTIMO esquema de cualquier tipo de radioterapia suministrado en el periodo actual en relación al tratamiento oncológico:</label>
                   <q-select rounded standout v-model="data.intencionUltimoRadiote" :options="intencionUltimoRadiote" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Tipo de radioterapia aplicada en el ÚLTIMO esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual</label>
+                  <label>99. Tipo de radioterapia aplicada en el ÚLTIMO esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual</label>
                   <q-select rounded standout v-model="data.tipoUltimoradiote" :options="tipoUltimoradiote" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Número de IPS que suministran este último esquema de cualquier tipo de radioterapia en el periodo de reporte actual: </label>
+                  <label>100. Número de IPS que suministran este último esquema de cualquier tipo de radioterapia en el periodo de reporte actual: </label>
                   <q-input rounded standout v-model="data.numeroIpsRadiote" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Código de la IPS1 que suministra último esquema de cualquier tipo de radioterapia en el periodo de reporte actual: </label>
-                  <q-select rounded standout v-model="data.cdIps1Radiote" :options="cdIps1Radiote" label="Seleccionar" />
+                  <label>101. Código de la IPS1 que suministra último esquema de cualquier tipo de radioterapia en el periodo de reporte actual: </label>
+                  <q-input rounded standout v-model="data.cdIps1Radiote" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de la IPS2 que suministra último esquema de cualquier tipo de radioterapia en el periodo de reporte actual: Ubicación temporal/intención del ÚLTIMO esquema de cualquier tipo de radioterapia suministrado en el periodo actual en relación al tratamiento oncológico:</label>
-                  <q-select rounded standout v-model="data.cdIps2Radiote" :options="cdIps2Radiote" label="Seleccionar" />
+                  <label>102. Código de la IPS2 que suministra último esquema de cualquier tipo de radioterapia en el periodo de reporte actual:</label>
+                  <q-input rounded standout v-model="data.cdIps2Radiote" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>Fecha de finalización del último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual: </label>
+                  <label>103. Fecha de finalización del último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual: </label>
                     <q-input filled v-model="data.fechaFinRadioterapiaActual">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -967,11 +1005,11 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Características actuales de este último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual: </label>
+                  <label>104. Características actuales de este último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual: </label>
                   <q-select rounded standout v-model="data.caractActualRadiote" :options="caractActualRadiote" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Motivo de la finalización de este último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual (aplica si registró la opción 2 de la pregunta anterior). Seleccione un sólo número (lo que primero ocurrió):  </label>
+                  <label>105. Motivo de la finalización de este último esquema de cualquier tipo de radioterapia suministrado en el periodo de reporte actual (aplica si registró la opción 2 de la pregunta anterior). Seleccione un sólo número (lo que primero ocurrió):  </label>
                   <q-select rounded standout v-model="data.motivoFinRadiote2" :options="motivoFinRadiote2" label="Seleccionar" />
               </div>
           </div>
@@ -993,22 +1031,22 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>¿Recibió el usuario trasplante de células progenitoras hematopoyética dentro del periodo de reporte actual?:</label>
+                  <label>106. ¿Recibió el usuario trasplante de células progenitoras hematopoyética dentro del periodo de reporte actual?:</label>
                   <q-select rounded standout v-model="data.trasplanteHematopoyetica" :options="trasplanteHematopoyetica" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Tipo de trasplante recibido: </label>
+                  <label>107. Tipo de trasplante recibido: </label>
                   <q-select rounded standout v-model="data.tipoTrasplanteRbd" :options="tipoTrasplanteRbd" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Ubicación temporal de este trasplante en relación al manejo oncológico: </label>
+                  <label>108. Ubicación temporal de este trasplante en relación al manejo oncológico: </label>
                   <q-select rounded standout v-model="data.ubTemporalTrasplante" :options="ubTemporalTrasplante" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Fecha del trasplante: </label>
+                  <label>109. Fecha del trasplante: </label>
                     <q-input filled v-model="data.fechaTrasplante">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1027,8 +1065,8 @@
 
           <div class="row uno_items">
               <div class="item">
-                  <label>Código de la IPS que realizó este trasplante:  </label>
-                  <q-select rounded standout v-model="data.cdIpsTrasplante" :options="cdIpsTrasplante" label="Seleccionar" />
+                  <label>110. Código de la IPS que realizó este trasplante:  </label>
+                  <q-input rounded standout v-model="data.cdIpsTrasplante" lazy-rules type="number"></q-input>
               </div>
           </div>
 
@@ -1049,11 +1087,11 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario, ¿recibió cirugía reconstructiva en el periodo de reporte actual?: </label>
+                  <label>111. El usuario, ¿recibió cirugía reconstructiva en el periodo de reporte actual?: </label>
                   <q-select rounded standout v-model="data.uCirugiaRecontruir" :options="uCirugiaRecontruir" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Fecha de la cirugía reconstructiva:  </label>
+                  <label>112. Fecha de la cirugía reconstructiva:  </label>
                     <q-input filled v-model="data.fechaCirugiaRecontruir">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1072,62 +1110,51 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de la IPS que realizó cirugía reconstructiva:  </label>
-                  <q-select rounded standout v-model="data.cdIpsReconstruir" :options="cdIpsReconstruir" label="Seleccionar" />
+                  <label>113. Código de la IPS que realizó cirugía reconstructiva:  </label>
+                  <q-input rounded standout v-model="data.cdIpsReconstruir" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>¿El usuario fue valorado en consulta o procedimiento de cuidado paliativo en el periodo de reporte actual? (pueden haber sido múltiples):</label>
+                  <label>114. ¿El usuario fue valorado en consulta o procedimiento de cuidado paliativo en el periodo de reporte actual? (pueden haber sido múltiples):</label>
                   <q-select rounded standout v-model="data.uValoradoProcedi" :options="uValoradoProcedi" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico especialista en cuidado paliativo:</label>
+                  <label>114.1 El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico especialista en cuidado paliativo:</label>
                   <q-select rounded standout v-model="data.uCuidadoPaliativo" :options="uCuidadoPaliativo" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por profesional de la salud (no médico, incluye psicólogo) especialista en cuidado paliativo:</label>
+                  <label>114.2. El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por profesional de la salud (no médico, incluye psicólogo) especialista en cuidado paliativo:</label>
                   <q-select rounded standout v-model="data.uCuidadoPaliativoEspecial" :options="uCuidadoPaliativoEspecial" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico especialista en cuidado paliativo:</label>
-                  <q-select rounded standout v-model="data.uCuidadoPaliativo" :options="uCuidadoPaliativo" label="Seleccionar" />
+                  <label>114.3. El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico especialista, otra especialidad:</label>
+                  <q-select rounded standout v-model="data.uCuidadoEspecialista" :options="uCuidadoPaliativo" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por profesional de la salud (no médico, incluye psicólogo) especialista en cuidado paliativo:</label>
-                  <q-select rounded standout v-model="data.uCuidadoPaliativoEspecial" :options="uCuidadoPaliativoEspecial" label="Seleccionar" />
-              </div>
-          </div>
-
-          <div class="row dos_items">
-              <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico especialista en cuidado paliativo:</label>
-                  <q-select rounded standout v-model="data.uCuidadoPaliativoOtra" :options="uCuidadoPaliativo" label="Seleccionar" />
-              </div>
-              <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico general: </label>
-                  <q-select rounded standout v-model="data.uPaliativoGeneral" :options="uPaliativoGeneral" label="Seleccionar" />
+                  <label>114.4. El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por médico general:</label>
+                  <q-select rounded standout v-model="data.uCuidadoGeneral" :options="uCuidadoPaliativo" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por trabajo social</label>
-                  <q-select rounded standout v-model="data.paliativoTrabajoSocial" :options="paliativoTrabajoSocial" label="Seleccionar" />
+                  <label>114.5. El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por trabajo social:</label>
+                  <q-select rounded standout v-model="data.uCuidadoSocial" :options="uCuidadoPaliativo" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por otro profesional de salud (no médico, incluye psicólogo) no especializado: </label>
-                  <q-select rounded standout v-model="data.paliativoOtro" :options="paliativoOtro" label="Seleccionar" />
+                  <label>114.6. El usuario recibió consulta o procedimiento de cuidado paliativo en el periodo de reporte actual, por otro profesional de salud (no médico, incluye psicólogo) no especializado:</label>
+                  <q-select rounded standout v-model="data.uCuidadoProfesionalNoEspecial" :options="uPaliativoGeneral" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de primera consulta o procedimiento de cuidado paliativo en el periodo de reporte actual: </label>
+                  <label>115. Fecha de primera consulta o procedimiento de cuidado paliativo en el periodo de reporte actual: </label>
                     <q-input filled v-model="data.fechaCuidadoPaliativo">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1143,18 +1170,18 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Código de la IPS donde recibe la atención de cuidado paliativo en el periodo de reporte actual: </label>
-                  <q-select rounded standout v-model="data.cdIpsPaliativoActual" :options="cdIpsPaliativoActual" label="Seleccionar" />
+                  <label>116. Código de la IPS donde recibe la atención de cuidado paliativo en el periodo de reporte actual: </label>
+                  <q-input rounded standout v-model="data.cdIpsPaliativoActual" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>¿Ha sido valorado el usuario por el servicio de psiquiatría en el periodo de reporte actual?:</label>
+                  <label>117. ¿Ha sido valorado el usuario por el servicio de psiquiatría en el periodo de reporte actual?:</label>
                   <q-select rounded standout v-model="data.valoracionPsiquiatraAct" :options="valoracionPsiquiatraAct" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Fecha de primera consulta con el servicio de psiquiatría (para todos los usuarios) en el periodo de reporte actual:  </label>
+                  <label>118. Fecha de primera consulta con el servicio de psiquiatría (para todos los usuarios) en el periodo de reporte actual:  </label>
                     <q-input filled v-model="data.fechaConsultaPsiquiatria">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1173,18 +1200,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Código de la IPS donde recibió la primera valoración de psiquiatría en el periodo de reporte actual</label>
-                  <q-select rounded standout v-model="data.cdIpsPrimerPsiquiatria" :options="cdIpsPrimerPsiquiatria" label="Seleccionar" />
+                  <label>119. Código de la IPS donde recibió la primera valoración de psiquiatría en el periodo de reporte actual</label>
+                  <q-input rounded standout v-model="data.cdIpsPrimerPsiquiatria" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>¿Fue valorado el usuario por profesional en nutrición en el periodo de reporte actual?: </label>
+                  <label>120. ¿Fue valorado el usuario por profesional en nutrición en el periodo de reporte actual?: </label>
                   <q-select rounded standout v-model="data.valorNutricionActu" :options="valorNutricionActu" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de consulta inicial con nutrición en el periodo de reporte actual:  </label>
+                  <label>121. Fecha de consulta inicial con nutrición en el periodo de reporte actual:  </label>
                     <q-input filled v-model="data.fechaConsultaNutricion">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1200,18 +1227,18 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Código de la IPS donde recibió la valoración por nutrición, en el periodo de reporte actual: </label>
-                  <q-select rounded standout v-model="data.cdIpsNutricion" :options="cdIpsNutricion" label="Seleccionar" />
+                  <label>122. Código de la IPS donde recibió la valoración por nutrición, en el periodo de reporte actual: </label>
+                  <q-input rounded standout v-model="data.cdIpsNutricion" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>¿El usuario recibió soporte nutricional?:  </label>
+                  <label>123. ¿El usuario recibió soporte nutricional?:  </label>
                   <q-select rounded standout v-model="data.uSoporteNutricion" :options="uSoporteNutricion" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>¿El usuario ha recibido terapias complementarias para su rehabilitación? </label>
+                  <label>124. ¿El usuario ha recibido terapias complementarias para su rehabilitación? </label>
                   <q-select rounded standout v-model="data.uTerapiasRehabilitar" :options="uTerapiasRehabilitar" label="Seleccionar" />
               </div>
           </div>
@@ -1234,7 +1261,7 @@
 
           <div class="row uno_items">
               <div class="item">
-                  <label>Tipo de tratamiento que está recibiendo el usuario a la fecha de corte (el día 01/01/2022):</label>
+                  <label>125. Tipo de tratamiento que está recibiendo el usuario a la fecha de corte (el día 01/01/2022):</label>
                   <q-select rounded standout v-model="data.tipoTratamientoCorte" :options="tipoTratamientoCorte" label="Seleccionar" />
               </div>
           </div>
@@ -1243,29 +1270,29 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Resultado final del manejo oncológico en este periodo de reporte, luego de ser tratado en este periodo el usuario está en:</label>
+                  <label>126. Resultado final del manejo oncológico en este periodo de reporte, luego de ser tratado en este periodo el usuario está en:</label>
                   <q-select rounded standout v-model="data.resultadoOncologicoCorte" :options="resultadoOncologicoCorte" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Estado vital al finalizar este periodo de reporte:</label>
+                  <label>127. Estado vital al finalizar este periodo de reporte:</label>
                   <q-select rounded standout v-model="data.estadoVitalReporte" :options="estadoVitalReporte" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Novedad ADMINISTRATIVA del usuario respecto al reporte anterior:</label>
+                  <label>128. Novedad ADMINISTRATIVA del usuario respecto al reporte anterior:</label>
                   <q-select rounded standout v-model="data.novedadAdminReporte" :options="novedadAdminReporte" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Novedad clínica del usuario a la fecha de corte:</label>
+                  <label>129. Novedad clínica del usuario a la fecha de corte:</label>
                   <q-select rounded standout v-model="data.novedadClinicaCorte" :options="novedadClinicaCorte" label="Seleccionar" />
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Fecha de desafiliación de la EAPB:</label>
+                  <label>130. Fecha de desafiliación de la EAPB:</label>
                     <q-input filled v-model="data.fechaDesafiliacionEapb">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1281,7 +1308,7 @@
                     </q-input>
               </div>
               <div class="item">
-                  <label>Fecha de muerte</label>
+                  <label>131. Fecha de muerte</label>
                     <q-input filled v-model="data.fechaMuerteE">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -1300,18 +1327,18 @@
 
           <div class="row dos_items">
               <div class="item">
-                  <label>Causa de muerte</label>
+                  <label>132. Causa de muerte</label>
                   <q-select rounded standout v-model="data.causaMuerteE" :options="causaMuerteE" label="Seleccionar" />
               </div>
               <div class="item">
-                  <label>Código único de identificación (BDUA-BDEX-PVS): </label>
+                  <label>133. Código único de identificación (BDUA-BDEX-PVS): </label>
                   <q-input rounded standout v-model="data.codifgoidentificiacionBBP" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row uno_items">
               <div class="item">
-                  <label>Fecha de Corte: </label>
+                  <label>134. Fecha de Corte: </label>
                     <q-input filled v-model="data.fechaCorteCancer">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
@@ -2297,6 +2324,15 @@ export default {
         { id: '3', label: 'Muerte por causa externa' },
         { id: '4', label: 'Muerte por causa no conocida' },
         { id: '98', label: 'No Aplica, usuario vivo o se desconoce su estado vital' },
+        { id: '55', label: 'Persona con aseguramiento (régimen subsidiado o contributivo y que no son PPNA) que recibió servicios de salud por parte del ente territorial durante el periodo de reporte.' }
+      ],
+      motivoUltimaCirugia: [
+        { id: '1', label: 'Complementar tratamiento quirúrgico del cáncer no asociado a complicaciones de la primera cirugía' },
+        { id: '2', label: 'Complicaciones debida a la primera cirugía o siguientes' },
+        { id: '3', label: 'Complicaciones por otras condiciones médicas no relacionadas a la cirugía (por ejemplo, comorbilidad)' },
+        { id: '5', label: '1 y 3' },
+        { id: '6', label: '2 y 3' },
+        { id: '98', label: 'No Aplica (sólo hubo una intervención en este periodo o no hubo cirugías en este periodo)' },
         { id: '55', label: 'Persona con aseguramiento (régimen subsidiado o contributivo y que no son PPNA) que recibió servicios de salud por parte del ente territorial durante el periodo de reporte.' }
       ]
     }
