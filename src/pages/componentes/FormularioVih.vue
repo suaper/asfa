@@ -8,10 +8,10 @@
                       <label class="toltip">15. Mujer gestante
                           <q-icon @click="tool = true" name="help_outline" class="cursor-pointer"></q-icon>
                         </label>
-                      <q-select rounded standout v-model="data.pregnantWoman" :options="pregnantWomans"  label="Seleccionar" :rules="[val => !!val || 'Campo requerido']"/>
+                      <q-select rounded standout v-model="data.v15" :options="pregnantWomans"  label="Seleccionar" :rules="[val => !!val || 'Campo requerido']"/>
                   </div>
               </div>
-              <div class="row un_item" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                     <label>FUM (Fecha de última menstruación confiable)</label>
                       <q-input filled v-model="data.fum">
@@ -32,11 +32,11 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>16. Niño o niña menor de 12 meses que es hijo(a) de madre que vive con VIH</label>
-                      <q-select rounded standout v-model="data.children" :options="childrens" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v16" :options="childrens" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>17.  Persona con tuberculosis activa</label>
-                      <q-select rounded standout v-model="data.tuberculosis" :options="optionsTuberculosis" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v17" :options="optionsTuberculosis" label="Seleccionar" />
                   </div>
               </div>
               <!--<div class="row un_item">
@@ -45,14 +45,14 @@
                       <q-select rounded standout v-model="model" :options="options" label="Seleccionar" />
                   </div>
               </div>-->
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>19. Fecha del diagnóstico de la gestación reportada</label>
-                      <q-input filled v-model="data.dateReportedPregnancy">
+                      <q-input filled v-model="data.v19">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.dateReportedPregnancy">
+                              <q-date v-model="data.v19">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -64,11 +64,11 @@
                   </div>
                   <div class="item">
                       <label>20. Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación</label>
-                      <q-input filled v-model="data.dateScreeningFirst">
+                      <q-input filled v-model="data.v20">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.dateScreeningFirst"> mask="YYYY-MM-DD"
+                              <q-date v-model="data.v20"> mask="YYYY-MM-DD"
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -79,14 +79,14 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>21. Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación</label>
-                      <q-input filled v-model="data.dateScreeningSecond">
+                      <q-input filled v-model="data.v21">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
-                              <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.dateScreeningSecond" maKk="YYYY-MM-DD">
+                              <q-popup-proxy cover transition-show="scale" transition-hide="scale">eeningThird
+                              <q-date v-model="data.v21" maKk="YYYY-MM-DD">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -98,11 +98,11 @@
                   </div>
                   <div class="item">
                       <label>22. Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación</label>
-                      <q-input filled v-model="data.dateScreeningThird">
+                      <q-input filled v-model="data.v22">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.dateScreeningThird"> mask="YYYY-MM-DD"
+                              <q-date v-model="data.v22"> mask="YYYY-MM-DD"
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -113,14 +113,14 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row un_item" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                     <label>23. Fecha de realización de tamizaje para VIH en el momento del parto</label>
-                      <q-input filled v-model="data.dateScreeningBirth">
+                      <q-input filled v-model="data.v23">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.dateScreeningBirth"> mask="YYYY-MM-DD"
+                              <q-date v-model="data.v23"> mask="YYYY-MM-DD"
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -131,58 +131,58 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>24. ¿Mujer con diagnóstico de VIH en cualquier momento de la gestación reportada?</label>
-                      <q-select rounded standout v-model="data.womanVihReported" :options="womanVihReporteds" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v24" :options="womanVihReporteds" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>24.1. Edad gestacional al momento del diagnóstico de VIH durante la gestación reportada.</label>
                       <q-input
                           rounded
                           standout
-                          v-model="data.ageVihReported"
+                          v-model="data.v24_1"
                           lazy-rules
                           type="number"
                           >
                         </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>24.2. ¿Recibió tratamiento para VIH durante la gestación reportada?</label>
-                      <q-select rounded standout v-model="data.receivedTreatmentVih" :options="receivedTreatmentVihs" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v24_2" :options="receivedTreatmentVihs" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>24.3. Edad gestacional al inicio de la terapia antirretroviral (TAR) en la gestación reportada.</label>
                       <q-input
                           rounded
                           standout
-                          v-model="data.ageInitTar"
+                          v-model="data.v24_3"
                           lazy-rules
                           type="number"
                           >
                         </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>24.4. Terapia antirretroviral (TAR) durante el intraparto en la gestación reportada.</label>
-                      <q-select rounded standout v-model="data.tarIntraBirth" :options="tarIntraBirths" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v24_4" :options="tarIntraBirths" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>24.5. Resultado de la gestación reportada en gestantes con VIH</label>
-                      <q-select rounded standout v-model="data.resultVihReported" :options="resultVihReporteds" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v24_5" :options="resultVihReporteds" label="Seleccionar" />
                   </div>
               </div>
-              <div class="row un_item" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>24.6. Fecha de culminación de la gestación reportada en gestantes con VIH.</label>
-                      <q-input filled v-model="data.dateCulminationReported">
+                      <q-input filled v-model="data.v24_6">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.dateCulminationReported" mask="YYYY-MM-DD">
+                              <q-date v-model="data.v24_6" mask="YYYY-MM-DD">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -193,23 +193,23 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>24.7. Supresión farmacológica de la lactancia materna en gestantes con VIH.</label>
-                      <q-select rounded standout v-model="data.pharmacologicalSuppression" :options="pharmacologicalSuppressions" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v24_7" :options="pharmacologicalSuppressions" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>24.8. Tipo de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada.</label>
-                      <q-select rounded standout v-model="data.identificationTypeNewbor" :options="identificationsNewbord" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v24_8" :options="identificationsNewbord" label="Seleccionar" />
                   </div>
               </div>
-              <div class="row dos_items" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
                   <div class="item">
                       <label>24.9. Número de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada</label>
                       <q-input
                           rounded
                           standout
-                          v-model="data.identificationNewborn"
+                          v-model="data.v24_9"
                           lazy-rules
                           type="number"
                           >
@@ -245,46 +245,46 @@
               </div>
           </div>
           <div class="wrp_forms w_50" v-if="secondStep">
-            <h4 class="titulo_fondo w_100" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">Información de menores de 12 meses hijos o hijas de madres que viven con VIH</h4>
-            <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
+            <h4 class="titulo_fondo w_100" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">Información de menores de 12 meses hijos o hijas de madres que viven con VIH</h4>
+            <div class="row dos_items" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">
               <div class="item">
                   <label>25. Tipo de identificación de la madre del menor de 12 meses expuesto al VIH</label>
-                  <q-select rounded standout v-model="data.documentTypeChildren" :options="documentTypesChildres" label="Seleccionar" />
+                  <q-select rounded standout v-model="data.v25" :options="documentTypesChildres" label="Seleccionar" />
               </div>
               <div class="item">
                 <label>25.1 Número de identificación de la madre del menor de 12 meses expuesto al VIH..</label>
                 <q-input
                     rounded
                     standout
-                    v-model="data.documentNumberChildren"
+                    v-model="data.v25_1"
                     lazy-rules
                     type="number"
                     >
                   </q-input>
               </div>
             </div>
-            <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
+            <div class="row dos_items" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">
               <div class="item">
                   <label>25.2 ¿La madre del menor de 12 meses expuesto al VIH tiene confirmado el diagnóstico de VIH?</label>
-                  <q-select rounded standout v-model="data.haveConfirmedVihDx" :options="answersConfirmedDx" label="Seleccionar" />
+                  <q-select rounded standout v-model="data.v25_2" :options="answersConfirmedDx" label="Seleccionar" />
               </div>
               <div class="item">
                 <label>26. Profilaxis con antirretrovirales para el recién nacido vivo expuesto al VIH.</label>
-                <q-select rounded standout v-model="data.profilaxis" :options="profilaxisOptions" label="Seleccionar" />
+                <q-select rounded standout v-model="data.v26" :options="profilaxisOptions" label="Seleccionar" />
               </div>
             </div>
-            <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
+            <div class="row dos_items" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">
               <div class="item">
                   <label>27. Suministro de fórmula láctea.</label>
-                  <q-select rounded standout v-model="data.suministroViaLactea" :options="viaLacteaOptions" label="Seleccionar" />
+                  <q-select rounded standout v-model="data.v27" :options="viaLacteaOptions" label="Seleccionar" />
               </div>
               <div class="item">
                 <label>28. Fecha de la primera carga viral para VIH en el menor de 12 meses expuesto al VIH.</label>
-                <q-input filled v-model="data.firstViralChargeVih">
+                <q-input filled v-model="data.v28">
                     <template v-slot:append>
                     <q-icon name="event" class="cursor-pointer">
                         <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                        <q-date v-model="data.firstViralChargeVih">
+                        <q-date v-model="data.v28">
                             <div class="row items-center justify-end">
                             <q-btn v-close-popup label="Cerrar" color="primary" flat />
                             </div>
@@ -295,13 +295,13 @@
                 </q-input>
               </div>
             </div>
-            <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
+            <div class="row dos_items" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">
               <div class="item">
                   <label>28.1 Resultado de la primera carga viral en el menor de 12 meses expuesto al VIH.</label>
                   <q-input
                     rounded
                     standout
-                    v-model="data.resultFirstViralChargeVih"
+                    v-model="data.v28_1"
                     lazy-rules
                     type="number"
                     >
@@ -309,11 +309,11 @@
               </div>
               <div class="item">
                 <label>29. Fecha de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
-                <q-input filled v-model="data.secondViralChargeVih">
+                <q-input filled v-model="data.v29">
                   <template v-slot:append>
                   <q-icon name="event" class="cursor-pointer">
                       <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                      <q-date v-model="data.secondViralChargeVih">
+                      <q-date v-model="data.v29">
                           <div class="row items-center justify-end">
                           <q-btn v-close-popup label="Cerrar" color="primary" flat />
                           </div>
@@ -324,13 +324,13 @@
               </q-input>
               </div>
             </div>
-            <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
+            <div class="row dos_items" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">
               <div class="item">
                   <label>29.1 Resultado de la segunda carga viral en el menor de 12 meses expuesto al VIH.</label>
                   <q-input
                     rounded
                     standout
-                    v-model="data.resultSecondViralChargeVih"
+                    v-model="data.v29_1"
                     lazy-rules
                     type="number"
                     >
@@ -338,11 +338,11 @@
               </div>
               <div class="item">
                 <label>30. Fecha de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
-                <q-input filled v-model="data.thirdViralChargeVih">
+                <q-input filled v-model="data.v30">
                     <template v-slot:append>
                     <q-icon name="event" class="cursor-pointer">
                         <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                        <q-date v-model="data.thirdViralChargeVih">
+                        <q-date v-model="data.v30">
                             <div class="row items-center justify-end">
                             <q-btn v-close-popup label="Cerrar" color="primary" flat />
                             </div>
@@ -353,13 +353,13 @@
                 </q-input>
               </div>
             </div>
-            <div class="row dos_items" v-if="typeof data.children !== 'undefined' && data.children.id !== '0'">
+            <div class="row dos_items" v-if="typeof data.v16 !== 'undefined' && data.v16.id !== '0'">
               <div class="item">
                   <label>30.1 Resultado de la tercera carga viral en el menor de 12 meses expuesto al VIH.</label>
                   <q-input
                     rounded
                     standout
-                    v-model="data.resultThirdViralChargeVih"
+                    v-model="data.v30_1"
                     lazy-rules
                     type="number"
                     >
@@ -367,18 +367,18 @@
               </div>
               <div class="item">
                 <label>31. Condición final del menor de 12 meses expuesto al VIH.</label>
-                <q-select rounded standout v-model="data.conditionFinalChild" :options="conditionFinalChildOptions" label="Seleccionar" />
+                <q-select rounded standout v-model="data.v31" :options="conditionFinalChildOptions" label="Seleccionar" />
               </div>
             </div>
-            <h4 class="titulo_fondo w_100" v-if="typeof data.tuberculosis !== 'undefined' && data.tuberculosis.id !== '3'">Información de personas con tuberculosis activa</h4>
-            <div class="row dos_items" v-if="typeof data.tuberculosis !== 'undefined' && data.tuberculosis.id !== '3'">
+            <h4 class="titulo_fondo w_100" v-if="typeof data.v17 !== 'undefined' && data.v17.id !== '3'">Información de personas con tuberculosis activa</h4>
+            <div class="row dos_items" v-if="typeof data.v17 !== 'undefined' && data.v17.id !== '3'">
               <div class="item">
                   <label>32. Fecha del diagnóstico de la tuberculosis activa reportada.</label>
-                  <q-input filled v-model="data.dateDxTuberculosisActiva">
+                  <q-input filled v-model="data.v32">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
                           <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                          <q-date v-model="data.dateDxTuberculosisActiva">
+                          <q-date v-model="data.v32">
                               <div class="row items-center justify-end">
                               <q-btn v-close-popup label="Cerrar" color="primary" flat />
                               </div>
@@ -390,11 +390,11 @@
               </div>
               <div class="item">
                 <label>33. Fecha de realización de tamizaje para VIH a la persona con tuberculosis activa reportada.</label>
-                <q-input filled v-model="data.dateTamizajeTuberculosis">
+                <q-input filled v-model="data.v33">
                       <template v-slot:append>
                       <q-icon name="event" class="cursor-pointer">
                           <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                          <q-date v-model="data.dateTamizajeTuberculosis">
+                          <q-date v-model="data.v33">
                               <div class="row items-center justify-end">
                               <q-btn v-close-popup label="Cerrar" color="primary" flat />
                               </div>
@@ -422,11 +422,11 @@
               <div class="row dos_items">
                   <div class="item">
                         <label>34. Fecha de la prueba presuntiva (prueba rápida, autotest o Elisa, según guía de práctica clínica vigente) para infección por VIH.</label>
-                        <q-input filled v-model="data.fechaPruebaPresuntiva">
+                        <q-input filled v-model="data.v34">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.fechaPruebaPresuntiva">
+                              <q-date v-model="data.v34">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -438,18 +438,18 @@
                   </div>
                   <div class="item">
                       <label>35. Cómo llegó a la prueba presuntiva para el VIH</label>
-                      <q-select rounded standout v-model="data.comoLlegoLaPrueba" :options="comoLlegoLaPrueba" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v35" :options="comoLlegoLaPrueba" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>36. Fecha de confirmación del diagnóstico de infección por VIH.</label>
-                      <q-input filled v-model="data.fechaCongirmacionDiagnostico">
+                      <q-input filled v-model="data.v36">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.fechaCongirmacionDiagnostico" maKk="YYYY-MM-DD">
+                              <q-date v-model="data.v36" maKk="YYYY-MM-DD">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -461,7 +461,7 @@
                   </div>
                   <div class="item">
                       <label>36.1 ¿La entidad que reporta a la persona que vive con VIH es la misma en la cual estaba afiliada al momento del diagnóstico? </label>
-                      <q-select rounded standout v-model="data.entidadReportaVih" :options="entidadReportaVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v36_1" :options="entidadReportaVih" label="Seleccionar" />
                   </div>
               </div>
 
@@ -471,7 +471,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.entidadReportaAnterior"
+                          v-model="data.v36_2"
                           lazy-rules
                           type="number"
                           >
@@ -479,11 +479,11 @@
                   </div>
                   <div class="item">
                     <label>37. Fecha de inicio de la atención por VIH.</label>
-                      <q-input filled v-model="data.fechaInicioAtencionVih">
+                      <q-input filled v-model="data.v37">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                              <q-date v-model="data.fechaInicioAtencionVih"> mask="YYYY-MM-DD"
+                              <q-date v-model="data.v37"> mask="YYYY-MM-DD"
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -498,18 +498,18 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>38. Mecanismo o vía de transmisión del VIH.</label>
-                      <q-select rounded standout v-model="data.mecanismoTransmisionVih" :options="mecanismoTransmisionVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v38" :options="mecanismoTransmisionVih" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>39. Estado clínico al momento del diagnóstico (para niños, niñas, adolescentes y adultos.</label>
-                      <q-select rounded standout v-model="data.estadoClinicoAlMomento" :options="estadoClinicoAlMomento" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v39" :options="estadoClinicoAlMomento" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>40. ¿Se realizó conteo de linfocitos T CD4 al momento del diagnóstico? </label>
-                      <q-select rounded standout v-model="data.verificacionConteoLinfocitos" :options="verificacionConteoLinfocitos" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v40" :options="verificacionConteoLinfocitos" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>40.1 Conteo de linfocitos T CD4 al momento del diagnóstico.</label>
@@ -527,14 +527,14 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>41. ¿Se realizó carga viral al momento del diagnóstico? </label>
-                      <q-select rounded standout v-model="data.verificacionCargaViral" :options="verificacionCargaViral" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v41" :options="verificacionCargaViral" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>41.1 Carga viral al momento del diagnóstico.</label>
                       <q-input
                           rounded
                           standout
-                          v-model="data.cargaViralEnresultado"
+                          v-model="data.v41_1"
                           lazy-rules
                           type="number"
                           >
@@ -558,11 +558,11 @@
               <div class="row dos_items">
                   <div class="item">
                         <label>42 Fecha de inicio de la terapia antirretroviral (TAR). </label>
-                        <q-input filled v-model="data.inicioTerapiaAntirretroviral">
+                        <q-input filled v-model="data.v42">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.inicioTerapiaAntirretroviral">
+                              <q-date v-model="data.v42">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -574,36 +574,36 @@
                   </div>
                   <div class="item">
                       <label>42.1 Medicamento 1 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.medicamento1InicioTar" :options="medicamento1InicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v42_1" :options="medicamento1InicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>42.2 Medicamento 2 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.medicamento2InicioTar" :options="medicamento2InicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v42_2" :options="medicamento2InicioTar" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>42.3 Medicamento 3 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.medicamento3InicioTar" :options="medicamento3InicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v42_3" :options="medicamento3InicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>42.4 Medicamento 4 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.medicamento4InicioTar" :options="medicamento4InicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v42_4" :options="medicamento4InicioTar" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>42.5 Medicamento 5 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.medicamento5InicioTar" :options="medicamento5InicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v42_5" :options="medicamento5InicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>43. ¿Conteo de linfocitos T CD4 al momento del inicio de la TAR?</label>
-                      <q-select rounded standout v-model="data.linfocitosCD4InicioTar" :options="linfocitosCD4InicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v43" :options="linfocitosCD4InicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
@@ -611,7 +611,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.valorLinfocitosCD4InicioTar"
+                          v-model="data.v43_1"
                           lazy-rules
                           type="number"
                           >
@@ -622,7 +622,7 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>44. ¿Carga viral al momento del inicio de la TAR? </label>
-                      <q-select rounded standout v-model="data.cargaMomentoInicioTar" :options="cargaMomentoInicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v44" :options="cargaMomentoInicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
@@ -630,7 +630,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.cargaViralInicioTar"
+                          v-model="data.v44_1"
                           lazy-rules
                           type="number"
                           >
@@ -641,52 +641,52 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>45. Motivo de inicio de la TAR</label>
-                      <q-select rounded standout v-model="data.motivoInicioTar" :options="motivoInicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v45" :options="motivoInicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>46. Tenía coinfección con el virus de la hepatitis B (VHB) al iniciar la TAR</label>
-                      <q-select rounded standout v-model="data.hepatitisBInicioTar" :options="hepatitisBInicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v46" :options="hepatitisBInicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>47. Tenía coinfección con hepatitis C (VHC) crónica al iniciar TAR</label>
-                      <q-select rounded standout v-model="data.hepatitisCInicioTar" :options="hepatitisCInicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v47" :options="hepatitisCInicioTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>48. Tenía coinfección con tuberculosis activa al iniciar TAR</label>
-                      <q-select rounded standout v-model="data.tuberculosisInicioTar" :options="tuberculosisInicioTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v48" :options="tuberculosisInicioTar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>49. Número de meses que se dispensó la fórmula completa de TAR durante los primeros 12 meses de iniciada la TAR:</label>
-                      <q-select rounded standout v-model="data.dispensoFormulaTar" :options="dispensoFormulaTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v49" :options="dispensoFormulaTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>50. Número de consultas médicas a las que asistió la persona que vive con VIH durante los primeros 12 meses luego de iniciar la TAR: </label>
-                      <q-select rounded standout v-model="data.consultasAsistirTarVih" :options="consultasAsistirTarVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v50" :options="consultasAsistirTarVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>51. ¿Ha tenido cambios en el esquema inicial de TAR?: </label>
-                      <q-select rounded standout v-model="data.cambiosEsquemaInicialTar" :options="cambiosEsquemaInicialTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51" :options="cambiosEsquemaInicialTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>51.1 Fecha del primer cambio de cualquier medicamento del esquema inicial de TAR</label>
-                      <q-input filled v-model="data.medicamentoEsquemaInicialTar">
+                      <q-input filled v-model="data.v51_1">
                         <template v-slot:append>
                         <q-icon name="event" class="cursor-pointer">
                             <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                            <q-date v-model="data.medicamentoEsquemaInicialTar">
+                            <q-date v-model="data.v51_1">
                                 <div class="row items-center justify-end">
                                 <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                 </div>
@@ -701,36 +701,36 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>51.2 Causa del cambio de medicamento con el que inicio la TAR</label>
-                      <q-select rounded standout v-model="data.cambioMedicamentoTar" :options="cambioMedicamentoTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51_2" :options="cambioMedicamentoTar" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>51.3 Medicamento 1 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.medicamento1Cambio" :options="medicamento1Cambio" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51_3" :options="medicamento1Cambio" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>51.4 Medicamento 2 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.medicamento2Cambio" :options="medicamento2Cambio" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51_4" :options="medicamento2Cambio" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>51.5 Medicamento 3 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.medicamento3ambio" :options="medicamento3Cambio" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51_5" :options="medicamento3Cambio" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>51.6 Medicamento 4 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.medicamento4Cambio" :options="medicamento4Cambio" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51_6" :options="medicamento4Cambio" label="Seleccionar" />
                   </div>
 
                   <div class="item">
                       <label>51.7 ¿Fallas desde el inicio de la TAR hasta el reporte actual?  </label>
-                      <q-select rounded standout v-model="data.fallasInicioTarAnual" :options="fallasInicioTarAnual" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v51_7" :options="fallasInicioTarAnual" label="Seleccionar" />
                   </div>
               </div>
 
@@ -740,7 +740,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.numeroFallasInicioTarAnual"
+                          v-model="data.v51_8"
                           lazy-rules
                           type="number"
                           >
@@ -765,121 +765,121 @@
             <div class="row dos_items">
                   <div class="item">
                       <label>52.1 ¿Infecciones bacterianas múltiples o recurrentes? </label>
-                      <q-select rounded standout v-model="data.infeccionBacteriana" :options="infeccionBacteriana" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_1" :options="infeccionBacteriana" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.2 ¿Candidiasis esofágica, traqueal, bronquial o pulmonar?  </label>
-                      <q-select rounded standout v-model="data.candidiasisETBP" :options="candidiasisETBP" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_2" :options="candidiasisETBP" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.3 ¿Tuberculosis pulmonar (solo en personas mayores o iguales a 6 años de edad) o extrapulmonar? </label>
-                      <q-select rounded standout v-model="data.tuberculosisPulmonar" :options="tuberculosisPulmonar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_3" :options="tuberculosisPulmonar" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.4 ¿Cáncer de cérvix invasivo? (solo para personas mayores o iguales a 6 años de edad) </label>
-                      <q-select rounded standout v-model="data.cancerCervix" :options="cancerCervix" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_4" :options="cancerCervix" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.5 ¿Coccidioidomicosis diseminada o extrapulmonar?</label>
-                      <q-select rounded standout v-model="data.coccidioidomicosis" :options="coccidioidomicosis" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_5" :options="coccidioidomicosis" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.6 ¿Citomegalovirus de cualquier órgano excepto hígado, bazo, o ganglios linfáticos? En mayores de 1 mes de edad.  </label>
-                      <q-select rounded standout v-model="data.citomegalovirus1Mes" :options="citomegalovirus1Mes" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_6" :options="citomegalovirus1Mes" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.7 ¿Retinitis por citomegalovirus (con pérdida de la visión)? </label>
-                      <q-select rounded standout v-model="data.retinitisCitomegalovirus" :options="retinitisCitomegalovirus" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_7" :options="retinitisCitomegalovirus" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.8 ¿Herpes simple con úlceras mucocutáneas de más de un mes de duración o causando bronquitis, neumonitis o esofagitis? (en mayores de 1 mes de edad)  </label>
-                      <q-select rounded standout v-model="data.herpesMayor1Mes" :options="herpesMayor1Mes" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_8" :options="herpesMayor1Mes" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.9 ¿Diarrea por isospora belli o cryptosporidium de más de un mes de duración? </label>
-                      <q-select rounded standout v-model="data.diarreaIsospora1Mes" :options="diarreaIsospora1Mes" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_9" :options="diarreaIsospora1Mes" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.10 ¿Histoplasmosis diseminada o extrapulmonar? </label>
-                      <q-select rounded standout v-model="data.histoplasmosisDiseminada" :options="histoplasmosisDiseminada" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_10" :options="histoplasmosisDiseminada" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.11 ¿Linfoma de Burkitt, inmunoblástico, o primario del sistema nervioso central? </label>
-                      <q-select rounded standout v-model="data.linfomaBurkitt" :options="linfomaBurkitt" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_11" :options="linfomaBurkitt" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.12 ¿Neumonía por pneumocystis jiroveci? </label>
-                      <q-select rounded standout v-model="data.neumoniaPneumocystis" :options="neumoniaPneumocystis" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_12" :options="neumoniaPneumocystis" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.13 ¿Neumonía recurrente?  </label>
-                      <q-select rounded standout v-model="data.neumoniaRecurrente" :options="neumoniaRecurrente" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_13" :options="neumoniaRecurrente" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.14 ¿Septicemia por salmonella recurrente? </label>
-                      <q-select rounded standout v-model="data.septicemiaSalmonella" :options="septicemiaSalmonella" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_14" :options="septicemiaSalmonella" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.15 ¿Infección diseminada o extrapulmonar por micobacterium avium, kansasii u otras especies de micobacterias? </label>
-                      <q-select rounded standout v-model="data.infeccionKansasiiOtras" :options="infeccionKansasiiOtras" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_15" :options="infeccionKansasiiOtras" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.16 ¿Criptococosis extrapulmonar? </label>
-                      <q-select rounded standout v-model="data.criptococosisExtrapulmonar" :options="criptococosisExtrapulmonar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_16" :options="criptococosisExtrapulmonar" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.17 ¿Sarcoma de Kaposi?  </label>
-                      <q-select rounded standout v-model="data.sarcamoKaposi" :options="sarcamoKaposi" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_17" :options="sarcamoKaposi" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.18 ¿Síndrome de desgaste asociado al VIH? </label>
-                      <q-select rounded standout v-model="data.sindromeDesgasteVih" :options="sindromeDesgasteVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_18" :options="sindromeDesgasteVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.19 ¿Leucoencefalopatía multifocal progresiva o encefalopatía por VIH? </label>
-                      <q-select rounded standout v-model="data.leucoencefalopatiaMultifocalVih" :options="leucoencefalopatiaMultifocalVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_19" :options="leucoencefalopatiaMultifocalVih" label="Seleccionar" />
                   </div>
                   <div class="item">
-                      <label>52.2 ¿Toxoplasmosis cerebral? (solo en personas mayores de 1 mes de edad): </label>
-                      <q-select rounded standout v-model="data.toxoplasmosisCerebral1Mes" :options="toxoplasmosisCerebral1Mes" label="Seleccionar" />
+                      <label>52.20 ¿Toxoplasmosis cerebral? (solo en personas mayores de 1 mes de edad): </label>
+                      <q-select rounded standout v-model="data.v52_20" :options="toxoplasmosisCerebral1Mes" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>52.21 ¿Demencia asociada al VIH? (solo para personas con diagnóstico de VIH antes de 2017) </label>
-                      <q-select rounded standout v-model="data.demenciaAsociadaVih" :options="demenciaAsociadaVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_21" :options="demenciaAsociadaVih" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>52.22 ¿Neumonía intersticial linfoidea? (solo para personas con diagnóstico de VIH antes de 2017) </label>
-                      <q-select rounded standout v-model="data.neumoniaIntersticialLinfoidea" :options="neumoniaIntersticialLinfoidea" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v52_22" :options="neumoniaIntersticialLinfoidea" label="Seleccionar" />
                   </div>
               </div>
 
@@ -904,7 +904,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.codigoSedeIps"
+                          v-model="data.v53"
                           lazy-rules
                           type="number"
                           >
@@ -912,11 +912,11 @@
                   </div>
                   <div class="item">
                       <label>53.1 Fecha de ingreso a la IPS actual para seguimiento y atención de la infección por el VIH: </label>
-                        <q-input filled v-model="data.ingresoIpsAtencionViH">
+                        <q-input filled v-model="data.v53_1">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ingresoIpsAtencionViH">
+                              <q-date v-model="data.v53_1">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -934,7 +934,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.municipioIps"
+                          v-model="data.v53_2"
                           lazy-rules
                           type="number"
                           >
@@ -942,22 +942,22 @@
                   </div>
                   <div class="item">
                       <label>53.3 Quién hace la atención clínica y formulación para la infección por el VIH al usuario actualmente</label>
-                      <q-select rounded standout v-model="data.atencionClinicaVihUsuario" :options="atencionClinicaVihUsuario" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v53_3" :options="atencionClinicaVihUsuario" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>53.4 Valoración por infectólogo en los últimos 12 meses</label>
-                      <q-select rounded standout v-model="data.valoracionInfectologo" :options="valoracionInfectologo" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v53_4" :options="valoracionInfectologo" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>54. Fecha de la última genotipificación realizada.</label>
-                        <q-input filled v-model="data.ultimaGenotipificación">
+                        <q-input filled v-model="data.v54">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaGenotipificación">
+                              <q-date v-model="data.v54">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -972,15 +972,15 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>55. Estado clínico actual  </label>
-                      <q-select rounded standout v-model="data.estadoClinicoActual" :options="estadoClinicoActual" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v55" :options="estadoClinicoActual" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>56. Fecha de último colesterol LDL  </label>
-                        <q-input filled v-model="data.ultimoColesterolLdl">
+                        <q-input filled v-model="data.v56">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimoColesterolLdl">
+                              <q-date v-model="data.v56">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -998,7 +998,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resultadoUltimoCoresterolLdl"
+                          v-model="data.v56_1"
                           lazy-rules
                           type="number"
                           >
@@ -1006,11 +1006,11 @@
                   </div>
                   <div class="item">
                       <label>57. Fecha de último nivel de triglicéridos: </label>
-                        <q-input filled v-model="data.ultimoNivelTrigliceridos">
+                        <q-input filled v-model="data.v57">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimoNivelTrigliceridos">
+                              <q-date v-model="data.v57">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1028,7 +1028,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resultadoUltimoNivelTrigliceridos"
+                          v-model="data.v57_1"
                           lazy-rules
                           type="number"
                           >
@@ -1036,11 +1036,11 @@
                   </div>
                   <div class="item">
                       <label>58. Fecha de última hemoglobina sérica</label>
-                        <q-input filled v-model="data.ultimaHemoglobinaSerica">
+                        <q-input filled v-model="data.v58">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaHemoglobinaSerica">
+                              <q-date v-model="data.v58">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1058,7 +1058,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resultadoUltimaHemoglobinaSerica"
+                          v-model="data.v58_1"
                           lazy-rules
                           type="number"
                           >
@@ -1066,11 +1066,11 @@
                   </div>
                   <div class="item">
                       <label>59. Fecha de la última enzima alanina aminotransferasa </label>
-                        <q-input filled v-model="data.ultimaEnzimaAlanina">
+                        <q-input filled v-model="data.v59">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaEnzimaAlanina">
+                              <q-date v-model="data.v59">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1088,7 +1088,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resutadoUltimaAltTgpSerica"
+                          v-model="data.v59_1"
                           lazy-rules
                           type="number"
                           >
@@ -1096,11 +1096,11 @@
                   </div>
                   <div class="item">
                       <label>60. Fecha de última creatinina sérica</label>
-                        <q-input filled v-model="data.ultimaCreatininaSerica">
+                        <q-input filled v-model="data.v60">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaCreatininaSerica">
+                              <q-date v-model="data.v60">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1118,7 +1118,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resultadoUltimaCreatininaSerica"
+                          v-model="data.v60_1"
                           lazy-rules
                           type="number"
                           >
@@ -1126,11 +1126,11 @@
                   </div>
                   <div class="item">
                       <label>61. Fecha de última glucemia sérica en ayuno:</label>
-                        <q-input filled v-model="data.ultimaGlucemiaSericaAyuno">
+                        <q-input filled v-model="data.v61">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaGlucemiaSericaAyuno">
+                              <q-date v-model="data.v61">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1148,7 +1148,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resultadoUltimaGlucemiaSericaAyuno"
+                          v-model="data.v61_1"
                           lazy-rules
                           type="number"
                           >
@@ -1156,11 +1156,11 @@
                   </div>
                   <div class="item">
                       <label>62. Fecha de última medición del peso corporal en el periodo</label>
-                        <q-input filled v-model="data.ultimaMedicionPesoPeriodo">
+                        <q-input filled v-model="data.v62">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaMedicionPesoPeriodo">
+                              <q-date v-model="data.v62">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1178,7 +1178,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.resultadoUltimaMedicionPeso"
+                          v-model="data.v62_1"
                           lazy-rules
                           type="number"
                           >
@@ -1189,7 +1189,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.talla"
+                          v-model="data.v63"
                           lazy-rules
                           type="number"
                           >
@@ -1200,48 +1200,48 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>64. ¿Tiene neuropatía periférica?: </label>
-                      <q-select rounded standout v-model="data.tieneNeuropatiaPeriferica" :options="tieneNeuropatiaPeriferica" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v64" :options="tieneNeuropatiaPeriferica" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>65. ¿Tiene lipoatrofia o lipodistrofia?: </label>
-                      <q-select rounded standout v-model="data.tieneLipotrofiaLipodistrofia" :options="tieneLipotrofiaLipodistrofia" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v65" :options="tieneLipotrofiaLipodistrofia" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>66. ¿Tiene coinfección con hepatitis B crónica?: </label>
-                      <q-select rounded standout v-model="data.coinfeccionHepatitisBCronica" :options="coinfeccionHepatitisBCronica" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v66" :options="coinfeccionHepatitisBCronica" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>67. ¿Tiene coinfección con hepatitis C crónica?:  </label>
-                      <q-select rounded standout v-model="data.coinfeccionHepatitisCCronica" :options="coinfeccionHepatitisCCronica" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v67" :options="coinfeccionHepatitisCCronica" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>68. ¿Tiene o tuvo coinfección con tuberculosis activa en los últimos 12 meses? </label>
-                      <q-select rounded standout v-model="data.coinfeccionTuberculosisUltimo12" :options="coinfeccionTuberculosisUltimo12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v68" :options="coinfeccionTuberculosisUltimo12" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>68.1 Tipo de tuberculosis activa que presenta o presentó la persona con coinfección TB/VIH en los últimos 12 meses: </label>
-                      <q-select rounded standout v-model="data.tuberculosisActivaTbVih12" :options="tuberculosisActivaTbVih12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v68_1" :options="tuberculosisActivaTbVih12" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>68.2 ¿La persona con coinfección TB/VIH recibe o recibió tratamiento para tuberculosis activa en los últimos 12 meses? </label>
-                      <q-select rounded standout v-model="data.coinfeccionTuberculosisTratamiento12" :optionsa="coinfeccionTuberculosisTratamiento12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v68_2" :optionsa="coinfeccionTuberculosisTratamiento12" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>68.3 Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses</label>
-                        <q-input filled v-model="data.inicioTratamientoAntituberculosos">
+                        <q-input filled v-model="data.v68_3">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.inicioTratamientoAntituberculosos">
+                              <q-date v-model="data.v68_3">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1259,7 +1259,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento1Antituberculoso12"
+                          v-model="data.v68_4"
                           lazy-rules
                           type="number"
                           >
@@ -1270,7 +1270,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento2Antituberculoso12"
+                          v-model="data.v68_5"
                           lazy-rules
                           type="number"
                           >
@@ -1284,7 +1284,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento3Antituberculoso12"
+                          v-model="data.v68_6"
                           lazy-rules
                           type="number"
                           >
@@ -1295,7 +1295,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento4Antituberculoso12"
+                          v-model="data.v68_7"
                           lazy-rules
                           type="number"
                           >
@@ -1309,7 +1309,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento5Antituberculoso12"
+                          v-model="data.v68_8"
                           lazy-rules
                           type="number"
                           >
@@ -1320,7 +1320,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento6Antituberculoso12"
+                          v-model="data.v68_9"
                           lazy-rules
                           type="number"
                           >
@@ -1334,7 +1334,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento7Antituberculoso12"
+                          v-model="data.v68_10"
                           lazy-rules
                           type="number"
                           >
@@ -1345,7 +1345,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento8Antituberculoso12"
+                          v-model="data.v68_11"
                           lazy-rules
                           type="number"
                           >
@@ -1359,7 +1359,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento9Antituberculoso12"
+                          v-model="data.v68_12"
                           lazy-rules
                           type="number"
                           >
@@ -1367,11 +1367,11 @@
                   </div>
                   <div class="item">
                       <label>68.13 Fecha en que terminó el tratamiento antituberculoso en los últimos 12 meses</label>
-                        <q-input filled v-model="data.terminoTratamientoantituberculoso12">
+                        <q-input filled v-model="data.v68_13">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.terminoTratamientoantituberculoso12">
+                              <q-date v-model="data.v68_13">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1386,48 +1386,48 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>68.14 Condición de egreso del tratamiento antituberculoso</label>
-                      <q-select rounded standout v-model="data.condicionEgresoAntituberculosos" :options="condicionEgresoAntituberculosos" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v68_14" :options="condicionEgresoAntituberculosos" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>69. ¿Tiene cirrosis hepática?: </label>
-                      <q-select rounded standout v-model="data.cirrosisHepatica" :options="cirrosisHepatica" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v69" :options="cirrosisHepatica" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>70. ¿Tiene enfermedad renal crónica por VIH? </label>
-                      <q-select rounded standout v-model="data.enfermedadRenalVih" :options="enfermedadRenalVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v70" :options="enfermedadRenalVih" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>71. ¿Tiene enfermedad coronaria?  </label>
-                      <q-select rounded standout v-model="data.enfermedadCoronaria" :options="enfermedadCoronaria" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v71" :options="enfermedadCoronaria" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>72. ¿Tiene o ha tenido otras infecciones de transmisión sexual diferentes a sífilis o hepatitis B en los últimos 12 meses? </label>
-                      <q-select rounded standout v-model="data.infeccionTransmisionSexual12" :options="infeccionTransmisionSexual12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v72" :options="infeccionTransmisionSexual12" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>73. ¿Tiene neoplasia no relacionada con Sida?  </label>
-                      <q-select rounded standout v-model="data.neoplasiaNoSida" :options="neoplasiaNoSida" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v73" :options="neoplasiaNoSida" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>74. ¿Discapacidad funcional? </label>
-                      <q-select rounded standout v-model="data.discapacidadFuncional" :options="discapacidadFuncional" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v74" :options="discapacidadFuncional" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>75. Fecha del último conteo de linfocitos T CD4 realizado en el período de observación: </label>
-                        <q-input filled v-model="data.ultimoConteoLinfocitosCd4">
+                        <q-input filled v-model="data.v75">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimoConteoLinfocitosCd4">
+                              <q-date v-model="data.v75">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1445,7 +1445,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.valorUltimoConteoLinfocitosCd4"
+                          v-model="data.v75_1"
                           lazy-rules
                           type="number"
                           >
@@ -1453,11 +1453,11 @@
                   </div>
                   <div class="item">
                       <label>76. Fecha de la última carga viral para VIH realizada en el período de observación: </label>
-                        <q-input filled v-model="data.ultimaCargaViralVih">
+                        <q-input filled v-model="data.v76">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.ultimaCargaViralVih">
+                              <q-date v-model="data.v76">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1475,7 +1475,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.valorUltimaCargaViralVih"
+                          v-model="data.v76_1"
                           lazy-rules
                           type="number"
                           >
@@ -1500,15 +1500,15 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>77. Recibe TAR</label>
-                      <q-select rounded standout v-model="data.RecibeTar" :options="RecibeTar" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v77" :options="RecibeTar" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>77.1 Fecha de inicio de los medicamentos de la TAR que recibe actualmente la persona que viven con VIH: </label>
-                        <q-input filled v-model="data.inicioMedicamentosTarPersonaViven">
+                        <q-input filled v-model="data.v77_1">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.inicioMedicamentosTarPersonaViven">
+                              <q-date v-model="data.v77_1">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1526,7 +1526,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento1TarActual"
+                          v-model="data.v77_2"
                           lazy-rules
                           type="number"
                           >
@@ -1537,7 +1537,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento2TarActual"
+                          v-model="data.v77_3"
                           lazy-rules
                           type="number"
                           >
@@ -1551,7 +1551,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento3TarActual"
+                          v-model="data.v77_4"
                           lazy-rules
                           type="number"
                           >
@@ -1562,7 +1562,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento4TarActual"
+                          v-model="data.v77_5"
                           lazy-rules
                           type="number"
                           >
@@ -1576,7 +1576,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento5TarActual"
+                          v-model="data.v77_6"
                           lazy-rules
                           type="number"
                           >
@@ -1587,7 +1587,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.medicamento6TarActual"
+                          v-model="data.v77_7"
                           lazy-rules
                           type="number"
                           >
@@ -1601,7 +1601,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.mesesDispensoFormulaTar"
+                          v-model="data.v77_8"
                           lazy-rules
                           type="number"
                           >
@@ -1630,7 +1630,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.numeroCondonesAño"
+                          v-model="data.v78"
                           lazy-rules
                           type="number"
                           >
@@ -1638,76 +1638,76 @@
                   </div>
                   <div class="item">
                       <label>79. Método de planificación familiar de la persona que vive con VIH (diferente al condón como método de protección) </label>
-                      <q-select rounded standout v-model="data.metodoPlanificacionViveVih" :options="metodoPlanificacionViveVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v79" :options="metodoPlanificacionViveVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>80. Vacunación contra la hepatitis A</label>
-                      <q-select rounded standout v-model="data.vacunacionHepatitisA" :options="vacunacionHepatitisA" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v80" :options="vacunacionHepatitisA" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>81. Vacunación contra la hepatitis B: </label>
-                      <q-select rounded standout v-model="data.vacunacionHepatitisB" :options="vacunacionHepatitisB" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v81" :options="vacunacionHepatitisB" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>82. Vacunación contra neumococo: </label>
-                      <q-select rounded standout v-model="data.vacunacionNeumococo" :options="vacunacionNeumococo" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v82" :options="vacunacionNeumococo" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>83. Tamizaje clínico para tuberculosis (TB) activa en la última consulta: </label>
-                      <q-select rounded standout v-model="data.tamizajeTuberculosisUltima" :options="tamizajeTuberculosisUltima" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v83" :options="tamizajeTuberculosisUltima" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>84. Se hizo PPD o pruebas equivalentes para la identificación de tuberculosis latente en los últimos 12 meses: </label>
-                      <q-select rounded standout v-model="data.ppdTuberculosis12" :options="ppdTuberculosis12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v84" :options="ppdTuberculosis12" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>85. Recibió tratamiento para tuberculosis latente en los últimos 12 meses: </label>
-                      <q-select rounded standout v-model="data.tratamientoTuberculosisLatente" :options="tratamientoTuberculosisLatente" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v85" :options="tratamientoTuberculosisLatente" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>86. Se hizo tamizaje para sífilis en la persona que vive con VIH en los últimos 12 meses: </label>
-                      <q-select rounded standout v-model="data.tamizajeSifilis12" :options="tamizajeSifilis12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v86" :options="tamizajeSifilis12" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>86.1 Recibió tratamiento para Sífilis: </label>
-                      <q-select rounded standout v-model="data.tratamientoSifilis" :options="tratamientoSifilis" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v86_1" :options="tratamientoSifilis" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>87. Se hizo tamizaje para VPH anal (hombre/mujer) en la persona que vive con VIH, en los últimos 12 meses: </label>
-                      <q-select rounded standout v-model="data.tamizajeVphViveVih" :options="tamizajeVphViveVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v87" :options="tamizajeVphViveVih" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>88. Se hizo tamizaje para hepatitis B en la persona que vive con VIH en los últimos 12 meses: </label>
-                      <q-select rounded standout v-model="data.tamizajeHepatitisBViveVih" :options="tamizajeHepatitisBViveVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v88" :options="tamizajeHepatitisBViveVih" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>89. Se hizo tamizaje para hepatitis C en la persona que vive con VIH en los últimos 12 meses </label>
-                      <q-select rounded standout v-model="data.tamizajeHepatitisCViveVih" :options="tamizajeHepatitisBViveVih" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v89" :options="tamizajeHepatitisBViveVih" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>90. Resultado de la evaluación de riesgo cardiovascular en la persona que vive con VIH en los últimos 12 meses: </label>
                       <q-input
                           rounded
                           standout
-                          v-model="data.evaluacionCardiovascularViveVih"
+                          v-model="data.v90"
                           lazy-rules
                           type="number"
                           >
@@ -1733,18 +1733,18 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>91. Profilaxis para MAC (Mycobacterium avium complex). </label>
-                      <q-select rounded standout v-model="data.profilaxisMac" :options="profilaxisMac" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v91" :options="profilaxisMac" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>92. Profilaxis para Criptococo neoformans. </label>
-                      <q-select rounded standout v-model="data.profilaxisCriptococo" :options="profilaxisCriptococo" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v92" :options="profilaxisCriptococo" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row uno_items">
                   <div class="item">
                       <label>93. Profilaxis para pneumocystis jirovecii. </label>
-                      <q-select rounded standout v-model="data.profilaxisJirovecii" :options="profilaxisJirovecii" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v93" :options="profilaxisJirovecii" label="Seleccionar" />
                   </div>
               </div>
 
@@ -1756,7 +1756,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.costoAtencionNoHospitalariaVih"
+                          v-model="data.v94"
                           lazy-rules
                           type="number"
                           >
@@ -1767,7 +1767,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.costoAtencionHospitalariaVih"
+                          v-model="data.v95"
                           lazy-rules
                           type="number"
                           >
@@ -1781,7 +1781,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.hospitalizacionesConVih"
+                          v-model="data.v96"
                           lazy-rules
                           type="number"
                           >
@@ -1789,18 +1789,18 @@
                   </div>
                   <div class="item">
                       <label>97. Novedad del usuario respecto al reporte anterior: </label>
-                      <q-select rounded standout v-model="data.novedadUsuarioReporteAnterior" :options="novedadUsuarioReporteAnterior" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v97" :options="novedadUsuarioReporteAnterior" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>97.1 Fecha de desafiliación de la entidad</label>
-                        <q-input filled v-model="data.desafiliacionEntidad">
+                        <q-input filled v-model="data.v97_1">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.desafiliacionEntidad">
+                              <q-date v-model="data.v97_1">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1815,7 +1815,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.novedadUsuarioReporteAnterior"
+                          v-model="data.v97_2"
                           lazy-rules
                           type="number"
                           >
@@ -1826,11 +1826,11 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>97.3 Fecha de Muerte: </label>
-                        <q-input filled v-model="data.fechaMuerte">
+                        <q-input filled v-model="data.v97_3">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.fechaMuerte">
+                              <q-date v-model="data.v97_3">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1842,18 +1842,18 @@
                   </div>
                   <div class="item">
                       <label>97.4 Causa de Muerte </label>
-                      <q-select rounded standout v-model="data.causaMuerte" :options="causaMuerte" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v97_4" :options="causaMuerte" label="Seleccionar" />
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>98. Fecha de Corte: </label>
-                        <q-input filled v-model="data.fechaCorte">
+                        <q-input filled v-model="data.v98">
                           <template v-slot:append>
                           <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale">
-                              <q-date v-model="data.fechaCorte">
+                              <q-date v-model="data.v98">
                                   <div class="row items-center justify-end">
                                   <q-btn v-close-popup label="Cerrar" color="primary" flat />
                                   </div>
@@ -1868,7 +1868,7 @@
                       <q-input
                           rounded
                           standout
-                          v-model="data.codigoUnicoo"
+                          v-model="data.v99"
                           lazy-rules
                           type="number"
                           >
@@ -2946,7 +2946,7 @@ export default {
       }
 
       if (this.thirdStep) {
-        if (this.data.children.id !== '0' || this.data.tuberculosis.id !== '3') {
+        if (this.data.v16.id !== '0' || this.data.v17.id !== '3') {
           this.secondStep = true
           this.thirdStep = false
         } else {
@@ -2988,747 +2988,909 @@ export default {
     saveRegister () {
       var _this = this
 
+      _this.errors = []
+
       if (this.status !== 'finalizado') {
         if (typeof this.patient.field_json.sex !== 'undefined') {
-          if (this.patient.field_json.sex.id === 'H' && this.data.fum === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.fum === '1845-01-01') {
+            this.errors.push('FUM es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningFirst === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.v20 === '1845-01-01') {
+            this.errors.push('La V20 es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateReportedPregnancy === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.v19 === '1845-01-01') {
+            this.errors.push('La V19 es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningSecond === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.v21 === '1845-01-01') {
+            this.errors.push('La V21 es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningThird === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.v22 === '1845-01-01') {
+            this.errors.push('La V22 es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateScreeningBirth === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.v23 === '1845-01-01') {
+            this.errors.push('La V23 es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '9') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24 !== 'undefined' && this.data.v24.id === '9') {
+            this.errors.push('La V24 es 9 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.ageVihReported !== 'undefined' && this.data.ageVihReported.id === '99') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_1 !== 'undefined' && this.data.v24_1.id === '99') {
+            this.errors.push('La V24.1 es 99 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '9') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '9') {
+            this.errors.push('La V24.2 es 9 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.ageInitTar !== 'undefined' && this.data.ageInitTar.id === '99') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_3 !== 'undefined' && this.data.v24_3.id === '99') {
+            this.errors.push('La V24.3 es 99 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '99') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '9') {
+            this.errors.push('La V24.4 es 9 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '9') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '9') {
+            this.errors.push('La V24.5 es 9 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.dateCulminationReported === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && this.data.v24_6 === '1845-01-01') {
+            this.errors.push('La V24.6 es 1845-01-01 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.pharmacologicalSuppression !== 'undefined' && this.data.pharmacologicalSuppression.id === '9') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_7 !== 'undefined' && this.data.v24_7.id === '9') {
+            this.errors.push('La V24.7 es 9 revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.identificationTypeNewbor !== 'undefined' && this.data.identificationTypeNewbor.id === 'NA') {
-            this.errors.push('Error en la validación No. B5327')
+          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_8 !== 'undefined' && this.data.v24_8.id === 'NA') {
+            this.errors.push('La V24.8 es NA revisar la V10 debe ser H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
           }
 
-          if (this.patient.field_json.sex.id === 'H' && this.data.identificationNewborn !== '9') {
-            this.errors.push('Error en la validación No. B5327')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+          if (typeof this.data.v24_9 !== 'undefined') {
+            if (this.patient.field_json.sex.id !== 'H' && this.data.v24_9 !== '9') {
+              this.errors.push('La V24.9 es 9 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
           }
 
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.pregnantWoman !== 'undefined' && this.data.pregnantWoman.id === '9') {
-            this.errors.push('Error en la validación No. B2885')
+          if (this.patient.field_json.sex.id === 'H' && typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) <= 3) {
+            this.errors.push('La V15 es <= 3 revisar la V10 debe ser <> H')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
           }
         }
 
-        if (parseInt(this.data.pregnantWoman.id) < 3) {
+        if (typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) < 3) {
           var currentDate = new Date('2020-04-01')
-          if (this.data.dateReportedPregnancy !== '1845-01-01') {
-            if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(currentDate)) {
-              this.errors.push('Error en la validación No. B2890')
+
+          if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 0) {
+            this.errors.push('La V16 es 0 revisar la V15 debe ser < 3')
+            this.error = true
+          }
+
+          if (Date.parse(this.patient.field_json.birthdate) < Date.parse('1978-01-31')) {
+            this.errors.push('La V15 es <= 2 revisar la v09 debe ser >= 1978-01-01 y <= 2012-01-31')
+            this.error = true
+          }
+
+          if (Date.parse(this.patient.field_json.birthdate) > Date.parse('2012-01-31')) {
+            this.errors.push('La V15 es <= 2 revisar la v09 debe ser >= 1978-01-01 y <= 2012-01-31')
+            this.error = true
+          }
+
+          if (this.data.v19 !== '1845-01-01') {
+            if (Date.parse(this.data.v19) <= Date.parse(currentDate)) {
+              this.errors.push('La V19 es > 2020-04-01 o = 1846-01-01 revisar la V15 debe ser < 3')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2890', 'error')
             }
           }
 
-          if (this.data.dateScreeningFirst === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2892')
+          if (this.data.v20 === '1845-01-01') {
+            this.errors.push('La V20 es 1845-01-01 revisar la V15 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (this.data.dateScreeningSecond === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2892')
+          if (this.data.v21 === '1845-01-01') {
+            this.errors.push('La V21 es <> 1845-01-01 revisar la V15 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (this.data.dateScreeningThird === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2892')
+          if (this.data.v22 === '1845-01-01') {
+            this.errors.push('La V22 es <>1845-01-01 revisar la V15 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (this.data.dateScreeningBirth === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2892')
+          if (this.data.v23 === '1845-01-01') {
+            this.errors.push('La V23 es <> 1845-01-01 revisar la V15 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '9') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24 !== 'undefined' && this.data.v24.id === '9') {
+            this.errors.push('La V24 es <> 9 revisar la V15 debe ser < 3 ')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.ageVihReported !== 'undefined' && this.data.ageVihReported.id === '99') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24_1 !== 'undefined' && this.data.v24_1.id === '99') {
+            this.errors.push('La V24.1 es <> 99 revisar la V15 debe ser < 3 ')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '9') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '9') {
+            this.errors.push('La V24.2 es <> 9 revisar la V15 debe ser < 3 ')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.ageInitTar !== 'undefined' && this.data.ageInitTar.id === '99') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24_3 !== 'undefined' && this.data.v24_3.id === '99') {
+            this.errors.push('La V24.3 es <> 99 revisar la V15 debe ser < 3 ')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '9') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '9') {
+            this.errors.push('La V24.4 es <> 9 revisar la V15 debe ser < 3 ')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '9') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '9') {
+            this.errors.push('La V24.5 es <> 9 revisar la V15 debe ser < 3 ')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (this.data.dateCulminationReported === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2892')
+          if (this.data.v24_6 === '1845-01-01') {
+            this.errors.push('La V24.6 es <> 9 revisar la V15 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
 
-          if (typeof this.data.pharmacologicalSuppression !== 'undefined' && this.data.pharmacologicalSuppression.id === '9') {
-            this.errors.push('Error en la validación No. B2892')
+          if (typeof this.data.v24_7 !== 'undefined' && this.data.v24_7.id === '9') {
+            this.errors.push('La V24.7 es <> 9 revisar la V15 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
           }
         }
 
+        if (typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) === 55) {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar la V15 sea 55')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v24 !== 'undefined' && parseInt(this.data.v24.id) === 55) {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar V24 debe ser 55')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) === 55) {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar la V16 sea 55')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) === 55) {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar la V17 sea 55')
+            this.error = true
+          }
+        }
+
+        if (this.data.v19 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar la V19 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v20 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar la V20 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v21 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar V21 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v22 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar V22 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v23 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+            this.errors.push('La V97 es 19 revisar V23 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) < 3) {
+          if (typeof this.data.v68 !== 'undefined' && parseInt(this.data.v68.id) !== 1) {
+            this.errors.push('La V68 es 1 revisar V17 debe ser < 3')
+            this.error = true
+          }
+
+          if (typeof this.data.v68_1 !== 'undefined' && parseInt(this.data.v68_1.id) >= 6) {
+            this.errors.push('La V68.1 es < 6 revisar V17 debe ser < 3')
+            this.error = true
+          }
+
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) >= 8) {
+            this.errors.push('La V68.2 es < 8 revisar V17 debe ser < 3')
+            this.error = true
+          }
+
+          if (this.data.v68_3 === '1799-01-01') {
+            this.errors.push('La V68 es <> 1799-01-01 revisar V17 debe ser < 3')
+            this.error = true
+          }
+
+          if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) === 10) {
+            this.errors.push('La V68.14 es <> 10 revisar V17 debe ser < 3')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) === 1) {
+          if (Date.parse(this.patient.field_json.birthdate) < Date.parse('2021-01-31')) {
+            this.errors.push('La V16 es 1 revisar la V9 debe ser > 2021-01-31')
+            this.error = true
+          }
+        }
+
         var maxDate = new Date('2020-04-01')
-        if (this.data.dateScreeningFirst !== '1799-01-01' && this.data.dateScreeningFirst !== '1822-02-01' && this.data.dateScreeningFirst !== '1833-03-03' && this.data.dateScreeningFirst !== '1845-01-01' && this.data.dateScreeningFirst !== '1846-01-01') {
-          if (this.data.dateReportedPregnancy !== '1845-01-01' && this.data.dateReportedPregnancy !== '1846-01-01') {
-            if (Date.parse(this.data.dateReportedPregnancy) <= Date.parse(maxDate)) {
-              this.errors.push('Error en la validación No. B2900')
+        if (this.data.v20 !== '1799-01-01' && this.data.v20 !== '1822-02-01' && this.data.v20 !== '1833-03-03' && this.data.v20 !== '1845-01-01' && this.data.v20 !== '1846-01-01') {
+          if (this.data.v19 !== '1845-01-01' && this.data.v19 !== '1846-01-01') {
+            if (Date.parse(this.data.v19) <= Date.parse(maxDate)) {
+              this.errors.push('La V19 debe ser >2020-01-04 y V19 <= V98 o = 1845-01-01  o 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
             }
 
-            if (this.data.dateScreeningFirst === '1845-01-01') {
-              this.errors.push('Error en la validación No. B5809')
+            if (Date.parse(this.data.v20) > Date.parse(maxDate)) {
+              if (Date.parse(this.data.v20) < Date.parse(this.data.v19)) {
+                this.errors.push('la V20 es >  01/04/2020 00:00:00 a.m revisar  V20 >= V19')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+              }
+            }
+
+            if (this.data.v20 === '1845-01-01') {
+              this.errors.push('La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
             }
 
-            if (this.data.dateScreeningSecond === '1845-01-01') {
-              this.errors.push('Error en la validación No. B5809')
+            if (this.data.v21 === '1845-01-01') {
+              this.errors.push('La V21 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+              // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
             }
 
-            if (this.data.dateScreeningThird === '1845-01-01') {
-              this.errors.push('Error en la validación No. B5809')
+            if (this.data.v22 === '1845-01-01') {
+              this.errors.push('La V22 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+              // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
             }
 
-            if (this.data.dateScreeningBirth === '1845-01-01') {
-              this.errors.push('Error en la validación No. B5809')
+            if (this.data.v23 === '1845-01-01') {
+              this.errors.push('La V23 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+              // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
             }
           }
 
-          if (Date.parse(this.data.dateScreeningFirst) < Date.parse(this.data.dateReportedPregnancy)) {
-            this.errors.push('Error en la validación No. B2902')
+          if (Date.parse(this.data.v20) < Date.parse(this.data.v19)) {
+            this.errors.push('La V20 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2902', 'error')
           }
         }
 
-        if (Date.parse(this.data.dateScreeningFirst) > Date.parse(this.data.dateReportedPregnancy)) {
-          if (this.data.dateScreeningSecond === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5809')
+        if (Date.parse(this.data.v20) > Date.parse(this.data.v19)) {
+          if (this.data.v21 === '1845-01-01') {
+            this.errors.push('La V21 es <> 1845-01-01 revisar la V20 debe ser > V19')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
           }
 
-          if (this.data.dateScreeningThird === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5809')
+          if (this.data.v22 === '1845-01-01') {
+            this.errors.push('La V22 es <> 1845-01-01 revisar la V20 debe ser > V19')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
           }
 
-          if (this.data.dateScreeningBirth === '1845-01-01') {
-            this.errors.push('Error en la validación No. B5809')
+          if (this.data.v23 === '1845-01-01') {
+            this.errors.push('La V23 es <> 1845-01-01 revisar la V20 debe ser > V19')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+            // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
           }
         }
 
-        if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
-          if (Date.parse(this.data.dateScreeningFirst) > Date.parse(maxDate)) {
-            if (this.data.dateScreeningSecond !== '1799-01-01' && this.data.dateScreeningSecond !== '1822-02-01' && this.data.dateScreeningSecond !== '1833-03-03' && this.data.dateScreeningSecond !== '1845-01-01' && this.data.dateScreeningSecond !== '1846-01-01') {
-              if (Date.parse(this.data.dateScreeningSecond) <= Date.parse(this.data.dateScreeningFirst)) {
-                this.errors.push('Error en la validación No. B4117')
+        if (this.data.v21 !== '1799-01-01' && this.data.v21 !== '1822-02-01' && this.data.v21 !== '1833-03-03' && this.data.v21 !== '1845-01-01' && this.data.v21 !== '1846-01-01') {
+          if (Date.parse(this.data.v21) > Date.parse(this.data.v98)) {
+            this.errors.push('La V21 debe ser <= V98 o  = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+          }
+
+          if (Date.parse(this.data.v20) > Date.parse(maxDate)) {
+            if (this.data.v21 !== '1799-01-01' && this.data.v21 !== '1822-02-01' && this.data.v21 !== '1833-03-03' && this.data.v21 !== '1845-01-01' && this.data.v21 !== '1846-01-01') {
+              if (Date.parse(this.data.v21) <= Date.parse(this.data.v20)) {
+                this.errors.push('La V21 es > V20 revisar la V20 debe ser > 01/04/2020 00:00:00 a.m')
                 this.error = true
                 // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
               }
             }
 
-            if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01') {
-              if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningFirst)) {
-                this.errors.push('Error en la validación No. B5810')
+            if (this.data.v22 !== '1799-01-01' && this.data.v22 !== '1822-02-01' && this.data.v22 !== '1833-03-03' && this.data.v22 !== '1845-01-01' && this.data.v22 !== '1846-01-01') {
+              if (Date.parse(this.data.v22) <= Date.parse(this.data.v20)) {
+                this.errors.push('La V22 es > V21 revisar la V21 debe ser > 2020-04-01')
                 this.error = true
                 // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
               }
             }
 
-            if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01') {
-              if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningFirst)) {
-                this.errors.push('Error en la validación No. B5810')
+            if (this.data.v23 !== '1799-01-01' && this.data.v23 !== '1822-02-01' && this.data.v23 !== '1833-03-03' && this.data.v23 !== '1845-01-01' && this.data.v23 !== '1846-01-01') {
+              if (this.data.v23 === this.data.v21) {
+                this.errors.push('La V23 es <> V21 revisar la V21 debe ser > 2020-04-01')
                 this.error = true
                 // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
               }
             }
 
-            if (this.data.dateScreeningBirth === '1845-01-01') {
-              this.errors.push('Error en la validación No. B4117')
+            if (this.data.v19 !== '1799-01-01' && this.data.v19 !== '1822-02-01' && this.data.v19 !== '1833-03-03' && this.data.v19 !== '1845-01-01' && this.data.v19 !== '1846-01-01') {
+              if (Date.parse(this.data.v19) > Date.parse(this.data.v21)) {
+                this.errors.push('La V19 es <= V21 revisar la V21 debe ser > 2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+              }
+            }
+
+            if (this.data.v20 !== '1799-01-01' && this.data.v20 !== '1822-02-01' && this.data.v20 !== '1833-03-03' && this.data.v20 !== '1845-01-01' && this.data.v20 !== '1846-01-01') {
+              if (Date.parse(this.data.v20) > Date.parse(this.data.v21)) {
+                this.errors.push('La V20 es < V21 revisar la V21 debe ser > 2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+              }
+            }
+
+            if (this.data.v23 === '1845-01-01') {
+              this.errors.push('La V22 es > 1845-01-01 revisar la V21 debe ser > 2020-04-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
             }
           }
 
-          if (Date.parse(this.data.dateScreeningSecond) < Date.parse(this.data.dateReportedPregnancy)) {
-            this.errors.push('Error en la validación No. B2906')
+          if (Date.parse(this.data.v21) < Date.parse(this.data.v19)) {
+            this.errors.push('La V21 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
           }
         }
 
-        if (this.data.dateScreeningThird !== '1799-01-01' && this.data.dateScreeningThird !== '1822-02-01' && this.data.dateScreeningThird !== '1833-03-03' && this.data.dateScreeningThird !== '1845-01-01' && this.data.dateScreeningThird !== '1846-01-01' && this.data.dateScreeningThird !== '1811-01-01') {
-          if (Date.parse(this.data.dateScreeningSecond) > Date.parse(maxDate)) {
-            if (Date.parse(this.data.dateScreeningThird) <= Date.parse(this.data.dateScreeningSecond)) {
-              this.errors.push('Error en la validación No. B4118')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            var dateMaxThird = new Date('1845-01-01')
-
-            if (Date.parse(this.data.dateScreeningThird) <= Date.parse(dateMaxThird)) {
-              this.errors.push('Error en la validación No. B4118')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (this.date.dateScreeningBirth === this.data.dateScreeningSecond) {
-              this.errors.push('Error en la validación No. B4118')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (this.date.dateScreeningBirth === '1845-01-01') {
-              this.errors.push('Error en la validación No. B4118')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-          }
-
-          if (Date.parse(this.data.dateScreeningThird) < Date.parse(this.data.dateReportedPregnancy)) {
-            this.errors.push('Error en la validación No. B2908')
+        if (this.data.v22 !== '1799-01-01' && this.data.v22 !== '1822-02-01' && this.data.v22 !== '1833-03-03' && this.data.v22 !== '1845-01-01' && this.data.v22 !== '1846-01-01' && this.data.v22 !== '1811-01-01') {
+          if (Date.parse(this.data.v22) < Date.parse(this.data.v19)) {
+            this.errors.push('La V22 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2908', 'error')
+            // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
           }
-        }
 
-        if (this.data.dateScreeningBirth !== '1799-01-01' && this.data.dateScreeningBirth !== '1822-02-01' && this.data.dateScreeningBirth !== '1833-03-03' && this.data.dateScreeningBirth !== '1845-01-01' && this.data.dateScreeningBirth !== '1846-01-01' && this.data.dateScreeningBirth !== '1811-01-01') {
-          if (Date.parse(this.data.dateScreeningThird) > Date.parse(maxDate)) {
-            if (Date.parse(this.data.dateScreeningBirth) <= Date.parse(this.data.dateScreeningSecond)) {
-              this.errors.push('Error en la validación No. B4120')
+          if (Date.parse(this.data.v22) > Date.parse(maxDate)) {
+            if (Date.parse(this.data.v23) <= Date.parse(this.data.v22)) {
+              this.errors.push('La V23 es > V22 revisar la V22 debe ser > 2020-04-01')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
             }
 
             if (this.date.dateScreeningThird === '1845-01-01') {
-              this.errors.push('Error en la validación No. B4120')
+              this.errors.push('La V22 es <> 1845-01-01 revisar la V22 debe ser > 2020-04-01')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4120', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
             }
-          }
 
-          if (Date.parse(this.data.dateScreeningBirth) < Date.parse(this.data.dateReportedPregnancy)) {
-            this.errors.push('Error en la validación No. B2911')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2911', 'error')
+            if (Date.parse(this.data.v22) <= Date.parse(this.data.v20)) {
+              this.errors.push('La V20 es < V22 revisar la V22 debe ser > 2020-04-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+
+            if (Date.parse(this.data.v22) <= Date.parse(this.data.v21)) {
+              this.errors.push('La V21 es < V22 revisar la V22 debe ser > 2020-04-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
           }
         }
 
-        if (typeof this.data.womanVihReported !== 'undefined' && this.data.womanVihReported.id === '1') {
-          if (parseInt(this.data.ageVihReported) < 2 || parseInt(this.data.ageVihReported) > 44) {
-            this.errors.push('Error en la validación No. B3261')
+        if (this.data.v23 !== '1799-01-01' && this.data.v23 !== '1822-02-01' && this.data.v23 !== '1833-03-03' && this.data.v23 !== '1845-01-01' && this.data.v23 !== '1846-01-01' && this.data.v23 !== '1811-01-01') {
+          if (Date.parse(this.data.v23) < Date.parse(this.data.v19)) {
+            this.errors.push('La V23 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+          }
+
+          if (Date.parse(this.data.v23) > Date.parse(maxDate)) {
+            if (Date.parse(this.data.v23) <= Date.parse(this.data.v20)) {
+              this.errors.push('La V20 es > v23 revisar la V23 debe ser >2020-04-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+
+            if (Date.parse(this.data.v23) <= Date.parse(this.data.v21)) {
+              this.errors.push('La V21 es >  v23 revisar la V23 debe ser >2020-04-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+
+            if (Date.parse(this.data.v23) <= Date.parse(this.data.v22)) {
+              this.errors.push('La V22 es > V23 revisar la V23 debe ser >2020-04-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+            }
+          }
+        }
+
+        if (typeof this.data.v24 !== 'undefined' && parseInt(this.data.v24.id) > 5 && parseInt(this.data.v24.id) !== 9 && parseInt(this.data.v24.id) !== 55 && parseInt(this.data.v24.id) !== 7) {
+          this.errors.push('La V24 debe ser < 5 o = 9 o 55 o 7')
+          this.error = true
+        }
+
+        if (typeof this.data.v24 !== 'undefined' && this.data.v24.id === '1') {
+          if (parseInt(this.data.v24_1) < 2 || parseInt(this.data.v24_1) > 44) {
+            this.errors.push('La V24.1 es > = 2 revisar la V24 debe ser 1, La V24.1 es <= 44 revisar la V24 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3261', 'error')
           }
         }
 
-        if (typeof this.data.womanVihReported !== 'undefined' && this.data.ageVihReported === '1' && this.data.womanVihReported.id !== '3') {
-          this.errors.push('Error en la validación No. B3219')
+        if (typeof this.data.v24 !== 'undefined' && this.data.v24_1 === '1' && this.data.v24.id !== '3') {
+          this.errors.push('La V24.1 es 1 revisar V24 debe ser 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B3219', 'error')
         }
 
-        if (parseInt(this.data.pregnantWoman) > 3 && parseInt(this.data.ageVihReported) < 45) {
-          this.errors.push('Error en la validación No. B4146')
+        if (parseInt(this.data.v15) > 3 && parseInt(this.data.v24_1) < 45) {
+          this.errors.push('La V24 es <45  revisar V15 debe ser < 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4146', 'error')
         }
 
-        if (typeof this.data.womanVihReported !== 'undefined' && typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '1' && this.data.womanVihReported.id !== '3') {
-          this.errors.push('Error en la validación No. B3222')
+        if (typeof this.data.v24 !== 'undefined' && typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '1' && this.data.v24.id !== '3') {
+          this.errors.push('La V24.2 es 1 revisar V24 debe ser 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B3222', 'error')
         }
 
-        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '1' && this.data.ageInitTar !== '1') {
-          this.errors.push('Error en la validación No. B4147')
+        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '1' && this.data.v24_3 !== '1') {
+          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '3' && this.data.ageInitTar !== '98') {
-          this.errors.push('Error en la validación No. B4147')
+        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '3' && this.data.v24_3 !== '98') {
+          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '4' && this.data.ageInitTar !== '98') {
-          this.errors.push('Error en la validación No. B4147')
+        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '4' && this.data.v24_3 !== '98') {
+          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) <= 1) {
-          this.errors.push('Error en la validación No. B4147')
+        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '2' && parseInt(this.data.v24_3) <= 1) {
+          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.receivedTreatmentVih !== 'undefined' && this.data.receivedTreatmentVih.id === '2' && parseInt(this.data.ageInitTar) > 98) {
-          this.errors.push('Error en la validación No. B4147')
+        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '2' && parseInt(this.data.v24_3) > 98) {
+          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
         }
 
-        if (typeof this.data.tarIntraBirth !== 'undefined' && this.data.tarIntraBirth.id === '4' && this.data.pregnantWoman !== '1') {
-          this.errors.push('Error en la validación No. B4150')
+        if (typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '4' && this.data.v15 !== '1') {
+          this.errors.push('La V24.4  es 4 revisar V15 debe ser = 1')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4150', 'error')
         }
 
-        if (typeof this.data.tarIntraBirth !== 'undefined' && parseInt(this.data.tarIntraBirth.id) < 6 && parseInt(this.data.pregnantWoman) > 3) {
-          this.errors.push('Error en la validación No. B4151')
+        if (typeof this.data.v24_4 !== 'undefined' && parseInt(this.data.v24_4.id) < 6 && parseInt(this.data.v15) > 3) {
+          this.errors.push('La V24.4  es < 6  revisar V15 debe ser < 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4151', 'error')
         }
 
-        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '4' && this.data.pregnantWoman !== '1') {
-          this.errors.push('Error en la validación No. B3253')
+        if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '4' && this.data.v15 !== '1') {
+          this.errors.push('La V24.5 es 4 revisar la V15 debe ser 1')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
         }
 
-        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '4' && this.data.dateCulminationReported !== '1811-01-01') {
-          this.errors.push('Error en la validación No. B3253')
+        if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '4' && this.data.v24_6 !== '1811-01-01') {
+          this.errors.push('La V24.6 es = 1811-01-01 revisar V24.5 debe ser 4')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
         }
 
-        if (typeof this.data.resultVihReported !== 'undefined' && parseInt(this.data.resultVihReported.id) < 5 && parseInt(this.data.pregnantWoman) > 3) {
-          this.errors.push('Error en la validación No. B4153')
+        if (typeof this.data.v24_5 !== 'undefined' && parseInt(this.data.v24_5.id) < 5 && parseInt(this.data.v15) > 3) {
+          this.errors.push('La V24.5  es<5 revisar V15 debe ser < 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4153', 'error')
         }
 
-        if (typeof this.data.resultVihReported !== 'undefined' && this.data.resultVihReported.id === '1' && this.data.identificationTypeNewbor.id !== 'CN' && this.data.identificationTypeNewbor.id !== 'RC' && this.data.identificationTypeNewbor.id !== 'MS') {
-          this.errors.push('Error en la validación No. B4162')
+        if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '1' && this.data.v24_8.id !== 'CN' && this.data.v24_8.id !== 'RC' && this.data.v24_8.id !== 'MS') {
+          this.errors.push('La V24.8 es CN revisar V24.5 debe ser 1, La V24.8 es RC revisar V24.5 debe ser 1, La V24.8 es MS revisar  V24.5 debe ser 1')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4162', 'error')
         }
 
-        if (this.data.dateCulminationReported !== '1811-01-01' && this.data.dateCulminationReported !== '1800-01-01' && this.data.dateCulminationReported !== '1833-03-03' && this.data.dateCulminationReported !== '1845-01-01' && this.data.dateCulminationReported !== '1846-01-01') {
-          if (Date.parse(this.data.dateCulminationReported) < Date.parse(this.data.dateReportedPregnancy)) {
-            this.errors.push('Error en la validación No. B2921')
+        if (this.data.v24_6 !== '1811-01-01' && this.data.v24_6 !== '1800-01-01' && this.data.v24_6 !== '1833-03-03' && this.data.v24_6 !== '1845-01-01' && this.data.v24_6 !== '1846-01-01') {
+          if (Date.parse(this.data.v24_6) < Date.parse(this.data.v19)) {
+            this.errors.push('La V24.6 debe ser >= V19 y V24.6 <= V98')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2921', 'error')
           }
         }
 
-        if (this.data.dateCulminationReported !== '1845-01-01' && parseInt(this.data.pregnantWoman) > 3) {
-          this.errors.push('Error en la validación No. B4154')
+        if (this.data.v24_6 !== '1845-01-01' && parseInt(this.data.v15) > 3) {
+          this.errors.push('a V24.6  es<> 1845-01-01 revisar V15 debe ser < 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4154', 'error')
         }
 
-        if (parseInt(this.data.pharmacologicalSuppression) < 9 && parseInt(this.data.pregnantWoman) > 3) {
-          this.errors.push('Error en la validación No. B4156')
+        if (parseInt(this.data.v24_7) < 9 && parseInt(this.data.v15) > 3) {
+          this.errors.push('Error en la validación No. Cuando V24.7 sea < 9 Entonces V15_Mujer_Gestante DEBE SER < 3')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4156', 'error')
         }
 
-        if (typeof this.data.identificationTypeNewbor !== 'undefined' && this.data.identificationTypeNewbor.id === 'NA' && this.data.identificationNewborn !== '9') {
-          this.errors.push('Error en la validación No. B4157')
+        if (typeof this.data.v24_8 !== 'undefined' && this.data.v24_8.id === 'NA' && this.data.v24_9 !== '9') {
+          this.errors.push('La V24.9 es 9 revisar la V24.8 debe ser NA')
           this.error = true
           // return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
         }
 
         if (this.secondStep === true) {
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && typeof this.data.v25 !== 'undefined' && this.data.v25.id === 'NA') {
+            this.errors.push('La V25 es <> NA revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.documentNumberChildren === '9') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && this.data.v25_1 === '9') {
+            this.errors.push('La V25.1 es <> 9 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.haveConfirmedVihDx !== 'undefined' && this.data.haveConfirmedVihDx.id === '9') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && typeof this.data.v25_2 !== 'undefined' && this.data.v25_2.id === '9') {
+            this.errors.push('La V25.2 es <> 9 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.profilaxis !== 'undefined' && this.data.profilaxis.id === '9') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && typeof this.data.v26 !== 'undefined' && this.data.v26.id === '9') {
+            this.errors.push('La V26 es <> 9 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.suministroViaLactea !== 'undefined' && this.data.suministroViaLactea.id === '9') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && typeof this.data.v27 !== 'undefined' && this.data.v27.id === '9') {
+            this.errors.push('La V27 es <> 9 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.firstViralChargeVih === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && this.data.v28 === '1845-01-01') {
+            this.errors.push('La V28 es <> 1845-01-01 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.secondViralChargeVih === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && this.data.v29 === '1845-01-01') {
+            this.errors.push('La V29 es <> 1845-01-01 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && this.data.thirdViralChargeVih === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && this.data.v30 === '1845-01-01') {
+            this.errors.push('La V30 es <> 1845-01-01 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.conditionFinalChild !== 'undefined' && this.data.conditionFinalChild.id === '9') {
-            this.errors.push('Error en la validación No. B2895')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && typeof this.data.v31 !== 'undefined' && this.data.v31.id === '9') {
+            this.errors.push('La V31 es <> 9 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2895', 'error')
           }
 
-          if (typeof this.data.children !== 'undefined' && this.data.children.id === '1' && typeof this.data.pregnantWoman !== 'undefined' && parseInt(this.data.pregnantWoman.id) < 3) {
-            this.errors.push('Error en la validación No. B4083')
+          if (typeof this.data.v16 !== 'undefined' && this.data.v16.id === '1' && typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) < 3) {
+            this.errors.push('La V16 es 1 revisar la v15 debe ser >= 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4083', 'error')
           }
 
-          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateDxTuberculosisActiva === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2897')
+          if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) < 3 && this.data.v32 === '1845-01-01') {
+            this.errors.push('La V32 es <> 1845-01-01 revisar la V17 debe  ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
           }
 
-          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateTamizajeTuberculosis === '1845-01-01') {
-            this.errors.push('Error en la validación No. B2897')
+          if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) < 3 && this.data.v33 === '1845-01-01') {
+            this.errors.push('La V33 es <> 1845-01-01 revisar la V17 debe  ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2897', 'error')
           }
 
-          if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) < 3 && this.data.dateScreeningSecond !== '1799-01-01') {
-            this.errors.push('Error en la validación No. B4084')
+          if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) < 3 && this.data.v21 !== '1799-01-01') {
+            this.errors.push('La V21 es <> 1799-01-01 revisar V17 debe ser < 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4084', 'error')
           }
 
-          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && (this.data.documentNumberChildren !== '55' && this.data.documentNumberChildren !== '9')) {
-            this.errors.push('Error en la validación No. B2926')
+          if (typeof this.data.v25 !== 'undefined' && this.data.v25.id === 'NA' && (this.data.v25_1 !== '55' && this.data.v25_1 !== '9')) {
+            this.errors.push('La V26 es > 5 revisar la V25 debe ser NA')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
           }
 
-          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) <= 1) {
-            this.errors.push('Error en la validación No. B2926')
+          if (typeof this.data.v25 !== 'undefined' && this.data.v25.id === 'NA' && typeof this.data.v25_2 !== 'undefined' && parseInt(this.data.v25_2.id) <= 1) {
+            this.errors.push('La V25.2 es > 1 revisar la V25 debe sr NA')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
           }
 
-          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.profilaxis !== 'undefined' && parseInt(this.data.profilaxis.id) <= 5) {
-            this.errors.push('Error en la validación No. B2926')
+          if (typeof this.data.v25 !== 'undefined' && this.data.v25.id === 'NA' && typeof this.data.v26 !== 'undefined' && parseInt(this.data.v26.id) <= 5) {
+            this.errors.push('La V26 es > 5 revisar la V25 debe ser NA')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
           }
 
-          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) <= 4) {
-            this.errors.push('Error en la validación No. B2926')
+          if (typeof this.data.v25 !== 'undefined' && this.data.v25.id === 'NA' && typeof this.data.v27 !== 'undefined' && parseInt(this.data.v27.id) <= 4) {
+            this.errors.push('La V27 es > 4 revisar la V25 debe ser NA')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
           }
 
-          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id === 'NA' && typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) <= 3) {
-            this.errors.push('Error en la validación No. B2926')
+          if (typeof this.data.v25 !== 'undefined' && this.data.v25.id === 'NA' && typeof this.data.v31 !== 'undefined' && parseInt(this.data.v31.id) <= 3) {
+            this.errors.push('La V31 es > 3  revisar la V25 debe ser NA')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2926', 'error')
           }
 
-          if (typeof this.data.documentTypeChildren !== 'undefined' && this.data.documentTypeChildren.id !== 'NA' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-            this.errors.push('Error en la validación No. B5329')
+          if (typeof this.data.v25 !== 'undefined' && this.data.v25.id !== 'NA' && typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 1) {
+            this.errors.push('La V25 es <> NA revdiar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5329', 'error')
           }
 
-          if (this.data.documentNumberChildren === '9' && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 0) {
-            this.errors.push('Error en la validación No. B4159')
+          if (this.data.v25_1 === '9' && typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 0) {
+            this.errors.push('La V25.1 es 9  revisar la V16 debe ser 0')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4159', 'error')
           }
 
-          if (typeof this.data.haveConfirmedVihDx !== 'undefined' && parseInt(this.data.haveConfirmedVihDx.id) < 2 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-            this.errors.push('Error en la validación No. B4160')
+          if (typeof this.data.v25_2 !== 'undefined' && parseInt(this.data.v25_2.id) < 2 && typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 1) {
+            this.errors.push('La V25.2 es < 2 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
           }
 
-          if (typeof this.data.suministroViaLactea !== 'undefined' && parseInt(this.data.suministroViaLactea.id) < 5 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-            this.errors.push('Error en la validación No. B4160')
+          if (typeof this.data.v27 !== 'undefined' && parseInt(this.data.v27.id) < 5 && typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 1) {
+            this.errors.push('La V27 es < 5 revisar la V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4160', 'error')
           }
 
-          if (this.data.firstViralChargeVih === '1800-01-01') {
-            if (this.data.resultFirstViralChargeVih !== '99999999') {
-              this.errors.push('Error en la validación No. B2932')
+          if (this.data.v28 === '1800-01-01') {
+            if (this.data.v28_1 !== '99999999') {
+              this.errors.push('La V28.1 es 99999999 revisar la V28 debe ser = 1800-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
             }
 
-            if (this.data.secondViralChargeVih !== '1800-01-01') {
-              this.errors.push('Error en la validación No. B2932')
+            if (this.data.v29 !== '1800-01-01') {
+              this.errors.push('La V29 es = 1800-01-01 revisar  V28 debe ser 1800-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
             }
 
-            if (this.data.thirdViralChargeVih !== '1800-01-01') {
-              this.errors.push('Error en la validación No. B2932')
+            if (this.data.v30 !== '1800-01-01') {
+              this.errors.push('La V30 es = 1800-01-01 revisar  V28 debe ser 1800-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2932', 'error')
             }
           }
 
-          if (this.data.firstViralChargeVih === '1846-01-01') {
-            if (this.data.resultFirstViralChargeVih !== '55555555') {
-              this.errors.push('Error en la validación No. B2933')
+          if (this.data.v28 === '1846-01-01') {
+            if (this.data.v28_1 !== '55555555') {
+              this.errors.push('La V28.1 es 55555555 revisar la V28 debe ser = 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2933', 'error')
             }
           }
 
-          if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
-            if (this.data.secondViralChargeVih !== '1800-01-01') {
-              this.errors.push('Error en la validación No. B3252')
+          if (Date.parse(this.data.v28) > Date.parse(this.patient.field_json.birthdate)) {
+            if (this.data.v29 !== '1800-01-01') {
+              this.errors.push('La V29 es 1800-01-01 revisar V28 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
             }
 
-            if (this.data.thirdViralChargeVih !== '1833-01-01') {
-              this.errors.push('Error en la validación No. B3252')
+            if (this.data.v30 !== '1833-01-01') {
+              this.errors.push('La V30 es 1833-01-01 revisar V28 debe ser >V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
             }
 
-            if (this.data.firstViralChargeVih === this.data.thirdViralChargeVih) {
-              this.errors.push('Error en la validación No. B2934')
+            if (this.data.v28 === this.data.v30) {
+              this.errors.push('La V30 ez <> V28 revisar V28 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2934', 'error')
             }
 
-            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.firstViralChargeVih)) {
-              this.errors.push('Error en la validación No. B3252')
+            if (Date.parse(this.data.v30) < Date.parse(this.data.v28)) {
+              this.errors.push('La V30 es > V28  revisar V28 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
             }
 
-            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
-              this.errors.push('Error en la validación No. B3252')
+            if (Date.parse(this.data.v30) < Date.parse(this.data.v29)) {
+              this.errors.push('La V29 es > V28  revisar V28 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B3252', 'error')
             }
           }
 
-          if (this.data.secondViralChargeVih === '1800-01-01') {
-            if (this.data.resultSecondViralChargeVih !== '99999999') {
-              this.errors.push('Error en la validación No. B2937')
+          if (this.data.v29 === '1800-01-01') {
+            if (this.data.v29_1 !== '99999999') {
+              this.errors.push('La V29.1 es = 99999999 revisar la V29 debe ser = 1800-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2937', 'error')
             }
           }
 
-          if (this.data.secondViralChargeVih === '1846-01-01') {
-            if (this.data.resultSecondViralChargeVih !== '55555555') {
-              this.errors.push('Error en la validación No. B2938')
+          if (this.data.v29 === '1846-01-01') {
+            if (this.data.v29_1 !== '55555555') {
+              this.errors.push('La V29.1 es = 55555555 revisar la V29 debe ser = 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2938', 'error')
             }
           }
 
-          if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
-            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse('1800-01-01')) {
-              this.errors.push('Error en la validación No. B2940')
+          if (Date.parse(this.data.v29) > Date.parse(this.patient.field_json.birthdate)) {
+            if (Date.parse(this.data.v30) < Date.parse('1800-01-01')) {
+              this.errors.push('La V30 es > 1800-01-01 revisar V29 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
             }
 
-            if (this.data.resultSecondViralChargeVih === '99999999') {
-              this.errors.push('Error en la validación No. B2940')
+            if (this.data.v29_1 === '99999999') {
+              this.errors.push('La V29.1 es <> 99999999 revisar V29 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
             }
 
-            if (Date.parse(this.data.thirdViralChargeVih) < Date.parse(this.data.secondViralChargeVih)) {
-              this.errors.push('Error en la validación No. B2940')
+            if (Date.parse(this.data.v30) < Date.parse(this.data.v29)) {
+              this.errors.push('La V30 es > V29 revisar V29 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2940', 'error')
             }
           }
 
-          if (this.data.thirdViralChargeVih === '1800-01-01') {
-            if (this.data.resultThirdViralChargeVih !== '99999999') {
-              this.errors.push('Error en la validación No. B2943')
+          if (this.data.v30 === '1800-01-01') {
+            if (this.data.v30_1 !== '99999999') {
+              this.errors.push('La V30.1 es 99999999 revisar V30 debe ser 1800-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2943', 'error')
             }
           }
 
-          if (this.data.thirdViralChargeVih === '1846-01-01') {
-            if (this.data.resultThirdViralChargeVih !== '55555555') {
-              this.errors.push('Error en la validación No. B2944')
+          if (this.data.v30 === '1846-01-01') {
+            if (this.data.v30_1 !== '55555555') {
+              this.errors.push('La V30.1 es 55555555 revisar V30 debe ser 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2944', 'error')
             }
           }
 
-          if (Date.parse(this.data.thirdViralChargeVih) > Date.parse(this.patient.field_json.birthdate)) {
-            if (Date.parse(this.data.secondViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
-              this.errors.push('Error en la validación No. B2945')
+          if (Date.parse(this.data.v30) > Date.parse(this.patient.field_json.birthdate)) {
+            if (this.data.v30_1 !== '99999999') {
+              this.errors.push('La V30 es > 1800-01-01 revisar V29 debe ser > V09')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2943', 'error')
+            }
+
+            if (Date.parse(this.data.v29) > Date.parse(this.data.v30)) {
+              this.errors.push('La V28 es <V30 revisar V30 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
             }
 
-            if (Date.parse(this.data.firstViralChargeVih) > Date.parse(this.data.thirdViralChargeVih)) {
-              this.errors.push('Error en la validación No. B2945')
+            if (Date.parse(this.data.v28) > Date.parse(this.data.v30)) {
+              this.errors.push('La V30 es > V29 revisar V30 debe ser > V09')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
             }
           }
 
-          if (typeof this.data.conditionFinalChild !== 'undefined' && parseInt(this.data.conditionFinalChild.id) === 1 && typeof this.data.children !== 'undefined' && parseInt(this.data.children.id) !== 1) {
-            this.errors.push('Error en la validación No. B4128')
+          if (typeof this.data.v31 !== 'undefined' && parseInt(this.data.v31.id) === 1 && typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 1) {
+            this.errors.push('La V31 es 1 revisar V16 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4128', 'error')
           }
 
-          if (Date.parse(this.data.dateDxTuberculosisActiva) > Date.parse(this.patient.field_json.birthdate)) {
-            if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
-              this.errors.push('Error en la validación No. B2945')
+          if (Date.parse(this.data.v32) > Date.parse(this.patient.field_json.birthdate)) {
+            if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+              this.errors.push('La V32 es > V09 revisar la V17 debe ser < 3')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
             }
           }
 
-          if (Date.parse(this.data.dateTamizajeTuberculosis) > Date.parse(this.patient.field_json.birthdate)) {
-            if (typeof this.data.tuberculosis !== 'undefined' && parseInt(this.data.tuberculosis.id) >= 3) {
-              this.errors.push('Error en la validación No. B2945')
+          if (Date.parse(this.data.v33) > Date.parse(this.patient.field_json.birthdate)) {
+            if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+              this.errors.push('La V33 es > V09 revisar la V17 debe ser < 3')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2945', 'error')
             }
@@ -3736,109 +3898,109 @@ export default {
         }
 
         if (this.thirdStep === true) {
-          if (this.data.fechaPruebaPresuntiva !== '1799-01-01' || this.data.fechaPruebaPresuntiva !== '1811-11-01' || this.data.fechaPruebaPresuntiva !== '1822-02-01' || this.data.fechaPruebaPresuntiva !== '1846-01-01') {
-            if (Date.parse(this.data.fechaPruebaPresuntiva) < Date.parse(this.patient.field_json.birthdate)) {
-              this.errors.push('Error en la validación No. B2954')
+          if (this.data.v34 !== '1799-01-01' || this.data.v34 !== '1811-11-01' || this.data.v34 !== '1822-02-01' || this.data.v34 !== '1846-01-01') {
+            if (Date.parse(this.data.v34) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V34 debe ser >= V09 y V32 <= V36 o = 1799-01-01,1822-01-01,1811-01-01,1846-01-01 ')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2954', 'error')
             }
 
-            if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.data.fechaCongirmacionDiagnostico)) {
-              this.errors.push('Error en la validación No. B2954')
+            if (Date.parse(this.data.v34) > Date.parse(this.data.v36)) {
+              this.errors.push('La V34 debe ser >= V09 y V32 <= V36 o = 1799-01-01,1822-01-01,1811-01-01,1846-01-01 ')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2954', 'error')
             }
           }
 
-          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.comoLlegoLaPrueba !== 'undefined' && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
-            this.errors.push('Error en la validación No. B4163')
+          if (Date.parse(this.data.v34) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v35 !== 'undefined' && parseInt(this.data.v35.id) >= 13) {
+            this.errors.push('La V35 es < 13 revisar V34 debe ser > V09')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4163', 'error')
           }
 
-          if (Date.parse(this.data.fechaPruebaPresuntiva) > Date.parse('1846-01-01') && typeof this.data.comoLlegoLaPrueba !== 'undefined' && parseInt(this.data.comoLlegoLaPrueba.id) >= 13) {
-            this.errors.push('Error en la validación No. B5330')
+          if (Date.parse(this.data.v34) > Date.parse('1846-01-01') && typeof this.data.v35 !== 'undefined' && parseInt(this.data.v35.id) >= 13) {
+            this.errors.push('La V35 es <> 13 revisar V34 debe ser > 1846-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5330', 'error')
           }
 
-          if (typeof this.data.comoLlegoLaPrueba !== 'undefined' && parseInt(this.data.comoLlegoLaPrueba.id) <= 13 && this.data.fechaPruebaPresuntiva === '1799-01-01') {
-            this.errors.push('Error en la validación No. B4401')
+          if (typeof this.data.v35 !== 'undefined' && parseInt(this.data.v35.id) <= 13 && this.data.v34 === '1799-01-01') {
+            this.errors.push('La V35 es < 13 revisar la V34 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4401', 'error')
           }
 
-          if (this.data.fechaCongirmacionDiagnostico !== '1846-01-01') {
-            if (Date.parse(this.data.fechaCongirmacionDiagnostico) < Date.parse(this.patient.field_json.birthdate)) {
-              this.errors.push('Error en la validación No. B2958')
+          if (this.data.v36 !== '1846-01-01') {
+            if (Date.parse(this.data.v36) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V36 debe ser >= V09 y V36 <= V98 o = 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2958', 'error')
             }
           }
 
-          if (this.data.fechaInicioAtencionVih !== '1800-01-01' || this.data.fechaInicioAtencionVih !== '1846-01-01') {
-            if (Date.parse(this.data.fechaInicioAtencionVih) < Date.parse(this.data.fechaCongirmacionDiagnostico)) {
-              this.errors.push('Error en la validación No. B2963')
+          if (this.data.v37 !== '1800-01-01' || this.data.v37 !== '1846-01-01') {
+            if (Date.parse(this.data.v37) < Date.parse(this.data.v36)) {
+              this.errors.push('LA V37 debe ser >= V36 y  <= V98 o = 1800-01-01 o 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2963', 'error')
             }
           }
 
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '4' && parseInt(this.data.conteoLinfocitosCd4) <= 3000) {
-            this.errors.push('Error en la validación No. B4167')
+          if (typeof this.data.v39 !== 'undefined' && this.data.v39.id === '4' && parseInt(this.data.conteoLinfocitosCd4) <= 3000) {
+            this.errors.push('La V40.1 es >3000 revisar V39 debe ser 4')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
           }
 
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '2') {
+          if (typeof this.data.v39 !== 'undefined' && this.data.v39.id === '2') {
             if ((parseInt(this.data.conteoLinfocitosCd4) < 200 || parseInt(this.data.conteoLinfocitosCd4) >= 500)) {
-              this.errors.push('Error en la validación No. B4167')
+              this.errors.push('La V40.1 es > 200 y < 500 revisar V39 debe ser = 2')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4167', 'error')
             }
           }
 
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '1') {
+          if (typeof this.data.v39 !== 'undefined' && this.data.v39.id === '1') {
             if ((parseInt(this.data.conteoLinfocitosCd4) < 500 || parseInt(this.data.conteoLinfocitosCd4) > 3000)) {
-              this.errors.push('Error en la validación No. B5331')
+              this.errors.push('La V40.1 e >= 500 y <= 3000 revisar la V39 debe ser 1')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B5331', 'error')
             }
           }
 
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && parseInt(this.data.conteoLinfocitosCd4) >= 200) {
-            this.errors.push('Error en la validación No. B5332')
+          if (typeof this.data.v39 !== 'undefined' && this.data.v39.id === '3' && parseInt(this.data.conteoLinfocitosCd4) >= 200) {
+            this.errors.push('La V40.1 es< 200 revisar la V39 debe ser 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
           }
 
-          if (typeof this.data.verificacionConteoLinfocitos !== 'undefined' && this.verificacionConteoLinfocitos.id === '1' && (parseInt(this.data.conteoLinfocitosCd4) === 9999 || parseInt(this.data.conteoLinfocitosCd4) === 9998)) {
-            this.errors.push('Error en la validación No. B3224')
+          if (typeof this.data.v40 !== 'undefined' && this.verificacionConteoLinfocitos.id === '1' && (parseInt(this.data.conteoLinfocitosCd4) === 9999 || parseInt(this.data.conteoLinfocitosCd4) === 9998)) {
+            this.errors.push('La V40.1 es <> 9999 y <> 9998 revisar la V40 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3224', 'error')
           }
 
-          if (typeof this.data.verificacionConteoLinfocitos !== 'undefined' && parseInt(this.verificacionConteoLinfocitos.id) > 1 && parseInt(this.data.conteoLinfocitosCd4) < 5555) {
-            this.errors.push('Error en la validación No. B4402')
+          if (typeof this.data.v40 !== 'undefined' && parseInt(this.verificacionConteoLinfocitos.id) > 1 && parseInt(this.data.conteoLinfocitosCd4) < 5555) {
+            this.errors.push('La V40.1 es >= 5555 revisar V40 debe ser > 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4402', 'error')
           }
 
-          if (typeof this.data.verificacionCargaViral !== 'undefined' && this.data.verificacionCargaViral.id === '9') {
-            this.errors.push('Error en la validación No. B2968')
+          if (typeof this.data.v41 !== 'undefined' && this.data.v41.id === '9') {
+            this.errors.push('La V40 debe sr <> 9')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2968', 'error')
           }
 
-          if (typeof this.data.verificacionCargaViral !== 'undefined' && this.data.verificacionCargaViral.id !== '9') {
-            if (typeof this.data.verificacionCargaViral !== 'undefined' && this.data.verificacionCargaViral.id === '1' && parseInt(this.data.cargaViralEnresultado) >= 1000000) {
-              this.errors.push('Error en la validación No. B4169')
+          if (typeof this.data.v41 !== 'undefined' && this.data.v41.id !== '9') {
+            if (typeof this.data.v41 !== 'undefined' && this.data.v41.id === '1' && parseInt(this.data.v41_1) >= 1000000) {
+              this.errors.push('La V41.1 es <= 10000000 revisar V41 debe ser 1')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4169', 'error')
             }
 
-            if (typeof this.data.verificacionCargaViral !== 'undefined' && parseInt(this.data.verificacionCargaViral.id) > 1 && parseInt(this.data.cargaViralEnresultado) < 5555555) {
-              this.errors.push('Error en la validación No. B4403')
+            if (typeof this.data.v41 !== 'undefined' && parseInt(this.data.v41.id) > 1 && parseInt(this.data.v41_1) < 5555555) {
+              this.errors.push('La V41.1 es > 41 debe ser > 1')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4403', 'error')
             }
@@ -3846,494 +4008,1223 @@ export default {
         }
 
         if (this.fourthStep === true) {
-          if (this.data.inicioTerapiaAntirretroviral !== '1788-01-01' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01' && this.data.inicioTerapiaAntirretroviral !== '1846-01-01') {
-            if (Date.parse(this.data.inicioTerapiaAntirretroviral) < Date.parse(this.data.fechaCongirmacionDiagnostico)) {
-              this.errors.push('Error en la validación No. B2976')
+          if (this.data.v42 !== '1788-01-01' && this.data.v42 !== '1799-01-01' && this.data.v42 !== '1846-01-01') {
+            if (Date.parse(this.data.v42) < Date.parse(this.data.v36)) {
+              this.errors.push('La V98 debe ser >= V42 o = 1788-01-01 o 1799-01-01 = 1846-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2976', 'error')
             }
           }
 
-          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento1InicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B3225')
+          if (Date.parse(this.data.v42) >= Date.parse(this.data.v36) && this.medicamento1InicioTar.id === '9') {
+            this.errors.push('La V42.1 es <> 9 revisar V42 debe ser >= V36')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
           }
 
-          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento2InicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B3225')
+          if (Date.parse(this.data.v42) >= Date.parse(this.data.v36) && this.medicamento2InicioTar.id === '9') {
+            this.errors.push('La V42.2 es <> 9 revisar V42 debe ser >= V36')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
           }
 
-          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento3InicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B3225')
+          if (Date.parse(this.data.v42) >= Date.parse(this.data.v36) && this.medicamento3InicioTar.id === '9') {
+            this.errors.push('La V42.5 es <> 9 revisar V42 debe ser >= V36')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
           }
 
-          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento4InicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B3225')
+          if (Date.parse(this.data.v42) >= Date.parse(this.data.v36) && this.medicamento4InicioTar.id === '9') {
+            this.errors.push('La V42.3 es <> 9 revisar V42 debe ser >= V36')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
           }
 
-          if (Date.parse(this.data.inicioTerapiaAntirretroviral) >= Date.parse(this.data.fechaCongirmacionDiagnostico) && this.medicamento5InicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B3225')
+          if (Date.parse(this.data.v42) >= Date.parse(this.data.v36) && this.medicamento5InicioTar.id === '9') {
+            this.errors.push('La V42.4 es <> 9 revisar V42 debe ser >= V36')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3225', 'error')
           }
 
-          if (this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            if (typeof this.data.medicamento1InicioTar !== 'undefined' && this.data.medicamento1InicioTar.id !== '9') {
-              this.errors.push('Error en la validación No. B2978')
+          if (this.data.v42 === '1799-01-01') {
+            if (typeof this.data.v42_1 !== 'undefined' && this.data.v42_1.id !== '9') {
+              this.errors.push('La V42.1 es 9 revisar V42 debe ser 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B2978', 'error')
             }
 
-            if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.linfocitosCD4InicioTar.id !== '5') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v43 !== 'undefined' && this.data.v43.id !== '5') {
+              this.errors.push('La V43 es 5 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.valorLinfocitosCD4InicioTar.id !== '9996') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v43 !== 'undefined' && this.data.v43_1.id !== '9996') {
+              this.errors.push('La V43.1 es 9996 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.cargaMomentoInicioTar.id !== '5') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v43 !== 'undefined' && this.data.v44.id !== '5') {
+              this.errors.push('La V44 es 5 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (this.data.cargaViralInicioTar !== '99999996') {
-              this.errors.push('Error en la validación No. B4170')
+            if (this.data.v44_1 !== '99999996') {
+              this.errors.push('La V44.1 es 99999996 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (typeof this.data.motivoInicioTar !== 'undefined' && this.data.motivoInicioTar.id !== '16') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v45 !== 'undefined' && this.data.v45.id !== '16') {
+              this.errors.push('La V45 es 16 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id !== '6') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v46 !== 'undefined' && this.data.v46.id !== '6') {
+              this.errors.push('La V46 es 6 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (typeof this.data.hepatitisCInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id !== '6') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v47 !== 'undefined' && this.data.v47.id !== '6') {
+              this.errors.push('La V47 es 6 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
 
-            if (typeof this.data.tuberculosisInicioTar !== 'undefined' && this.data.tuberculosisInicioTar.id !== '5') {
-              this.errors.push('Error en la validación No. B4170')
+            if (typeof this.data.v48 !== 'undefined' && this.data.v48.id !== '5') {
+              this.errors.push('La V48 es 5 revisar la V42 debe ser = 1799-01-01')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
             }
           }
 
-          if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && this.data.linfocitosCD4InicioTar.id === '1' && parseInt(this.data.valorLinfocitosCD4InicioTar) > 3000) {
-            this.errors.push('Error en la validación No. B4172')
+          if (this.data.v42 !== '1799-01-01') {
+            if (typeof this.data.v42_1 !== 'undefined' && this.data.v42_1.id === '9') {
+              this.errors.push('La V42.1 es 9 revisar V42 debe ser 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2978', 'error')
+            }
+
+            if (typeof this.data.v43 !== 'undefined' && this.data.v43.id === '5') {
+              this.errors.push('La V43 es 5 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (typeof this.data.v43 !== 'undefined' && this.data.v43_1.id === '9996') {
+              this.errors.push('La V43.1 es 9996 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (typeof this.data.v43 !== 'undefined' && this.data.v44.id === '5') {
+              this.errors.push('La V44 es 5 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (this.data.v44_1 === '99999996') {
+              this.errors.push('La V44.1 es 99999996 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (typeof this.data.v45 !== 'undefined' && this.data.v45.id === '16') {
+              this.errors.push('La V45 es 16 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (typeof this.data.v46 !== 'undefined' && this.data.v46.id === '6') {
+              this.errors.push('La V46 es 6 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (typeof this.data.v47 !== 'undefined' && this.data.v47.id === '6') {
+              this.errors.push('La V47 es 6 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+
+            if (typeof this.data.v48 !== 'undefined' && this.data.v48.id === '5') {
+              this.errors.push('La V48 es 5 revisar la V42 debe ser = 1799-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4170', 'error')
+            }
+          }
+
+          if (typeof this.data.v43 !== 'undefined' && this.data.v43.id === '1' && parseInt(this.data.v43_1) > 3000) {
+            this.errors.push('La V43.1 es <= 300 revisar la V43 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4172', 'error')
           }
 
-          if (typeof this.data.linfocitosCD4InicioTar !== 'undefined' && parseInt(this.data.linfocitosCD4InicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5335')
+          if (typeof this.data.v43 !== 'undefined' && parseInt(this.data.v43.id) < 5 && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V43 es < 5 revisar V42 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5335', 'error')
           }
 
-          if (parseInt(this.data.valorLinfocitosCD4InicioTar) <= 3000 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5338')
+          if (parseInt(this.data.v43_1) <= 3000 && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V43.1 es <= 3000 revisar V42 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5338', 'error')
           }
 
-          if (this.data.cargaMomentoInicioTar === '1') {
-            if (parseInt(this.data.cargaViralInicioTar) > 10000000 || this.data.cargaViralInicioTar !== '99999994' || this.data.cargaViralInicioTar !== '99999995') {
-              this.errors.push('Error en la validación No. B3226')
+          if (this.data.v44 === '1') {
+            if (parseInt(this.data.v44_1) > 10000000 || this.data.v44_1 !== '99999994' || this.data.v44_1 !== '99999995') {
+              this.errors.push('La V44 .1 es <= 10000000 o = 99999994 o =99999995 revisar V44 debe ser 1')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B3226', 'error')
             }
           }
 
-          if (typeof this.data.motivoInicioTar !== 'undefined' && this.data.motivoInicioTar.id === '16' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-            this.errors.push('Error en la validación No. B3255')
+          if (typeof this.data.v45 !== 'undefined' && this.data.v45.id === '16' && this.data.v42 !== '1799-01-01') {
+            this.errors.push('La V45 es 16 revisar la V42 debe ser = 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3255', 'error')
           }
 
-          if (typeof this.data.motivoInicioTar !== 'undefined' && parseInt(this.data.motivoInicioTar.id) < 16 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5341')
+          if (typeof this.data.v45 !== 'undefined' && parseInt(this.data.v45.id) < 16 && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V45 es < 16 revisar V42 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5341', 'error')
           }
 
-          if (typeof this.data.motivoInicioTar !== 'undefined' && this.data.motivoInicioTar.id === '17' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5342')
+          if (typeof this.data.v45 !== 'undefined' && this.data.v45.id === '17' && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V45 es 17 revisar V42 debe ser <>  1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5342', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B2996')
+          if (typeof this.data.v46 !== 'undefined' && this.data.v46.id === '9') {
+            this.errors.push('La V46 debe ser <> 9')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2996', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-            this.errors.push('Error en la validación No. B3256')
+          if (typeof this.data.v46 !== 'undefined' && this.data.v46.id === '6' && this.data.v42 !== '1799-01-01') {
+            this.errors.push('La V46 es 6 revisar la V42 debe ser = 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3256', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && parseInt(this.data.hepatitisBInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5343')
+          if (typeof this.data.v46 !== 'undefined' && parseInt(this.data.v46.id) < 6 && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V46 es < 6 revisar V42 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5343', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisBInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5344')
+          if (typeof this.data.v46 !== 'undefined' && this.data.v46.id === '7' && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V46 es 7 revisar V42 debe ser <>  1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5344', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B2998')
+          if (typeof this.data.v46 !== 'undefined' && this.data.v47.id === '9') {
+            this.errors.push('La V47 debe ser <> 9')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B2998', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id === '6' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-            this.errors.push('Error en la validación No. B3257')
+          if (typeof this.data.v46 !== 'undefined' && this.data.v47.id === '6' && this.data.v42 !== '1799-01-01') {
+            this.errors.push('La V47 es 6 revisar la V42 debe ser = 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3257', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && parseInt(this.data.hepatitisCInicioTar.id) < 6 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5345')
+          if (typeof this.data.v46 !== 'undefined' && parseInt(this.data.v47.id) < 6 && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V47 es < 6 revisar V42 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5345', 'error')
           }
 
-          if (typeof this.data.hepatitisBInicioTar !== 'undefined' && this.data.hepatitisCInicioTar.id === '7' && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5346')
+          if (typeof this.data.v46 !== 'undefined' && this.data.v47.id === '7' && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V47 es 7 revisar V42 debe ser <>  1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5346', 'error')
           }
 
-          if (typeof this.data.tuberculosisInicioTar !== 'undefined' && this.data.tuberculosisInicioTar.id === '9') {
-            this.errors.push('Error en la validación No. B3000')
+          if (typeof this.data.v48 !== 'undefined' && this.data.v48.id === '9') {
+            this.errors.push('La V48 debe ser <> 9')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3000', 'error')
           }
 
-          if (typeof this.data.tuberculosisInicioTar !== 'undefined' && this.data.tuberculosisInicioTar.id === '5' && this.data.inicioTerapiaAntirretroviral !== '1799-01-01') {
-            this.errors.push('Error en la validación No. B3258')
+          if (typeof this.data.v48 !== 'undefined' && this.data.v48.id === '5' && this.data.v42 !== '1799-01-01') {
+            this.errors.push('La V48 es 5 revisar la V42 debe ser = 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3258', 'error')
           }
 
-          if (typeof this.data.tuberculosisInicioTar !== 'undefined' && parseInt(this.data.tuberculosisInicioTar.id) < 5 && this.data.inicioTerapiaAntirretroviral === '1799-01-01') {
-            this.errors.push('Error en la validación No. B5347')
+          if (typeof this.data.v48 !== 'undefined' && parseInt(this.data.v48.id) < 5 && this.data.v42 === '1799-01-01') {
+            this.errors.push('La V48 es < 5 revisar V42 debe ser <> 1799-01-01')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5347', 'error')
           }
 
-          if (typeof this.data.cambiosEsquemaInicialTar !== 'undefined' && this.data.cambiosEsquemaInicialTar.id === '9') {
-            this.errors.push('Error en la validación No. B3006')
+          if (typeof this.data.v51 !== 'undefined' && this.data.v51.id === '9') {
+            this.errors.push('La V51 debe ser <> 9')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3006', 'error')
           }
 
-          if (typeof this.data.cambiosEsquemaInicialTar !== 'undefined' && this.data.cambiosEsquemaInicialTar.id === '1' && this.data.medicamentoEsquemaInicialTar === '1800-01-01') {
-            this.errors.push('Error en la validación No. B3227')
+          if (typeof this.data.v51 !== 'undefined' && this.data.v51.id === '1' && this.data.v51_1 === '1800-01-01') {
+            this.errors.push('La V51.1 es <> 1800-01-01 revisar V51 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
           }
 
-          if (typeof this.data.cambiosEsquemaInicialTar !== 'undefined' && typeof this.data.cambioMedicamentoTar !== 'undefined' && this.data.cambiosEsquemaInicialTar.id === '1' && (parseInt(this.data.cambioMedicamentoTar.id) > 7 || this.data.cambioMedicamentoTar.id !== '55')) {
-            this.errors.push('Error en la validación No. B3227')
+          if (typeof this.data.v51 !== 'undefined' && typeof this.data.v51_2 !== 'undefined' && this.data.v51.id === '1' && (parseInt(this.data.v51_2.id) > 7 || this.data.v51_2.id !== '55')) {
+            this.errors.push('La V51.2 es <= 7 revisar V51 debe ser 1, La V51.2 es 55 revisar V51 debe ser 1')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3227', 'error')
           }
 
-          if (this.data.medicamentoEsquemaInicialTar !== '1777-01-01' && this.data.medicamentoEsquemaInicialTar !== '1788-01-01' && this.data.medicamentoEsquemaInicialTar !== '1800-01-01' && this.data.medicamentoEsquemaInicialTar !== '1845-01-01' && this.data.medicamentoEsquemaInicialTar !== '1846-01-01') {
-            if (Date.parse(this.data.medicamentoEsquemaInicialTar) < Date.parse(this.data.inicioTerapiaAntirretroviral)) {
-              this.errors.push('Error en la validación No. B3008')
+          if (this.data.v51_1 !== '1777-01-01' && this.data.v51_1 !== '1788-01-01' && this.data.v51_1 !== '1800-01-01' && this.data.v51_1 !== '1845-01-01' && this.data.v51_1 !== '1846-01-01') {
+            if (Date.parse(this.data.v51_1) < Date.parse(this.data.v42)) {
+              this.errors.push('La V51.1 debe ser > = V42 o = 1777-01-01 o 1788-01-01 o 1800-01-01 o 1845-01-01 o 1846-01-01 ')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B3008', 'error')
             }
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && Date.parse(this.data.medicamentoEsquemaInicialTar) > Date.parse('1846-01-01') && parseInt(this.data.cambioMedicamentoTar.id) > 10) {
-            this.errors.push('Error en la validación No. B4173')
+          if (typeof this.data.v51_2 !== 'undefined' && Date.parse(this.data.v51_1) > Date.parse('1846-01-01') && parseInt(this.data.v51_2.id) > 10) {
+            this.errors.push('La V51.2 es <= 10 revisar la V51.1 debe ser > 1846-01-01')
             this.error = true
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && this.data.medicamentoEsquemaInicialTar === '1800-01-01' && parseInt(this.data.cambioMedicamentoTar.id) <= 5) {
-            this.errors.push('Error en la validación No. B4405')
+          if (typeof this.data.v51_2 !== 'undefined' && this.data.v51_1 === '1800-01-01' && parseInt(this.data.v51_2.id) <= 5) {
+            this.errors.push('La V51.2 es > 5 revisar la V51.1 debe ser = 1800-01-01')
             this.error = true
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && this.data.medicamentoEsquemaInicialTar === '1799-01-01' && parseInt(this.data.cambioMedicamentoTar.id) <= 5) {
-            this.errors.push('Error en la validación No. B4406')
+          if (typeof this.data.v51_2 !== 'undefined' && this.data.v51_1 === '1799-01-01' && parseInt(this.data.v51_2.id) <= 5) {
+            this.errors.push('La V51.2 es > 5 revisar la V51.1 debe ser = 1799-01-01')
             this.error = true
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && this.data.medicamentoEsquemaInicialTar === '1788-01-01' && parseInt(this.data.cambioMedicamentoTar.id) <= 5) {
-            this.errors.push('Error en la validación No. B4407')
+          if (typeof this.data.v51_2 !== 'undefined' && this.data.v51_1 === '1788-01-01' && parseInt(this.data.v51_2.id) <= 5) {
+            this.errors.push('La V51.2 es > 5 revisar la V51.1 debe ser = 1788-01-01')
             this.error = true
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && parseInt(this.data.cambioMedicamentoTar.id) > 7) {
-            if (this.data.medicamentoEsquemaInicialTar !== '1845-01-01' && this.data.medicamentoEsquemaInicialTar !== '1800-01-01' && this.data.medicamentoEsquemaInicialTar !== '1777-01-01' && this.data.medicamentoEsquemaInicialTar !== '1788-01-01') {
-              this.errors.push('Error en la validación No. B4404')
+          if (typeof this.data.v51_2 !== 'undefined' && parseInt(this.data.v51_2.id) > 7) {
+            if (this.data.v51_1 !== '1845-01-01' && this.data.v51_1 !== '1800-01-01' && this.data.v51_1 !== '1777-01-01' && this.data.v51_1 !== '1788-01-01') {
+              this.errors.push('La V51.1 es > 7 revisar V51.1 debe ser 1845-01-01 o 1800-01-01 o 1777-01-01 o 1788-01-01 ')
               this.error = true
             }
           }
 
-          if (typeof this.data.fallasInicioTarAnual !== 'undefined' && this.data.fallasInicioTarAnual.id === '1' && this.data.numeroFallasInicioTarAnual === '99') {
-            this.errors.push('Error en la validación No. B4175')
+          if (typeof this.data.v51_7 !== 'undefined' && this.data.v51_7.id === '1' && this.data.v51_8 === '99') {
+            this.errors.push('La V51.8 es <> 99 revisar V51.7 debe ser 1')
             this.error = true
           }
 
-          if (typeof this.data.fallasInicioTarAnual !== 'undefined' && this.data.fallasInicioTarAnual.id === '1' && this.data.numeroFallasInicioTarAnual === '0') {
-            this.errors.push('Error en la validación No. B5332')
+          if (typeof this.data.v51_7 !== 'undefined' && this.data.v51_7.id === '1' && this.data.v51_8 === '0') {
+            this.errors.push('La V51.8 es <> 0 revisar V51.7 debe ser 1')
             this.error = true
           }
 
-          if (typeof this.data.fallasInicioTarAnual !== 'undefined' && parseInt(this.data.fallasInicioTarAnual.id) > 1 && parseInt(this.data.numeroFallasInicioTarAnual) <= 54) {
-            this.errors.push('Error en la validación No. B5353')
+          if (typeof this.data.v51_7 !== 'undefined' && parseInt(this.data.v51_7.id) > 1 && parseInt(this.data.v51_8) <= 54) {
+            this.errors.push('La V51.8 es > 54 revisar V51.7 debe ser > 1')
             this.error = true
           }
         }
 
         if (this.fiveStep === true) {
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionBacteriana !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
+          if (typeof this.data.v39 !== 'undefined' && this.data.v39 === '3') {
+            if (typeof this.data.v52_1 !== 'undefined' && this.data.v52_1.id !== '1') {
+              this.errors.push('La V52.1 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_2 !== 'undefined' && this.data.v52_2.id !== '1') {
+              this.errors.push('La V52.2 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_3 !== 'undefined' && this.data.v52_3.id !== '1') {
+              this.errors.push('La V52.3 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_4 !== 'undefined' && this.data.v52_4.id !== '1') {
+              this.errors.push('La V52.4 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_5 !== 'undefined' && this.data.v52_5.id !== '1') {
+              this.errors.push('La V52.5 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_6 !== 'undefined' && this.data.v52_6.id !== '1') {
+              this.errors.push('La V52.6 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_7 !== 'undefined' && this.data.v52_7.id !== '1') {
+              this.errors.push('La V52.7 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_8 !== 'undefined' && this.data.v52_8.id !== '1') {
+              this.errors.push('La V52.8 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_9 !== 'undefined' && this.data.v52_9.id !== '1') {
+              this.errors.push('La V52.9 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_10 !== 'undefined' && this.data.v52_10.id !== '1') {
+              this.errors.push('La V52.10 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_11 !== 'undefined' && this.data.v52_11.id !== '1') {
+              this.errors.push('La V52.11 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_12 !== 'undefined' && this.data.v52_12.id !== '1') {
+              this.errors.push('La V52.12 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_13 !== 'undefined' && this.data.v52_13.id !== 1) {
+              this.errors.push('La V52.13 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_14 !== 'undefined' && this.data.v52_14.id !== 1) {
+              this.errors.push('La V52.14 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_15 !== 'undefined' && this.data.v52_15.id !== 1) {
+              this.errors.push('La V52.15 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_16 !== 'undefined' && this.data.v52_16.id !== 1) {
+              this.errors.push('La V52.16 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_17 !== 'undefined' && this.data.v52_17.id !== '1') {
+              this.errors.push('La V52.17 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_18 !== 'undefined' && this.data.v52_18.id !== '1') {
+              this.errors.push('La V52.18 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_19 !== 'undefined' && this.data.v52_19.id !== '1') {
+              this.errors.push('La V52.19 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_20 !== 'undefined' && this.data.v52_20.id !== '1') {
+              this.errors.push('La V52.20 es 1 revisar la V39 debe ser 3')
+              this.error = true
+            }
+            if (typeof this.data.v52_21 !== 'undefined' && this.data.v52_21.id !== '1') {
+              this.errors.push('La V52.21 es 1, revisar la V39 debe ser 3')
+              this.error = true
+            }
 
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.candidiasisETBP !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.tuberculosisPulmonar !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.cancerCervix !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.coccidioidomicosis !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.citomegalovirus1Mes !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.retinitisCitomegalovirus !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.herpesMayor1Mes !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.diarreaIsospora1Mes !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.histoplasmosisDiseminada !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.linfomaBurkitt !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaPneumocystis !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaRecurrente !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.septicemiaSalmonella !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.infeccionKansasiiOtras !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.criptococosisExtrapulmonar !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.sarcamoKaposi !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.sindromeDesgasteVih !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.leucoencefalopatiaMultifocalVih !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.toxoplasmosisCerebral1Mes !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.demenciaAsociadaVih !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
-          }
-
-          if (typeof this.data.estadoClinicoAlMomento !== 'undefined' && this.data.estadoClinicoAlMomento.id === '3' && this.data.neumoniaIntersticialLinfoidea !== '1') {
-            this.errors.push('Error en la validación No. B5332')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5332', 'error')
+            if (typeof this.data.v52_22 !== 'undefined' && this.data.v52_22.id !== '1') {
+              this.errors.push('La V52.22 es 1, revisar la V39 debe ser 3')
+              this.error = true
+            }
           }
         }
 
         if (this.sixStep === true) {
-          if (typeof this.data.estadoClinicoActual !== 'undefined' && this.data.estadoClinicoActual.id !== '3' && this.data.estadoClinicoAlMomento.id === '3') {
-            this.errors.push('Error en la validación No. B3260')
+          if (typeof this.data.v55 !== 'undefined' && this.data.v55.id !== '3' && this.data.v39.id === '3') {
+            this.errors.push('La V55 es 3 revisar la V39 debe ser 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B3260', 'error')
           }
 
-          if (typeof this.data.estadoClinicoActual !== 'undefined' && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4) && this.data.estadoClinicoAlMomento.id === '2') {
-            this.errors.push('Error en la validación No. B4168')
+          if (typeof this.data.v55 !== 'undefined' && (parseInt(this.data.v55.id) <= 1 || parseInt(this.data.v55.id) >= 4) && this.data.v39.id === '2') {
+            this.errors.push('La V55 es > 1 y < 4 revisar la V39 debe ser 3')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B4168', 'error')
           }
 
-          if (typeof this.data.estadoClinicoActual !== 'undefined' && parseInt(this.data.valorLinfocitosCD4InicioTar) < 500 && (parseInt(this.data.estadoClinicoActual.id) <= 1 || parseInt(this.data.estadoClinicoActual.id) >= 4)) {
-            this.errors.push('Error en la validación No. B5336')
+          if (typeof this.data.v55 !== 'undefined' && parseInt(this.data.v43_1) < 500 && (parseInt(this.data.v55.id) <= 1 || parseInt(this.data.v55.id) >= 4)) {
+            this.errors.push('La V55 es > 1 y < 4 revisar la V43.1 debe ser <500')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5336', 'error')
           }
 
-          if (typeof this.data.estadoClinicoActual !== 'undefined' && parseInt(this.data.valorLinfocitosCD4InicioTar) < 200 && this.data.estadoClinicoActual.id !== '3') {
-            this.errors.push('Error en la validación No. B5337')
+          if (typeof this.data.v55 !== 'undefined' && parseInt(this.data.v43_1) < 200 && this.data.v55.id !== '3') {
+            this.errors.push('La V55 es 3 revisar la V43.1 debe ser < 200')
             this.error = true
             // return _this.$swal('Advertencia', 'Error en la validación No. B5337', 'error')
           }
         }
 
         if (this.nineStep === true) {
-          if (this.data.medicamentoEsquemaInicialTar === '1846-01-01' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3009')
+          if (this.data.v51_1 === '1846-01-01' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.1 debe ser 1846-01-01')
             this.error = true
           }
 
-          if (Date.parse(this.data.medicamentoEsquemaInicialTar) > Date.parse(this.data.fechaCorte)) {
-            this.errors.push('Error en la validación No. B4374')
+          if (Date.parse(this.data.v51_1) > Date.parse(this.data.v98)) {
+            this.errors.push('La V51.1 debe ser <= V98')
             this.error = true
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && this.data.cambioMedicamentoTar.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3010')
+          if (typeof this.data.v51_2 !== 'undefined' && this.data.v51_2.id === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.2 debe ser 55')
             this.error = true
           }
 
-          if (typeof this.data.cambioMedicamentoTar !== 'undefined' && this.data.medicamento1Cambio.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3010')
+          if (typeof this.data.v51_3 !== 'undefined' && this.data.v51_3.id === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.3 debe ser 55')
             this.error = true
           }
 
-          if (typeof this.data.medicamento1Cambio !== 'undefined' && this.data.medicamento1Cambio.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3011')
+          if (typeof this.data.v51_4 !== 'undefined' && this.data.v51_4.id === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.4 debe ser 55')
             this.error = true
           }
 
-          if (typeof this.data.medicamento2Cambio !== 'undefined' && this.data.medicamento2Cambio.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3012')
+          if (typeof this.data.v51_5 !== 'undefined' && this.data.v51_5.id === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.5 debe ser 55')
             this.error = true
           }
 
-          if (typeof this.data.medicamento3ambio !== 'undefined' && this.data.medicamento3ambio.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3013')
+          if (typeof this.data.v51_6 !== 'undefined' && this.data.v51_6.id === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.6 debe ser 55')
             this.error = true
           }
 
-          if (typeof this.data.medicamento4Cambio !== 'undefined' && this.data.medicamento4Cambio.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3014')
+          if (typeof this.data.v51_7 !== 'undefined' && this.data.v51_7.id === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.7 debe ser 55')
             this.error = true
           }
 
-          if (typeof this.data.fallasInicioTarAnual !== 'undefined' && this.data.fallasInicioTarAnual.id === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3015')
-            this.error = true
-          }
-
-          if (typeof this.data.numeroFallasInicioTarAnual !== 'undefined' && this.data.numeroFallasInicioTarAnual === '55' && this.data.novedadUsuarioReporteAnterior.id !== '19') {
-            this.errors.push('Error en la validación No. B3016')
+          if (typeof this.data.v51_8 !== 'undefined' && this.data.v51_8 === '55' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19  revisar la V51.8 debe ser 55')
             this.error = true
           }
         }
 
+        if (this.data.v53_1 !== '1846-01-01') {
+          if (Date.parse(this.data.v53_1) < Date.parse(this.patient.field_json.birthdate) || Date.parse(this.data.v53_1) > Date.parse(this.data.v98)) {
+            this.errors.push('La V53.1 debe ser >= V09 y <= V98 o = 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v53_1 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 debe ser 19 revisar la V53.1 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === 7) {
+          this.errors.push('La V53.3 debe ser <> 7')
+          this.error = true
+        }
+
+        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V53.3 debe ser 55')
+          this.error = true
+        }
+
+        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '10') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '9' && this.data.v97.id !== '7' && this.data.v97.id !== '10' && this.data.v97.id !== '4' && this.data.v97.id !== '5' && this.data.v97.id !== '11' && this.data.v97.id !== '17') {
+            this.errors.push('LA V97 es 9,7,10,4,5,11 o 17 revisar la V53.3 debe ser 10')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id !== '10') {
+          if (typeof this.data.v97 !== 'undefined' && (this.data.v97.id === '9' || this.data.v97.id === '7' || this.data.v97.id === '10' || this.data.v97.id === '4' || this.data.v97.id === '5' || this.data.v97.id === '11' || this.data.v97.id === '17')) {
+            this.errors.push('LA V97 es 9,7,10,4,5,11 o 17 revisar la V53.3 debe ser 10')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '2' && typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) >= 5) {
+          this.errors.push('La V53.4 es < 5 revisar V53.3 debe ser = 2')
+          this.error = true
+        }
+
+        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id !== '2' && typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) < 5) {
+          this.errors.push('La V53.4 es < 5 revisar V53.3 debe ser = 2')
+          this.error = true
+        }
+
+        if (typeof this.data.v53_4 !== 'undefined' && this.data.v53_4.id === '9') {
+          this.errors.push('La V53.4 debe ser <> 9')
+          this.error = true
+        }
+
+        if (typeof this.data.v53_4 !== 'undefined' && this.data.v53_4.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar V53.4 debe ser 55')
+          this.error = true
+        }
+
+        if (typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) < 5 && parseInt(this.data.v94) <= 100000) {
+          this.errors.push('La V94 es > 100000 revisar la V53.4 debe ser < 5')
+          this.error = true
+        }
+
+        if (this.data.v54 !== '1799-01-01' && this.data.v54 !== '1800-01-01' && this.data.v54 !== '1846-01-01') {
+          if (Date.parse(this.data.v54) < Date.parse(this.data.v36)) {
+            this.errors.push('La V54 debe ser >= V36')
+            this.error = true
+          }
+
+          if (Date.parse(this.data.v54) > Date.parse(this.data.v98)) {
+            this.errors.push('La V54 debe ser <= V98 0 = 1799-01-01 o 1800-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v54 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V54 debe ser 1846-01-01')
+          this.error = true
+        }
+
+        if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '9') {
+          this.errors.push('La V55 debe ser <> 9')
+          this.error = true
+        }
+
+        if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '55') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V55 debe ser 55')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '0') {
+          if (Date.parse(this.data.v36) <= Date.parse('2021-07-31')) {
+            this.errors.push('La V55 es 0 revisar V36 debe ser > 2021-07-31')
+            this.error = true
+          }
+        }
+
+        if (this.data.v56 !== '1846-01-01' && this.data.v56 !== '1799-01-01') {
+          if (Date.parse(this.data.v56) < Date.parse(this.patient.field_json.birthdate) || Date.parse(this.data.v56) > Date.parse(this.data.v98)) {
+            this.errors.push('La V56 debe ser > = V09, La V56 debe ser <= V98 0 = 1799-01-01 o  1846-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 1
+        if (this.data.v56 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V56 debe ser 1846-01-01')
+          this.error = true
+        }
+
+        // Validación 2
+        if (Date.parse(this.data.v56) > Date.parse(this.patient.field_json.birthdate) && parseInt(this.data.v56_1) > 500) {
+          this.errors.push('La V56.1 es <= 500 revisar la V56 debe ser > v09')
+          this.error = true
+        }
+
+        // Validación 3
+        if (this.data.v56 === '1799-01-01' && parseInt(this.data.v56_1) <= 500) {
+          this.errors.push('La V56.1 es > 500 revisar la V56 debe ser 1799-01-01')
+          this.error = true
+        }
+
+        if (this.data.v56_1 !== '999' && this.data.v56_1 !== '998' && this.data.v56_1 !== '0' && this.data.v56_1 !== '555') {
+          if (parseInt(this.data.v56_1) < 0 || parseInt(this.data.v56_1) > 500) {
+            this.errors.push('La V56.1 debe ser >= 0 y <= 500 o = 999 o = 998 o 0 555')
+            this.error = true
+          }
+        }
+
+        // validación 1
+        if (this.data.v56_1 === '555') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V56.1 debe ser = 555')
+            this.error = true
+          }
+        }
+
+        // validación 2
+        if (parseInt(this.data.v56_1) <= 500) {
+          if (this.data.v56 === '1799-01-01') {
+            this.errors.push('La v56.1 es <= 500 revisar  la V56 debe ser <> 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // validación 3
+        if (parseInt(this.data.v56_1) < 501) {
+          if (Date.parse(this.data.v56) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V56.1 es <501 revisar la V56 debe ser >= V09_Fecha_de_nacimiento')
+            this.error = true
+          }
+        }
+
+        if (this.data.v57 !== '1799-01-01' && this.data.v57 !== '1846-01-01') {
+          if (Date.parse(this.data.v57) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V57 debe ser > = v09')
+            this.error = true
+          }
+
+          // validacion para V57 DEBE SER <= V98
+          if (Date.parse(this.data.v57) > Date.parse(this.data.v98)) {
+            this.errors.push('La V57 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v57_1 !== '9999' && this.data.v57_1 !== '9998' && this.data.v57_1 !== '0' && this.data.v57_1 !== '5555') {
+          if (parseInt(this.data.v57_1) < 0 || parseInt(this.data.v57_1) > 5000) {
+            this.errors.push('La V57.1 debe ser >= o y < = 5000 o = 9999 , 9998 o 5555')
+            this.error = true
+          }
+        }
+
+        // Validacion 1
+        if (this.data.v57_1 === '5555') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V57.1 debe ser  5555')
+            this.error = true
+          }
+        }
+
+        // Validacion 2
+        if (parseInt(this.data.v57_1) < 5001) {
+          if (this.data.v57 === '1799-01-01') {
+            this.errors.push('La V57.1 es < 5001 revisar la V57 debe ser <> 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // Validacion 3
+        if (parseInt(this.data.v57_1) < 5001) {
+          if (Date.parse(this.data.v57) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V57.1 es < 5001 revisar la V57 debe ser >= V09')
+            this.error = true
+          }
+        }
+
+        if (this.data.v58 !== '1799-01-01' && this.data.v58 !== '1846-01-01') {
+          if (Date.parse(this.data.v58) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La v58 debe ser > = v09')
+            this.error = true
+          }
+
+          // validacion para V57 DEBE SER <= V98
+          if (Date.parse(this.data.v58) > Date.parse(this.data.v98)) {
+            this.errors.push('La V58 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 1
+        if (this.data.v58 === '1799-01-01') {
+          if (parseInt(this.data.v58_1) <= 100) {
+            this.errors.push('La V58.1 es <= 100 revisar V58 debe ser = 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 2
+        if (Date.parse(this.data.v58) > Date.parse(this.patient.field_json.birthdate)) {
+          if (parseInt(this.data.v58_1) > 99) {
+            this.errors.push('La V58.1 es > 99 revisar V58 debe ser > V09')
+            this.error = true
+          }
+        }
+
+        // Validación 3
+        if (this.data.v58 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V58 debe ser 1845-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v58_1 !== '9999' && this.data.v58_1 !== '9998' && this.data.v58_1 !== '5555') {
+          if (parseInt(this.data.v58_1) < 0 || parseInt(this.data.v58_1) > 30) {
+            this.errors.push('La V58.1 debe ser >= 0 y <= 30 o = 9999 o = 9998 o = 5555')
+            this.error = true
+          }
+        }
+
+        if (this.data.v58_1 === '5555') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V58.1 debe ser = 5555')
+            this.error = true
+          }
+        }
+
+        // Segunda validación
+        if (parseInt(this.data.v58_1) <= 30) {
+          if (this.data.v58 === '1799-01-01') {
+            this.errors.push('La V58.1 es <= 30 revisar la V58 debe ser <> 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // Tercera validación
+        if (parseInt(this.data.v58_1) <= 30) {
+          if (Date.parse(this.data.v58) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V58.1 es <= 30 revisar la V58 debe ser >= V09_Fecha_de_nacimiento')
+          }
+        }
+
+        if (this.data.v59 !== '1799-01-01' && this.data.v59 !== '1846-01-01') {
+          if (Date.parse(this.data.v59) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V59 debe ser > = v09')
+            this.error = true
+          }
+
+          // validacion para V57 DEBE SER <= V98
+          if (Date.parse(this.data.v59) > Date.parse(this.data.v98)) {
+            this.errors.push('La V59 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v59 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V59 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (Date.parse(this.data.v59) > Date.parse(this.patient.field_json.birthdate)) {
+          if (parseInt(this.data.v59_1) > 5000) {
+            this.errors.push('La V59.1 es <= 5000 revisar la V59 debe ser > V09')
+            this.error = true
+          }
+        }
+
+        if (this.data.v59 === '1799-01-01') {
+          if (parseInt(this.data.v59_1) <= 5000) {
+            this.errors.push('La V59.1 es > 5000 revisar V59 debe ser = 1799-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v59_1 !== '9999' && this.data.v59_1 !== '9998' && this.data.v59_1 !== '5555') {
+          if (parseInt(this.data.v59_1) < 0 || parseInt(this.data.v58_1) > 5000) {
+            this.errors.push('La V59.1 debe ser > = 0 y < = 5000 o = 9999, 9998 o 5555')
+            this.error = true
+          }
+        }
+
+        // Validacion 1
+        if (parseInt(this.data.v59_1) === 5555 && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V59.1 debe ser V59.1')
+          this.error = true
+        }
+
+        // Validacion 2
+        if (parseInt(this.data.v59_1) < 5000 && this.data.v59 === '1799-01-01') {
+          this.errors.push('La V59.1 es < 5000 revisar la V59 debe ser <> 1799-01-01')
+          this.error = true
+        }
+
+        // Validacion 3
+        if (parseInt(this.data.v59_1) < 5000 && Date.parse(this.data.v59) < Date.parse(this.patient.field_json.birthdate)) {
+          this.errors.push('La V59.1 es < 5000 revisar la V59 debe ser >= V09')
+          this.error = true
+        }
+
+        if (this.data.v60 !== '1799-01-01' && this.data.v60 !== '1846-01-01') {
+          if (Date.parse(this.data.v60) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V60 debe ser > = v09')
+            this.error = true
+          }
+
+          // validacion para V57 DEBE SER <= V98
+          if (Date.parse(this.data.v60) > Date.parse(this.data.v98)) {
+            this.errors.push('La V60 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 1
+        if (this.data.v60 === '1799-01-01') {
+          if (parseInt(this.data.v60_1) <= 100) {
+            this.errors.push('La V60.1 es <= 100 revisar V60 debe ser = 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 2
+        if (Date.parse(this.data.v60) > Date.parse(this.patient.field_json.birthdate)) {
+          if (parseInt(this.data.v60_1) > 99.9) {
+            this.errors.push('La V60.1 es > 99.9 revisar V60 debe ser > V09')
+            this.error = true
+          }
+        }
+
+        // Validación 3
+        if (this.data.v60 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V60 debe ser = 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v60_1 !== '9999' && this.data.v60_1 !== '9998' && this.data.v60_1 !== '5555') {
+          if (parseInt(this.data.v60_1) < 0 || parseInt(this.data.v58_1) > 99.9) {
+            this.errors.push('La V60.1 debe ser > = 0 y <= 99,9 o = 9999 , 99998 o 5555')
+            this.error = true
+          }
+        }
+
+        // validacion 1
+        if (this.data.v60_1 === '5555') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es = 19 revisar V60.1 debe ser = 5555')
+            this.error = true
+          }
+        }
+
+        // validacion 2
+        if (parseInt(this.data.v60_1) <= 1) {
+          if (this.data.v60 !== '1799-01-01') {
+            this.errors.push('La V60.1 es <= 1 revisar V60 debe ser <> 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // validacion 3
+        if (parseInt(this.data.v60_1) < 100) {
+          if (Date.parse(this.data.v60) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V60.1 es < 100 revisar  V60 debe ser > = v09')
+            this.error = true
+          }
+        }
+
+        if (this.data.v61 !== '1799-01-01' && this.data.v61 !== '1846-01-01') {
+          if (Date.parse(this.data.v61) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V61 debe ser > V09')
+            this.error = true
+          }
+
+          // validacion para V57 DEBE SER <= V98
+          if (Date.parse(this.data.v61) > Date.parse(this.data.v98)) {
+            this.errors.push('La V61 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v61 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V61 debe ser = 1846-01-01')
+            this.error = true
+          }
+        }
+
+        if (Date.parse(this.data.v61) > Date.parse(this.patient.field_json.birthdate)) {
+          if (parseInt(this.data.v61_1) > 1000) {
+            this.errors.push('La V61.1 es <= 1000 revisar la V61 debe sere > V09')
+            this.error = true
+          }
+        }
+
+        if (this.data.v61 === '1799-01-01') {
+          if (this.data.v61_1 !== '9998') {
+            this.errors.push('La V61.1 es 9998 revisar la V61 debe ser = 1799-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v61_1 !== '9999' && this.data.v61_1 !== '9998' && this.data.v61_1 !== '5555') {
+          if (parseInt(this.data.v61_1) < 0 || parseInt(this.data.v58_1) > 1000) {
+            this.errors.push('La V61.1 debe ser > = 0 y <= 99,9 o = 9999 , 99998 o 5555')
+            this.error = true
+          }
+        }
+
+        // validación 1
+        if (this.data.v61_1 === '5555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V61.1 debe ser 5555')
+          this.error = true
+        }
+
+        // validación 2
+        if (parseInt(this.data.v61_1) < 1000 && this.data.v61 !== '1799-01-01') {
+          this.errors.push('La V61.1 es < 1000 revisar la V61 debe ser <> 1799-01-01')
+          this.error = true
+        }
+
+        // validación 3
+        if (parseInt(this.data.v61_1) < 1001 && Date.parse(this.data.v61) < Date.parse(this.patient.field_json.birthdate)) {
+          this.errors.push('La V61.1 es < 1001  revisar la V61 debe ser > = v09')
+          this.error = true
+        }
+
+        if (this.data.v62 !== '1799-01-01' && this.data.v62 !== '1846-01-01') {
+          if (Date.parse(this.data.v62) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V62 debe ser > V09')
+            this.error = true
+          }
+
+          // validacion para V57 DEBE SER <= V98
+          if (Date.parse(this.data.v62) > Date.parse(this.data.v98)) {
+            this.errors.push('La V62 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 1
+        if (this.data.v62 === '1846-01-01') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V62 debe ser 1846-01-01')
+            this.error = true
+          }
+        }
+
+        // Validación 2
+        if (Date.parse(this.data.v62) > Date.parse(this.patient.field_json.birthdate)) {
+          if (parseInt(this.data.v62_1) > 250) {
+            this.errors.push('La V62.1 es <= 250 revisar la V62 debe ser > V09')
+            this.error = true
+          }
+        }
+
+        // Validación 3
+        if (this.data.v62 === '1799-01-01') {
+          if (parseInt(this.data.v62_1) <= 250) {
+            this.errors.push('La V62.1 es > 250 revisar V62 debe ser = 1799-01-01')
+            this.error = true
+          }
+        }
+
+        if (this.data.v62_1 !== '999' && this.data.v62_1 !== '998' && this.data.v62_1 !== '555') {
+          if (parseInt(this.data.v62_1) < 0 || parseInt(this.data.v58_1) > 250) {
+            this.errors.push('La V62 debe ser >0 y < = 250  o = 999 o 998 o 555')
+            this.error = true
+          }
+        }
+
+        if (this.data.v62_1 === '555') {
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V62.1 debe ser 555')
+            this.error = true
+          }
+        }
+
+        // segunda validación
+        if (parseInt(this.data.v62_1) < 250) {
+          if (this.data.v62 !== '1799-01-01') {
+            this.errors.push('La V62.1 es <= 250 revisar la V62 debe ser <> 1799-01-01')
+            this.error = true
+          }
+        }
+
+        // tercera validación
+        if (parseInt(this.data.v62_1) < 251) {
+          if (Date.parse(this.data.v62) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V62.1 es < 251 revisar V62 debe ser >= V09')
+            this.error = true
+          }
+        }
+
+        if (this.data.v63 !== '555') {
+          if (parseInt(this.data.v63) < 30 || parseInt(this.data.v63) > 220) {
+            this.errors.push('La V62 debe ser >30 y < = 220  o = 555')
+            this.error = true
+          }
+        }
+
+        if (this.data.v63 === '555') {
+          // Si el valor de V97 es diferente de 19 ejecuta el siguiente código
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V63 debe ser 555')
+            this.error = true
+          }
+        }
+
+        // Validación V64 debe ser <> 9
+        if (this.data.v64 === '9') {
+          this.errors.push('La V64 debe ser <> 9')
+          this.error = true
+        }
+
+        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+        if (this.data.v64 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V64 debe ser 55')
+          this.error = true
+        }
+
+        if (this.data.v65 === '9') {
+          this.errors.push('La V65 debe ser <> 9')
+          this.error = true
+        }
+
+        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+        if (this.data.v65 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V65 debe ser 55')
+          this.error = true
+        }
+
+        if (this.data.v66 === '9') {
+          this.errors.push('La V66 debe ser <> 9')
+          this.error = true
+        }
+
+        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+        if (this.data.v66 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V66 debe ser 55')
+          this.error = true
+        }
+
+        if (this.data.v67 === '9') {
+          this.errors.push('La V67 debe ser <> 9')
+          this.error = true
+        }
+
+        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+        if (this.data.v67 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V67 debe ser 55')
+          this.error = true
+        }
+
+        // 1
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '9') {
+          this.errors.push('La V68 debe ser <> 9')
+          this.error = true
+        }
+
+        // 2
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V68 debe ser 55')
+          this.error = true
+        }
+
+        // 3
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1' && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+          this.errors.push('La V68 es 1 revisa V17 debe ser < 3')
+          this.error = true
+        }
+
+        // 4
+        if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id !== '7') {
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1' && (parseInt(this.data.v68_1.id) > 6)) {
+            this.errors.push('La V68.1 es < 6 o = 7  revisar V68 debe ser 1')
+            this.error = true
+          }
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.1 DEBE SER = 6 El mensaje de error debe ser La V68.1 es 6 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id !== '6') {
+          this.errors.push('La V68.1 es 6 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.2 DEBE SER = 8 El mensaje de error debe ser La V68.2 es 8 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id !== '8') {
+          this.errors.push('La V68.2 es 8 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.3 DEBE SER = 1799-01-01 El mensaje de error debe ser La V68.3 es 1799-01-01 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && this.data.v68_3 !== '1799-01-01') {
+          this.errors.push('La V68.3 es 1799-01-01 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.4 DEBE SER = 9 El mensaje de error debe ser La V68.4 es 9 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_4 !== 'undefined' && this.data.v68_4.id !== '9') {
+          this.errors.push('La V68.4 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_5 !== 'undefined' && this.data.v68_5.id !== '9') {
+          this.errors.push('La V68.5 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.6 DEBE SER = 9 El mensaje de error debe ser La V68.6 es 9 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_6 !== 'undefined' && this.data.v68_6.id !== '9') {
+          this.errors.push('La V68.6 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.7 DEBE SER = 9 El mensaje de error debe ser La V68.7 es 9 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_7 !== 'undefined' && this.data.v68_7.id !== '9') {
+          this.errors.push('La V68.7 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Cuando V68 sea = 0 Entonces V68.8 DEBE SER = 9 El mensaje de error debe ser La V68.8 es 9 revisar V68 debe ser 0
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_8 !== 'undefined' && this.data.v68_8.id !== '9') {
+          this.errors.push('La V68.8 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_9 !== 'undefined' && this.data.v68_9.id !== '9') {
+          this.errors.push('La V68.9 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_10 !== 'undefined' && this.data.v68_10.id !== '9') {
+          this.errors.push('La V68.10 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_11 !== 'undefined' && this.data.v68_11.id !== '9') {
+          this.errors.push('La V68.11 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_12 !== 'undefined' && this.data.v68_12.id !== '9') {
+          this.errors.push('La V68.12 es 9 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Validación 5
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0') {
+          if (this.data.v68_13 !== '1799-01-01') {
+            this.errors.push('La V68.13 es 1799-01-01 revisar V68 debe ser 0')
+            this.error = true
+          }
+        }
+
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id !== '9') {
+          this.errors.push('La V68.14 es 10 revisar V68 debe ser 0')
+          this.error = true
+        }
+
+        // Validación 9
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1') {
+          if (this.data.v68_13 === '1799-01-01') {
+            this.errors.push('La V68.13 es <> 1799-01-01 revisar V68 debe ser 1')
+            this.error = true
+          }
+        }
+
+        // Validación 10
+        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1') {
+          if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9) {
+            this.errors.push('La V68.14 es < 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+        }
+
+        // Validación V68.1 DEBE SER <> 9
+        if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id === '9') {
+          this.errors.push('La V68.1 debe ser <> 9')
+          this.error = true
+        }
+
+        // Validación Cuando V68.1 sea = 55 Entonces V97 DEBE SER = 19
+        if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+          this.errors.push('La V97 es 19 revisar la V68.1 = 55')
+          this.error = true
+        }
+
+        // Validación Cuando V68.1 sea < 6 Entonces V17 DEBE SER < 3
+        if (typeof this.data.v68_1 !== 'undefined' && parseInt(this.data.v68_1.id) < 6 && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+          this.errors.push('La V68.1 es < 6 revisar la V17 debe ser < 3')
+          this.error = true
+        }
+
         var comodines = []
 
-        if (this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1822-02-01' || this.data.dateCulminationReported === '1799-01-01' || this.data.dateCulminationReported === '1811-01-01' || this.data.dateCulminationReported === '1800-01-01' || this.data.dateCulminationReported === '1833-03-03' || this.data.dateCulminationReported === '1845-01-01' || this.data.dateCulminationReported === '1846-01-01' || this.data.dateCulminationReported === '1777-01-01' || this.data.dateCulminationReported === '1788-01-01') {
+        if (this.data.v24_6 === '1833-03-03' || this.data.v24_6 === '1822-02-01' || this.data.v24_6 === '1799-01-01' || this.data.v24_6 === '1811-01-01' || this.data.v24_6 === '1800-01-01' || this.data.v24_6 === '1833-03-03' || this.data.v24_6 === '1845-01-01' || this.data.v24_6 === '1846-01-01' || this.data.v24_6 === '1777-01-01' || this.data.v24_6 === '1788-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Fecha de culminación de la gestación reportada en gestantes con VIH.'
@@ -4351,7 +5242,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1822-02-01' || this.data.dateReportedPregnancy === '1799-01-01' || this.data.dateReportedPregnancy === '1811-01-01' || this.data.dateReportedPregnancy === '1800-01-01' || this.data.dateReportedPregnancy === '1833-03-03' || this.data.dateReportedPregnancy === '1845-01-01' || this.data.dateReportedPregnancy === '1846-01-01') {
+        if (this.data.v19 === '1833-03-03' || this.data.v19 === '1822-02-01' || this.data.v19 === '1799-01-01' || this.data.v19 === '1811-01-01' || this.data.v19 === '1800-01-01' || this.data.v19 === '1833-03-03' || this.data.v19 === '1845-01-01' || this.data.v19 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Fecha del diagnóstico de la gestación reportada'
@@ -4360,7 +5251,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1822-02-01' || this.data.dateScreeningFirst === '1799-01-01' || this.data.dateScreeningFirst === '1811-01-01' || this.data.dateScreeningFirst === '1800-01-01' || this.data.dateScreeningFirst === '1833-03-03' || this.data.dateScreeningFirst === '1845-01-01' || this.data.dateScreeningFirst === '1846-01-01') {
+        if (this.data.v20 === '1833-03-03' || this.data.v20 === '1822-02-01' || this.data.v20 === '1799-01-01' || this.data.v20 === '1811-01-01' || this.data.v20 === '1800-01-01' || this.data.v20 === '1833-03-03' || this.data.v20 === '1845-01-01' || this.data.v20 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Fecha de realización de tamizaje para VIH en el primer trimestre de la gestación'
@@ -4369,7 +5260,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1822-02-01' || this.data.dateScreeningSecond === '1799-01-01' || this.data.dateScreeningSecond === '1811-01-01' || this.data.dateScreeningSecond === '1800-01-01' || this.data.dateScreeningSecond === '1833-03-03' || this.data.dateScreeningSecond === '1845-01-01' || this.data.dateScreeningSecond === '1846-01-01') {
+        if (this.data.v21 === '1833-03-03' || this.data.v21 === '1822-02-01' || this.data.v21 === '1799-01-01' || this.data.v21 === '1811-01-01' || this.data.v21 === '1800-01-01' || this.data.v21 === '1833-03-03' || this.data.v21 === '1845-01-01' || this.data.v21 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación'
@@ -4378,7 +5269,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1822-02-01' || this.data.dateScreeningThird === '1799-01-01' || this.data.dateScreeningThird === '1811-01-01' || this.data.dateScreeningThird === '1800-01-01' || this.data.dateScreeningThird === '1833-03-03' || this.data.dateScreeningThird === '1845-01-01' || this.data.dateScreeningThird === '1846-01-01') {
+        if (this.data.v22 === '1833-03-03' || this.data.v22 === '1822-02-01' || this.data.v22 === '1799-01-01' || this.data.v22 === '1811-01-01' || this.data.v22 === '1800-01-01' || this.data.v22 === '1833-03-03' || this.data.v22 === '1845-01-01' || this.data.v22 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Fecha de realización de tamizaje para VIH en el tercer trimestre de la gestación'
@@ -4387,7 +5278,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1822-02-01' || this.data.dateScreeningBirth === '1799-01-01' || this.data.dateScreeningBirth === '1811-01-01' || this.data.dateScreeningBirth === '1800-01-01' || this.data.dateScreeningBirth === '1833-03-03' || this.data.dateScreeningBirth === '1845-01-01' || this.data.dateScreeningBirth === '1846-01-01') {
+        if (this.data.v23 === '1833-03-03' || this.data.v23 === '1822-02-01' || this.data.v23 === '1799-01-01' || this.data.v23 === '1811-01-01' || this.data.v23 === '1800-01-01' || this.data.v23 === '1833-03-03' || this.data.v23 === '1845-01-01' || this.data.v23 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Fecha de realización de tamizaje para VIH en el momento del parto'
@@ -4405,7 +5296,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1822-02-01' || this.data.firstViralChargeVih === '1799-01-01' || this.data.firstViralChargeVih === '1811-01-01' || this.data.firstViralChargeVih === '1800-01-01' || this.data.firstViralChargeVih === '1833-03-03' || this.data.firstViralChargeVih === '1845-01-01' || this.data.firstViralChargeVih === '1846-01-01' || this.data.firstViralChargeVih === '1833-01-01') {
+        if (this.data.v28 === '1833-03-03' || this.data.v28 === '1822-02-01' || this.data.v28 === '1799-01-01' || this.data.v28 === '1811-01-01' || this.data.v28 === '1800-01-01' || this.data.v28 === '1833-03-03' || this.data.v28 === '1845-01-01' || this.data.v28 === '1846-01-01' || this.data.v28 === '1833-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Resultado Elisa para VIH.'
@@ -4414,7 +5305,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1822-02-01' || this.data.secondViralChargeVih === '1799-01-01' || this.data.secondViralChargeVih === '1811-01-01' || this.data.secondViralChargeVih === '1800-01-01' || this.data.secondViralChargeVih === '1833-03-03' || this.data.secondViralChargeVih === '1845-01-01' || this.data.secondViralChargeVih === '1846-01-01' || this.data.secondViralChargeVih === '1833-01-01') {
+        if (this.data.v29 === '1833-03-03' || this.data.v29 === '1822-02-01' || this.data.v29 === '1799-01-01' || this.data.v29 === '1811-01-01' || this.data.v29 === '1800-01-01' || this.data.v29 === '1833-03-03' || this.data.v29 === '1845-01-01' || this.data.v29 === '1846-01-01' || this.data.v29 === '1833-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Resultado Elisa para VIH.'
@@ -4423,7 +5314,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1822-02-01' || this.data.thirdViralChargeVih === '1799-01-01' || this.data.thirdViralChargeVih === '1811-01-01' || this.data.thirdViralChargeVih === '1800-01-01' || this.data.thirdViralChargeVih === '1833-03-03' || this.data.thirdViralChargeVih === '1845-01-01' || this.data.thirdViralChargeVih === '1846-01-01' || this.data.thirdViralChargeVih === '1833-01-01') {
+        if (this.data.v30 === '1833-03-03' || this.data.v30 === '1822-02-01' || this.data.v30 === '1799-01-01' || this.data.v30 === '1811-01-01' || this.data.v30 === '1800-01-01' || this.data.v30 === '1833-03-03' || this.data.v30 === '1845-01-01' || this.data.v30 === '1846-01-01' || this.data.v30 === '1833-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Resultado Elisa para VIH.'
@@ -4432,7 +5323,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1822-02-01' || this.data.dateDxTuberculosisActiva === '1799-01-01' || this.data.dateDxTuberculosisActiva === '1811-01-01' || this.data.dateDxTuberculosisActiva === '1800-01-01' || this.data.dateDxTuberculosisActiva === '1833-03-03' || this.data.dateDxTuberculosisActiva === '1845-01-01' || this.data.dateDxTuberculosisActiva === '1846-01-01') {
+        if (this.data.v32 === '1833-03-03' || this.data.v32 === '1822-02-01' || this.data.v32 === '1799-01-01' || this.data.v32 === '1811-01-01' || this.data.v32 === '1800-01-01' || this.data.v32 === '1833-03-03' || this.data.v32 === '1845-01-01' || this.data.v32 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Resultado Elisa para VIH.'
@@ -4441,7 +5332,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1822-02-01' || this.data.dateTamizajeTuberculosis === '1799-01-01' || this.data.dateTamizajeTuberculosis === '1811-01-01' || this.data.dateTamizajeTuberculosis === '1800-01-01' || this.data.dateTamizajeTuberculosis === '1833-03-03' || this.data.dateTamizajeTuberculosis === '1845-01-01' || this.data.dateTamizajeTuberculosis === '1846-01-01') {
+        if (this.data.v33 === '1833-03-03' || this.data.v33 === '1822-02-01' || this.data.v33 === '1799-01-01' || this.data.v33 === '1811-01-01' || this.data.v33 === '1800-01-01' || this.data.v33 === '1833-03-03' || this.data.v33 === '1845-01-01' || this.data.v33 === '1846-01-01') {
           const comodin = {
             section: 'Mujeres Gestantes',
             field: 'Resultado Elisa para VIH.'
@@ -4450,7 +5341,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.fechaCongirmacionDiagnostico === '1833-03-03' || this.data.fechaCongirmacionDiagnostico === '1822-02-01' || this.data.fechaCongirmacionDiagnostico === '1799-01-01' || this.data.fechaCongirmacionDiagnostico === '1811-01-01' || this.data.fechaCongirmacionDiagnostico === '1800-01-01' || this.data.fechaCongirmacionDiagnostico === '1833-03-03' || this.data.fechaCongirmacionDiagnostico === '1845-01-01' || this.data.fechaCongirmacionDiagnostico === '1846-01-01' || this.data.fechaCongirmacionDiagnostico === '1777-01-01' || this.data.fechaCongirmacionDiagnostico === '1788-01-01') {
+        if (this.data.v36 === '1833-03-03' || this.data.v36 === '1822-02-01' || this.data.v36 === '1799-01-01' || this.data.v36 === '1811-01-01' || this.data.v36 === '1800-01-01' || this.data.v36 === '1833-03-03' || this.data.v36 === '1845-01-01' || this.data.v36 === '1846-01-01' || this.data.v36 === '1777-01-01' || this.data.v36 === '1788-01-01') {
           const comodin = {
             section: 'Información de personas que viven con VIH',
             field: 'Fecha de confirmación del diagnóstico de infección por VIH.'
@@ -4459,7 +5350,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.fechaInicioAtencionVih === '1833-03-03' || this.data.fechaInicioAtencionVih === '1822-02-01' || this.data.fechaInicioAtencionVih === '1799-01-01' || this.data.fechaInicioAtencionVih === '1811-01-01' || this.data.fechaInicioAtencionVih === '1800-01-01' || this.data.fechaInicioAtencionVih === '1833-03-03' || this.data.fechaInicioAtencionVih === '1845-01-01' || this.data.fechaInicioAtencionVih === '1846-01-01' || this.data.fechaInicioAtencionVih === '1777-01-01' || this.data.fechaInicioAtencionVih === '1788-01-01') {
+        if (this.data.v37 === '1833-03-03' || this.data.v37 === '1822-02-01' || this.data.v37 === '1799-01-01' || this.data.v37 === '1811-01-01' || this.data.v37 === '1800-01-01' || this.data.v37 === '1833-03-03' || this.data.v37 === '1845-01-01' || this.data.v37 === '1846-01-01' || this.data.v37 === '1777-01-01' || this.data.v37 === '1788-01-01') {
           const comodin = {
             section: 'Información de personas que viven con VIH',
             field: 'Fecha de inicio de la atención por VIH.'
@@ -4468,7 +5359,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.inicioTerapiaAntirretroviral === '1833-03-03' || this.data.inicioTerapiaAntirretroviral === '1822-02-01' || this.data.inicioTerapiaAntirretroviral === '1799-01-01' || this.data.inicioTerapiaAntirretroviral === '1811-01-01' || this.data.inicioTerapiaAntirretroviral === '1800-01-01' || this.data.inicioTerapiaAntirretroviral === '1833-03-03' || this.data.inicioTerapiaAntirretroviral === '1845-01-01' || this.data.inicioTerapiaAntirretroviral === '1846-01-01' || this.data.inicioTerapiaAntirretroviral === '1777-01-01' || this.data.inicioTerapiaAntirretroviral === '1788-01-01') {
+        if (this.data.v42 === '1833-03-03' || this.data.v42 === '1822-02-01' || this.data.v42 === '1799-01-01' || this.data.v42 === '1811-01-01' || this.data.v42 === '1800-01-01' || this.data.v42 === '1833-03-03' || this.data.v42 === '1845-01-01' || this.data.v42 === '1846-01-01' || this.data.v42 === '1777-01-01' || this.data.v42 === '1788-01-01') {
           const comodin = {
             section: 'Terapia Antirretroviral (TAR) Inicial',
             field: 'Fecha de inicio de la terapia antirretroviral (TAR).'
@@ -4477,7 +5368,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.medicamentoEsquemaInicialTar === '1833-03-03' || this.data.medicamentoEsquemaInicialTar === '1822-02-01' || this.data.medicamentoEsquemaInicialTar === '1799-01-01' || this.data.medicamentoEsquemaInicialTar === '1811-01-01' || this.data.medicamentoEsquemaInicialTar === '1800-01-01' || this.data.medicamentoEsquemaInicialTar === '1833-03-03' || this.data.medicamentoEsquemaInicialTar === '1845-01-01' || this.data.medicamentoEsquemaInicialTar === '1846-01-01' || this.data.medicamentoEsquemaInicialTar === '1777-01-01' || this.data.medicamentoEsquemaInicialTar === '1788-01-01') {
+        if (this.data.v51_1 === '1833-03-03' || this.data.v51_1 === '1822-02-01' || this.data.v51_1 === '1799-01-01' || this.data.v51_1 === '1811-01-01' || this.data.v51_1 === '1800-01-01' || this.data.v51_1 === '1833-03-03' || this.data.v51_1 === '1845-01-01' || this.data.v51_1 === '1846-01-01' || this.data.v51_1 === '1777-01-01' || this.data.v51_1 === '1788-01-01') {
           const comodin = {
             section: 'Terapia Antirretroviral (TAR) Inicial',
             field: 'Fecha del primer cambio de cualquier medicamento del esquema inicial de TAR'
@@ -4486,7 +5377,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ingresoIpsAtencionViH === '1833-03-03' || this.data.ingresoIpsAtencionViH === '1822-02-01' || this.data.ingresoIpsAtencionViH === '1799-01-01' || this.data.ingresoIpsAtencionViH === '1811-01-01' || this.data.ingresoIpsAtencionViH === '1800-01-01' || this.data.ingresoIpsAtencionViH === '1833-03-03' || this.data.ingresoIpsAtencionViH === '1845-01-01' || this.data.ingresoIpsAtencionViH === '1846-01-01' || this.data.ingresoIpsAtencionViH === '1777-01-01' || this.data.ingresoIpsAtencionViH === '1788-01-01') {
+        if (this.data.v53_1 === '1833-03-03' || this.data.v53_1 === '1822-02-01' || this.data.v53_1 === '1799-01-01' || this.data.v53_1 === '1811-01-01' || this.data.v53_1 === '1800-01-01' || this.data.v53_1 === '1833-03-03' || this.data.v53_1 === '1845-01-01' || this.data.v53_1 === '1846-01-01' || this.data.v53_1 === '1777-01-01' || this.data.v53_1 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de ingreso a la IPS actual para seguimiento y atención de la infección por el VIH'
@@ -4495,7 +5386,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaGenotipificación === '1833-03-03' || this.data.ultimaGenotipificación === '1822-02-01' || this.data.ultimaGenotipificación === '1799-01-01' || this.data.ultimaGenotipificación === '1811-01-01' || this.data.ultimaGenotipificación === '1800-01-01' || this.data.ultimaGenotipificación === '1833-03-03' || this.data.ultimaGenotipificación === '1845-01-01' || this.data.ultimaGenotipificación === '1846-01-01' || this.data.ultimaGenotipificación === '1777-01-01' || this.data.ultimaGenotipificación === '1788-01-01') {
+        if (this.data.v54 === '1833-03-03' || this.data.v54 === '1822-02-01' || this.data.v54 === '1799-01-01' || this.data.v54 === '1811-01-01' || this.data.v54 === '1800-01-01' || this.data.v54 === '1833-03-03' || this.data.v54 === '1845-01-01' || this.data.v54 === '1846-01-01' || this.data.v54 === '1777-01-01' || this.data.v54 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de la última genotipificación realizada'
@@ -4504,7 +5395,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimoColesterolLdl === '1833-03-03' || this.data.ultimoColesterolLdl === '1822-02-01' || this.data.ultimoColesterolLdl === '1799-01-01' || this.data.ultimoColesterolLdl === '1811-01-01' || this.data.ultimoColesterolLdl === '1800-01-01' || this.data.ultimoColesterolLdl === '1833-03-03' || this.data.ultimoColesterolLdl === '1845-01-01' || this.data.ultimoColesterolLdl === '1846-01-01' || this.data.ultimoColesterolLdl === '1777-01-01' || this.data.ultimoColesterolLdl === '1788-01-01') {
+        if (this.data.v56 === '1833-03-03' || this.data.v56 === '1822-02-01' || this.data.v56 === '1799-01-01' || this.data.v56 === '1811-01-01' || this.data.v56 === '1800-01-01' || this.data.v56 === '1833-03-03' || this.data.v56 === '1845-01-01' || this.data.v56 === '1846-01-01' || this.data.v56 === '1777-01-01' || this.data.v56 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de último colesterol LDL'
@@ -4513,7 +5404,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaHemoglobinaSerica === '1833-03-03' || this.data.ultimaHemoglobinaSerica === '1822-02-01' || this.data.ultimaHemoglobinaSerica === '1799-01-01' || this.data.ultimaHemoglobinaSerica === '1811-01-01' || this.data.ultimaHemoglobinaSerica === '1800-01-01' || this.data.ultimaHemoglobinaSerica === '1833-03-03' || this.data.ultimaHemoglobinaSerica === '1845-01-01' || this.data.ultimaHemoglobinaSerica === '1846-01-01' || this.data.ultimaHemoglobinaSerica === '1777-01-01' || this.data.ultimaHemoglobinaSerica === '1788-01-01') {
+        if (this.data.v58 === '1833-03-03' || this.data.v58 === '1822-02-01' || this.data.v58 === '1799-01-01' || this.data.v58 === '1811-01-01' || this.data.v58 === '1800-01-01' || this.data.v58 === '1833-03-03' || this.data.v58 === '1845-01-01' || this.data.v58 === '1846-01-01' || this.data.v58 === '1777-01-01' || this.data.v58 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de última hemoglobina sérica'
@@ -4522,7 +5413,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaEnzimaAlanina === '1833-03-03' || this.data.ultimaEnzimaAlanina === '1822-02-01' || this.data.ultimaEnzimaAlanina === '1799-01-01' || this.data.ultimaEnzimaAlanina === '1811-01-01' || this.data.ultimaEnzimaAlanina === '1800-01-01' || this.data.ultimaEnzimaAlanina === '1833-03-03' || this.data.ultimaEnzimaAlanina === '1845-01-01' || this.data.ultimaEnzimaAlanina === '1846-01-01' || this.data.ultimaEnzimaAlanina === '1777-01-01' || this.data.ultimaEnzimaAlanina === '1788-01-01') {
+        if (this.data.v59 === '1833-03-03' || this.data.v59 === '1822-02-01' || this.data.v59 === '1799-01-01' || this.data.v59 === '1811-01-01' || this.data.v59 === '1800-01-01' || this.data.v59 === '1833-03-03' || this.data.v59 === '1845-01-01' || this.data.v59 === '1846-01-01' || this.data.v59 === '1777-01-01' || this.data.v59 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de la última enzima alanina aminotransferasa'
@@ -4531,7 +5422,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaCreatininaSerica === '1833-03-03' || this.data.ultimaCreatininaSerica === '1822-02-01' || this.data.ultimaCreatininaSerica === '1799-01-01' || this.data.ultimaCreatininaSerica === '1811-01-01' || this.data.ultimaCreatininaSerica === '1800-01-01' || this.data.ultimaCreatininaSerica === '1833-03-03' || this.data.ultimaCreatininaSerica === '1845-01-01' || this.data.ultimaCreatininaSerica === '1846-01-01' || this.data.ultimaCreatininaSerica === '1777-01-01' || this.data.ultimaCreatininaSerica === '1788-01-01') {
+        if (this.data.v60 === '1833-03-03' || this.data.v60 === '1822-02-01' || this.data.v60 === '1799-01-01' || this.data.v60 === '1811-01-01' || this.data.v60 === '1800-01-01' || this.data.v60 === '1833-03-03' || this.data.v60 === '1845-01-01' || this.data.v60 === '1846-01-01' || this.data.v60 === '1777-01-01' || this.data.v60 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de última creatinina sérica'
@@ -4540,7 +5431,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaGlucemiaSericaAyuno === '1833-03-03' || this.data.ultimaGlucemiaSericaAyuno === '1822-02-01' || this.data.ultimaGlucemiaSericaAyuno === '1799-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1811-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1800-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1833-03-03' || this.data.ultimaGlucemiaSericaAyuno === '1845-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1846-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1777-01-01' || this.data.ultimaGlucemiaSericaAyuno === '1788-01-01') {
+        if (this.data.v61 === '1833-03-03' || this.data.v61 === '1822-02-01' || this.data.v61 === '1799-01-01' || this.data.v61 === '1811-01-01' || this.data.v61 === '1800-01-01' || this.data.v61 === '1833-03-03' || this.data.v61 === '1845-01-01' || this.data.v61 === '1846-01-01' || this.data.v61 === '1777-01-01' || this.data.v61 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de última glucemia sérica en ayuno'
@@ -4549,7 +5440,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaMedicionPesoPeriodo === '1833-03-03' || this.data.ultimaMedicionPesoPeriodo === '1822-02-01' || this.data.ultimaMedicionPesoPeriodo === '1799-01-01' || this.data.ultimaMedicionPesoPeriodo === '1811-01-01' || this.data.ultimaMedicionPesoPeriodo === '1800-01-01' || this.data.ultimaMedicionPesoPeriodo === '1833-03-03' || this.data.ultimaMedicionPesoPeriodo === '1845-01-01' || this.data.ultimaMedicionPesoPeriodo === '1846-01-01' || this.data.ultimaMedicionPesoPeriodo === '1777-01-01' || this.data.ultimaMedicionPesoPeriodo === '1788-01-01') {
+        if (this.data.v62 === '1833-03-03' || this.data.v62 === '1822-02-01' || this.data.v62 === '1799-01-01' || this.data.v62 === '1811-01-01' || this.data.v62 === '1800-01-01' || this.data.v62 === '1833-03-03' || this.data.v62 === '1845-01-01' || this.data.v62 === '1846-01-01' || this.data.v62 === '1777-01-01' || this.data.v62 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de última medición del peso corporal en el periodo'
@@ -4558,7 +5449,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.inicioTratamientoAntituberculosos === '1833-03-03' || this.data.inicioTratamientoAntituberculosos === '1822-02-01' || this.data.inicioTratamientoAntituberculosos === '1799-01-01' || this.data.inicioTratamientoAntituberculosos === '1811-01-01' || this.data.inicioTratamientoAntituberculosos === '1800-01-01' || this.data.inicioTratamientoAntituberculosos === '1833-03-03' || this.data.inicioTratamientoAntituberculosos === '1845-01-01' || this.data.inicioTratamientoAntituberculosos === '1846-01-01' || this.data.inicioTratamientoAntituberculosos === '1777-01-01' || this.data.inicioTratamientoAntituberculosos === '1788-01-01') {
+        if (this.data.v68_3 === '1833-03-03' || this.data.v68_3 === '1822-02-01' || this.data.v68_3 === '1799-01-01' || this.data.v68_3 === '1811-01-01' || this.data.v68_3 === '1800-01-01' || this.data.v68_3 === '1833-03-03' || this.data.v68_3 === '1845-01-01' || this.data.v68_3 === '1846-01-01' || this.data.v68_3 === '1777-01-01' || this.data.v68_3 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses'
@@ -4567,7 +5458,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.terminoTratamientoantituberculoso12 === '1833-03-03' || this.data.terminoTratamientoantituberculoso12 === '1822-02-01' || this.data.terminoTratamientoantituberculoso12 === '1799-01-01' || this.data.terminoTratamientoantituberculoso12 === '1811-01-01' || this.data.terminoTratamientoantituberculoso12 === '1800-01-01' || this.data.terminoTratamientoantituberculoso12 === '1833-03-03' || this.data.terminoTratamientoantituberculoso12 === '1845-01-01' || this.data.terminoTratamientoantituberculoso12 === '1846-01-01' || this.data.terminoTratamientoantituberculoso12 === '1777-01-01' || this.data.terminoTratamientoantituberculoso12 === '1788-01-01') {
+        if (this.data.v68_13 === '1833-03-03' || this.data.v68_13 === '1822-02-01' || this.data.v68_13 === '1799-01-01' || this.data.v68_13 === '1811-01-01' || this.data.v68_13 === '1800-01-01' || this.data.v68_13 === '1833-03-03' || this.data.v68_13 === '1845-01-01' || this.data.v68_13 === '1846-01-01' || this.data.v68_13 === '1777-01-01' || this.data.v68_13 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha en que terminó el tratamiento antituberculoso en los últimos 12 meses'
@@ -4576,7 +5467,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimoConteoLinfocitosCd4 === '1833-03-03' || this.data.ultimoConteoLinfocitosCd4 === '1822-02-01' || this.data.ultimoConteoLinfocitosCd4 === '1799-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1811-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1800-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1833-03-03' || this.data.ultimoConteoLinfocitosCd4 === '1845-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1846-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1777-01-01' || this.data.ultimoConteoLinfocitosCd4 === '1788-01-01') {
+        if (this.data.v75 === '1833-03-03' || this.data.v75 === '1822-02-01' || this.data.v75 === '1799-01-01' || this.data.v75 === '1811-01-01' || this.data.v75 === '1800-01-01' || this.data.v75 === '1833-03-03' || this.data.v75 === '1845-01-01' || this.data.v75 === '1846-01-01' || this.data.v75 === '1777-01-01' || this.data.v75 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha del último conteo de linfocitos T CD4 realizado en el período de observación'
@@ -4585,7 +5476,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.ultimaCargaViralVih === '1833-03-03' || this.data.ultimaCargaViralVih === '1822-02-01' || this.data.ultimaCargaViralVih === '1799-01-01' || this.data.ultimaCargaViralVih === '1811-01-01' || this.data.ultimaCargaViralVih === '1800-01-01' || this.data.ultimaCargaViralVih === '1833-03-03' || this.data.ultimaCargaViralVih === '1845-01-01' || this.data.ultimaCargaViralVih === '1846-01-01' || this.data.ultimaCargaViralVih === '1777-01-01' || this.data.ultimaCargaViralVih === '1788-01-01') {
+        if (this.data.v76 === '1833-03-03' || this.data.v76 === '1822-02-01' || this.data.v76 === '1799-01-01' || this.data.v76 === '1811-01-01' || this.data.v76 === '1800-01-01' || this.data.v76 === '1833-03-03' || this.data.v76 === '1845-01-01' || this.data.v76 === '1846-01-01' || this.data.v76 === '1777-01-01' || this.data.v76 === '1788-01-01') {
           const comodin = {
             section: 'Condición actual de la persona que vive con VIH',
             field: 'Fecha de la última carga viral para VIH realizada en el período de observación'
@@ -4594,7 +5485,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.inicioMedicamentosTarPersonaViven === '1833-03-03' || this.data.inicioMedicamentosTarPersonaViven === '1822-02-01' || this.data.inicioMedicamentosTarPersonaViven === '1799-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1811-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1800-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1833-03-03' || this.data.inicioMedicamentosTarPersonaViven === '1845-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1846-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1777-01-01' || this.data.inicioMedicamentosTarPersonaViven === '1788-01-01') {
+        if (this.data.v77_1 === '1833-03-03' || this.data.v77_1 === '1822-02-01' || this.data.v77_1 === '1799-01-01' || this.data.v77_1 === '1811-01-01' || this.data.v77_1 === '1800-01-01' || this.data.v77_1 === '1833-03-03' || this.data.v77_1 === '1845-01-01' || this.data.v77_1 === '1846-01-01' || this.data.v77_1 === '1777-01-01' || this.data.v77_1 === '1788-01-01') {
           const comodin = {
             section: 'Terapia Antirretroviral (TAR) Actual',
             field: 'Fecha de inicio de los medicamentos de la TAR que recibe actualmente la persona que viven con VIH'
@@ -4603,7 +5494,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.desafiliacionEntidad === '1833-03-03' || this.data.desafiliacionEntidad === '1822-02-01' || this.data.desafiliacionEntidad === '1799-01-01' || this.data.desafiliacionEntidad === '1811-01-01' || this.data.desafiliacionEntidad === '1800-01-01' || this.data.desafiliacionEntidad === '1833-03-03' || this.data.desafiliacionEntidad === '1845-01-01' || this.data.desafiliacionEntidad === '1846-01-01' || this.data.desafiliacionEntidad === '1777-01-01' || this.data.desafiliacionEntidad === '1788-01-01') {
+        if (this.data.v97_1 === '1833-03-03' || this.data.v97_1 === '1822-02-01' || this.data.v97_1 === '1799-01-01' || this.data.v97_1 === '1811-01-01' || this.data.v97_1 === '1800-01-01' || this.data.v97_1 === '1833-03-03' || this.data.v97_1 === '1845-01-01' || this.data.v97_1 === '1846-01-01' || this.data.v97_1 === '1777-01-01' || this.data.v97_1 === '1788-01-01') {
           const comodin = {
             section: 'Situación administrativa a la fecha de corte',
             field: 'Fecha de desafiliación de la entidad'
@@ -4612,7 +5503,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.fechaMuerte === '1833-03-03' || this.data.fechaMuerte === '1822-02-01' || this.data.fechaMuerte === '1799-01-01' || this.data.fechaMuerte === '1811-01-01' || this.data.fechaMuerte === '1800-01-01' || this.data.fechaMuerte === '1833-03-03' || this.data.fechaMuerte === '1845-01-01' || this.data.fechaMuerte === '1846-01-01' || this.data.fechaMuerte === '1777-01-01' || this.data.fechaMuerte === '1788-01-01') {
+        if (this.data.v97_3 === '1833-03-03' || this.data.v97_3 === '1822-02-01' || this.data.v97_3 === '1799-01-01' || this.data.v97_3 === '1811-01-01' || this.data.v97_3 === '1800-01-01' || this.data.v97_3 === '1833-03-03' || this.data.v97_3 === '1845-01-01' || this.data.v97_3 === '1846-01-01' || this.data.v97_3 === '1777-01-01' || this.data.v97_3 === '1788-01-01') {
           const comodin = {
             section: 'Situación administrativa a la fecha de corte',
             field: 'Fecha de muerte'
@@ -4621,7 +5512,7 @@ export default {
           comodines.push(comodin)
         }
 
-        if (this.data.fechaCorte === '1833-03-03' || this.data.fechaCorte === '1822-02-01' || this.data.fechaCorte === '1799-01-01' || this.data.fechaCorte === '1811-01-01' || this.data.fechaCorte === '1800-01-01' || this.data.fechaCorte === '1833-03-03' || this.data.fechaCorte === '1845-01-01' || this.data.fechaCorte === '1846-01-01' || this.data.fechaCorte === '1777-01-01' || this.data.fechaCorte === '1788-01-01') {
+        if (this.data.v98 === '1833-03-03' || this.data.v98 === '1822-02-01' || this.data.v98 === '1799-01-01' || this.data.v98 === '1811-01-01' || this.data.v98 === '1800-01-01' || this.data.v98 === '1833-03-03' || this.data.v98 === '1845-01-01' || this.data.v98 === '1846-01-01' || this.data.v98 === '1777-01-01' || this.data.v98 === '1788-01-01') {
           const comodin = {
             section: 'Situación administrativa a la fecha de corte',
             field: 'Fecha de corte'
@@ -4669,14 +5560,14 @@ export default {
                 _this.registerNid = data.id
               }
               if (_this.type === 'siguiente') {
-                if (typeof _this.data.children === 'undefined' || typeof _this.data.tuberculosis === 'undefined') {
+                if (typeof _this.data.v16 === 'undefined' || typeof _this.data.v17 === 'undefined') {
                   localStorage.setItem('registerNid', _this.registerNid)
                   _this.$router.push('/resumen')
                   return
                 }
 
                 if (_this.secondStep === false && _this.firstStep === true) {
-                  if (_this.data.children.id !== '0' || _this.data.tuberculosis.id !== '3') {
+                  if (_this.data.v16.id !== '0' || _this.data.v17.id !== '3') {
                     _this.firstStep = false
                     _this.secondStep = true
                   } else {
@@ -4719,11 +5610,11 @@ export default {
         }
       } else {
         if (_this.secondStep === false && _this.firstStep === true) {
-          if (typeof _this.data.children === 'undefined' || typeof _this.data.tuberculosis === 'undefined') {
+          if (typeof _this.data.v16 === 'undefined' || typeof _this.data.v17 === 'undefined') {
             _this.thirdStep = true
             _this.firstStep = false
           } else {
-            if (_this.data.children.id !== '0' || _this.data.tuberculosis.id !== '3') {
+            if (_this.data.v16.id !== '0' || _this.data.v17.id !== '3') {
               _this.firstStep = false
               _this.secondStep = true
             } else {
