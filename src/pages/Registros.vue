@@ -53,7 +53,7 @@
                                   <tr v-for="(item, key) in patients" :key="key">
                                     <td>
                                         <q-icon name="person" class="azul_iconos" size="25px" />
-                                        <span class="name_usuario">{{ item.field_json.identification }} - {{ item.title }}</span>
+                                        <span class="name_usuario">{{ item.field_json.identification }} - {{ item.title }} - <strong>{{ item.field_json.program }}</strong></span>
                                     </td>
                                     <td class="action">
                                         <q-btn @click="crearRegistro(item.nid)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Crear Registro" />
@@ -69,7 +69,7 @@
                                     <tr v-for="(item, key) in drafts" :key="key">
                                       <td>
                                           <q-icon name="person" class="azul_iconos" size="25px" />
-                                          <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
+                                          <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }} - <strong>{{ item.field_json_1.program }}</strong></span>
                                       </td>
                                       <td class="action">
                                           <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Completar Registro" />
@@ -85,7 +85,7 @@
                                     <tr v-for="(item, key) in fixes" :key="key">
                                       <td>
                                           <q-icon name="person" class="azul_iconos" size="25px" />
-                                          <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
+                                          <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }} - <strong>{{ item.field_json_1.program }}</strong></span>
                                       </td>
                                       <td class="action">
                                           <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Ver Formulario" />
