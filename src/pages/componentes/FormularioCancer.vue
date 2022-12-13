@@ -5025,12 +5025,293 @@ export default {
         }
       }
 
-      if (this.data.v53_7.id === '97' && this.data.v53_8.id !== '97') {
-        this.errors.push('La V53.8 debe ser 97')
+      if(this.data.v53_8.id === '97' && this.data.v53_9.id !== '97') {
+        this.errors.push('La V53.8 debe ser 97');
+        this.error = true;
+      }
+
+      // 54
+      if (this.data.v54.id == '97' && this.data.v45.id !== '1') {
+        this.errors.push('La V54 es 97  revisar la V45 debe ser 1')
         this.error = true
       }
-      // voy
 
+      if (this.data.v54.id === '98' && this.data.v45.id !== '98') {
+        this.errors.push('La V54 es =  98  revisar la V45 debe ser 98')
+        this.error = true
+      }
+
+      if (this.data.v54 > 98 && this.data.v45 !== 1) {
+        this.errors.push('La V54 es > 98 revisar la V45 debe ser 1');
+        this.error = true;
+      }
+
+      if (this.data.v54 > 98 && this.data.v53_9 < 98) {
+        this.errors.push('La V54 es >98 revisar V53.9 debe ser >98');
+        this.error = true;
+      }
+
+      if (this.data.v54 > 98 && this.data.v55 != this.data.v54) {
+        this.errors.push('La V55 es <> V54 revisar la V54 debe ser > 98');
+        this.error = true;
+      }
+
+      if (this.data.v54 > 98 && this.data.v56 != this.data.v54) {
+        this.errors.push('La V56 es <> V54 revisar la V54 debe ser > 98');
+        this.error = true;
+      }
+      if (this.data.v54.id === '97') {
+        if (this.data.v55.id !== '97') {
+          this.errors.push("La V55 es 97 revisar V54 deber ser 97");
+          this.error = true;
+        }
+      }
+      // 55
+      if (this.data.v55.id === '97') {
+        if (this.data.v45.id !== '1') {
+          this.errors.push("La V55 es 97  revisar la V45 debe ser 1");
+          this.error = true;
+        }
+      }
+      if (this.data.v55.id === '98') {
+        if (this.data.v45.id !== '98') {
+          this.errors.push("La V55 es =  98  revisar la V45 debe ser 98");
+          this.error = true;
+        }
+      }
+      if (this.data.v55.id > '98' && this.data.v45.id !== '1') {
+          this.errors.push("La V55 es > 98  revisar la V53.8 debe ser  1");
+          this.error = true;
+      }
+
+      if (this.data.v55.id > '98' && this.data.v54.id <= '98') {
+          this.errors.push("La V55 es >98 revisar V54 debe ser >98");
+          this.error = true;
+      }
+
+      if (this.data.v55.id === '55') {
+        if (this.data.v45.id !== '55') {
+          this.errors.push("La V55 es 55 revisar la V45 debe ser 55");
+          this.error = true;
+        }
+      }
+
+      if (this.data.v55.id === '97') {
+        if (this.data.v56.id !== '97') {
+          this.errors.push("La V56 es 97 revisar la V55 debe ser 97");
+          this.error = true;
+        }
+      }
+
+      if (this.data.v55.id > '98') {
+        if (this.data.v56.id === this.data.v55.id) {
+          this.errors.push("La V55 <> V56 revisar la V55 debe ser >98");
+          this.error = true;
+        }
+      }
+      // 56
+
+      if (this.data.v56.id === '97' && this.data.v45.id !== 1) {
+        this.errors.push("La V56 es 97 revisar la V45 debe ser 1");
+        this.error = true;
+      }
+      if (this.data.v56.id === '98' && this.data.v45.id !== '98') {
+        this.errors.push("La V56 es 98 revisar la V45 debe ser 98");
+        this.error = true;
+      }
+      if (this.data.v56.id > '98') {
+        if (this.data.v45.id !== 1) {
+          this.errors.push("La V56 es > 98 revisar la V53.8 debe ser 1");
+          this.error = true;
+        }
+      }
+      if (this.data.v56.id > '98') {
+        if (this.data.v55 <= '98') {
+          this.errors.push("La V55 es >98 revisar V55 debe ser >98");
+          this.error = true;
+        }
+      }
+      if (this.data.v56.id === '55') {
+        if (this.data.v45.id !== '55') {
+          this.errors.push("La V56 es 55 revisar la V45 debe ser 55");
+          this.error = true;
+        }
+      }
+
+      // 57
+      if (this.data.v57.id === '1' && this.data.v45.id !== '1') {
+        this.errors.push('La V57 es 1 revisar la V45 debe ser 1')
+        this.error = true
+      }
+      // 58
+      if (this.data.v58 !== '1800-01-01' && this.data.v58 !== '1845-01-01' && this.data.v58 !== '1846-01-01') {
+        if(this.data.v58 < this.data.v49) {
+          this.errors.push('V58 DEBE SER >= V49')
+          this.error = true
+        }
+
+        if(this.data.v58 > this.data.v134) {
+          this.errors.push('V58 DEBE SER <= V134')
+          this.error = true
+        }
+
+        if(this.data.v58 < "2021-01-02" || this.data.v58 == "1846-01-01") {
+          this.errors.push('La V58 debe ser >= 2021-01-02 o = 1846-01-01')
+          this.error = true
+        }
+      }
+      if (this.data.v58 === '1846-01-01' && this.data.v128 !== '14') {
+        this.errors.push('La V128 = 14 revisar la V58 debe ser 1846-01-01')
+        this.error = true
+      }
+
+      if (this.data.v58 === '1800-01-01') {
+        if (this.data.v45.id !== 1) {
+          this.errors.push('La V58 es = 1800-01-01 revisar la V45 debe ser 1')
+          this.error = true
+        }
+        if (this.data.v59.id !== 3) {
+          this.errors.push('La V59 es 3 revisar La V58 debe ser 1800-01-01')
+          this.error = true
+        }
+        if (this.data.v60.id !== 98) {
+          this.errors.push('La V60 es = 98 revisar La V58 Debe ser  1800-01-01')
+          this.error = true
+        }
+        if (this.data.v61.id > 97) {
+          this.errors.push('La V61 es 98revisar La V58 debe ser 1800-01-01')
+          this.error = true
+        }
+      }
+      if(this.data.v58 > "1846-01-01") {
+        if(this.data.v45 !== 1) {
+        this.errors.push("La V58 es > 1846-01-01 revisar la V45 debe ser 1")
+        this.error = true
+        }
+        if(this.data.v59 > 2) {
+        this.errors.push("la V59 es <2 revisar La V58 debe ser > 1846-01-01")
+        this.error = true
+        }
+        if(this.data.v61 === 98) {
+        this.errors.push("la V61 es <> 98 revisar La V58 debe ser > 1846-01-01")
+        this.error = true
+        }
+      }
+      if (this.data.v58 === '1845-01-01'){
+       if(this.data.v45.id !== '98' && this.data.v45.id !== '2') {
+        this.errors.push('La V55 es 1845-01-01 revisar V45 debe ser = 98 o 2')
+        this.error = true
+       }
+      }
+      if (this.data.v58 === "1800-01-01") {
+        if (this.data.v125.id !== "2" && this.data.v125.id !== "4" && this.data.v125.id !== "6" && this.data.v125.id !== "98" && this.data.v125.id !== "10") {
+          this.errors.push("Cuando V58 sea = 1800-01-01 Entonces V125 DEBE SER = 2, 4, 6, 98 o 10")
+          this.error = true
+        }
+      }
+      if (this.data.v58 < '1846-01-01' && this.data.v49 >= this.data.v58) {
+        this.errors.push('La V58 es 1846-01-01 revisar la V49 debe ser <= V58')
+        this.error = true
+      }
+      // v59
+      if (this.data.v59.id === '2' && this.data.v60.id > '8'){
+        this.errors.push("La V60 es <= 8 revisar la V59 debe ser 2")
+        this.error = true
+      }
+
+      if (this.data.v59.id == '2' && Date.parse(this.data.v58) < Date.parse('1846-01-01')){
+        this.errors.push('La V50 es 2 revisar la V58 debe ser >1846-01-01')
+        this.error = true
+      }
+
+      if (this.data.v59.id === '3' && this.data.v45 !== 1) {
+        this.errors.push("La V59 es 3 revisar la V45 debe ser 1")
+        this.error = true
+      }
+      if (this.data.v59.id === '3' && this.data.v58 !== '1800-01-01') {
+        this.errors.push("La V59 es 3 revisar La V58 debe ser 1800-01-01")
+        this.error = true
+      }
+      if (this.data.v59.id === '3' && this.data.v61.id > '97') {
+        this.errors.push("La V61 es <= 97 revisalr la v59 debe ser 3")
+        this.error = true
+      }
+      if (this.data.v59.id === '3' && this.data.v60.id !== '98') {
+        this.errors.push("La v60 es 98 revisar la V59 debe ser 3")
+        this.error = true
+      }
+      if (this.data.v59.id === '55' && this.data.v128.id !== '14') {
+        this.errors.push('La V128 debe ser 14, revisar la V59 debe ser 55')
+        this.error = true
+      }
+      if (this.data.v59.id !== '98' && this.data.v59.id !== '55') {
+        if (this.data.v59.id < 1) {
+          this.errors.push('La V59 debe estar entre 1 y 3 o  = 98 0 55')
+          this.error = true
+        }
+
+        if (this.data.v59.id > 3) {
+          this.errors.push('La V59 debe estar entre 1 y 3 o  = 98 0 55')
+          this.error = true;
+        }
+      }
+      if (this.data.v59.id === '1') {
+        if (this.data.v60.id !== '98') {
+          this.errors.push('La V60 es 98 revisar la V59 debe ser 1')
+          this.error = true
+        }
+        if (Date.parse(this.data.v58)< Date.parse('2021-01-02')) {
+          this.errors.push("La V59 es 1 revisar la V58 debe ser  >= 2021.01.02")
+          this.error = true
+        }
+      }
+      if (this.data.v59.id === '98') {
+        if(this.data.v45.id !== '98' && this.data.v45.id !== '2') {
+          this.errors.push('La V59 es 98 revisar la V45 debe ser 98 o 2')
+          this.error = true
+        }
+      }
+      // 60
+      if(this.data.v60.id !== '98' && this.data.v60.id !== '55') {
+        if (this.data.v60.id < 1 || this.data.v60.id > 8) {
+          this.errors.push('La V60 debe estar entre 1 y 8 o = 98 o 55')
+          this.error = true
+        }
+      }
+      if (this.data.v60.id === '55' && this.data.v128.id !== '14') {
+        this.errors.push('LA V128 = 14 revisar la V60 debe ser 55');
+        this.error = true;
+      }
+      if (this.data.v60.id === '3') {
+        if (this.data.v127 !== 2) {
+          this.errors.push('La V127 es 2 revisar la V60 debe ser 3');
+          this.error = true;
+        }
+        if (this.data.v131 !== '1845-01-01') {
+          this.errors.push('La V131 es <> 1845-01-01 revisar la V60 debe ser 3');
+          this.error = true;
+        }
+        if (this.data.v132.id !== '98') {
+          this.errors.push('La V132 es <> 98 revisar la V60 debe ser 3');
+          this.error = true;
+        }
+      }
+      if (this.data.v60.id === '3' && this.data.v128.id !== 10) {
+        this.errors.push("Cuando V60 sea = 3 Entonces V128 DEBE SER = 10");
+        this.error = true;
+      }
+
+      if (this.data.v60.id === '3' && this.data.v128.id !== 4) {
+        this.errors.push("Cuando V60 sea = 3 Entonces V128 DEBE SER = 4");
+        this.error = true;
+      }
+      if (this.data.v60 <= 8 && this.data.v59 !== 2) {
+        this.errors.push("La V60 <= 8 revisar la V50 debe ser 2");
+        this.error = true;
+      }
+      // 61
+
+      // voy
       if (this.status !== 'finalizado') {
         var data = {
           type: 'saveRegister',
