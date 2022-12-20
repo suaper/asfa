@@ -72,6 +72,11 @@
                                       </template>
                                     </q-input>
                                   </div>
+                                  <div class="item">
+                                    <label class="labele">Paciente</label>
+                                    <q-input filled v-model="patientFilter" @input="getRegistersByPatient">
+                                    </q-input>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -128,6 +133,11 @@
                                       </template>
                                     </q-input>
                                   </div>
+                                  <div class="item">
+                                    <label class="labele">Paciente</label>
+                                    <q-input filled v-model="patientFilter">
+                                    </q-input>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -162,6 +172,7 @@ export default {
     return {
       sliders: true,
       patients: [],
+      patientFilter: '',
       search: null,
       tab: 'registro_vih',
       finished: [],
@@ -245,11 +256,48 @@ export default {
         }
       })
     },
+    getRegistersByPatient () {
+      var _this = this
+
+      if (this.patientFilter.length < 4) {
+        return
+      }
+
+      if (this.patientFilter === '') {
+        this.getRegistros()
+        return
+      }
+
+      _this.finished = []
+      _this.allFinished = []
+      _this.finishedCancer = []
+      _this.allFinishedCancer = []
+      configServices.loadData(this, 'registros/finalizado/json/?field_json_value=' + _this.patientFilter, {
+        callBack: (data) => {
+          data.map((item, key) => {
+            var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+            data[key].field_json = JSON.parse(json)
+
+            var jsonPatient = data[key].field_json_1.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+            data[key].field_json_1 = JSON.parse(jsonPatient)
+
+            if (data[key].field_json_1.program === 'VIH') {
+              _this.finished.push(data[key])
+              _this.allFinished.push(data[key])
+            } else {
+              _this.finishedCancer.push(data[key])
+              _this.allFinishedCancer.push(data[key])
+            }
+          })
+
+          _this.$q.loading.hide()
+        }
+      })
+    },
     getRegistros () {
       var _this = this
       configServices.loadData(this, 'registros/finalizado/json/', {
         callBack: (data) => {
-          console.log(data)
           data.map((item, key) => {
             var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
             data[key].field_json = JSON.parse(json)
