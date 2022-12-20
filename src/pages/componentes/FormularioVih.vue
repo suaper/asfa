@@ -11,7 +11,7 @@
                       <q-select rounded standout v-model="data.v15" :options="pregnantWomans"  label="Seleccionar" :rules="[val => !!val || 'Campo requerido']"/>
                   </div>
               </div>
-              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                     <label>FUM (Fecha de última menstruación confiable)</label>
                       <q-input filled v-model="data.fum">
@@ -45,7 +45,7 @@
                       <q-select rounded standout v-model="model" :options="options" label="Seleccionar" />
                   </div>
               </div>-->
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>19. Fecha del diagnóstico de la gestación reportada</label>
                       <q-input filled v-model="data.v19">
@@ -79,7 +79,7 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>21. Fecha de realización de tamizaje para VIH en el segundo trimestre de la gestación</label>
                       <q-input filled v-model="data.v21">
@@ -113,7 +113,7 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                     <label>23. Fecha de realización de tamizaje para VIH en el momento del parto</label>
                       <q-input filled v-model="data.v23">
@@ -131,7 +131,7 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>24. ¿Mujer con diagnóstico de VIH en cualquier momento de la gestación reportada?</label>
                       <q-select rounded standout v-model="data.v24" :options="womanVihReporteds" label="Seleccionar" />
@@ -148,7 +148,7 @@
                         </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>24.2. ¿Recibió tratamiento para VIH durante la gestación reportada?</label>
                       <q-select rounded standout v-model="data.v24_2" :options="receivedTreatmentVihs" label="Seleccionar" />
@@ -165,7 +165,7 @@
                         </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>24.4. Terapia antirretroviral (TAR) durante el intraparto en la gestación reportada.</label>
                       <q-select rounded standout v-model="data.v24_4" :options="tarIntraBirths" label="Seleccionar" />
@@ -175,7 +175,7 @@
                       <q-select rounded standout v-model="data.v24_5" :options="resultVihReporteds" label="Seleccionar" />
                   </div>
               </div>
-              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row un_item" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>24.6. Fecha de culminación de la gestación reportada en gestantes con VIH.</label>
                       <q-input filled v-model="data.v24_6">
@@ -193,7 +193,7 @@
                       </q-input>
                   </div>
               </div>
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>24.7. Supresión farmacológica de la lactancia materna en gestantes con VIH.</label>
                       <q-select rounded standout v-model="data.v24_7" :options="pharmacologicalSuppressions" label="Seleccionar" />
@@ -203,7 +203,7 @@
                       <q-select rounded standout v-model="data.v24_8" :options="identificationsNewbord" label="Seleccionar" />
                   </div>
               </div>
-              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9'">
+              <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>24.9. Número de identificación del recién nacido vivo expuesto al VIH resultado de la gestación reportada</label>
                       <q-input
@@ -574,35 +574,71 @@
                   </div>
                   <div class="item">
                       <label>42.1 Medicamento 1 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.v42_1" :options="medicamento1InicioTar" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v42_1"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>42.2 Medicamento 2 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.v42_2" :options="medicamento2InicioTar" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v42_2"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
                   <div class="item">
                       <label>42.3 Medicamento 3 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.v42_3" :options="medicamento3InicioTar" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v42_3"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>42.4 Medicamento 4 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.v42_4" :options="medicamento4InicioTar" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v42_4"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
                   <div class="item">
                       <label>42.5 Medicamento 5 con el que inició la TAR</label>
-                      <q-select rounded standout v-model="data.v42_5" :options="medicamento5InicioTar" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v42_5"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>43. ¿Conteo de linfocitos T CD4 al momento del inicio de la TAR?</label>
+
                       <q-select rounded standout v-model="data.v43" :options="linfocitosCD4InicioTar" label="Seleccionar" />
                   </div>
 
@@ -706,26 +742,54 @@
 
                   <div class="item">
                       <label>51.3 Medicamento 1 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.v51_3" :options="medicamento1Cambio" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v51_3"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>51.4 Medicamento 2 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.v51_4" :options="medicamento2Cambio" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v51_4"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
 
                   <div class="item">
                       <label>51.5 Medicamento 3 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.v51_5" :options="medicamento3Cambio" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v51_5"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
               </div>
 
               <div class="row dos_items">
                   <div class="item">
                       <label>51.6 Medicamento 4 que ocasionó el cambio: </label>
-                      <q-select rounded standout v-model="data.v51_6" :options="medicamento4Cambio" label="Seleccionar" />
+                      <q-input
+                          rounded
+                          standout
+                          v-model="data.v51_6"
+                          lazy-rules
+                          type="number"
+                          >
+                        </q-input>
                   </div>
 
                   <div class="item">
@@ -2991,622 +3055,534 @@ export default {
       _this.errors = []
 
       if (this.status !== 'finalizado') {
-        if (typeof this.patient.field_json.sex !== 'undefined') {
-          if (this.patient.field_json.sex.id !== 'H' && this.data.fum === '1845-01-01') {
-            this.errors.push('FUM es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && this.data.v20 === '1845-01-01') {
-            this.errors.push('La V20 es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && this.data.v19 === '1845-01-01') {
-            this.errors.push('La V19 es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && this.data.v21 === '1845-01-01') {
-            this.errors.push('La V21 es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && this.data.v22 === '1845-01-01') {
-            this.errors.push('La V22 es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && this.data.v23 === '1845-01-01') {
-            this.errors.push('La V23 es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24 !== 'undefined' && this.data.v24.id === '9') {
-            this.errors.push('La V24 es 9 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_1 !== 'undefined' && this.data.v24_1.id === '99') {
-            this.errors.push('La V24.1 es 99 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '9') {
-            this.errors.push('La V24.2 es 9 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_3 !== 'undefined' && this.data.v24_3.id === '99') {
-            this.errors.push('La V24.3 es 99 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '9') {
-            this.errors.push('La V24.4 es 9 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '9') {
-            this.errors.push('La V24.5 es 9 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && this.data.v24_6 === '1845-01-01') {
-            this.errors.push('La V24.6 es 1845-01-01 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_7 !== 'undefined' && this.data.v24_7.id === '9') {
-            this.errors.push('La V24.7 es 9 revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (this.patient.field_json.sex.id !== 'H' && typeof this.data.v24_8 !== 'undefined' && this.data.v24_8.id === 'NA') {
-            this.errors.push('La V24.8 es NA revisar la V10 debe ser H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
-          }
-
-          if (typeof this.data.v24_9 !== 'undefined') {
-            if (this.patient.field_json.sex.id !== 'H' && this.data.v24_9 !== '9') {
-              this.errors.push('La V24.9 es 9 revisar la V10 debe ser H')
+        if (this.firstStep) {
+          if (typeof this.patient.field_json.sex !== 'undefined') {
+            if (this.patient.field_json.sex.id === 'H' && this.data.fum !== '1845-01-01') {
+              this.errors.push('FUM es 1845-01-01 revisar la V10 debe ser H')
               this.error = true
               // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
             }
-          }
 
-          if (this.patient.field_json.sex.id === 'H' && typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) <= 3) {
-            this.errors.push('La V15 es <= 3 revisar la V10 debe ser <> H')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
-          }
-        }
-
-        if (typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) < 3) {
-          var currentDate = new Date('2020-04-01')
-
-          if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 0) {
-            this.errors.push('La V16 es 0 revisar la V15 debe ser < 3')
-            this.error = true
-          }
-
-          if (Date.parse(this.patient.field_json.birthdate) < Date.parse('1978-01-31')) {
-            this.errors.push('La V15 es <= 2 revisar la v09 debe ser >= 1978-01-01 y <= 2012-01-31')
-            this.error = true
-          }
-
-          if (Date.parse(this.patient.field_json.birthdate) > Date.parse('2012-01-31')) {
-            this.errors.push('La V15 es <= 2 revisar la v09 debe ser >= 1978-01-01 y <= 2012-01-31')
-            this.error = true
-          }
-
-          if (this.data.v19 !== '1845-01-01') {
-            if (Date.parse(this.data.v19) <= Date.parse(currentDate)) {
-              this.errors.push('La V19 es > 2020-04-01 o = 1846-01-01 revisar la V15 debe ser < 3')
+            if (this.patient.field_json.sex.id === 'H' && this.data.v20 !== '1845-01-01') {
+              this.errors.push('La V20 es 1845-01-01 revisar la V10 debe ser H')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B2890', 'error')
-            }
-          }
-
-          if (this.data.v20 === '1845-01-01') {
-            this.errors.push('La V20 es 1845-01-01 revisar la V15 debe ser < 3')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (this.data.v21 === '1845-01-01') {
-            this.errors.push('La V21 es <> 1845-01-01 revisar la V15 debe ser < 3')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (this.data.v22 === '1845-01-01') {
-            this.errors.push('La V22 es <>1845-01-01 revisar la V15 debe ser < 3')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (this.data.v23 === '1845-01-01') {
-            this.errors.push('La V23 es <> 1845-01-01 revisar la V15 debe ser < 3')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24 !== 'undefined' && this.data.v24.id === '9') {
-            this.errors.push('La V24 es <> 9 revisar la V15 debe ser < 3 ')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24_1 !== 'undefined' && this.data.v24_1.id === '99') {
-            this.errors.push('La V24.1 es <> 99 revisar la V15 debe ser < 3 ')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '9') {
-            this.errors.push('La V24.2 es <> 9 revisar la V15 debe ser < 3 ')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24_3 !== 'undefined' && this.data.v24_3.id === '99') {
-            this.errors.push('La V24.3 es <> 99 revisar la V15 debe ser < 3 ')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '9') {
-            this.errors.push('La V24.4 es <> 9 revisar la V15 debe ser < 3 ')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '9') {
-            this.errors.push('La V24.5 es <> 9 revisar la V15 debe ser < 3 ')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (this.data.v24_6 === '1845-01-01') {
-            this.errors.push('La V24.6 es <> 9 revisar la V15 debe ser < 3')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-
-          if (typeof this.data.v24_7 !== 'undefined' && this.data.v24_7.id === '9') {
-            this.errors.push('La V24.7 es <> 9 revisar la V15 debe ser < 3')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
-          }
-        }
-
-        if (typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) === 55) {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar la V15 sea 55')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v24 !== 'undefined' && parseInt(this.data.v24.id) === 55) {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar V24 debe ser 55')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) === 55) {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar la V16 sea 55')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) === 55) {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar la V17 sea 55')
-            this.error = true
-          }
-        }
-
-        if (this.data.v19 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar la V19 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v20 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar la V20 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v21 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar V21 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v22 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar V22 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v23 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
-            this.errors.push('La V97 es 19 revisar V23 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) < 3) {
-          if (typeof this.data.v68 !== 'undefined' && parseInt(this.data.v68.id) !== 1) {
-            this.errors.push('La V68 es 1 revisar V17 debe ser < 3')
-            this.error = true
-          }
-
-          if (typeof this.data.v68_1 !== 'undefined' && parseInt(this.data.v68_1.id) >= 6) {
-            this.errors.push('La V68.1 es < 6 revisar V17 debe ser < 3')
-            this.error = true
-          }
-
-          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) >= 8) {
-            this.errors.push('La V68.2 es < 8 revisar V17 debe ser < 3')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1799-01-01') {
-            this.errors.push('La V68 es <> 1799-01-01 revisar V17 debe ser < 3')
-            this.error = true
-          }
-
-          if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) === 10) {
-            this.errors.push('La V68.14 es <> 10 revisar V17 debe ser < 3')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) === 1) {
-          if (Date.parse(this.patient.field_json.birthdate) < Date.parse('2021-01-31')) {
-            this.errors.push('La V16 es 1 revisar la V9 debe ser > 2021-01-31')
-            this.error = true
-          }
-        }
-
-        var maxDate = new Date('2020-04-01')
-        if (this.data.v20 !== '1799-01-01' && this.data.v20 !== '1822-02-01' && this.data.v20 !== '1833-03-03' && this.data.v20 !== '1845-01-01' && this.data.v20 !== '1846-01-01') {
-          if (this.data.v19 !== '1845-01-01' && this.data.v19 !== '1846-01-01') {
-            if (Date.parse(this.data.v19) <= Date.parse(maxDate)) {
-              this.errors.push('La V19 debe ser >2020-01-04 y V19 <= V98 o = 1845-01-01  o 1846-01-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
             }
 
-            if (Date.parse(this.data.v20) > Date.parse(maxDate)) {
-              if (Date.parse(this.data.v20) < Date.parse(this.data.v19)) {
-                this.errors.push('la V20 es >  01/04/2020 00:00:00 a.m revisar  V20 >= V19')
+            if (this.patient.field_json.sex.id === 'H' && this.data.v19 !== '1845-01-01') {
+              this.errors.push('La V19 es 1845-01-01 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && this.data.v21 !== '1845-01-01') {
+              this.errors.push('La V21 es 1845-01-01 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && this.data.v22 !== '1845-01-01') {
+              this.errors.push('La V22 es 1845-01-01 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && this.data.v23 !== '1845-01-01') {
+              this.errors.push('La V23 es 1845-01-01 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24 !== 'undefined' && this.data.v24.id !== '9') {
+              this.errors.push('La V24 es 9 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_1 !== 'undefined' && this.data.v24_1.id !== '99') {
+              this.errors.push('La V24.1 es 99 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id !== '9') {
+              this.errors.push('La V24.2 es 9 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_3 !== 'undefined' && this.data.v24_3.id !== '99') {
+              this.errors.push('La V24.3 es 99 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id !== '9') {
+              this.errors.push('La V24.4 es 9 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id !== '9') {
+              this.errors.push('La V24.5 es 9 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && this.data.v24_6 !== '1845-01-01') {
+              this.errors.push('La V24.6 es 1845-01-01 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_7 !== 'undefined' && this.data.v24_7.id !== '9') {
+              this.errors.push('La V24.7 es 9 revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v24_8 !== 'undefined' && this.data.v24_8.id !== 'NA') {
+              this.errors.push('La V24.8 es NA revisar la V10 debe ser H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+            }
+
+            if (typeof this.data.v24_9 !== 'undefined') {
+              if (this.patient.field_json.sex.id === 'H' && this.data.v24_9 !== '9') {
+                this.errors.push('La V24.9 es 9 revisar la V10 debe ser H')
                 this.error = true
-                // return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+                // return _this.$swal('Advertencia', 'Error en la validación No. B5327', 'error')
+              }
+            }
+
+            if (this.patient.field_json.sex.id === 'H' && typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) <= 3) {
+              this.errors.push('La V15 es <= 3 revisar la V10 debe ser <> H')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2885', 'error')
+            }
+          }
+
+          if (typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) < 3) {
+            var currentDate = new Date('2020-04-01')
+
+            if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) !== 0) {
+              this.errors.push('La V16 es 0 revisar la V15 debe ser < 3')
+              this.error = true
+            }
+
+            if (Date.parse(this.patient.field_json.birthdate) < Date.parse('1978-01-31')) {
+              this.errors.push('La V15 es <= 2 revisar la v09 debe ser >= 1978-01-01 y <= 2012-01-31')
+              this.error = true
+            }
+
+            if (Date.parse(this.patient.field_json.birthdate) > Date.parse('2012-01-31')) {
+              this.errors.push('La V15 es <= 2 revisar la v09 debe ser >= 1978-01-01 y <= 2012-01-31')
+              this.error = true
+            }
+
+            if (this.data.v19 !== '1845-01-01') {
+              if (Date.parse(this.data.v19) <= Date.parse(currentDate)) {
+                this.errors.push('La V19 es > 2020-04-01 o = 1846-01-01 revisar la V15 debe ser < 3')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B2890', 'error')
               }
             }
 
             if (this.data.v20 === '1845-01-01') {
-              this.errors.push('La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+              this.errors.push('La V20 es 1845-01-01 revisar la V15 debe ser < 3')
               this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
             }
 
             if (this.data.v21 === '1845-01-01') {
-              this.errors.push('La V21 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+              this.errors.push('La V21 es <> 1845-01-01 revisar la V15 debe ser < 3')
               this.error = true
-              // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
             }
 
             if (this.data.v22 === '1845-01-01') {
-              this.errors.push('La V22 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+              this.errors.push('La V22 es <>1845-01-01 revisar la V15 debe ser < 3')
               this.error = true
-              // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
             }
 
             if (this.data.v23 === '1845-01-01') {
-              this.errors.push('La V23 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+              this.errors.push('La V23 es <> 1845-01-01 revisar la V15 debe ser < 3')
               this.error = true
-              // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24 !== 'undefined' && this.data.v24.id === '9') {
+              this.errors.push('La V24 es <> 9 revisar la V15 debe ser < 3 ')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24_1 !== 'undefined' && this.data.v24_1.id === '99') {
+              this.errors.push('La V24.1 es <> 99 revisar la V15 debe ser < 3 ')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id !== '9') {
+              this.errors.push('La V24.2 es <> 9 revisar la V15 debe ser < 3 ')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24_3 !== 'undefined' && this.data.v24_3.id === '99') {
+              this.errors.push('La V24.3 es <> 99 revisar la V15 debe ser < 3 ')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id !== '9') {
+              this.errors.push('La V24.4 es <> 9 revisar la V15 debe ser < 3 ')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id !== '9') {
+              this.errors.push('La V24.5 es <> 9 revisar la V15 debe ser < 3 ')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (this.data.v24_6 === '1845-01-01') {
+              this.errors.push('La V24.6 es <> 9 revisar la V15 debe ser < 3')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
+            }
+
+            if (typeof this.data.v24_7 !== 'undefined' && this.data.v24_7.id !== '9') {
+              this.errors.push('La V24.7 es <> 9 revisar la V15 debe ser < 3')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2892', 'error')
             }
           }
 
-          if (Date.parse(this.data.v20) < Date.parse(this.data.v19)) {
-            this.errors.push('La V20 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2902', 'error')
-          }
-        }
-
-        if (Date.parse(this.data.v20) > Date.parse(this.data.v19)) {
-          if (this.data.v21 === '1845-01-01') {
-            this.errors.push('La V21 es <> 1845-01-01 revisar la V20 debe ser > V19')
-            this.error = true
-            // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
+          if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) === 1) {
+            if (Date.parse(this.patient.field_json.birthdate) < Date.parse('2021-01-31')) {
+              this.errors.push('La V16 es 1 revisar la V9 debe ser > 2021-01-31')
+              this.error = true
+            }
           }
 
-          if (this.data.v22 === '1845-01-01') {
-            this.errors.push('La V22 es <> 1845-01-01 revisar la V20 debe ser > V19')
-            this.error = true
-            // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
+          var maxDate = new Date('2020-04-01')
+          if (this.data.v20 !== '1799-01-01' && this.data.v20 !== '1822-02-01' && this.data.v20 !== '1833-03-03' && this.data.v20 !== '1845-01-01' && this.data.v20 !== '1846-01-01') {
+            if (this.data.v19 !== '1845-01-01' && this.data.v19 !== '1846-01-01') {
+              if (Date.parse(this.data.v19) <= Date.parse(maxDate)) {
+                this.errors.push('La V19 debe ser >2020-01-04 y V19 <= V98 o = 1845-01-01  o 1846-01-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+              }
+
+              if (Date.parse(this.data.v20) > Date.parse(maxDate)) {
+                if (Date.parse(this.data.v20) < Date.parse(this.data.v19)) {
+                  this.errors.push('la V20 es >  01/04/2020 00:00:00 a.m revisar  V20 >= V19')
+                  this.error = true
+                  // return _this.$swal('Advertencia', 'Error en la validación No. B2900', 'error')
+                }
+              }
+
+              if (this.data.v20 === '1845-01-01') {
+                this.errors.push('La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B5809', 'error')
+              }
+
+              if (this.data.v21 === '1845-01-01') {
+                this.errors.push('La V21 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+                this.error = true
+                // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
+              }
+
+              if (this.data.v22 === '1845-01-01') {
+                this.errors.push('La V22 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+                this.error = true
+                // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
+              }
+
+              if (this.data.v23 === '1845-01-01') {
+                this.errors.push('La V23 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.')
+                this.error = true
+                // return _this.$swal('Advertencia', 'La V20 es <> 1845-01-01 revisar la V19 debe ser > 01/04/2020 00:00:00 a.m.', 'error')
+              }
+            }
+
+            if (Date.parse(this.data.v20) < Date.parse(this.data.v19)) {
+              this.errors.push('La V20 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2902', 'error')
+            }
           }
 
-          if (this.data.v23 === '1845-01-01') {
-            this.errors.push('La V23 es <> 1845-01-01 revisar la V20 debe ser > V19')
-            this.error = true
-            // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
-          }
-        }
+          if (Date.parse(this.data.v20) > Date.parse(this.data.v19)) {
+            if (this.data.v21 === '1845-01-01') {
+              this.errors.push('La V21 es <> 1845-01-01 revisar la V20 debe ser > V19')
+              this.error = true
+              // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
+            }
 
-        if (this.data.v21 !== '1799-01-01' && this.data.v21 !== '1822-02-01' && this.data.v21 !== '1833-03-03' && this.data.v21 !== '1845-01-01' && this.data.v21 !== '1846-01-01') {
-          if (Date.parse(this.data.v21) > Date.parse(this.data.v98)) {
-            this.errors.push('La V21 debe ser <= V98 o  = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
-            this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+            if (this.data.v22 === '1845-01-01') {
+              this.errors.push('La V22 es <> 1845-01-01 revisar la V20 debe ser > V19')
+              this.error = true
+              // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
+            }
+
+            if (this.data.v23 === '1845-01-01') {
+              this.errors.push('La V23 es <> 1845-01-01 revisar la V20 debe ser > V19')
+              this.error = true
+              // return _this.$swal('Advertencia', 'La V21 es <> 1845-01-01 revisar la V20 debe ser > V19', 'error')
+            }
           }
 
-          if (Date.parse(this.data.v20) > Date.parse(maxDate)) {
-            if (this.data.v21 !== '1799-01-01' && this.data.v21 !== '1822-02-01' && this.data.v21 !== '1833-03-03' && this.data.v21 !== '1845-01-01' && this.data.v21 !== '1846-01-01') {
-              if (Date.parse(this.data.v21) <= Date.parse(this.data.v20)) {
-                this.errors.push('La V21 es > V20 revisar la V20 debe ser > 01/04/2020 00:00:00 a.m')
+          if (this.data.v21 !== '1799-01-01' && this.data.v21 !== '1822-02-01' && this.data.v21 !== '1833-03-03' && this.data.v21 !== '1845-01-01' && this.data.v21 !== '1846-01-01') {
+            if (Date.parse(this.data.v21) > Date.parse(this.data.v98)) {
+              this.errors.push('La V21 debe ser <= V98 o  = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+            }
+
+            if (Date.parse(this.data.v20) > Date.parse(maxDate)) {
+              if (this.data.v21 !== '1799-01-01' && this.data.v21 !== '1822-02-01' && this.data.v21 !== '1833-03-03' && this.data.v21 !== '1845-01-01' && this.data.v21 !== '1846-01-01') {
+                if (Date.parse(this.data.v21) <= Date.parse(this.data.v20)) {
+                  this.errors.push('La V21 es > V20 revisar la V20 debe ser > 01/04/2020 00:00:00 a.m')
+                  this.error = true
+                  // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
+                }
+              }
+
+              if (this.data.v22 !== '1799-01-01' && this.data.v22 !== '1822-02-01' && this.data.v22 !== '1833-03-03' && this.data.v22 !== '1845-01-01' && this.data.v22 !== '1846-01-01') {
+                if (Date.parse(this.data.v22) <= Date.parse(this.data.v20)) {
+                  this.errors.push('La V22 es > V21 revisar la V21 debe ser > 2020-04-01')
+                  this.error = true
+                  // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+                }
+              }
+
+              if (this.data.v23 !== '1799-01-01' && this.data.v23 !== '1822-02-01' && this.data.v23 !== '1833-03-03' && this.data.v23 !== '1845-01-01' && this.data.v23 !== '1846-01-01') {
+                if (this.data.v23 === this.data.v21) {
+                  this.errors.push('La V23 es <> V21 revisar la V21 debe ser > 2020-04-01')
+                  this.error = true
+                  // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+                }
+              }
+
+              if (this.data.v19 !== '1799-01-01' && this.data.v19 !== '1822-02-01' && this.data.v19 !== '1833-03-03' && this.data.v19 !== '1845-01-01' && this.data.v19 !== '1846-01-01') {
+                if (Date.parse(this.data.v19) > Date.parse(this.data.v21)) {
+                  this.errors.push('La V19 es <= V21 revisar la V21 debe ser > 2020-04-01')
+                  this.error = true
+                  // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+                }
+              }
+
+              if (this.data.v20 !== '1799-01-01' && this.data.v20 !== '1822-02-01' && this.data.v20 !== '1833-03-03' && this.data.v20 !== '1845-01-01' && this.data.v20 !== '1846-01-01') {
+                if (Date.parse(this.data.v20) > Date.parse(this.data.v21)) {
+                  this.errors.push('La V20 es < V21 revisar la V21 debe ser > 2020-04-01')
+                  this.error = true
+                  // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+                }
+              }
+
+              if (this.data.v23 === '1845-01-01') {
+                this.errors.push('La V22 es > 1845-01-01 revisar la V21 debe ser > 2020-04-01')
                 this.error = true
                 // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
               }
             }
 
-            if (this.data.v22 !== '1799-01-01' && this.data.v22 !== '1822-02-01' && this.data.v22 !== '1833-03-03' && this.data.v22 !== '1845-01-01' && this.data.v22 !== '1846-01-01') {
+            if (Date.parse(this.data.v21) < Date.parse(this.data.v19)) {
+              this.errors.push('La V21 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+            }
+          }
+
+          if (this.data.v22 !== '1799-01-01' && this.data.v22 !== '1822-02-01' && this.data.v22 !== '1833-03-03' && this.data.v22 !== '1845-01-01' && this.data.v22 !== '1846-01-01' && this.data.v22 !== '1811-01-01') {
+            if (Date.parse(this.data.v22) < Date.parse(this.data.v19)) {
+              this.errors.push('La V22 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+            }
+
+            if (Date.parse(this.data.v22) > Date.parse(maxDate)) {
+              if (Date.parse(this.data.v23) <= Date.parse(this.data.v22)) {
+                this.errors.push('La V23 es > V22 revisar la V22 debe ser > 2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+              }
+
+              if (this.date.dateScreeningThird === '1845-01-01') {
+                this.errors.push('La V22 es <> 1845-01-01 revisar la V22 debe ser > 2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+              }
+
               if (Date.parse(this.data.v22) <= Date.parse(this.data.v20)) {
-                this.errors.push('La V22 es > V21 revisar la V21 debe ser > 2020-04-01')
+                this.errors.push('La V20 es < V22 revisar la V22 debe ser > 2020-04-01')
                 this.error = true
-                // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+              }
+
+              if (Date.parse(this.data.v22) <= Date.parse(this.data.v21)) {
+                this.errors.push('La V21 es < V22 revisar la V22 debe ser > 2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
               }
             }
+          }
 
-            if (this.data.v23 !== '1799-01-01' && this.data.v23 !== '1822-02-01' && this.data.v23 !== '1833-03-03' && this.data.v23 !== '1845-01-01' && this.data.v23 !== '1846-01-01') {
-              if (this.data.v23 === this.data.v21) {
-                this.errors.push('La V23 es <> V21 revisar la V21 debe ser > 2020-04-01')
+          if (this.data.v23 !== '1799-01-01' && this.data.v23 !== '1822-02-01' && this.data.v23 !== '1833-03-03' && this.data.v23 !== '1845-01-01' && this.data.v23 !== '1846-01-01' && this.data.v23 !== '1811-01-01') {
+            if (Date.parse(this.data.v23) < Date.parse(this.data.v19)) {
+              this.errors.push('La V23 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+            }
+
+            if (Date.parse(this.data.v23) > Date.parse(maxDate)) {
+              if (Date.parse(this.data.v23) <= Date.parse(this.data.v20)) {
+                this.errors.push('La V20 es > v23 revisar la V23 debe ser >2020-04-01')
                 this.error = true
-                // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+              }
+
+              if (Date.parse(this.data.v23) <= Date.parse(this.data.v21)) {
+                this.errors.push('La V21 es >  v23 revisar la V23 debe ser >2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
+              }
+
+              if (Date.parse(this.data.v23) <= Date.parse(this.data.v22)) {
+                this.errors.push('La V22 es > V23 revisar la V23 debe ser >2020-04-01')
+                this.error = true
+                // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
               }
             }
-
-            if (this.data.v19 !== '1799-01-01' && this.data.v19 !== '1822-02-01' && this.data.v19 !== '1833-03-03' && this.data.v19 !== '1845-01-01' && this.data.v19 !== '1846-01-01') {
-              if (Date.parse(this.data.v19) > Date.parse(this.data.v21)) {
-                this.errors.push('La V19 es <= V21 revisar la V21 debe ser > 2020-04-01')
-                this.error = true
-                // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
-              }
-            }
-
-            if (this.data.v20 !== '1799-01-01' && this.data.v20 !== '1822-02-01' && this.data.v20 !== '1833-03-03' && this.data.v20 !== '1845-01-01' && this.data.v20 !== '1846-01-01') {
-              if (Date.parse(this.data.v20) > Date.parse(this.data.v21)) {
-                this.errors.push('La V20 es < V21 revisar la V21 debe ser > 2020-04-01')
-                this.error = true
-                // return _this.$swal('Advertencia', 'Error en la validación No. B5810', 'error')
-              }
-            }
-
-            if (this.data.v23 === '1845-01-01') {
-              this.errors.push('La V22 es > 1845-01-01 revisar la V21 debe ser > 2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4117', 'error')
-            }
           }
 
-          if (Date.parse(this.data.v21) < Date.parse(this.data.v19)) {
-            this.errors.push('La V21 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+          if (typeof this.data.v24 !== 'undefined' && parseInt(this.data.v24.id) > 5 && parseInt(this.data.v24.id) !== 9 && parseInt(this.data.v24.id) !== 55 && parseInt(this.data.v24.id) !== 7) {
+            this.errors.push('La V24 debe ser < 5 o = 9 o 55 o 7')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
           }
-        }
 
-        if (this.data.v22 !== '1799-01-01' && this.data.v22 !== '1822-02-01' && this.data.v22 !== '1833-03-03' && this.data.v22 !== '1845-01-01' && this.data.v22 !== '1846-01-01' && this.data.v22 !== '1811-01-01') {
-          if (Date.parse(this.data.v22) < Date.parse(this.data.v19)) {
-            this.errors.push('La V22 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+          if (typeof this.data.v24 !== 'undefined' && this.data.v24.id === '1') {
+            if (parseInt(this.data.v24_1) < 2 || parseInt(this.data.v24_1) > 44) {
+              this.errors.push('La V24.1 es > = 2 revisar la V24 debe ser 1, La V24.1 es <= 44 revisar la V24 debe ser 1')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B3261', 'error')
+            }
+          }
+
+          if (typeof this.data.v24 !== 'undefined' && this.data.v24_1 === '1' && this.data.v24.id !== '3') {
+            this.errors.push('La V24.1 es 1 revisar V24 debe ser 3')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+            // return _this.$swal('Advertencia', 'Error en la validación No. B3219', 'error')
           }
 
-          if (Date.parse(this.data.v22) > Date.parse(maxDate)) {
-            if (Date.parse(this.data.v23) <= Date.parse(this.data.v22)) {
-              this.errors.push('La V23 es > V22 revisar la V22 debe ser > 2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (this.date.dateScreeningThird === '1845-01-01') {
-              this.errors.push('La V22 es <> 1845-01-01 revisar la V22 debe ser > 2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (Date.parse(this.data.v22) <= Date.parse(this.data.v20)) {
-              this.errors.push('La V20 es < V22 revisar la V22 debe ser > 2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (Date.parse(this.data.v22) <= Date.parse(this.data.v21)) {
-              this.errors.push('La V21 es < V22 revisar la V22 debe ser > 2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-          }
-        }
-
-        if (this.data.v23 !== '1799-01-01' && this.data.v23 !== '1822-02-01' && this.data.v23 !== '1833-03-03' && this.data.v23 !== '1845-01-01' && this.data.v23 !== '1846-01-01' && this.data.v23 !== '1811-01-01') {
-          if (Date.parse(this.data.v23) < Date.parse(this.data.v19)) {
-            this.errors.push('La V23 debe ser <= V98 o = 1799-01-01 o 1822-02-01 o = 03/03/1833 00:00:00 a.m. o = 1845-01-01 o = 1846-01-01')
+          if (parseInt(this.data.v15) > 3 && parseInt(this.data.v24_1) < 45) {
+            this.errors.push('La V24 es <45  revisar V15 debe ser < 3')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2906', 'error')
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4146', 'error')
           }
 
-          if (Date.parse(this.data.v23) > Date.parse(maxDate)) {
-            if (Date.parse(this.data.v23) <= Date.parse(this.data.v20)) {
-              this.errors.push('La V20 es > v23 revisar la V23 debe ser >2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (Date.parse(this.data.v23) <= Date.parse(this.data.v21)) {
-              this.errors.push('La V21 es >  v23 revisar la V23 debe ser >2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-
-            if (Date.parse(this.data.v23) <= Date.parse(this.data.v22)) {
-              this.errors.push('La V22 es > V23 revisar la V23 debe ser >2020-04-01')
-              this.error = true
-              // return _this.$swal('Advertencia', 'Error en la validación No. B4118', 'error')
-            }
-          }
-        }
-
-        if (typeof this.data.v24 !== 'undefined' && parseInt(this.data.v24.id) > 5 && parseInt(this.data.v24.id) !== 9 && parseInt(this.data.v24.id) !== 55 && parseInt(this.data.v24.id) !== 7) {
-          this.errors.push('La V24 debe ser < 5 o = 9 o 55 o 7')
-          this.error = true
-        }
-
-        if (typeof this.data.v24 !== 'undefined' && this.data.v24.id === '1') {
-          if (parseInt(this.data.v24_1) < 2 || parseInt(this.data.v24_1) > 44) {
-            this.errors.push('La V24.1 es > = 2 revisar la V24 debe ser 1, La V24.1 es <= 44 revisar la V24 debe ser 1')
+          if (typeof this.data.v24 !== 'undefined' && typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '1' && this.data.v24.id !== '3') {
+            this.errors.push('La V24.2 es 1 revisar V24 debe ser 3')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B3261', 'error')
+            // return _this.$swal('Advertencia', 'Error en la validación No. B3222', 'error')
           }
-        }
 
-        if (typeof this.data.v24 !== 'undefined' && this.data.v24_1 === '1' && this.data.v24.id !== '3') {
-          this.errors.push('La V24.1 es 1 revisar V24 debe ser 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B3219', 'error')
-        }
-
-        if (parseInt(this.data.v15) > 3 && parseInt(this.data.v24_1) < 45) {
-          this.errors.push('La V24 es <45  revisar V15 debe ser < 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4146', 'error')
-        }
-
-        if (typeof this.data.v24 !== 'undefined' && typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '1' && this.data.v24.id !== '3') {
-          this.errors.push('La V24.2 es 1 revisar V24 debe ser 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B3222', 'error')
-        }
-
-        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '1' && this.data.v24_3 !== '1') {
-          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-        }
-
-        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '3' && this.data.v24_3 !== '98') {
-          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-        }
-
-        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '4' && this.data.v24_3 !== '98') {
-          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-        }
-
-        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '2' && parseInt(this.data.v24_3) <= 1) {
-          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-        }
-
-        if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '2' && parseInt(this.data.v24_3) > 98) {
-          this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
-        }
-
-        if (typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '4' && this.data.v15 !== '1') {
-          this.errors.push('La V24.4  es 4 revisar V15 debe ser = 1')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4150', 'error')
-        }
-
-        if (typeof this.data.v24_4 !== 'undefined' && parseInt(this.data.v24_4.id) < 6 && parseInt(this.data.v15) > 3) {
-          this.errors.push('La V24.4  es < 6  revisar V15 debe ser < 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4151', 'error')
-        }
-
-        if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '4' && this.data.v15 !== '1') {
-          this.errors.push('La V24.5 es 4 revisar la V15 debe ser 1')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
-        }
-
-        if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '4' && this.data.v24_6 !== '1811-01-01') {
-          this.errors.push('La V24.6 es = 1811-01-01 revisar V24.5 debe ser 4')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
-        }
-
-        if (typeof this.data.v24_5 !== 'undefined' && parseInt(this.data.v24_5.id) < 5 && parseInt(this.data.v15) > 3) {
-          this.errors.push('La V24.5  es<5 revisar V15 debe ser < 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4153', 'error')
-        }
-
-        if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '1' && this.data.v24_8.id !== 'CN' && this.data.v24_8.id !== 'RC' && this.data.v24_8.id !== 'MS') {
-          this.errors.push('La V24.8 es CN revisar V24.5 debe ser 1, La V24.8 es RC revisar V24.5 debe ser 1, La V24.8 es MS revisar  V24.5 debe ser 1')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4162', 'error')
-        }
-
-        if (this.data.v24_6 !== '1811-01-01' && this.data.v24_6 !== '1800-01-01' && this.data.v24_6 !== '1833-03-03' && this.data.v24_6 !== '1845-01-01' && this.data.v24_6 !== '1846-01-01') {
-          if (Date.parse(this.data.v24_6) < Date.parse(this.data.v19)) {
-            this.errors.push('La V24.6 debe ser >= V19 y V24.6 <= V98')
+          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '1' && this.data.v24_3 !== '1') {
+            this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
             this.error = true
-            // return _this.$swal('Advertencia', 'Error en la validación No. B2921', 'error')
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
           }
-        }
 
-        if (this.data.v24_6 !== '1845-01-01' && parseInt(this.data.v15) > 3) {
-          this.errors.push('a V24.6  es<> 1845-01-01 revisar V15 debe ser < 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4154', 'error')
-        }
+          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '3' && this.data.v24_3 !== '98') {
+            this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+          }
 
-        if (parseInt(this.data.v24_7) < 9 && parseInt(this.data.v15) > 3) {
-          this.errors.push('Error en la validación No. Cuando V24.7 sea < 9 Entonces V15_Mujer_Gestante DEBE SER < 3')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4156', 'error')
-        }
+          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '4' && this.data.v24_3 !== '98') {
+            this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+          }
 
-        if (typeof this.data.v24_8 !== 'undefined' && this.data.v24_8.id === 'NA' && this.data.v24_9 !== '9') {
-          this.errors.push('La V24.9 es 9 revisar la V24.8 debe ser NA')
-          this.error = true
-          // return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
+          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '2' && parseInt(this.data.v24_3) <= 1) {
+            this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+          }
+
+          if (typeof this.data.v24_2 !== 'undefined' && this.data.v24_2.id === '2' && parseInt(this.data.v24_3) > 98) {
+            this.errors.push('La V24.3 es 1 o 98 o es > 1 y >= 97 revisar V24.2 debe ser 1,3,4 o 2')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4147', 'error')
+          }
+
+          if (typeof this.data.v24_4 !== 'undefined' && this.data.v24_4.id === '4' && this.data.v15 !== '1') {
+            this.errors.push('La V24.4  es 4 revisar V15 debe ser = 1')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4150', 'error')
+          }
+
+          if (typeof this.data.v24_4 !== 'undefined' && parseInt(this.data.v24_4.id) < 6 && parseInt(this.data.v15) > 3) {
+            this.errors.push('La V24.4  es < 6  revisar V15 debe ser < 3')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4151', 'error')
+          }
+
+          if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '4' && this.data.v15 !== '1') {
+            this.errors.push('La V24.5 es 4 revisar la V15 debe ser 1')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
+          }
+
+          if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '4' && this.data.v24_6 !== '1811-01-01') {
+            this.errors.push('La V24.6 es = 1811-01-01 revisar V24.5 debe ser 4')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B3253', 'error')
+          }
+
+          if (typeof this.data.v24_5 !== 'undefined' && parseInt(this.data.v24_5.id) < 5 && parseInt(this.data.v15) > 3) {
+            this.errors.push('La V24.5  es<5 revisar V15 debe ser < 3')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4153', 'error')
+          }
+
+          if (typeof this.data.v24_5 !== 'undefined' && this.data.v24_5.id === '1' && this.data.v24_8.id !== 'CN' && this.data.v24_8.id !== 'RC' && this.data.v24_8.id !== 'MS') {
+            this.errors.push('La V24.8 es CN revisar V24.5 debe ser 1, La V24.8 es RC revisar V24.5 debe ser 1, La V24.8 es MS revisar  V24.5 debe ser 1')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4162', 'error')
+          }
+
+          if (this.data.v24_6 !== '1811-01-01' && this.data.v24_6 !== '1800-01-01' && this.data.v24_6 !== '1833-03-03' && this.data.v24_6 !== '1845-01-01' && this.data.v24_6 !== '1846-01-01') {
+            if (Date.parse(this.data.v24_6) < Date.parse(this.data.v19)) {
+              this.errors.push('La V24.6 debe ser >= V19 y V24.6 <= V98')
+              this.error = true
+              // return _this.$swal('Advertencia', 'Error en la validación No. B2921', 'error')
+            }
+          }
+
+          if (this.data.v24_6 !== '1845-01-01' && parseInt(this.data.v15) > 3) {
+            this.errors.push('a V24.6  es<> 1845-01-01 revisar V15 debe ser < 3')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4154', 'error')
+          }
+
+          if (parseInt(this.data.v24_7) < 9 && parseInt(this.data.v15) > 3) {
+            this.errors.push('Error en la validación No. Cuando V24.7 sea < 9 Entonces V15_Mujer_Gestante DEBE SER < 3')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4156', 'error')
+          }
+
+          if (typeof this.data.v24_8 !== 'undefined' && this.data.v24_8.id === 'NA' && this.data.v24_9 !== '9') {
+            this.errors.push('La V24.9 es 9 revisar la V24.8 debe ser NA')
+            this.error = true
+            // return _this.$swal('Advertencia', 'Error en la validación No. B4157', 'error')
+          }
         }
 
         if (this.secondStep === true) {
@@ -4338,6 +4314,33 @@ export default {
         }
 
         if (this.fiveStep === true) {
+          if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) < 3) {
+            if (typeof this.data.v68 !== 'undefined' && parseInt(this.data.v68.id) !== 1) {
+              this.errors.push('La V68 es 1 revisar V17 debe ser < 3')
+              this.error = true
+            }
+
+            if (typeof this.data.v68_1 !== 'undefined' && parseInt(this.data.v68_1.id) >= 6) {
+              this.errors.push('La V68.1 es < 6 revisar V17 debe ser < 3')
+              this.error = true
+            }
+
+            if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) >= 8) {
+              this.errors.push('La V68.2 es < 8 revisar V17 debe ser < 3')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01') {
+              this.errors.push('La V68 es <> 1799-01-01 revisar V17 debe ser < 3')
+              this.error = true
+            }
+
+            if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) === 10) {
+              this.errors.push('La V68.14 es <> 10 revisar V17 debe ser < 3')
+              this.error = true
+            }
+          }
+
           if (typeof this.data.v39 !== 'undefined' && this.data.v39 === '3') {
             if (typeof this.data.v52_1 !== 'undefined' && this.data.v52_1.id !== '1') {
               this.errors.push('La V52.1 es 1 revisar la V39 debe ser 3')
@@ -4429,6 +4432,1336 @@ export default {
               this.error = true
             }
           }
+
+          if (this.data.v53_1 !== '1846-01-01') {
+            if (Date.parse(this.data.v53_1) < Date.parse(this.patient.field_json.birthdate) || Date.parse(this.data.v53_1) > Date.parse(this.data.v98)) {
+              this.errors.push('La V53.1 debe ser >= V09 y <= V98 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v53_1 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 debe ser 19 revisar la V53.1 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === 7) {
+            this.errors.push('La V53.3 debe ser <> 7')
+            this.error = true
+          }
+
+          if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V53.3 debe ser 55')
+            this.error = true
+          }
+
+          if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '10') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '9' && this.data.v97.id !== '7' && this.data.v97.id !== '10' && this.data.v97.id !== '4' && this.data.v97.id !== '5' && this.data.v97.id !== '11' && this.data.v97.id !== '17') {
+              this.errors.push('LA V97 es 9,7,10,4,5,11 o 17 revisar la V53.3 debe ser 10')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id !== '10') {
+            if (typeof this.data.v97 !== 'undefined' && (this.data.v97.id === '9' || this.data.v97.id === '7' || this.data.v97.id === '10' || this.data.v97.id === '4' || this.data.v97.id === '5' || this.data.v97.id === '11' || this.data.v97.id === '17')) {
+              this.errors.push('LA V97 es 9,7,10,4,5,11 o 17 revisar la V53.3 debe ser 10')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '2' && typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) >= 5) {
+            this.errors.push('La V53.4 es < 5 revisar V53.3 debe ser = 2')
+            this.error = true
+          }
+
+          if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id !== '2' && typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) < 5) {
+            this.errors.push('La V53.4 es < 5 revisar V53.3 debe ser = 2')
+            this.error = true
+          }
+
+          if (typeof this.data.v53_4 !== 'undefined' && this.data.v53_4.id === '9') {
+            this.errors.push('La V53.4 debe ser <> 9')
+            this.error = true
+          }
+
+          if (typeof this.data.v53_4 !== 'undefined' && this.data.v53_4.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V53.4 debe ser 55')
+            this.error = true
+          }
+
+          if (typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) < 5 && parseInt(this.data.v94) <= 100000) {
+            this.errors.push('La V94 es > 100000 revisar la V53.4 debe ser < 5')
+            this.error = true
+          }
+
+          if (this.data.v54 !== '1799-01-01' && this.data.v54 !== '1800-01-01' && this.data.v54 !== '1846-01-01') {
+            if (Date.parse(this.data.v54) < Date.parse(this.data.v36)) {
+              this.errors.push('La V54 debe ser >= V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v54) > Date.parse(this.data.v98)) {
+              this.errors.push('La V54 debe ser <= V98 0 = 1799-01-01 o 1800-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v54 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V54 debe ser 1846-01-01')
+            this.error = true
+          }
+
+          if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '9') {
+            this.errors.push('La V55 debe ser <> 9')
+            this.error = true
+          }
+
+          if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '55') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V55 debe ser 55')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '0') {
+            if (Date.parse(this.data.v36) <= Date.parse('2021-07-31')) {
+              this.errors.push('La V55 es 0 revisar V36 debe ser > 2021-07-31')
+              this.error = true
+            }
+          }
+
+          if (this.data.v56 !== '1846-01-01' && this.data.v56 !== '1799-01-01') {
+            if (Date.parse(this.data.v56) < Date.parse(this.patient.field_json.birthdate) || Date.parse(this.data.v56) > Date.parse(this.data.v98)) {
+              this.errors.push('La V56 debe ser > = V09, La V56 debe ser <= V98 0 = 1799-01-01 o  1846-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 1
+          if (this.data.v56 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V56 debe ser 1846-01-01')
+            this.error = true
+          }
+
+          // Validación 2
+          if (Date.parse(this.data.v56) > Date.parse(this.patient.field_json.birthdate) && parseInt(this.data.v56_1) > 500) {
+            this.errors.push('La V56.1 es <= 500 revisar la V56 debe ser > v09')
+            this.error = true
+          }
+
+          // Validación 3
+          if (this.data.v56 === '1799-01-01' && parseInt(this.data.v56_1) <= 500) {
+            this.errors.push('La V56.1 es > 500 revisar la V56 debe ser 1799-01-01')
+            this.error = true
+          }
+
+          if (this.data.v56_1 !== '999' && this.data.v56_1 !== '998' && this.data.v56_1 !== '0' && this.data.v56_1 !== '555') {
+            if (parseInt(this.data.v56_1) < 0 || parseInt(this.data.v56_1) > 500) {
+              this.errors.push('La V56.1 debe ser >= 0 y <= 500 o = 999 o = 998 o 0 555')
+              this.error = true
+            }
+          }
+
+          // validación 1
+          if (this.data.v56_1 === '555') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V56.1 debe ser = 555')
+              this.error = true
+            }
+          }
+
+          // validación 2
+          if (parseInt(this.data.v56_1) <= 500) {
+            if (this.data.v56 === '1799-01-01') {
+              this.errors.push('La v56.1 es <= 500 revisar  la V56 debe ser <> 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // validación 3
+          if (parseInt(this.data.v56_1) < 501) {
+            if (Date.parse(this.data.v56) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V56.1 es <501 revisar la V56 debe ser >= V09_Fecha_de_nacimiento')
+              this.error = true
+            }
+          }
+
+          if (this.data.v57 !== '1799-01-01' && this.data.v57 !== '1846-01-01') {
+            if (Date.parse(this.data.v57) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V57 debe ser > = v09')
+              this.error = true
+            }
+
+            // validacion para V57 DEBE SER <= V98
+            if (Date.parse(this.data.v57) > Date.parse(this.data.v98)) {
+              this.errors.push('La V57 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v57_1 !== '9999' && this.data.v57_1 !== '9998' && this.data.v57_1 !== '0' && this.data.v57_1 !== '5555') {
+            if (parseInt(this.data.v57_1) < 0 || parseInt(this.data.v57_1) > 5000) {
+              this.errors.push('La V57.1 debe ser >= o y < = 5000 o = 9999 , 9998 o 5555')
+              this.error = true
+            }
+          }
+
+          // Validacion 1
+          if (this.data.v57_1 === '5555') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V57.1 debe ser  5555')
+              this.error = true
+            }
+          }
+
+          // Validacion 2
+          if (parseInt(this.data.v57_1) < 5001) {
+            if (this.data.v57 === '1799-01-01') {
+              this.errors.push('La V57.1 es < 5001 revisar la V57 debe ser <> 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // Validacion 3
+          if (parseInt(this.data.v57_1) < 5001) {
+            if (Date.parse(this.data.v57) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V57.1 es < 5001 revisar la V57 debe ser >= V09')
+              this.error = true
+            }
+          }
+
+          if (this.data.v58 !== '1799-01-01' && this.data.v58 !== '1846-01-01') {
+            if (Date.parse(this.data.v58) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La v58 debe ser > = v09')
+              this.error = true
+            }
+
+            // validacion para V57 DEBE SER <= V98
+            if (Date.parse(this.data.v58) > Date.parse(this.data.v98)) {
+              this.errors.push('La V58 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 1
+          if (this.data.v58 === '1799-01-01') {
+            if (parseInt(this.data.v58_1) <= 100) {
+              this.errors.push('La V58.1 es <= 100 revisar V58 debe ser = 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 2
+          if (Date.parse(this.data.v58) > Date.parse(this.patient.field_json.birthdate)) {
+            if (parseInt(this.data.v58_1) > 99) {
+              this.errors.push('La V58.1 es > 99 revisar V58 debe ser > V09')
+              this.error = true
+            }
+          }
+
+          // Validación 3
+          if (this.data.v58 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V58 debe ser 1845-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v58_1 !== '9999' && this.data.v58_1 !== '9998' && this.data.v58_1 !== '5555') {
+            if (parseInt(this.data.v58_1) < 0 || parseInt(this.data.v58_1) > 30) {
+              this.errors.push('La V58.1 debe ser >= 0 y <= 30 o = 9999 o = 9998 o = 5555')
+              this.error = true
+            }
+          }
+
+          if (this.data.v58_1 === '5555') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar V58.1 debe ser = 5555')
+              this.error = true
+            }
+          }
+
+          // Segunda validación
+          if (parseInt(this.data.v58_1) <= 30) {
+            if (this.data.v58 === '1799-01-01') {
+              this.errors.push('La V58.1 es <= 30 revisar la V58 debe ser <> 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // Tercera validación
+          if (parseInt(this.data.v58_1) <= 30) {
+            if (Date.parse(this.data.v58) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V58.1 es <= 30 revisar la V58 debe ser >= V09_Fecha_de_nacimiento')
+            }
+          }
+
+          if (this.data.v59 !== '1799-01-01' && this.data.v59 !== '1846-01-01') {
+            if (Date.parse(this.data.v59) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V59 debe ser > = v09')
+              this.error = true
+            }
+
+            // validacion para V57 DEBE SER <= V98
+            if (Date.parse(this.data.v59) > Date.parse(this.data.v98)) {
+              this.errors.push('La V59 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v59 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V59 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (Date.parse(this.data.v59) > Date.parse(this.patient.field_json.birthdate)) {
+            if (parseInt(this.data.v59_1) > 5000) {
+              this.errors.push('La V59.1 es <= 5000 revisar la V59 debe ser > V09')
+              this.error = true
+            }
+          }
+
+          if (this.data.v59 === '1799-01-01') {
+            if (parseInt(this.data.v59_1) <= 5000) {
+              this.errors.push('La V59.1 es > 5000 revisar V59 debe ser = 1799-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v59_1 !== '9999' && this.data.v59_1 !== '9998' && this.data.v59_1 !== '5555') {
+            if (parseInt(this.data.v59_1) < 0 || parseInt(this.data.v58_1) > 5000) {
+              this.errors.push('La V59.1 debe ser > = 0 y < = 5000 o = 9999, 9998 o 5555')
+              this.error = true
+            }
+          }
+
+          // Validacion 1
+          if (parseInt(this.data.v59_1) === 5555 && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V59.1 debe ser V59.1')
+            this.error = true
+          }
+
+          // Validacion 2
+          if (parseInt(this.data.v59_1) < 5000 && this.data.v59 === '1799-01-01') {
+            this.errors.push('La V59.1 es < 5000 revisar la V59 debe ser <> 1799-01-01')
+            this.error = true
+          }
+
+          // Validacion 3
+          if (parseInt(this.data.v59_1) < 5000 && Date.parse(this.data.v59) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V59.1 es < 5000 revisar la V59 debe ser >= V09')
+            this.error = true
+          }
+
+          if (this.data.v60 !== '1799-01-01' && this.data.v60 !== '1846-01-01') {
+            if (Date.parse(this.data.v60) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V60 debe ser > = v09')
+              this.error = true
+            }
+
+            // validacion para V57 DEBE SER <= V98
+            if (Date.parse(this.data.v60) > Date.parse(this.data.v98)) {
+              this.errors.push('La V60 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 1
+          if (this.data.v60 === '1799-01-01') {
+            if (parseInt(this.data.v60_1) <= 100) {
+              this.errors.push('La V60.1 es <= 100 revisar V60 debe ser = 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 2
+          if (Date.parse(this.data.v60) > Date.parse(this.patient.field_json.birthdate)) {
+            if (parseInt(this.data.v60_1) > 99.9) {
+              this.errors.push('La V60.1 es > 99.9 revisar V60 debe ser > V09')
+              this.error = true
+            }
+          }
+
+          // Validación 3
+          if (this.data.v60 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V60 debe ser = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v60_1 !== '9999' && this.data.v60_1 !== '9998' && this.data.v60_1 !== '5555') {
+            if (parseInt(this.data.v60_1) < 0 || parseInt(this.data.v58_1) > 99.9) {
+              this.errors.push('La V60.1 debe ser > = 0 y <= 99,9 o = 9999 , 99998 o 5555')
+              this.error = true
+            }
+          }
+
+          // validacion 1
+          if (this.data.v60_1 === '5555') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es = 19 revisar V60.1 debe ser = 5555')
+              this.error = true
+            }
+          }
+
+          // validacion 2
+          if (parseInt(this.data.v60_1) <= 1) {
+            if (this.data.v60 !== '1799-01-01') {
+              this.errors.push('La V60.1 es <= 1 revisar V60 debe ser <> 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // validacion 3
+          if (parseInt(this.data.v60_1) < 100) {
+            if (Date.parse(this.data.v60) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V60.1 es < 100 revisar  V60 debe ser > = v09')
+              this.error = true
+            }
+          }
+
+          if (this.data.v61 !== '1799-01-01' && this.data.v61 !== '1846-01-01') {
+            if (Date.parse(this.data.v61) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V61 debe ser > V09')
+              this.error = true
+            }
+
+            // validacion para V57 DEBE SER <= V98
+            if (Date.parse(this.data.v61) > Date.parse(this.data.v98)) {
+              this.errors.push('La V61 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v61 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V61 debe ser = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (Date.parse(this.data.v61) > Date.parse(this.patient.field_json.birthdate)) {
+            if (parseInt(this.data.v61_1) > 1000) {
+              this.errors.push('La V61.1 es <= 1000 revisar la V61 debe sere > V09')
+              this.error = true
+            }
+          }
+
+          if (this.data.v61 === '1799-01-01') {
+            if (this.data.v61_1 !== '9998') {
+              this.errors.push('La V61.1 es 9998 revisar la V61 debe ser = 1799-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v61_1 !== '9999' && this.data.v61_1 !== '9998' && this.data.v61_1 !== '5555') {
+            if (parseInt(this.data.v61_1) < 0 || parseInt(this.data.v58_1) > 1000) {
+              this.errors.push('La V61.1 debe ser > = 0 y <= 99,9 o = 9999 , 99998 o 5555')
+              this.error = true
+            }
+          }
+
+          // validación 1
+          if (this.data.v61_1 === '5555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V61.1 debe ser 5555')
+            this.error = true
+          }
+
+          // validación 2
+          if (parseInt(this.data.v61_1) < 1000 && this.data.v61 !== '1799-01-01') {
+            this.errors.push('La V61.1 es < 1000 revisar la V61 debe ser <> 1799-01-01')
+            this.error = true
+          }
+
+          // validación 3
+          if (parseInt(this.data.v61_1) < 1001 && Date.parse(this.data.v61) < Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V61.1 es < 1001  revisar la V61 debe ser > = v09')
+            this.error = true
+          }
+
+          if (this.data.v62 !== '1799-01-01' && this.data.v62 !== '1846-01-01') {
+            if (Date.parse(this.data.v62) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V62 debe ser > V09')
+              this.error = true
+            }
+
+            // validacion para V57 DEBE SER <= V98
+            if (Date.parse(this.data.v62) > Date.parse(this.data.v98)) {
+              this.errors.push('La V62 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 1
+          if (this.data.v62 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V62 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          // Validación 2
+          if (Date.parse(this.data.v62) > Date.parse(this.patient.field_json.birthdate)) {
+            if (parseInt(this.data.v62_1) > 250) {
+              this.errors.push('La V62.1 es <= 250 revisar la V62 debe ser > V09')
+              this.error = true
+            }
+          }
+
+          // Validación 3
+          if (this.data.v62 === '1799-01-01') {
+            if (parseInt(this.data.v62_1) <= 250) {
+              this.errors.push('La V62.1 es > 250 revisar V62 debe ser = 1799-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v62_1 !== '999' && this.data.v62_1 !== '998' && this.data.v62_1 !== '555') {
+            if (parseInt(this.data.v62_1) < 0 || parseInt(this.data.v58_1) > 250) {
+              this.errors.push('La V62 debe ser >0 y < = 250  o = 999 o 998 o 555')
+              this.error = true
+            }
+          }
+
+          if (this.data.v62_1 === '555') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V62.1 debe ser 555')
+              this.error = true
+            }
+          }
+
+          // segunda validación
+          if (parseInt(this.data.v62_1) < 250) {
+            if (this.data.v62 !== '1799-01-01') {
+              this.errors.push('La V62.1 es <= 250 revisar la V62 debe ser <> 1799-01-01')
+              this.error = true
+            }
+          }
+
+          // tercera validación
+          if (parseInt(this.data.v62_1) < 251) {
+            if (Date.parse(this.data.v62) < Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('La V62.1 es < 251 revisar V62 debe ser >= V09')
+              this.error = true
+            }
+          }
+
+          if (this.data.v63 !== '555') {
+            if (parseInt(this.data.v63) < 30 || parseInt(this.data.v63) > 220) {
+              this.errors.push('La V62 debe ser >30 y < = 220  o = 555')
+              this.error = true
+            }
+          }
+
+          if (this.data.v63 === '555') {
+            // Si el valor de V97 es diferente de 19 ejecuta el siguiente código
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V63 debe ser 555')
+              this.error = true
+            }
+          }
+
+          // Validación V64 debe ser <> 9
+          if (this.data.v64 === '9') {
+            this.errors.push('La V64 debe ser <> 9')
+            this.error = true
+          }
+
+          // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+          if (this.data.v64 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V64 debe ser 55')
+            this.error = true
+          }
+
+          if (this.data.v65 === '9') {
+            this.errors.push('La V65 debe ser <> 9')
+            this.error = true
+          }
+
+          // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+          if (this.data.v65 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V65 debe ser 55')
+            this.error = true
+          }
+
+          if (this.data.v66 === '9') {
+            this.errors.push('La V66 debe ser <> 9')
+            this.error = true
+          }
+
+          // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+          if (this.data.v66 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V66 debe ser 55')
+            this.error = true
+          }
+
+          if (this.data.v67 === '9') {
+            this.errors.push('La V67 debe ser <> 9')
+            this.error = true
+          }
+
+          // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
+          if (this.data.v67 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V67 debe ser 55')
+            this.error = true
+          }
+
+          // 1
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '9') {
+            this.errors.push('La V68 debe ser <> 9')
+            this.error = true
+          }
+
+          // 2
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V68 debe ser 55')
+            this.error = true
+          }
+
+          // 3
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1' && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+            this.errors.push('La V68 es 1 revisa V17 debe ser < 3')
+            this.error = true
+          }
+
+          // 4
+          if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id !== '7') {
+            if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1' && (parseInt(this.data.v68_1.id) > 6)) {
+              this.errors.push('La V68.1 es < 6 o = 7  revisar V68 debe ser 1')
+              this.error = true
+            }
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.1 DEBE SER = 6 El mensaje de error debe ser La V68.1 es 6 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id !== '6') {
+            this.errors.push('La V68.1 es 6 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.2 DEBE SER = 8 El mensaje de error debe ser La V68.2 es 8 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id !== '8') {
+            this.errors.push('La V68.2 es 8 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.3 DEBE SER = 1799-01-01 El mensaje de error debe ser La V68.3 es 1799-01-01 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && this.data.v68_3 !== '1799-01-01') {
+            this.errors.push('La V68.3 es 1799-01-01 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.4 DEBE SER = 9 El mensaje de error debe ser La V68.4 es 9 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_4 !== 'undefined' && this.data.v68_4.id !== '9') {
+            this.errors.push('La V68.4 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_5 !== 'undefined' && this.data.v68_5.id !== '9') {
+            this.errors.push('La V68.5 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.6 DEBE SER = 9 El mensaje de error debe ser La V68.6 es 9 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_6 !== 'undefined' && this.data.v68_6.id !== '9') {
+            this.errors.push('La V68.6 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.7 DEBE SER = 9 El mensaje de error debe ser La V68.7 es 9 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_7 !== 'undefined' && this.data.v68_7.id !== '9') {
+            this.errors.push('La V68.7 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Cuando V68 sea = 0 Entonces V68.8 DEBE SER = 9 El mensaje de error debe ser La V68.8 es 9 revisar V68 debe ser 0
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_8 !== 'undefined' && this.data.v68_8.id !== '9') {
+            this.errors.push('La V68.8 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_9 !== 'undefined' && this.data.v68_9.id !== '9') {
+            this.errors.push('La V68.9 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_10 !== 'undefined' && this.data.v68_10.id !== '9') {
+            this.errors.push('La V68.10 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_11 !== 'undefined' && this.data.v68_11.id !== '9') {
+            this.errors.push('La V68.11 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_12 !== 'undefined' && this.data.v68_12.id !== '9') {
+            this.errors.push('La V68.12 es 9 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Validación 5
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0') {
+            if (this.data.v68_13 !== '1799-01-01') {
+              this.errors.push('La V68.13 es 1799-01-01 revisar V68 debe ser 0')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id !== '9') {
+            this.errors.push('La V68.14 es 10 revisar V68 debe ser 0')
+            this.error = true
+          }
+
+          // Validación 9
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1') {
+            if (this.data.v68_13 === '1799-01-01') {
+              this.errors.push('La V68.13 es <> 1799-01-01 revisar V68 debe ser 1')
+              this.error = true
+            }
+          }
+
+          // Validación 10
+          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1') {
+            if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9) {
+              this.errors.push('La V68.14 es < 9 revisar V68 debe ser 1')
+              this.error = true
+            }
+          }
+
+          // Validación V68.1 DEBE SER <> 9
+          if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id === '9') {
+            this.errors.push('La V68.1 debe ser <> 9')
+            this.error = true
+          }
+
+          // Validación Cuando V68.1 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V68.1 = 55')
+            this.error = true
+          }
+
+          // Validación Cuando V68.1 sea < 6 Entonces V17 DEBE SER < 3
+          if (typeof this.data.v68_1 !== 'undefined' && parseInt(this.data.v68_1.id) < 6 && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+            this.errors.push('La V68.1 es < 6 revisar la V17 debe ser < 3')
+            this.error = true
+          }
+
+          // validación V68.2 DEBE SER <> 9
+          if (typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id === '9') {
+            this.errors.push('La V68.2 debe ser <> 9')
+            this.error = true
+          }
+
+          // validación Cuando V68.2 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V68.2 = 55')
+            this.error = true
+          }
+
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2 && Date.parse(this.data.v68_3) > Date.parse(this.patient.field_json.birthdate)) {
+            this.errors.push('La V68.3 es > V09 revisar V68.2 debe ser < = 2')
+            this.error = true
+          }
+
+          // validación 1
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_4 === '9') {
+              this.errors.push('La V68.4 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 2
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_5 === '9') {
+              this.errors.push('La V68.5 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 3
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_6 === '9') {
+              this.errors.push('La V68.6 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 4
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_7 === '9') {
+              this.errors.push('La V68.7 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 1
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_8 === '9') {
+              this.errors.push('La V68.8 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 2
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_9 === '9') {
+              this.errors.push('La V68.9 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 3
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_10 === '9') {
+              this.errors.push('La V68.10 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // validación 4
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_11 === '9') {
+              this.errors.push('La V68.11 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
+            if (this.data.v68_12 === '9') {
+              this.errors.push('La V68.12 es <> 9 revisar V68.2 debe ser < = 2')
+              this.error = true
+            }
+          }
+
+          // la validación debe ser
+          if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) < 8 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.2 es < 8 revisar la V68 debe ser 1')
+            this.error = true
+          }
+
+          // validaciones
+          if (this.data.v68_3 === '1845-01-01') {
+            this.errors.push('La V68.3 debe ser <> 1845-01-01')
+            this.error = true
+          }
+
+          if (this.data.v68_3 !== '1845-01-01') {
+            if (this.data.v68_3 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+              this.errors.push('La V97 es 19 revisar la V68.3= 1846-01-01')
+              this.error = true
+            }
+
+            // Validación 1
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_4 === '9') {
+              this.errors.push('La V68.4 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            // Validación 2
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_5 === '9') {
+              this.errors.push('La V68.5 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            // Validación 3
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_6 === '9') {
+              this.errors.push('La V68.6 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            // Validación 4
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_7 === '9') {
+              this.errors.push('La V68.7 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            // Validación 5
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_8 === '9') {
+              this.errors.push('La V68.8 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_9 === '9') {
+              this.errors.push('La V68.9 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_10 === '9') {
+              this.errors.push('La V68.10 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_11 === '9') {
+              this.errors.push('La V68.11 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_12 === '9') {
+              this.errors.push('La V68.12 es <> 9  revisar V68.3 debe ser > V36')
+              this.error = true
+            }
+
+            if (this.data.v68_3 !== '1800-01-01' || this.data.v68_3 !== '1811-01-01' || this.data.v68_3 !== '1799-01-01' || this.data.v68_3 !== '1846-01-01') {
+              // Validación V68.3 DEBE SER >= V36
+              if (Date.parse(this.data.v68_3) < Date.parse(this.data.v36)) {
+                this.errors.push('La V68.3 debe ser >= V36')
+                this.error = true
+              }
+
+              // Validación V68.3 DEBE SER <= V98
+              if (Date.parse(this.data.v68_3) > Date.parse(this.data.v98)) {
+                this.errors.push('La V68.3 debe ser <= V98 o = 1800-01-01 o 1811-01-01 O 1799-=1-01 O 1846-01-01')
+                this.error = true
+              }
+
+              if (Date.parse(this.data.v68_3) < Date.parse('2016-01-31')) {
+                this.errors.push('La V68.3 debe ser > 2016-01-31 y < = V98 o = 1799-01-01 o 1800-01-01 o 1811-01-01 ')
+                this.error = true
+              }
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_4 !== '9') {
+              this.errors.push('La V68.4 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_5 !== '9') {
+              this.errors.push('La V68.5 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_6 !== '9') {
+              this.errors.push('La V68.6 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_7 !== '9') {
+              this.errors.push('La V68.7 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_8 !== '9') {
+              this.errors.push('La V68.8 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_9 !== '9') {
+              this.errors.push('La V68.9 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_10 !== '9') {
+              this.errors.push('La V68.10 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_11 !== '9') {
+              this.errors.push('La V68.11 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1799-01-01' && this.data.v68_12 !== '9') {
+              this.errors.push('La V68.12 es = 9 revisar V68.3 debe ser= 1799-01-01')
+              this.error = true
+            }
+
+            // 1800-01-01
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_4 !== '9') {
+              this.errors.push('La V68.4 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_5 !== '9') {
+              this.errors.push('La V68.5 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_6 !== '9') {
+              this.errors.push('La V68.6 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_7 !== '9') {
+              this.errors.push('La V68.7 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_8 !== '9') {
+              this.errors.push('La V68.8 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_9 !== '9') {
+              this.errors.push('La V68.9 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_10 !== '9') {
+              this.errors.push('La V68.10 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_11 !== '9') {
+              this.errors.push('La V68.11 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1800-01-01' && this.data.v68_12 !== '9') {
+              this.errors.push('La V68.12 es = 9 revisar V68.3 debe ser= 1800-01-01')
+              this.error = true
+            }
+
+            // 1811-01-01
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_4 !== '9') {
+              this.errors.push('La V68.4 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_5 !== '9') {
+              this.errors.push('La V68.5 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_6 !== '9') {
+              this.errors.push('La V68.6 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_7 !== '9') {
+              this.errors.push('La V68.7 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_8 !== '9') {
+              this.errors.push('La V68.8 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_9 !== '9') {
+              this.errors.push('La V68.9 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_10 !== '9') {
+              this.errors.push('La V68.10 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_11 !== '9') {
+              this.errors.push('La V68.11 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            if (this.data.v68_3 === '1811-01-01' && this.data.v68_12 !== '9') {
+              this.errors.push('La V68.12 es = 9 revisar V68.3 debe ser= 1811-01-01')
+              this.error = true
+            }
+
+            // Cuando V68.3 sea > 1846-01-01 Entonces V68 DEBE SER = 1 El mensaje de error debe ser La V68.3 es > 1846-01-01 revisar V68 debe ser 1
+            if (Date.parse(this.data.v68_3) > Date.parse('1846-01-01') && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+              this.errors.push('La V68.3 es > 1846-01-01 revisar V68 debe ser 1')
+              this.error = true
+            }
+
+            // Cuando V68.3 sea = 1800-01-01 Entonces V68 DEBE SER = 1 El mensaje de error debe ser La V68.3 es = 1800-01-01 revisar V68 debe ser 1
+            if (this.data.v68_3 === '1800-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+              this.errors.push('La V68.3 es = 1800-01-01 revisar V68 debe ser 1')
+              this.error = true
+            }
+
+            // Cuando V68.3 sea = 1811-01-01 Entonces V68 DEBE SER = 1 El mensaje de error debe ser La V68.3 es =  1811-01-01 revisar V68 debe ser 1
+            if (this.data.v68_3 === '1811-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+              this.errors.push('La V68.3 es =  1811-01-01 revisar V68 debe ser 1')
+              this.error = true
+            }
+          }
+
+          if (this.data.v68_4 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.4 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_5 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.5 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_6 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.6 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_7 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.7 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_8 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.8 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_9 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.9 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_10 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.10 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_11 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.11 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_12 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.12 es <> 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          if (this.data.v68_13 === '1799-01-01' && this.data.v68_13 === '1800-01-01' && this.data.v68_13 === '1846-01-01' && this.data.v68_13 === '1822-01-01') {
+            // validacion 1
+            if (Date.parse(this.data.v68_13) < Date.parse(this.data.v36)) {
+              this.errors.push('La V68.13 debe ser >= V36')
+              this.error = true
+            }
+
+            // validacion 2
+            if (Date.parse(this.data.v68_13) > Date.parse(this.data.v98)) {
+              this.errors.push('La V68.3 debe ser <= V98 o = 1799-01-01 o = 1800-01-01 o =1846-01-01 o = 1822-01-01')
+              this.error = true
+            }
+          }
+
+          // validacion 1
+          if (this.data.v68_13 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V68.13 debe der = 1846-01-01')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v68_13 !== 'undefined' && this.data.v68_13 !== '1799-01-01' && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
+            this.errors.push('La V68.13 es <> 1799-01-01 revisar V17 debe ser < 3')
+            this.error = true
+          }
+
+          // validacion 3
+          if (this.data.v68_13 === '1800-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.13 es 1800-01-01 revisar la V68 debe sr = 1')
+            this.error = true
+          }
+
+          // validacion 4
+          if (this.data.v68_13 === '1822-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.13 es 1822-01-01 revisar la V68 debe sr = 1')
+            this.error = true
+          }
+
+          // validacion 5
+          if (Date.parse(this.data.v68_13) > Date.parse('1846-01-01') && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.13 es > 1846-01-01 revisar la V68 debe sr = 1')
+            this.error = true
+          }
+
+          // Validación V68.14 DEBE SER <> 9
+          if (typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id === '9') {
+            this.errors.push('La V68.14 debe ser <> 9')
+            this.error = true
+          }
+
+          // Validación Cuando V68.14 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 debe ser 19 revisar V68.14 debe ser 55')
+            this.error = true
+          }
+
+          if (typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id === '5' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '10') {
+            this.errors.push('La V97 es 4 o 10  revisar V68.14 debe ser 5')
+            this.error = true
+          }
+
+          // para validar la primera condicion:
+          if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9 && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17) > 3) {
+            this.errors.push('La V68.14 es < 9 revisar V17 debe ser < 3')
+            this.error = true
+          }
+
+          // para validar la segunda condicion:
+          if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
+            this.errors.push('La V68.14 es < 9 revisar V68 debe ser 1')
+            this.error = true
+          }
+
+          // validacion 1
+          if (typeof this.data.v69 !== 'undefined' && this.data.v69.id === '9') {
+            this.errors.push('La V69 debe ser <> 9')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v69 !== 'undefined' && this.data.v69.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V69 debe ser 55')
+            this.error = true
+          }
+
+          // validacion 1
+          if (typeof this.data.v70 !== 'undefined' && this.data.v70.id === '9') {
+            this.errors.push('La V70 debe ser <> 9')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v70 !== 'undefined' && this.data.v70.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V70 debe ser 55')
+            this.error = true
+          }
+
+          // validacion 1
+          if (typeof this.data.v71 !== 'undefined' && this.data.v71.id === '9') {
+            this.errors.push('La V71 debe ser <> 9')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v71 !== 'undefined' && this.data.v71.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V71 debe ser 55')
+            this.error = true
+          }
+
+          // validacion 1
+          if (typeof this.data.v72 !== 'undefined' && this.data.v72.id === '9') {
+            this.errors.push('La V72 debe ser <> 9')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v72 !== 'undefined' && this.data.v72.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V72 debe ser 55')
+            this.error = true
+          }
+
+          // validacion 1
+          if (typeof this.data.v73 !== 'undefined' && this.data.v73.id === '9') {
+            this.errors.push('La V73 debe ser <> 9')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v73 !== 'undefined' && this.data.v73.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V73 debe ser 55')
+            this.error = true
+          }
+
+          // validacion 1
+          if (typeof this.data.v74 !== 'undefined' && this.data.v74.id === '9') {
+            this.errors.push('La V74 debe ser <> 9')
+            this.error = true
+          }
+
+          // validacion 2
+          if (typeof this.data.v74 !== 'undefined' && this.data.v74.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V74 debe ser 55')
+            this.error = true
+          }
+
+          if (this.data.v75 !== '1799-01-01' && this.data.v75 !== '1846-01-01') {
+            if (Date.parse(this.data.v75) < Date.parse(this.data.v36)) {
+              this.errors.push('La V75 debe ser >= V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v75) > Date.parse(this.data.v98)) {
+              this.errors.push('La V75 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v75 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V75 debe ser 1846-01-01')
+            this.error = true
+          }
+
+          if (Date.parse(this.data.v75) > Date.parse(this.data.v36) && parseInt(this.data.v75_1) > 3000) {
+            this.errors.push('La V75.1 es < = 3000 revisar V75 debe ser > V36')
+            this.error = true
+          }
+
+          if (this.data.v75_1 !== '9999' && this.data.v75_1 !== '5555') {
+            if (parseInt(this.data.v75_1) > 3000 || parseInt(this.data.v75_1) < 1) {
+              this.errors.push('La V75.1 debe ser >= 0 y < = 3000 o = 9999 o = 5555')
+              this.error = true
+            }
+          }
+
+          if (this.data.v75_1 === '5555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V75.1  debe ser  5555')
+            this.error = true
+          }
+
+          if (parseInt(this.data.v75_1) < 500) {
+            if (typeof this.data.v55 !== 'undefined' && (parseInt(this.data.v55.id) < 1 || parseInt(this.data.v55.id) > 4)) {
+              this.errors.push('La V75.1 es < 500 revisar V55 debe ser > 1 y < 4')
+              this.error = true
+            }
+          }
+
+          if (parseInt(this.data.v75_1) < 200) {
+            if (typeof this.data.v55 !== 'undefined' && this.data.v55.id !== '3') {
+              this.errors.push('La V75.1 es < 200 revisar V55 debe ser = 3')
+              this.error = true
+            }
+          }
+
+          if (this.data.v76 !== '1799-01-01' && this.data.v76 !== '1846-01-01') {
+            if (Date.parse(this.data.v76) < Date.parse(this.data.v36)) {
+              this.errors.push('La V75 debe ser >= V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v76) > Date.parse(this.data.v98)) {
+              this.errors.push('La V75 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v76 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V75 debe ser 1846-01-01')
+            this.error = true
+          }
+
+          if (Date.parse(this.data.v76) > Date.parse(this.data.v36)) {
+            if (parseInt(this.data.v76_1) > 10000000) {
+              this.errors.push('La V76.1 es < 10000000 revisar V76 deeb ser > V36')
+              this.error = true
+            }
+          }
+
+          if (this.data.v76 === '1799-01-01') {
+            if (this.data.v76_1 !== '99999999') {
+              this.errors.push('La V76.1 es = 99999999 revisar V76 debe ser  1799-01-01 ')
+              this.error = true
+            }
+          }
+
+          if (this.data.v76_1 !== '99999999' && this.data.v76_1 !== '55555555') {
+            if (parseInt(this.data.v76_1) > 10000000 || parseInt(this.data.v76_1) < 1) {
+              this.errors.push('la V76.1 debe ser >= 0 y <= 10000000 o = 99999999 o = 55555555')
+              this.error = true
+            }
+          }
+
+          if (this.data.v76_1 === '55555555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V75.1  debe ser  55555555')
+            this.error = true
+          }
         }
 
         if (this.sixStep === true) {
@@ -4457,7 +5790,326 @@ export default {
           }
         }
 
+        if (this.sevenStep === true) {
+          // primera validacion
+          if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '9') {
+            this.errors.push('La V77 debe ser <> 9')
+            this.error = true
+          }
+
+          // segunda validacion
+          if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 debe ser 19 revisar la V77 debe ser 55')
+            this.error = true
+          }
+
+          if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '1') {
+            if (this.data.v77_2 === '9') {
+              this.errors.push('La V77.2 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_3 === '9') {
+              this.errors.push('La V77.3 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_4 === '9') {
+              this.errors.push('La V77.4 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_5 === '9') {
+              this.errors.push('La V77.5 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_6 === '9') {
+              this.errors.push('La V77.6 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_7 === '9') {
+              this.errors.push('La V77.7 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (parseInt(this.data.v94) <= 100000) {
+              this.errors.push('La V94 es > 100000 revisar V77 debe ser 1')
+              this.error = true
+            }
+          }
+
+          // tar = 55
+          if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '55') {
+            if (this.data.v77_2 === '9') {
+              this.errors.push('La V77.2 es <> 9 revisar V77 debe ser = 55')
+              this.error = true
+            }
+            if (this.data.v77_3 === '9') {
+              this.errors.push('La V77.3 es <> 9 revisar V77 debe ser = 55')
+              this.error = true
+            }
+            if (this.data.v77_4 === '9') {
+              this.errors.push('La V77.4 es <> 9 revisar V77 debe ser = 55')
+              this.error = true
+            }
+            if (this.data.v77_5 === '9') {
+              this.errors.push('La V77.5 es <> 9 revisar V77 debe ser = 55')
+              this.error = true
+            }
+            if (this.data.v77_6 === '9') {
+              this.errors.push('La V77.6 es <> 9 revisar V77 debe ser = 55')
+              this.error = true
+            }
+            if (this.data.v77_7 === '9') {
+              this.errors.push('La V77.7 es <> 9 revisar V77 debe ser = 55')
+              this.error = true
+            }
+          }
+
+          // tar = 1
+          if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '1') {
+            if (this.data.v77_1 !== '1799-01-01' || Date.parse(this.data.v77_1) < Date.parse(this.data.v36)) {
+              this.errors.push('LA V77.1 es 1799-01-01 o > = V36 revisar la V77 debe ser 1')
+              this.error = true
+            }
+
+            if (this.data.v77_2 === '9') {
+              this.errors.push('La V77.2 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_3 === '9') {
+              this.errors.push('La V77.3 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_4 === '9') {
+              this.errors.push('La V77.4 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_5 === '9') {
+              this.errors.push('La V77.5 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_6 === '9') {
+              this.errors.push('La V77.6 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+            if (this.data.v77_7 === '9') {
+              this.errors.push('La V77.7 es <> 9 revisar V77 debe ser = 1')
+              this.error = true
+            }
+
+            if (this.data.v77_8 === '99') {
+              this.errors.push('La V77.8 es <> 99 revisar V77 debe ser 1')
+              this.error = true
+            }
+          }
+
+          if (this.data.v77_1 !== '1799-01-01' && this.data.v77_1 !== '1788-01-01' && this.data.v77_1 !== '1846-01-01') {
+            if (Date.parse(this.data.v77_1) < Date.parse(this.data.v36)) {
+              this.errors.push('La V77.1 debe ser >= V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v77_1) > Date.parse(this.data.v98)) {
+              this.errors.push('La V77.1 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v77_1 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V77.1 debe ser 1846-01-01')
+            this.error = true
+          }
+
+          if (this.data.v77_8 !== '99') {
+            if (parseInt(this.data.v77_8) > 12 || parseInt(this.data.v76_1) < 1) {
+              this.errors.push('La V77.8 debe ser > = 0 y < = 12 o 99')
+              this.error = true
+            }
+          }
+        }
+
+        if (this.eightStep === true) {
+          if (this.data.v78 !== '997' && this.data.v78 !== '998') {
+            if (parseInt(this.data.v78) > 500 || parseInt(this.data.v76_1) < 1) {
+              this.errors.push('La V78 debe ser > = 0 y < = 500 o 997 o 998')
+              this.error = true
+            }
+          }
+
+          if (parseInt(this.data.v78) > 0 && Date.parse(this.patient.field_json.birthdate) >= Date.parse('2012-01-31')) {
+            this.errors.push('La V78 es > 0 revisar la V09 debe ser < 2012-01-31')
+            this.error = true
+          }
+
+          // V79 DEBE SER <> 9
+          if (typeof this.data.v79 !== 'undefined' && this.data.v79.id === '9') {
+            this.errors.push('La V79 debe ser <>  9')
+            this.error = true
+          }
+
+          // Cuando V79 sea = 7 Entonces V09_Fecha_de_nacimiento DEBE SER >= 2010-01-31
+          if (typeof this.data.v79 !== 'undefined' && this.data.v79.id === '7' && Date.parse(this.patient.field_json.birthdate) < Date.parse('2010-01-31')) {
+            this.errors.push('La V79 es 7 reviar la V09 debe ser > = 2012-01-31')
+            this.error = true
+          }
+
+          // v80
+          if (typeof this.data.v80 !== 'undefined' && this.data.v80.id === '9') {
+            this.errors.push('La V80 debe ser <>  9')
+            this.error = true
+          }
+
+          // v81
+          if (typeof this.data.v81 !== 'undefined' && this.data.v81.id === '9') {
+            this.errors.push('La V81 debe ser <>  9')
+            this.error = true
+          }
+
+          // v82
+          if (typeof this.data.v82 !== 'undefined' && this.data.v82.id === '9') {
+            this.errors.push('La V82 debe ser <>  9')
+            this.error = true
+          }
+
+          // v83
+          if (typeof this.data.v83 !== 'undefined' && this.data.v83.id === '9') {
+            this.errors.push('La V83 debe ser <>  9')
+            this.error = true
+          }
+
+          // v84
+          if (typeof this.data.v84 !== 'undefined' && this.data.v84.id === '9') {
+            this.errors.push('La V84 debe ser <>  9')
+            this.error = true
+          }
+
+          // Cuando V84 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v84 !== 'undefined' && this.data.v84.id === '6' && typeof this.data.v85 !== 'undefined' && this.data.v85.id !== '10') {
+            this.errors.push('La V85 es 10 revisar V84 debe ser 6')
+            this.error = true
+          }
+
+          // v85
+          if (typeof this.data.v85 !== 'undefined' && this.data.v85.id === '9') {
+            this.errors.push('La V85 debe ser <>  9')
+            this.error = true
+          }
+
+          // v86
+          if (typeof this.data.v86 !== 'undefined' && this.data.v86.id === '9') {
+            this.errors.push('La V86 debe ser <>  9')
+            this.error = true
+          }
+
+          // v86_1
+          if (typeof this.data.v86_1 !== 'undefined' && this.data.v86_1.id === '9') {
+            this.errors.push('La V86.1 debe ser <>  9')
+            this.error = true
+          }
+
+          // v87
+          if (typeof this.data.v87 !== 'undefined' && this.data.v87.id === '9') {
+            this.errors.push('La V87 debe ser <>  9')
+            this.error = true
+          }
+
+          // v88
+          if (typeof this.data.v88 !== 'undefined' && this.data.v88.id === '9') {
+            this.errors.push('La V88 debe ser <>  9')
+            this.error = true
+          }
+
+          // v89
+          if (typeof this.data.v89 !== 'undefined' && this.data.v89.id === '9') {
+            this.errors.push('La V89 debe ser <>  9')
+            this.error = true
+          }
+
+          // v90
+          if (typeof this.data.v90 !== 'undefined' && this.data.v90.id === '9') {
+            this.errors.push('La V90 debe ser <>  9')
+            this.error = true
+          }
+        }
+
         if (this.nineStep === true) {
+          if (this.data.v77_1 !== '1799-01-01' && this.data.v77_1 !== '1788-01-01' && this.data.v77_1 !== '1846-01-01') {
+            if (Date.parse(this.data.v77_1) < Date.parse(this.data.v36)) {
+              this.errors.push('La V77.1 debe ser >= V36')
+              this.error = true
+            }
+
+            if (Date.parse(this.data.v77_1) > Date.parse(this.data.v98)) {
+              this.errors.push('La V77.1 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v77_1 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V77.1 debe ser 1846-01-01')
+            this.error = true
+          }
+
+          if (typeof this.data.v15 !== 'undefined' && parseInt(this.data.v15.id) === 55) {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar la V15 sea 55')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v24 !== 'undefined' && parseInt(this.data.v24.id) === 55) {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar V24 debe ser 55')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v16 !== 'undefined' && parseInt(this.data.v16.id) === 55) {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar la V16 sea 55')
+              this.error = true
+            }
+          }
+
+          if (typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) === 55) {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar la V17 sea 55')
+              this.error = true
+            }
+          }
+
+          if (this.data.v19 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar la V19 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v20 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar la V20 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v21 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar V21 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v22 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar V22 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v23 === '1846-01-01') {
+            if (typeof this.data.v97 !== 'undefined' && parseInt(this.data.v97.id) !== 19) {
+              this.errors.push('La V97 es 19 revisar V23 debe ser 1846-01-01')
+              this.error = true
+            }
+          }
+
           if (this.data.v51_1 === '1846-01-01' && this.data.v97.id !== '19') {
             this.errors.push('La V97 es 19  revisar la V51.1 debe ser 1846-01-01')
             this.error = true
@@ -4502,1850 +6154,285 @@ export default {
             this.errors.push('La V97 es 19  revisar la V51.8 debe ser 55')
             this.error = true
           }
-        }
 
-        if (this.data.v53_1 !== '1846-01-01') {
-          if (Date.parse(this.data.v53_1) < Date.parse(this.patient.field_json.birthdate) || Date.parse(this.data.v53_1) > Date.parse(this.data.v98)) {
-            this.errors.push('La V53.1 debe ser >= V09 y <= V98 o = 1846-01-01')
+          // Cuando V79 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v79 !== 'undefined' && this.data.v79.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V79 debe ser 55')
             this.error = true
           }
-        }
 
-        if (this.data.v53_1 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 debe ser 19 revisar la V53.1 debe ser 1846-01-01')
+          // Cuando V80 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v80 !== 'undefined' && this.data.v80.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V80 debe ser 55')
             this.error = true
           }
-        }
 
-        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === 7) {
-          this.errors.push('La V53.3 debe ser <> 7')
-          this.error = true
-        }
-
-        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V53.3 debe ser 55')
-          this.error = true
-        }
-
-        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '10') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '9' && this.data.v97.id !== '7' && this.data.v97.id !== '10' && this.data.v97.id !== '4' && this.data.v97.id !== '5' && this.data.v97.id !== '11' && this.data.v97.id !== '17') {
-            this.errors.push('LA V97 es 9,7,10,4,5,11 o 17 revisar la V53.3 debe ser 10')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id !== '10') {
-          if (typeof this.data.v97 !== 'undefined' && (this.data.v97.id === '9' || this.data.v97.id === '7' || this.data.v97.id === '10' || this.data.v97.id === '4' || this.data.v97.id === '5' || this.data.v97.id === '11' || this.data.v97.id === '17')) {
-            this.errors.push('LA V97 es 9,7,10,4,5,11 o 17 revisar la V53.3 debe ser 10')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id === '2' && typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) >= 5) {
-          this.errors.push('La V53.4 es < 5 revisar V53.3 debe ser = 2')
-          this.error = true
-        }
-
-        if (typeof this.data.v53_3 !== 'undefined' && this.data.v53_3.id !== '2' && typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) < 5) {
-          this.errors.push('La V53.4 es < 5 revisar V53.3 debe ser = 2')
-          this.error = true
-        }
-
-        if (typeof this.data.v53_4 !== 'undefined' && this.data.v53_4.id === '9') {
-          this.errors.push('La V53.4 debe ser <> 9')
-          this.error = true
-        }
-
-        if (typeof this.data.v53_4 !== 'undefined' && this.data.v53_4.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V53.4 debe ser 55')
-          this.error = true
-        }
-
-        if (typeof this.data.v53_4 !== 'undefined' && parseInt(this.data.v53_4.id) < 5 && parseInt(this.data.v94) <= 100000) {
-          this.errors.push('La V94 es > 100000 revisar la V53.4 debe ser < 5')
-          this.error = true
-        }
-
-        if (this.data.v54 !== '1799-01-01' && this.data.v54 !== '1800-01-01' && this.data.v54 !== '1846-01-01') {
-          if (Date.parse(this.data.v54) < Date.parse(this.data.v36)) {
-            this.errors.push('La V54 debe ser >= V36')
-            this.error = true
-          }
-
-          if (Date.parse(this.data.v54) > Date.parse(this.data.v98)) {
-            this.errors.push('La V54 debe ser <= V98 0 = 1799-01-01 o 1800-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v54 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V54 debe ser 1846-01-01')
-          this.error = true
-        }
-
-        if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '9') {
-          this.errors.push('La V55 debe ser <> 9')
-          this.error = true
-        }
-
-        if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '55') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V55 debe ser 55')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v55 !== 'undefined' && this.data.v55.id === '0') {
-          if (Date.parse(this.data.v36) <= Date.parse('2021-07-31')) {
-            this.errors.push('La V55 es 0 revisar V36 debe ser > 2021-07-31')
-            this.error = true
-          }
-        }
-
-        if (this.data.v56 !== '1846-01-01' && this.data.v56 !== '1799-01-01') {
-          if (Date.parse(this.data.v56) < Date.parse(this.patient.field_json.birthdate) || Date.parse(this.data.v56) > Date.parse(this.data.v98)) {
-            this.errors.push('La V56 debe ser > = V09, La V56 debe ser <= V98 0 = 1799-01-01 o  1846-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 1
-        if (this.data.v56 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V56 debe ser 1846-01-01')
-          this.error = true
-        }
-
-        // Validación 2
-        if (Date.parse(this.data.v56) > Date.parse(this.patient.field_json.birthdate) && parseInt(this.data.v56_1) > 500) {
-          this.errors.push('La V56.1 es <= 500 revisar la V56 debe ser > v09')
-          this.error = true
-        }
-
-        // Validación 3
-        if (this.data.v56 === '1799-01-01' && parseInt(this.data.v56_1) <= 500) {
-          this.errors.push('La V56.1 es > 500 revisar la V56 debe ser 1799-01-01')
-          this.error = true
-        }
-
-        if (this.data.v56_1 !== '999' && this.data.v56_1 !== '998' && this.data.v56_1 !== '0' && this.data.v56_1 !== '555') {
-          if (parseInt(this.data.v56_1) < 0 || parseInt(this.data.v56_1) > 500) {
-            this.errors.push('La V56.1 debe ser >= 0 y <= 500 o = 999 o = 998 o 0 555')
-            this.error = true
-          }
-        }
-
-        // validación 1
-        if (this.data.v56_1 === '555') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V56.1 debe ser = 555')
-            this.error = true
-          }
-        }
-
-        // validación 2
-        if (parseInt(this.data.v56_1) <= 500) {
-          if (this.data.v56 === '1799-01-01') {
-            this.errors.push('La v56.1 es <= 500 revisar  la V56 debe ser <> 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // validación 3
-        if (parseInt(this.data.v56_1) < 501) {
-          if (Date.parse(this.data.v56) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V56.1 es <501 revisar la V56 debe ser >= V09_Fecha_de_nacimiento')
-            this.error = true
-          }
-        }
-
-        if (this.data.v57 !== '1799-01-01' && this.data.v57 !== '1846-01-01') {
-          if (Date.parse(this.data.v57) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V57 debe ser > = v09')
-            this.error = true
-          }
-
-          // validacion para V57 DEBE SER <= V98
-          if (Date.parse(this.data.v57) > Date.parse(this.data.v98)) {
-            this.errors.push('La V57 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v57_1 !== '9999' && this.data.v57_1 !== '9998' && this.data.v57_1 !== '0' && this.data.v57_1 !== '5555') {
-          if (parseInt(this.data.v57_1) < 0 || parseInt(this.data.v57_1) > 5000) {
-            this.errors.push('La V57.1 debe ser >= o y < = 5000 o = 9999 , 9998 o 5555')
-            this.error = true
-          }
-        }
-
-        // Validacion 1
-        if (this.data.v57_1 === '5555') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V57.1 debe ser  5555')
-            this.error = true
-          }
-        }
-
-        // Validacion 2
-        if (parseInt(this.data.v57_1) < 5001) {
-          if (this.data.v57 === '1799-01-01') {
-            this.errors.push('La V57.1 es < 5001 revisar la V57 debe ser <> 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // Validacion 3
-        if (parseInt(this.data.v57_1) < 5001) {
-          if (Date.parse(this.data.v57) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V57.1 es < 5001 revisar la V57 debe ser >= V09')
-            this.error = true
-          }
-        }
-
-        if (this.data.v58 !== '1799-01-01' && this.data.v58 !== '1846-01-01') {
-          if (Date.parse(this.data.v58) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La v58 debe ser > = v09')
-            this.error = true
-          }
-
-          // validacion para V57 DEBE SER <= V98
-          if (Date.parse(this.data.v58) > Date.parse(this.data.v98)) {
-            this.errors.push('La V58 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 1
-        if (this.data.v58 === '1799-01-01') {
-          if (parseInt(this.data.v58_1) <= 100) {
-            this.errors.push('La V58.1 es <= 100 revisar V58 debe ser = 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 2
-        if (Date.parse(this.data.v58) > Date.parse(this.patient.field_json.birthdate)) {
-          if (parseInt(this.data.v58_1) > 99) {
-            this.errors.push('La V58.1 es > 99 revisar V58 debe ser > V09')
-            this.error = true
-          }
-        }
-
-        // Validación 3
-        if (this.data.v58 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V58 debe ser 1845-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v58_1 !== '9999' && this.data.v58_1 !== '9998' && this.data.v58_1 !== '5555') {
-          if (parseInt(this.data.v58_1) < 0 || parseInt(this.data.v58_1) > 30) {
-            this.errors.push('La V58.1 debe ser >= 0 y <= 30 o = 9999 o = 9998 o = 5555')
-            this.error = true
-          }
-        }
-
-        if (this.data.v58_1 === '5555') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar V58.1 debe ser = 5555')
-            this.error = true
-          }
-        }
-
-        // Segunda validación
-        if (parseInt(this.data.v58_1) <= 30) {
-          if (this.data.v58 === '1799-01-01') {
-            this.errors.push('La V58.1 es <= 30 revisar la V58 debe ser <> 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // Tercera validación
-        if (parseInt(this.data.v58_1) <= 30) {
-          if (Date.parse(this.data.v58) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V58.1 es <= 30 revisar la V58 debe ser >= V09_Fecha_de_nacimiento')
-          }
-        }
-
-        if (this.data.v59 !== '1799-01-01' && this.data.v59 !== '1846-01-01') {
-          if (Date.parse(this.data.v59) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V59 debe ser > = v09')
-            this.error = true
-          }
-
-          // validacion para V57 DEBE SER <= V98
-          if (Date.parse(this.data.v59) > Date.parse(this.data.v98)) {
-            this.errors.push('La V59 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v59 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V59 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (Date.parse(this.data.v59) > Date.parse(this.patient.field_json.birthdate)) {
-          if (parseInt(this.data.v59_1) > 5000) {
-            this.errors.push('La V59.1 es <= 5000 revisar la V59 debe ser > V09')
-            this.error = true
-          }
-        }
-
-        if (this.data.v59 === '1799-01-01') {
-          if (parseInt(this.data.v59_1) <= 5000) {
-            this.errors.push('La V59.1 es > 5000 revisar V59 debe ser = 1799-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v59_1 !== '9999' && this.data.v59_1 !== '9998' && this.data.v59_1 !== '5555') {
-          if (parseInt(this.data.v59_1) < 0 || parseInt(this.data.v58_1) > 5000) {
-            this.errors.push('La V59.1 debe ser > = 0 y < = 5000 o = 9999, 9998 o 5555')
-            this.error = true
-          }
-        }
-
-        // Validacion 1
-        if (parseInt(this.data.v59_1) === 5555 && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V59.1 debe ser V59.1')
-          this.error = true
-        }
-
-        // Validacion 2
-        if (parseInt(this.data.v59_1) < 5000 && this.data.v59 === '1799-01-01') {
-          this.errors.push('La V59.1 es < 5000 revisar la V59 debe ser <> 1799-01-01')
-          this.error = true
-        }
-
-        // Validacion 3
-        if (parseInt(this.data.v59_1) < 5000 && Date.parse(this.data.v59) < Date.parse(this.patient.field_json.birthdate)) {
-          this.errors.push('La V59.1 es < 5000 revisar la V59 debe ser >= V09')
-          this.error = true
-        }
-
-        if (this.data.v60 !== '1799-01-01' && this.data.v60 !== '1846-01-01') {
-          if (Date.parse(this.data.v60) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V60 debe ser > = v09')
-            this.error = true
-          }
-
-          // validacion para V57 DEBE SER <= V98
-          if (Date.parse(this.data.v60) > Date.parse(this.data.v98)) {
-            this.errors.push('La V60 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 1
-        if (this.data.v60 === '1799-01-01') {
-          if (parseInt(this.data.v60_1) <= 100) {
-            this.errors.push('La V60.1 es <= 100 revisar V60 debe ser = 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 2
-        if (Date.parse(this.data.v60) > Date.parse(this.patient.field_json.birthdate)) {
-          if (parseInt(this.data.v60_1) > 99.9) {
-            this.errors.push('La V60.1 es > 99.9 revisar V60 debe ser > V09')
-            this.error = true
-          }
-        }
-
-        // Validación 3
-        if (this.data.v60 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V60 debe ser = 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v60_1 !== '9999' && this.data.v60_1 !== '9998' && this.data.v60_1 !== '5555') {
-          if (parseInt(this.data.v60_1) < 0 || parseInt(this.data.v58_1) > 99.9) {
-            this.errors.push('La V60.1 debe ser > = 0 y <= 99,9 o = 9999 , 99998 o 5555')
-            this.error = true
-          }
-        }
-
-        // validacion 1
-        if (this.data.v60_1 === '5555') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es = 19 revisar V60.1 debe ser = 5555')
-            this.error = true
-          }
-        }
-
-        // validacion 2
-        if (parseInt(this.data.v60_1) <= 1) {
-          if (this.data.v60 !== '1799-01-01') {
-            this.errors.push('La V60.1 es <= 1 revisar V60 debe ser <> 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // validacion 3
-        if (parseInt(this.data.v60_1) < 100) {
-          if (Date.parse(this.data.v60) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V60.1 es < 100 revisar  V60 debe ser > = v09')
-            this.error = true
-          }
-        }
-
-        if (this.data.v61 !== '1799-01-01' && this.data.v61 !== '1846-01-01') {
-          if (Date.parse(this.data.v61) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V61 debe ser > V09')
-            this.error = true
-          }
-
-          // validacion para V57 DEBE SER <= V98
-          if (Date.parse(this.data.v61) > Date.parse(this.data.v98)) {
-            this.errors.push('La V61 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v61 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V61 debe ser = 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (Date.parse(this.data.v61) > Date.parse(this.patient.field_json.birthdate)) {
-          if (parseInt(this.data.v61_1) > 1000) {
-            this.errors.push('La V61.1 es <= 1000 revisar la V61 debe sere > V09')
-            this.error = true
-          }
-        }
-
-        if (this.data.v61 === '1799-01-01') {
-          if (this.data.v61_1 !== '9998') {
-            this.errors.push('La V61.1 es 9998 revisar la V61 debe ser = 1799-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v61_1 !== '9999' && this.data.v61_1 !== '9998' && this.data.v61_1 !== '5555') {
-          if (parseInt(this.data.v61_1) < 0 || parseInt(this.data.v58_1) > 1000) {
-            this.errors.push('La V61.1 debe ser > = 0 y <= 99,9 o = 9999 , 99998 o 5555')
-            this.error = true
-          }
-        }
-
-        // validación 1
-        if (this.data.v61_1 === '5555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V61.1 debe ser 5555')
-          this.error = true
-        }
-
-        // validación 2
-        if (parseInt(this.data.v61_1) < 1000 && this.data.v61 !== '1799-01-01') {
-          this.errors.push('La V61.1 es < 1000 revisar la V61 debe ser <> 1799-01-01')
-          this.error = true
-        }
-
-        // validación 3
-        if (parseInt(this.data.v61_1) < 1001 && Date.parse(this.data.v61) < Date.parse(this.patient.field_json.birthdate)) {
-          this.errors.push('La V61.1 es < 1001  revisar la V61 debe ser > = v09')
-          this.error = true
-        }
-
-        if (this.data.v62 !== '1799-01-01' && this.data.v62 !== '1846-01-01') {
-          if (Date.parse(this.data.v62) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V62 debe ser > V09')
-            this.error = true
-          }
-
-          // validacion para V57 DEBE SER <= V98
-          if (Date.parse(this.data.v62) > Date.parse(this.data.v98)) {
-            this.errors.push('La V62 debe ser <= V98 o = 1799-01-01 o 1846-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 1
-        if (this.data.v62 === '1846-01-01') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V62 debe ser 1846-01-01')
-            this.error = true
-          }
-        }
-
-        // Validación 2
-        if (Date.parse(this.data.v62) > Date.parse(this.patient.field_json.birthdate)) {
-          if (parseInt(this.data.v62_1) > 250) {
-            this.errors.push('La V62.1 es <= 250 revisar la V62 debe ser > V09')
-            this.error = true
-          }
-        }
-
-        // Validación 3
-        if (this.data.v62 === '1799-01-01') {
-          if (parseInt(this.data.v62_1) <= 250) {
-            this.errors.push('La V62.1 es > 250 revisar V62 debe ser = 1799-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v62_1 !== '999' && this.data.v62_1 !== '998' && this.data.v62_1 !== '555') {
-          if (parseInt(this.data.v62_1) < 0 || parseInt(this.data.v58_1) > 250) {
-            this.errors.push('La V62 debe ser >0 y < = 250  o = 999 o 998 o 555')
-            this.error = true
-          }
-        }
-
-        if (this.data.v62_1 === '555') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V62.1 debe ser 555')
-            this.error = true
-          }
-        }
-
-        // segunda validación
-        if (parseInt(this.data.v62_1) < 250) {
-          if (this.data.v62 !== '1799-01-01') {
-            this.errors.push('La V62.1 es <= 250 revisar la V62 debe ser <> 1799-01-01')
-            this.error = true
-          }
-        }
-
-        // tercera validación
-        if (parseInt(this.data.v62_1) < 251) {
-          if (Date.parse(this.data.v62) < Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('La V62.1 es < 251 revisar V62 debe ser >= V09')
+          // Cuando V81 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v81 !== 'undefined' && this.data.v81.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V81 debe ser 55')
             this.error = true
           }
-        }
 
-        if (this.data.v63 !== '555') {
-          if (parseInt(this.data.v63) < 30 || parseInt(this.data.v63) > 220) {
-            this.errors.push('La V62 debe ser >30 y < = 220  o = 555')
+          // Cuando V82 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v82 !== 'undefined' && this.data.v82.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V82 debe ser 55')
             this.error = true
           }
-        }
 
-        if (this.data.v63 === '555') {
-          // Si el valor de V97 es diferente de 19 ejecuta el siguiente código
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V63 debe ser 555')
+          // Cuando V83 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v83 !== 'undefined' && this.data.v83.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V83 debe ser 55')
             this.error = true
           }
-        }
 
-        // Validación V64 debe ser <> 9
-        if (this.data.v64 === '9') {
-          this.errors.push('La V64 debe ser <> 9')
-          this.error = true
-        }
-
-        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
-        if (this.data.v64 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V64 debe ser 55')
-          this.error = true
-        }
-
-        if (this.data.v65 === '9') {
-          this.errors.push('La V65 debe ser <> 9')
-          this.error = true
-        }
-
-        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
-        if (this.data.v65 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V65 debe ser 55')
-          this.error = true
-        }
-
-        if (this.data.v66 === '9') {
-          this.errors.push('La V66 debe ser <> 9')
-          this.error = true
-        }
-
-        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
-        if (this.data.v66 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V66 debe ser 55')
-          this.error = true
-        }
-
-        if (this.data.v67 === '9') {
-          this.errors.push('La V67 debe ser <> 9')
-          this.error = true
-        }
-
-        // Validación cuando V64 sea = 55 Entonces V97 DEBE SER = 19
-        if (this.data.v67 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V67 debe ser 55')
-          this.error = true
-        }
-
-        // 1
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '9') {
-          this.errors.push('La V68 debe ser <> 9')
-          this.error = true
-        }
-
-        // 2
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68 === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V68 debe ser 55')
-          this.error = true
-        }
-
-        // 3
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1' && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
-          this.errors.push('La V68 es 1 revisa V17 debe ser < 3')
-          this.error = true
-        }
-
-        // 4
-        if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id !== '7') {
-          if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1' && (parseInt(this.data.v68_1.id) > 6)) {
-            this.errors.push('La V68.1 es < 6 o = 7  revisar V68 debe ser 1')
-            this.error = true
-          }
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.1 DEBE SER = 6 El mensaje de error debe ser La V68.1 es 6 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id !== '6') {
-          this.errors.push('La V68.1 es 6 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.2 DEBE SER = 8 El mensaje de error debe ser La V68.2 es 8 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id !== '8') {
-          this.errors.push('La V68.2 es 8 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.3 DEBE SER = 1799-01-01 El mensaje de error debe ser La V68.3 es 1799-01-01 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && this.data.v68_3 !== '1799-01-01') {
-          this.errors.push('La V68.3 es 1799-01-01 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.4 DEBE SER = 9 El mensaje de error debe ser La V68.4 es 9 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_4 !== 'undefined' && this.data.v68_4.id !== '9') {
-          this.errors.push('La V68.4 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_5 !== 'undefined' && this.data.v68_5.id !== '9') {
-          this.errors.push('La V68.5 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.6 DEBE SER = 9 El mensaje de error debe ser La V68.6 es 9 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_6 !== 'undefined' && this.data.v68_6.id !== '9') {
-          this.errors.push('La V68.6 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.7 DEBE SER = 9 El mensaje de error debe ser La V68.7 es 9 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_7 !== 'undefined' && this.data.v68_7.id !== '9') {
-          this.errors.push('La V68.7 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Cuando V68 sea = 0 Entonces V68.8 DEBE SER = 9 El mensaje de error debe ser La V68.8 es 9 revisar V68 debe ser 0
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_8 !== 'undefined' && this.data.v68_8.id !== '9') {
-          this.errors.push('La V68.8 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_9 !== 'undefined' && this.data.v68_9.id !== '9') {
-          this.errors.push('La V68.9 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_10 !== 'undefined' && this.data.v68_10.id !== '9') {
-          this.errors.push('La V68.10 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_11 !== 'undefined' && this.data.v68_11.id !== '9') {
-          this.errors.push('La V68.11 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_12 !== 'undefined' && this.data.v68_12.id !== '9') {
-          this.errors.push('La V68.12 es 9 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Validación 5
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0') {
-          if (this.data.v68_13 !== '1799-01-01') {
-            this.errors.push('La V68.13 es 1799-01-01 revisar V68 debe ser 0')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '0' && typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id !== '9') {
-          this.errors.push('La V68.14 es 10 revisar V68 debe ser 0')
-          this.error = true
-        }
-
-        // Validación 9
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1') {
-          if (this.data.v68_13 === '1799-01-01') {
-            this.errors.push('La V68.13 es <> 1799-01-01 revisar V68 debe ser 1')
+          // Cuando V84 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v84 !== 'undefined' && this.data.v84.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V84 debe ser 55')
             this.error = true
           }
-        }
 
-        // Validación 10
-        if (typeof this.data.v68 !== 'undefined' && this.data.v68.id === '1') {
-          if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9) {
-            this.errors.push('La V68.14 es < 9 revisar V68 debe ser 1')
+          // Cuando V85 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v85 !== 'undefined' && this.data.v85.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V85 debe ser 55')
             this.error = true
           }
-        }
 
-        // Validación V68.1 DEBE SER <> 9
-        if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id === '9') {
-          this.errors.push('La V68.1 debe ser <> 9')
-          this.error = true
-        }
-
-        // Validación Cuando V68.1 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v68_1 !== 'undefined' && this.data.v68_1.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V68.1 = 55')
-          this.error = true
-        }
-
-        // Validación Cuando V68.1 sea < 6 Entonces V17 DEBE SER < 3
-        if (typeof this.data.v68_1 !== 'undefined' && parseInt(this.data.v68_1.id) < 6 && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
-          this.errors.push('La V68.1 es < 6 revisar la V17 debe ser < 3')
-          this.error = true
-        }
-
-        // validación V68.2 DEBE SER <> 9
-        if (typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id === '9') {
-          this.errors.push('La V68.2 debe ser <> 9')
-          this.error = true
-        }
-
-        // validación Cuando V68.2 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v68_2 !== 'undefined' && this.data.v68_2.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V68.2 = 55')
-          this.error = true
-        }
-
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2 && Date.parse(this.data.v68_3) > Date.parse(this.patient.field_json.birthdate)) {
-          this.errors.push('La V68.3 es > V09 revisar V68.2 debe ser < = 2')
-          this.error = true
-        }
-
-        // validación 1
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_4 === '9') {
-            this.errors.push('La V68.4 es <> 9 revisar V68.2 debe ser < = 2')
-            this.error = true
-          }
-        }
-
-        // validación 2
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_5 === '9') {
-            this.errors.push('La V68.5 es <> 9 revisar V68.2 debe ser < = 2')
-            this.error = true
-          }
-        }
-
-        // validación 3
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_6 === '9') {
-            this.errors.push('La V68.6 es <> 9 revisar V68.2 debe ser < = 2')
-            this.error = true
-          }
-        }
-
-        // validación 4
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_7 === '9') {
-            this.errors.push('La V68.7 es <> 9 revisar V68.2 debe ser < = 2')
+          // Cuando V86 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v86 !== 'undefined' && this.data.v86.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V86 debe ser 55')
             this.error = true
           }
-        }
 
-        // validación 1
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_8 === '9') {
-            this.errors.push('La V68.8 es <> 9 revisar V68.2 debe ser < = 2')
+          // Cuando V86 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v86_1 !== 'undefined' && this.data.v86_1.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V86.1 debe ser 55')
             this.error = true
           }
-        }
 
-        // validación 2
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_9 === '9') {
-            this.errors.push('La V68.9 es <> 9 revisar V68.2 debe ser < = 2')
+          // Cuando V87 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v87 !== 'undefined' && this.data.v87.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V87 debe ser 55')
             this.error = true
           }
-        }
 
-        // validación 3
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_10 === '9') {
-            this.errors.push('La V68.10 es <> 9 revisar V68.2 debe ser < = 2')
+          // Cuando V88 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v88 !== 'undefined' && this.data.v88.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V86 debe ser 55')
             this.error = true
           }
-        }
 
-        // validación 4
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_11 === '9') {
-            this.errors.push('La V68.11 es <> 9 revisar V68.2 debe ser < = 2')
+          // Cuando V89 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v89 !== 'undefined' && this.data.v89.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V86 debe ser 55')
             this.error = true
           }
-        }
 
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) <= 2) {
-          if (this.data.v68_12 === '9') {
-            this.errors.push('La V68.12 es <> 9 revisar V68.2 debe ser < = 2')
+          // Cuando V90 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v90 !== 'undefined' && this.data.v90.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V90 debe ser 55')
             this.error = true
           }
-        }
 
-        // la validación debe ser
-        if (typeof this.data.v68_2 !== 'undefined' && parseInt(this.data.v68_2.id) < 8 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.2 es < 8 revisar la V68 debe ser 1')
-          this.error = true
-        }
-
-        // validaciones
-        if (this.data.v68_3 === '1845-01-01') {
-          this.errors.push('La V68.3 debe ser <> 1845-01-01')
-          this.error = true
-        }
-
-        if (this.data.v68_3 !== '1845-01-01') {
-          if (this.data.v68_3 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-            this.errors.push('La V97 es 19 revisar la V68.3= 1846-01-01')
-            this.error = true
-          }
-
-          // Validación 1
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_4 === '9') {
-            this.errors.push('La V68.4 es <> 9  revisar V68.3 debe ser > V36')
-            this.error = true
-          }
-
-          // Validación 2
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_5 === '9') {
-            this.errors.push('La V68.5 es <> 9  revisar V68.3 debe ser > V36')
+          // v91
+          if (typeof this.data.v91 !== 'undefined' && this.data.v91.id === '9') {
+            this.errors.push('La V91 debe ser <>  9')
             this.error = true
           }
 
-          // Validación 3
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_6 === '9') {
-            this.errors.push('La V68.6 es <> 9  revisar V68.3 debe ser > V36')
+          // Cuando V91 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v91 !== 'undefined' && this.data.v91.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V90 debe ser 55')
             this.error = true
           }
 
-          // Validación 4
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_7 === '9') {
-            this.errors.push('La V68.7 es <> 9  revisar V68.3 debe ser > V36')
+          // v92
+          if (typeof this.data.v92 !== 'undefined' && this.data.v92.id === '9') {
+            this.errors.push('La V92 debe ser <>  9')
             this.error = true
           }
 
-          // Validación 5
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_8 === '9') {
-            this.errors.push('La V68.8 es <> 9  revisar V68.3 debe ser > V36')
+          // Cuando V92 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v92 !== 'undefined' && this.data.v92.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V92 debe ser 55')
             this.error = true
           }
 
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_9 === '9') {
-            this.errors.push('La V68.9 es <> 9  revisar V68.3 debe ser > V36')
+          // v93
+          if (typeof this.data.v93 !== 'undefined' && this.data.v93.id === '9') {
+            this.errors.push('La V93 debe ser <>  9')
             this.error = true
           }
 
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_10 === '9') {
-            this.errors.push('La V68.10 es <> 9  revisar V68.3 debe ser > V36')
+          // Cuando V93 sea = 55 Entonces V97 DEBE SER = 19
+          if (typeof this.data.v93 !== 'undefined' && this.data.v93.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar la V93 debe ser 55')
             this.error = true
           }
-
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_11 === '9') {
-            this.errors.push('La V68.11 es <> 9  revisar V68.3 debe ser > V36')
-            this.error = true
-          }
-
-          if (Date.parse(this.data.v68_3) > Date.parse(this.data.v36) && this.data.v68_12 === '9') {
-            this.errors.push('La V68.12 es <> 9  revisar V68.3 debe ser > V36')
-            this.error = true
-          }
-
-          if (this.data.v68_3 !== '1800-01-01' || this.data.v68_3 !== '1811-01-01' || this.data.v68_3 !== '1799-01-01' || this.data.v68_3 !== '1846-01-01') {
-            // Validación V68.3 DEBE SER >= V36
-            if (Date.parse(this.data.v68_3) < Date.parse(this.data.v36)) {
-              this.errors.push('La V68.3 debe ser >= V36')
-              this.error = true
-            }
-
-            // Validación V68.3 DEBE SER <= V98
-            if (Date.parse(this.data.v68_3) > Date.parse(this.data.v98)) {
-              this.errors.push('La V68.3 debe ser <= V98 o = 1800-01-01 o 1811-01-01 O 1799-=1-01 O 1846-01-01')
-              this.error = true
-            }
 
-            if (Date.parse(this.data.v68_3) < Date.parse('2016-01-31')) {
-              this.errors.push('La V68.3 debe ser > 2016-01-31 y < = V98 o = 1799-01-01 o 1800-01-01 o 1811-01-01 ')
+          if (this.data.v94 === '0') {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '5' && this.data.v97.id !== '6' && this.data.v97.id !== '7' && this.data.v97.id !== '8' && this.data.v97.id !== '9' && this.data.v97.id !== '10' && this.data.v97.id !== '11' && this.data.v97.id !== '15' && this.data.v97.id !== '16' && this.data.v97.id !== '17' && this.data.v97.id !== '20' && this.data.v97.id !== '21') {
+              this.errors.push('La V97 es 4,5,6,7,8,9,10,11,15,16,17,20 o 21 revisar la V94 debe ser 0')
               this.error = true
             }
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_4 !== '9') {
-            this.errors.push('La V68.4 es = 9 revisar V68.3 debe ser= 1799-01-01')
+          if (parseInt(this.data.v94) < 0 || parseInt(this.data.v94) > 500000000) {
+            this.errors.push('La V94 debe ser > = 0 y < = 500000000')
             this.error = true
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_5 !== '9') {
-            this.errors.push('La V68.5 es = 9 revisar V68.3 debe ser= 1799-01-01')
+          if (parseInt(this.data.v95) < 0 || parseInt(this.data.v95) > 250000000) {
+            this.errors.push('La V95 debe ser > = 0 y < = 250000000')
             this.error = true
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_6 !== '9') {
-            this.errors.push('La V68.6 es = 9 revisar V68.3 debe ser= 1799-01-01')
+          if (parseInt(this.data.v95) > 0 && parseInt(this.data.v96) <= 0) {
+            this.errors.push('La V96 es > 0 revisar V95 deb ser > 0')
             this.error = true
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_7 !== '9') {
-            this.errors.push('La V68.7 es = 9 revisar V68.3 debe ser= 1799-01-01')
+          if (parseInt(this.data.v96) < 0 || parseInt(this.data.v96) > 20) {
+            this.errors.push('La V94 debe ser > = 0 y < = 20')
             this.error = true
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_8 !== '9') {
-            this.errors.push('La V68.8 es = 9 revisar V68.3 debe ser= 1799-01-01')
+          if (parseInt(this.data.v96) > 0 && parseInt(this.data.v95) <= 150000) {
+            this.errors.push('La V96 es > 0 revisar V95 deb ser > 0')
             this.error = true
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_9 !== '9') {
-            this.errors.push('La V68.9 es = 9 revisar V68.3 debe ser= 1799-01-01')
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '13' && this.data.v97.id === '14' && this.data.v97.id === '12') {
+            this.errors.push('La V97 debe ser <> 13 o <> 14 o <> 12')
             this.error = true
           }
 
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_10 !== '9') {
-            this.errors.push('La V68.10 es = 9 revisar V68.3 debe ser= 1799-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_11 !== '9') {
-            this.errors.push('La V68.11 es = 9 revisar V68.3 debe ser= 1799-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1799-01-01' && this.data.v68_12 !== '9') {
-            this.errors.push('La V68.12 es = 9 revisar V68.3 debe ser= 1799-01-01')
-            this.error = true
-          }
-
-          // 1800-01-01
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_4 !== '9') {
-            this.errors.push('La V68.4 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_5 !== '9') {
-            this.errors.push('La V68.5 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_6 !== '9') {
-            this.errors.push('La V68.6 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_7 !== '9') {
-            this.errors.push('La V68.7 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_8 !== '9') {
-            this.errors.push('La V68.8 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_9 !== '9') {
-            this.errors.push('La V68.9 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_10 !== '9') {
-            this.errors.push('La V68.10 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_11 !== '9') {
-            this.errors.push('La V68.11 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1800-01-01' && this.data.v68_12 !== '9') {
-            this.errors.push('La V68.12 es = 9 revisar V68.3 debe ser= 1800-01-01')
-            this.error = true
-          }
-
-          // 1811-01-01
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_4 !== '9') {
-            this.errors.push('La V68.4 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_5 !== '9') {
-            this.errors.push('La V68.5 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_6 !== '9') {
-            this.errors.push('La V68.6 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_7 !== '9') {
-            this.errors.push('La V68.7 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_8 !== '9') {
-            this.errors.push('La V68.8 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_9 !== '9') {
-            this.errors.push('La V68.9 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_10 !== '9') {
-            this.errors.push('La V68.10 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_11 !== '9') {
-            this.errors.push('La V68.11 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          if (this.data.v68_3 === '1811-01-01' && this.data.v68_12 !== '9') {
-            this.errors.push('La V68.12 es = 9 revisar V68.3 debe ser= 1811-01-01')
-            this.error = true
-          }
-
-          // Cuando V68.3 sea > 1846-01-01 Entonces V68 DEBE SER = 1 El mensaje de error debe ser La V68.3 es > 1846-01-01 revisar V68 debe ser 1
-          if (Date.parse(this.data.v68_3) > Date.parse('1846-01-01') && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-            this.errors.push('La V68.3 es > 1846-01-01 revisar V68 debe ser 1')
-            this.error = true
-          }
-
-          // Cuando V68.3 sea = 1800-01-01 Entonces V68 DEBE SER = 1 El mensaje de error debe ser La V68.3 es = 1800-01-01 revisar V68 debe ser 1
-          if (this.data.v68_3 === '1800-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-            this.errors.push('La V68.3 es = 1800-01-01 revisar V68 debe ser 1')
-            this.error = true
-          }
-
-          // Cuando V68.3 sea = 1811-01-01 Entonces V68 DEBE SER = 1 El mensaje de error debe ser La V68.3 es =  1811-01-01 revisar V68 debe ser 1
-          if (this.data.v68_3 === '1811-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-            this.errors.push('La V68.3 es =  1811-01-01 revisar V68 debe ser 1')
-            this.error = true
-          }
-        }
-
-        if (this.data.v68_4 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.4 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_5 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.5 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_6 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.6 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_7 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.7 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_8 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.8 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_9 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.9 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_10 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.10 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_11 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.11 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_12 !== 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.12 es <> 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        if (this.data.v68_13 === '1799-01-01' && this.data.v68_13 === '1800-01-01' && this.data.v68_13 === '1846-01-01' && this.data.v68_13 === '1822-01-01') {
-          // validacion 1
-          if (Date.parse(this.data.v68_13) < Date.parse(this.data.v36)) {
-            this.errors.push('La V68.13 debe ser >= V36')
-            this.error = true
-          }
-
-          // validacion 2
-          if (Date.parse(this.data.v68_13) > Date.parse(this.data.v98)) {
-            this.errors.push('La V68.3 debe ser <= V98 o = 1799-01-01 o = 1800-01-01 o =1846-01-01 o = 1822-01-01')
-            this.error = true
-          }
-        }
-
-        // validacion 1
-        if (this.data.v68_13 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V68.13 debe der = 1846-01-01')
-          this.error = true
-        }
-
-        // validacion 2
-        if (this.data.v68_13 !== '1799-01-01' && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17.id) >= 3) {
-          this.errors.push('La V68.13 es <> 1799-01-01 revisar V17 debe ser < 3')
-          this.error = true
-        }
-
-        // validacion 3
-        if (this.data.v68_13 === '1800-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.13 es 1800-01-01 revisar la V68 debe sr = 1')
-          this.error = true
-        }
-
-        // validacion 4
-        if (this.data.v68_13 === '1822-01-01' && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.13 es 1822-01-01 revisar la V68 debe sr = 1')
-          this.error = true
-        }
-
-        // validacion 5
-        if (Date.parse(this.data.v68_13) > Date.parse('1846-01-01') && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.13 es > 1846-01-01 revisar la V68 debe sr = 1')
-          this.error = true
-        }
-
-        // Validación V68.14 DEBE SER <> 9
-        if (typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id === '9') {
-          this.errors.push('La V68.14 debe ser <> 9')
-          this.error = true
-        }
-
-        // Validación Cuando V68.14 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 debe ser 19 revisar V68.14 debe ser 55')
-          this.error = true
-        }
-
-        if (typeof this.data.v68_14 !== 'undefined' && this.data.v68_14.id === '5' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '10') {
-          this.errors.push('La V97 es 4 o 10  revisar V68.14 debe ser 5')
-          this.error = true
-        }
-
-        // para validar la primera condicion:
-        if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9 && typeof this.data.v17 !== 'undefined' && parseInt(this.data.v17) > 3) {
-          this.errors.push('La V68.14 es < 9 revisar V17 debe ser < 3')
-          this.error = true
-        }
-
-        // para validar la segunda condicion:
-        if (typeof this.data.v68_14 !== 'undefined' && parseInt(this.data.v68_14.id) < 9 && typeof this.data.v68 !== 'undefined' && this.data.v68.id !== '1') {
-          this.errors.push('La V68.14 es < 9 revisar V68 debe ser 1')
-          this.error = true
-        }
-
-        // validacion 1
-        if (typeof this.data.v69 !== 'undefined' && this.data.v69.id === '9') {
-          this.errors.push('La V69 debe ser <> 9')
-          this.error = true
-        }
-
-        // validacion 2
-        if (typeof this.data.v69 !== 'undefined' && this.data.v69.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V69 debe ser 55')
-          this.error = true
-        }
-
-        // validacion 1
-        if (typeof this.data.v70 !== 'undefined' && this.data.v70.id === '9') {
-          this.errors.push('La V70 debe ser <> 9')
-          this.error = true
-        }
-
-        // validacion 2
-        if (typeof this.data.v70 !== 'undefined' && this.data.v70.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V70 debe ser 55')
-          this.error = true
-        }
-
-        // validacion 1
-        if (typeof this.data.v71 !== 'undefined' && this.data.v71.id === '9') {
-          this.errors.push('La V71 debe ser <> 9')
-          this.error = true
-        }
-
-        // validacion 2
-        if (typeof this.data.v71 !== 'undefined' && this.data.v71.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V71 debe ser 55')
-          this.error = true
-        }
-
-        // validacion 1
-        if (typeof this.data.v72 !== 'undefined' && this.data.v72.id === '9') {
-          this.errors.push('La V72 debe ser <> 9')
-          this.error = true
-        }
-
-        // validacion 2
-        if (typeof this.data.v72 !== 'undefined' && this.data.v72.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V72 debe ser 55')
-          this.error = true
-        }
-
-        // validacion 1
-        if (typeof this.data.v73 !== 'undefined' && this.data.v73.id === '9') {
-          this.errors.push('La V73 debe ser <> 9')
-          this.error = true
-        }
-
-        // validacion 2
-        if (typeof this.data.v73 !== 'undefined' && this.data.v73.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V73 debe ser 55')
-          this.error = true
-        }
-
-        // validacion 1
-        if (typeof this.data.v74 !== 'undefined' && this.data.v74.id === '9') {
-          this.errors.push('La V74 debe ser <> 9')
-          this.error = true
-        }
-
-        // validacion 2
-        if (typeof this.data.v74 !== 'undefined' && this.data.v74.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V74 debe ser 55')
-          this.error = true
-        }
-
-        if (this.data.v75 !== '1799-01-01' && this.data.v75 !== '1846-01-01') {
-          if (Date.parse(this.data.v75) < Date.parse(this.data.v36)) {
-            this.errors.push('La V75 debe ser >= V36')
-            this.error = true
-          }
-
-          if (Date.parse(this.data.v75) > Date.parse(this.data.v98)) {
-            this.errors.push('La V75 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v75 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V75 debe ser 1846-01-01')
-          this.error = true
-        }
-
-        if (Date.parse(this.data.v75) > Date.parse(this.data.v36) && parseInt(this.data.v75_1) > 3000) {
-          this.errors.push('La V75.1 es < = 3000 revisar V75 debe ser > V36')
-          this.error = true
-        }
-
-        if (this.data.v75_1 !== '9999' && this.data.v75_1 !== '5555') {
-          if (parseInt(this.data.v75_1) > 3000 || parseInt(this.data.v75_1) < 1) {
-            this.errors.push('La V75.1 debe ser >= 0 y < = 3000 o = 9999 o = 5555')
-            this.error = true
-          }
-        }
-
-        if (this.data.v75_1 === '5555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V75.1  debe ser  5555')
-          this.error = true
-        }
-
-        if (parseInt(this.data.v75_1) < 500) {
-          if (typeof this.data.v55 !== 'undefined' && (parseInt(this.data.v55.id) < 1 || parseInt(this.data.v55.id) > 4)) {
-            this.errors.push('La V75.1 es < 500 revisar V55 debe ser > 1 y < 4')
-            this.error = true
-          }
-        }
-
-        if (parseInt(this.data.v75_1) < 200) {
-          if (typeof this.data.v55 !== 'undefined' && this.data.v55.id !== '3') {
-            this.errors.push('La V75.1 es < 200 revisar V55 debe ser = 3')
-            this.error = true
-          }
-        }
-
-        if (this.data.v76 !== '1799-01-01' && this.data.v76 !== '1846-01-01') {
-          if (Date.parse(this.data.v76) < Date.parse(this.data.v36)) {
-            this.errors.push('La V75 debe ser >= V36')
-            this.error = true
-          }
-
-          if (Date.parse(this.data.v76) > Date.parse(this.data.v98)) {
-            this.errors.push('La V75 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v76 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V75 debe ser 1846-01-01')
-          this.error = true
-        }
-
-        if (Date.parse(this.data.v76) > Date.parse(this.data.v36)) {
-          if (parseInt(this.data.v76_1) > 10000000) {
-            this.errors.push('La V76.1 es < 10000000 revisar V76 deeb ser > V36')
-            this.error = true
-          }
-        }
-
-        if (this.data.v76 === '1799-01-01') {
-          if (this.data.v76_1 !== '99999999') {
-            this.errors.push('La V76.1 es = 99999999 revisar V76 debe ser  1799-01-01 ')
-            this.error = true
-          }
-        }
-
-        if (this.data.v76_1 !== '99999999' && this.data.v76_1 !== '55555555') {
-          if (parseInt(this.data.v76_1) > 10000000 || parseInt(this.data.v76_1) < 1) {
-            this.errors.push('la V76.1 debe ser >= 0 y <= 10000000 o = 99999999 o = 55555555')
-            this.error = true
-          }
-        }
-
-        if (this.data.v76_1 === '55555555' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V75.1  debe ser  55555555')
-          this.error = true
-        }
-
-        // primera validacion
-        if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '9') {
-          this.errors.push('La V77 debe ser <> 9')
-          this.error = true
-        }
-
-        // segunda validacion
-        if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 debe ser 19 revisar la V77 debe ser 55')
-          this.error = true
-        }
-
-        if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '1') {
-          if (this.data.v77_2 === '9') {
-            this.errors.push('La V77.2 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_3 === '9') {
-            this.errors.push('La V77.3 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_4 === '9') {
-            this.errors.push('La V77.4 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_5 === '9') {
-            this.errors.push('La V77.5 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_6 === '9') {
-            this.errors.push('La V77.6 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_7 === '9') {
-            this.errors.push('La V77.7 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (parseInt(this.data.v94) <= 100000) {
-            this.errors.push('La V94 es > 100000 revisar V77 debe ser 1')
-            this.error = true
-          }
-        }
-
-        // tar = 55
-        if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '55') {
-          if (this.data.v77_2 === '9') {
-            this.errors.push('La V77.2 es <> 9 revisar V77 debe ser = 55')
-            this.error = true
-          }
-          if (this.data.v77_3 === '9') {
-            this.errors.push('La V77.3 es <> 9 revisar V77 debe ser = 55')
-            this.error = true
-          }
-          if (this.data.v77_4 === '9') {
-            this.errors.push('La V77.4 es <> 9 revisar V77 debe ser = 55')
-            this.error = true
-          }
-          if (this.data.v77_5 === '9') {
-            this.errors.push('La V77.5 es <> 9 revisar V77 debe ser = 55')
-            this.error = true
-          }
-          if (this.data.v77_6 === '9') {
-            this.errors.push('La V77.6 es <> 9 revisar V77 debe ser = 55')
-            this.error = true
-          }
-          if (this.data.v77_7 === '9') {
-            this.errors.push('La V77.7 es <> 9 revisar V77 debe ser = 55')
-            this.error = true
-          }
-        }
-
-        // tar = 1
-        if (typeof this.data.v77 !== 'undefined' && this.data.v77.id === '1') {
-          if (this.data.v77_1 !== '1799-01-01' || Date.parse(this.data.v77_1) < Date.parse(this.data.v36)) {
-            this.errors.push('LA V77.1 es 1799-01-01 o > = V36 revisar la V77 debe ser 1')
-            this.error = true
-          }
-
-          if (this.data.v77_2 === '9') {
-            this.errors.push('La V77.2 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_3 === '9') {
-            this.errors.push('La V77.3 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_4 === '9') {
-            this.errors.push('La V77.4 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_5 === '9') {
-            this.errors.push('La V77.5 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_6 === '9') {
-            this.errors.push('La V77.6 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-          if (this.data.v77_7 === '9') {
-            this.errors.push('La V77.7 es <> 9 revisar V77 debe ser = 1')
-            this.error = true
-          }
-
-          if (this.data.v77_8 === '99') {
-            this.errors.push('La V77.8 es <> 99 revisar V77 debe ser 1')
-            this.error = true
-          }
-        }
-
-        if (this.data.v77_1 !== '1799-01-01' && this.data.v77_1 !== '1788-01-01' && this.data.v77_1 !== '1846-01-01') {
-          if (Date.parse(this.data.v77_1) < Date.parse(this.data.v36)) {
-            this.errors.push('La V77.1 debe ser >= V36')
-            this.error = true
-          }
-
-          if (Date.parse(this.data.v77_1) > Date.parse(this.data.v98)) {
-            this.errors.push('La V77.1 debe ser <= V98 o = 1799-01-01 o = 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v77_1 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V77.1 debe ser 1846-01-01')
-          this.error = true
-        }
-
-        if (this.data.v77_8 !== '99') {
-          if (parseInt(this.data.v77_8) > 12 || parseInt(this.data.v76_1) < 1) {
-            this.errors.push('La V77.8 debe ser > = 0 y < = 12 o 99')
-            this.error = true
-          }
-        }
-
-        if (this.data.v78 !== '997' && this.data.v78 !== '998') {
-          if (parseInt(this.data.v78) > 500 || parseInt(this.data.v76_1) < 1) {
-            this.errors.push('La V78 debe ser > = 0 y < = 500 o 997 o 998')
-            this.error = true
-          }
-        }
-
-        if (parseInt(this.data.v78) > 0 && Date.parse(this.patient.field_json.birthdate) >= Date.parse('2012-01-31')) {
-          this.errors.push('La V78 es > 0 revisar la V09 debe ser < 2012-01-31')
-          this.error = true
-        }
-
-        // V79 DEBE SER <> 9
-        if (typeof this.data.v79.id !== 'undefined' && this.data.v79.id === '9') {
-          this.errors.push('La V79 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V79 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v79.id !== 'undefined' && this.data.v79.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V79 debe ser 55')
-          this.error = true
-        }
-
-        // Cuando V79 sea = 7 Entonces V09_Fecha_de_nacimiento DEBE SER >= 2010-01-31
-        if (typeof this.data.v79.id !== 'undefined' && this.data.v79.id === '7' && Date.parse(this.patient.field_json.birthdate) < Date.parse('2010-01-31')) {
-          this.errors.push('La V79 es 7 reviar la V09 debe ser > = 2012-01-31')
-          this.error = true
-        }
-
-        // v80
-        if (typeof this.data.v80.id !== 'undefined' && this.data.v80.id === '9') {
-          this.errors.push('La V80 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V80 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v80.id !== 'undefined' && this.data.v80.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V80 debe ser 55')
-          this.error = true
-        }
-
-        // v81
-        if (typeof this.data.v81.id !== 'undefined' && this.data.v81.id === '9') {
-          this.errors.push('La V81 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V81 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v81.id !== 'undefined' && this.data.v81.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V81 debe ser 55')
-          this.error = true
-        }
-
-        // v82
-        if (typeof this.data.v82.id !== 'undefined' && this.data.v82.id === '9') {
-          this.errors.push('La V82 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V82 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v82.id !== 'undefined' && this.data.v82.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V82 debe ser 55')
-          this.error = true
-        }
-
-        // v83
-        if (typeof this.data.v83.id !== 'undefined' && this.data.v83.id === '9') {
-          this.errors.push('La V83 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V83 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v83.id !== 'undefined' && this.data.v83.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V83 debe ser 55')
-          this.error = true
-        }
+          if (typeof this.data.v97 !== 'undefined' && (this.data.v97.id === '1' || this.data.v97.id === '2' || this.data.v97.id === '3' || this.data.v97.id === '18' || this.data.v97.id === '19' || this.data.v97.id === '20')) {
+            if (parseInt(this.data.v94) <= 0) {
+              this.errors.push('La V97 es 1, 2,3,18,19 o 20 revisar la V94 debe ser > 0')
+              this.error = true
+            }
 
-        // v84
-        if (typeof this.data.v84.id !== 'undefined' && this.data.v84.id === '9') {
-          this.errors.push('La V84 debe ser <>  9')
-          this.error = true
-        }
+            if (this.data.v75 !== '1799-01-01' && this.data.v75 !== '1846-01-01') {
+              if (Date.parse(this.data.v75) <= Date.parse('2021-01-31')) {
+                this.errors.push('La V97 es 1,2,3,18,19 o 20 revisar la V75 debe ser > 2021-01-31 o = 1799-01-01 o = 1846-01-01')
+                this.error = true
+              }
+            }
 
-        // Cuando V84 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v84.id !== 'undefined' && this.data.v84.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V84 debe ser 55')
-          this.error = true
-        }
-
-        // Cuando V84 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v84.id !== 'undefined' && this.data.v84.id === '6' && typeof this.data.v85 !== 'undefined' && this.data.v85.id !== '10') {
-          this.errors.push('La V85 es 10 revisar V84 debe ser 6')
-          this.error = true
-        }
-
-        // v85
-        if (typeof this.data.v85.id !== 'undefined' && this.data.v85.id === '9') {
-          this.errors.push('La V85 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V85 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v85.id !== 'undefined' && this.data.v85.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V85 debe ser 55')
-          this.error = true
-        }
-
-        // v86
-        if (typeof this.data.v86.id !== 'undefined' && this.data.v86.id === '9') {
-          this.errors.push('La V86 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V86 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v86.id !== 'undefined' && this.data.v86.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V86 debe ser 55')
-          this.error = true
-        }
-
-        // v86_1
-        if (typeof this.data.v86_1.id !== 'undefined' && this.data.v86_1.id === '9') {
-          this.errors.push('La V86.1 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V86 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v86_1.id !== 'undefined' && this.data.v86_1.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V86.1 debe ser 55')
-          this.error = true
-        }
-
-        // v87
-        if (typeof this.data.v87.id !== 'undefined' && this.data.v87.id === '9') {
-          this.errors.push('La V87 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V87 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v87.id !== 'undefined' && this.data.v87.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V87 debe ser 55')
-          this.error = true
-        }
-
-        // v88
-        if (typeof this.data.v88.id !== 'undefined' && this.data.v88.id === '9') {
-          this.errors.push('La V88 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V88 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v88.id !== 'undefined' && this.data.v88.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V86 debe ser 55')
-          this.error = true
-        }
-
-        // v89
-        if (typeof this.data.v89.id !== 'undefined' && this.data.v89.id === '9') {
-          this.errors.push('La V89 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V89 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v89.id !== 'undefined' && this.data.v89.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V86 debe ser 55')
-          this.error = true
-        }
-
-        // v90
-        if (typeof this.data.v90.id !== 'undefined' && this.data.v90.id === '9') {
-          this.errors.push('La V90 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V90 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v90.id !== 'undefined' && this.data.v90.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V90 debe ser 55')
-          this.error = true
-        }
-
-        // v91
-        if (typeof this.data.v91.id !== 'undefined' && this.data.v91.id === '9') {
-          this.errors.push('La V91 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V91 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v91.id !== 'undefined' && this.data.v91.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V90 debe ser 55')
-          this.error = true
-        }
-
-        // v92
-        if (typeof this.data.v92.id !== 'undefined' && this.data.v92.id === '9') {
-          this.errors.push('La V92 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V92 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v92.id !== 'undefined' && this.data.v92.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V92 debe ser 55')
-          this.error = true
-        }
-
-        // v93
-        if (typeof this.data.v93.id !== 'undefined' && this.data.v93.id === '9') {
-          this.errors.push('La V93 debe ser <>  9')
-          this.error = true
-        }
-
-        // Cuando V93 sea = 55 Entonces V97 DEBE SER = 19
-        if (typeof this.data.v93.id !== 'undefined' && this.data.v93.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar la V93 debe ser 55')
-          this.error = true
-        }
-
-        if (this.data.v94 === '0') {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '5' && this.data.v97.id !== '6' && this.data.v97.id !== '7' && this.data.v97.id !== '8' && this.data.v97.id !== '9' && this.data.v97.id !== '10' && this.data.v97.id !== '11' && this.data.v97.id !== '15' && this.data.v97.id !== '16' && this.data.v97.id !== '17' && this.data.v97.id !== '20' && this.data.v97.id !== '21') {
-            this.errors.push('La V97 es 4,5,6,7,8,9,10,11,15,16,17,20 o 21 revisar la V94 debe ser 0')
-            this.error = true
+            if (this.data.v76 !== '1799-01-01' && this.data.v76 !== '1846-01-01') {
+              if (Date.parse(this.data.v76) <= Date.parse('2021-01-31')) {
+                this.errors.push('La V97 es 1,2,3,18,19 o 20 revisar la V76 debe ser > 2021-01-31 o = 1799-01-01 o = 1846-01-01')
+                this.error = true
+              }
+            }
           }
-        }
 
-        if (parseInt(this.data.v94) < 0 || parseInt(this.data.v94) > 500000000) {
-          this.errors.push('La V94 debe ser > = 0 y < = 500000000')
-          this.error = true
-        }
-
-        if (parseInt(this.data.v95) < 0 || parseInt(this.data.v95) > 250000000) {
-          this.errors.push('La V95 debe ser > = 0 y < = 250000000')
-          this.error = true
-        }
-
-        if (parseInt(this.data.v95) > 0 && parseInt(this.data.v96) <= 0) {
-          this.errors.push('La V96 es > 0 revisar V95 deb ser > 0')
-          this.error = true
-        }
-
-        if (parseInt(this.data.v96) < 0 || parseInt(this.data.v96) > 20) {
-          this.errors.push('La V94 debe ser > = 0 y < = 20')
-          this.error = true
-        }
-
-        if (parseInt(this.data.v96) > 0 && parseInt(this.data.v95) <= 150000) {
-          this.errors.push('La V96 es > 0 revisar V95 deb ser > 0')
-          this.error = true
-        }
-
-        if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '13' && this.data.v97.id === '14' && this.data.v97.id === '12') {
-          this.errors.push('La V97 debe ser <> 13 o <> 14 o <> 12')
-          this.error = true
-        }
-
-        if (typeof this.data.v97 !== 'undefined' && (this.data.v97.id === '1' || this.data.v97.id === '2' || this.data.v97.id === '3' || this.data.v97.id === '18' || this.data.v97.id === '19' || this.data.v97.id === '20')) {
-          if (parseInt(this.data.v94) <= 0) {
-            this.errors.push('La V97 es 1, 2,3,18,19 o 20 revisar la V94 debe ser > 0')
-            this.error = true
-          }
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '4') {
+            if (Date.parse(this.data.v97_3) <= Date.parse(this.data.v36)) {
+              this.errors.push('La V97 es 4 revisar la V97.3 debe ser > = V36')
+              this.error = true
+            }
 
-          if (this.data.v75 !== '1799-01-01' && this.data.v75 !== '1846-01-01') {
-            if (Date.parse(this.data.v75) <= Date.parse('2021-01-31')) {
-              this.errors.push('La V97 es 1,2,3,18,19 o 20 revisar la V75 debe ser > 2021-01-31 o = 1799-01-01 o = 1846-01-01')
+            if (typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4.id) >= 4) {
+              this.errors.push('La V97 es 4 revisar la V97.4 debe ser < 4')
               this.error = true
             }
           }
 
-          if (this.data.v76 !== '1799-01-01' && this.data.v76 !== '1846-01-01') {
-            if (Date.parse(this.data.v76) <= Date.parse('2021-01-31')) {
-              this.errors.push('La V97 es 1,2,3,18,19 o 20 revisar la V76 debe ser > 2021-01-31 o = 1799-01-01 o = 1846-01-01')
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '10') {
+            if (Date.parse(this.data.v97_3) <= Date.parse(this.data.v36)) {
+              this.errors.push('La V97 es 10 revisar la V97.3 debe ser > = V36')
+              this.error = true
+            }
+
+            if (typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4.id) >= 4) {
+              this.errors.push('La V97 es 10 revisar la V97.4 debe ser < 4')
               this.error = true
             }
           }
-        }
 
-        if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '4') {
-          if (Date.parse(this.data.v97_3) <= Date.parse(this.data.v36)) {
-            this.errors.push('La V97 es 4 revisar la V97.3 debe ser > = V36')
+          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '19') {
+            if (this.patient.field_json.entity !== '5000' && this.patient.field_json.entity !== '8000' && this.patient.field_json.entity !== '8001' && this.patient.field_json.entity !== '11001' && this.patient.field_json.entity !== '13000' && this.patient.field_json.entity !== '13001' && this.patient.field_json.entity !== '15000' && this.patient.field_json.entity !== '17000' && this.patient.field_json.entity !== '18000' && this.patient.field_json.entity !== '19000' && this.patient.field_json.entity !== '20000' && this.patient.field_json.entity !== '25000' && this.patient.field_json.entity !== '27000' && this.patient.field_json.entity !== '41000' && this.patient.field_json.entity !== '44000' && this.patient.field_json.entity !== '47000' && this.patient.field_json.entity !== '47001' && this.patient.field_json.entity !== '50000' && this.patient.field_json.entity !== '52000' && this.patient.field_json.entity !== '54000' && this.patient.field_json.entity !== '63000' && this.patient.field_json.entity !== '66000' && this.patient.field_json.entity !== '68000' && this.patient.field_json.entity !== '70000' && this.patient.field_json.entity !== '73000' && this.patient.field_json.entity !== '76000' && this.patient.field_json.entity !== '76109' && this.patient.field_json.entity !== '81000' && this.patient.field_json.entity !== '85000' && this.patient.field_json.entity !== '86000' && this.patient.field_json.entity !== '88000' && this.patient.field_json.entity !== '91000' && this.patient.field_json.entity !== '94000' && this.patient.field_json.entity !== '95000' && this.patient.field_json.entity !== '97000' && this.patient.field_json.entity !== '99000' && this.patient.field_json.entity !== '23000') {
+              this.errors.push('La V97 es 19 revisar Eps')
+              this.error = true
+            }
+          }
+
+          if (this.data.v97_1 !== '1845-01-01' && this.data.v97_1 !== '1846-01-01') {
+            if (Date.parse(this.data.v97_1) <= Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('V97.1 debe ser > V09_Fecha_de_nacimiento')
+              this.error = true
+            }
+
+            // validación 2
+            if (Date.parse(this.data.v97_1) > Date.parse(this.data.v98)) {
+              this.errors.push('La V97.1 debe ser <= V98 o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (this.data.v97_1 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97 es 19 revisar V97.1 debe ser 1846-01-01')
             this.error = true
           }
 
-          if (typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4.id) >= 4) {
-            this.errors.push('La V97 es 4 revisar la V97.4 debe ser < 4')
-            this.error = true
-          }
-        }
-
-        if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '10') {
-          if (Date.parse(this.data.v97_3) <= Date.parse(this.data.v36)) {
-            this.errors.push('La V97 es 10 revisar la V97.3 debe ser > = V36')
+          // Validación
+          if (Date.parse(this.data.v97_1) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '5' && this.data.v97.id !== '11' && this.data.v97.id !== '16') {
+            this.errors.push('La V97.1 es > V09 revisar V97 debe ser 5, 11, o 16')
             this.error = true
           }
 
-          if (typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4.id) >= 4) {
-            this.errors.push('La V97 es 10 revisar la V97.4 debe ser < 4')
+          if (this.data.v97_3 !== '1845-01-01' && this.data.v97_3 !== '1846-01-01') {
+            if (Date.parse(this.data.v97_3) <= Date.parse(this.patient.field_json.birthdate)) {
+              this.errors.push('V97.1 debe ser > V09_Fecha_de_nacimiento')
+              this.error = true
+            }
+
+            // validación 2
+            if (Date.parse(this.data.v97_3) > Date.parse(this.data.v98)) {
+              this.errors.push('La V97.3 debe ser <= V98 o = 1845-01-01 o = 1846-01-01')
+              this.error = true
+            }
+          }
+
+          if (Date.parse(this.data.v97_3) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '10') {
+            this.errors.push('La V97.3 es > V09 revisar V97 deb ser 4 o 10')
             this.error = true
           }
-        }
 
-        if (typeof this.data.v97 !== 'undefined' && this.data.v97.id === '19') {
-          if (this.patient.field_json.entity !== '5000' && this.patient.field_json.entity !== '8000' && this.patient.field_json.entity !== '8001' && this.patient.field_json.entity !== '11001' && this.patient.field_json.entity !== '13000' && this.patient.field_json.entity !== '13001' && this.patient.field_json.entity !== '15000' && this.patient.field_json.entity !== '17000' && this.patient.field_json.entity !== '18000' && this.patient.field_json.entity !== '19000' && this.patient.field_json.entity !== '20000' && this.patient.field_json.entity !== '25000' && this.patient.field_json.entity !== '27000' && this.patient.field_json.entity !== '41000' && this.patient.field_json.entity !== '44000' && this.patient.field_json.entity !== '47000' && this.patient.field_json.entity !== '47001' && this.patient.field_json.entity !== '50000' && this.patient.field_json.entity !== '52000' && this.patient.field_json.entity !== '54000' && this.patient.field_json.entity !== '63000' && this.patient.field_json.entity !== '66000' && this.patient.field_json.entity !== '68000' && this.patient.field_json.entity !== '70000' && this.patient.field_json.entity !== '73000' && this.patient.field_json.entity !== '76000' && this.patient.field_json.entity !== '76109' && this.patient.field_json.entity !== '81000' && this.patient.field_json.entity !== '85000' && this.patient.field_json.entity !== '86000' && this.patient.field_json.entity !== '88000' && this.patient.field_json.entity !== '91000' && this.patient.field_json.entity !== '94000' && this.patient.field_json.entity !== '95000' && this.patient.field_json.entity !== '97000' && this.patient.field_json.entity !== '99000' && this.patient.field_json.entity !== '23000') {
-            this.errors.push('La V97 es 19 revisar Eps')
-            this.error = true
-          }
-        }
-
-        if (this.data.v97_1 !== '1845-01-01' && this.data.v97_1 !== '1846-01-01') {
-          if (Date.parse(this.data.v97_1) <= Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('V97.1 debe ser > V09_Fecha_de_nacimiento')
+          if (this.data.v97_3 === '1845-01-01' && typeof this.data.v97_4 !== 'undefined' && this.data.v97_4.id !== '4') {
+            this.errors.push('La V97.4 es 4 revisar  V97.3 debe ser 1845-01-01')
             this.error = true
           }
 
           // validación 2
-          if (Date.parse(this.data.v97_1) > Date.parse(this.data.v98)) {
-            this.errors.push('La V97.1 debe ser <= V98 o = 1845-01-01 o = 1846-01-01')
-            this.error = true
-          }
-        }
-
-        if (this.data.v97_1 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97 es 19 revisar V97.1 debe ser 1846-01-01')
-          this.error = true
-        }
-
-        // Validación
-        if (Date.parse(this.data.v97_1) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '5' && this.data.v97.id !== '11' && this.data.v97.id !== '16') {
-          this.errors.push('La V97.1 es > V09 revisar V97 debe ser 5, 11, o 16')
-          this.error = true
-        }
-
-        if (this.data.v97_3 !== '1845-01-01' && this.data.v97_3 !== '1846-01-01') {
-          if (Date.parse(this.data.v97_3) <= Date.parse(this.patient.field_json.birthdate)) {
-            this.errors.push('V97.1 debe ser > V09_Fecha_de_nacimiento')
+          if (this.data.v97_3 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97.4 es 1846-01-01 revisar  V97 debe de 19')
             this.error = true
           }
 
-          // validación 2
-          if (Date.parse(this.data.v97_3) > Date.parse(this.data.v98)) {
-            this.errors.push('La V97.3 debe ser <= V98 o = 1845-01-01 o = 1846-01-01')
+          // validación 3
+          if (Date.parse(this.data.v97_3) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4) >= 4) {
+            this.errors.push('La V97.4 es < 4 revisar la V97.3 debe ser > V09')
             this.error = true
           }
-        }
 
-        if (Date.parse(this.data.v97_3) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '10') {
-          this.errors.push('La V97.3 es > V09 revisar V97 deb ser 4 o 10')
-          this.error = true
-        }
-
-        if (this.data.v97_3 === '1845-01-01' && typeof this.data.v97_4 !== 'undefined' && this.data.v97_4.id !== '4') {
-          this.errors.push('La V97.4 es 4 revisar  V97.3 debe ser 1845-01-01')
-          this.error = true
-        }
-
-        // validación 2
-        if (this.data.v97_3 === '1846-01-01' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97.4 es 1846-01-01 revisar  V97 debe de 19')
-          this.error = true
-        }
-
-        // validación 3
-        if (Date.parse(this.data.v97_3) > Date.parse(this.patient.field_json.birthdate) && typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4) >= 4) {
-          this.errors.push('La V97.4 es < 4 revisar la V97.3 debe ser > V09')
-          this.error = true
-        }
-
-        if (typeof this.data.v97_4 !== 'undefined' && this.data.v97_4.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
-          this.errors.push('La V97.4 es 55 revisar V97 debe ser 19')
-          this.error = true
-        }
-
-        if (typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4.id) <= 4) {
-          if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '10') {
-            this.errors.push('La V97.4 es < 4 revisar la V97 debe ser 4 o 10')
+          if (typeof this.data.v97_4 !== 'undefined' && this.data.v97_4.id === '55' && typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '19') {
+            this.errors.push('La V97.4 es 55 revisar V97 debe ser 19')
             this.error = true
           }
-        }
 
-        if (this.data.v98 !== '' && this.data.v98 !== '2022-01-31') {
-          this.errors.push('la V98 debe ser = 2022-01-31')
-          this.error = true
+          if (typeof this.data.v97_4 !== 'undefined' && parseInt(this.data.v97_4.id) <= 4) {
+            if (typeof this.data.v97 !== 'undefined' && this.data.v97.id !== '4' && this.data.v97.id !== '10') {
+              this.errors.push('La V97.4 es < 4 revisar la V97 debe ser 4 o 10')
+              this.error = true
+            }
+          }
+
+          if (this.data.v98 !== '' && this.data.v98 !== '2022-01-31') {
+            this.errors.push('la V98 debe ser = 2022-01-31')
+            this.error = true
+          }
         }
 
         var comodines = []
