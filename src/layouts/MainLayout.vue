@@ -83,7 +83,7 @@
                 <img alt="logo" src="../assets/iconos/i-doc.png"/>
               </q-item-section>
 
-              <q-item-section>
+              <q-item-section @click="irDocumentos">
                 Documentos
                 <q-icon name="chevron_right" class="cursor-pointer"></q-icon>
               </q-item-section>
@@ -149,6 +149,9 @@ export default {
     },
     irPacientes () {
       this.$router.push('/pacientes')
+    },
+    irDocumentos () {
+      this.$router.push('/documentos')
     }
   }
 }

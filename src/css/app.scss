@@ -193,6 +193,9 @@ body{
 .bg_botn_verde{
     background: #A1BC31;
 }
+.bg_botn_rojo{
+    background: #C23832;
+}
 .bg_botn_naranja{
     background: #bca331;
 }
@@ -1046,4 +1049,80 @@ h2{
 }
 .bg_botn_green{
     background: #A1BC31;
+}
+.wrp_tree{
+    .q-tree{
+        .q-tree__node-header{
+            &:before{display: none;}
+        }    
+        .q-tree__node:after{
+            display: none;
+        }            
+        >.q-tree__node--parent{
+            >.q-tree__node-header{
+                background: #21609F 0% 0% no-repeat padding-box;
+                color: #fff;
+                padding: 5px;
+                border-radius: 10px;
+                &:before{display: none;}
+                i{
+                    color: #fff;
+                }
+                >.q-tree__node-header-content{
+                    color: #fff;
+                }                
+            }
+        }
+    }
+    .q-tree__children{
+        .q-tree__node--child{
+            background: #EEF6F7 0% 0% no-repeat padding-box;
+            color: #656565;;
+            padding: 5px;
+            border-radius: 10px;
+            margin-top: 7px;
+            i{
+                color: #21609F;
+            }            
+        }
+        .q-tree__node-header-content{
+            text-transform: capitalize;
+        }
+        .q-tree__node-header-content.text-primary{
+            font-weight: bold;
+        } 
+        .q-tree__node {
+            .q-tree__node-header.text-primary{
+                background: #EEF6F7 0% 0% no-repeat padding-box !important;
+                color: #fff;
+                padding: 5px;
+                border-radius: 10px;
+                &.text-primary{
+                    background: #EEF6F7 0% 0% no-repeat padding-box !important;
+                }
+                &:before{display: none;}
+                i{
+                    color: #fff;
+                }
+                >.q-tree__node-header-content{
+                    color: #fff;
+                }                
+            }
+        }        
+    }
+}
+.btns_actions.align_right{
+    .row_1{
+        display: flex;
+        justify-content: flex-end;
+        button{
+            margin: 10px 15px;
+            min-width: 155px;
+        }
+    }
+}
+.row_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }

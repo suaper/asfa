@@ -29,6 +29,20 @@ const routes = [
     ]
   },
   {
+    path: '/documentos',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Documentos.vue') }
+    ]
+  },
+  {
+    path: '/lista-documentos',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/ListaDocumentos.vue') }
+    ]
+  },
+  {
     path: '/reportes',
     component: () => import('layouts/MainLayout.vue'),
     children: [
