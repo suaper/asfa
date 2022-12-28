@@ -21,39 +21,21 @@
                 </q-input>
                 <q-btn rounded class="bg_botn_verde" @click="executeSearch" text-color="white" icon-right="search" label="Buscar" />
             </div>
-            <q-btn rounded class="bg_botn_verde btn_crear" @click="irCrearPaciente" text-color="white" icon-right="add" label="Crear paciente" />
           </div>
         </div>
         <div class="desc_seccion">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem</p>
         </div>
         <div class="wrp_table tipo_grilla q-mt-xl">
+          <h4 class="aviso_busque" v-if="patients.length === 0">Por favor busque un paciente</h4>
           <table class="grilla">
-            <tr>
+            <tr v-for="(item, key) in patients" :key="key">
               <td>
                   <q-icon name="person" class="azul_iconos" size="25px" />
-                  <span class="name_usuario">Nombre del usuario</span>
+                  <span class="name_usuario">{{ item.field_json.identification }} - {{ item.title }} - <strong>{{ item.field_json.program }}</strong></span>
               </td>
               <td class="action">
-                  <q-btn rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Administrar Carpeta" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                  <q-icon name="person" class="azul_iconos" size="25px" />
-                  <span class="name_usuario">Nombre del usuario</span>
-              </td>
-              <td class="action">
-                  <q-btn rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Administrar Carpeta" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                  <q-icon name="person" class="azul_iconos" size="25px" />
-                  <span class="name_usuario">Nombre del usuario</span>
-              </td>
-              <td class="action">
-                  <q-btn rounded @click="irListaDocumetos()" class="bg_botn_azul" text-color="white" icon-right="edit" label="Administrar Carpeta" />
+                  <q-btn @click="irListaDocumetos(item)" rounded class="bg_botn_azul" text-color="white" icon-right="edit" label="Administrar carpetas" />
               </td>
             </tr>
           </table>
@@ -87,7 +69,8 @@ export default {
       localStorage.setItem('patientNid', nid)
       this.$router.push('/crear-paciente')
     },
-    irListaDocumetos () {
+    irListaDocumetos (item) {
+      localStorage.setItem('patientFolder', JSON.stringify(item))
       this.$router.push('/lista-documentos')
     },
     executeSearch () {
