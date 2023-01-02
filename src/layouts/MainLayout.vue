@@ -110,14 +110,11 @@
 
       <q-page-container class="fdo_gris">
           <div class="header_search w_1200">
-            <div class="logo_content">
-               <img alt="logo" src="../assets/logo-asfa-blanco.png"/>
-              </div>
             <div class="wrp_head">
               <div class="w_60">
                 <div class="wrp_dss">
                   <span class="minilabel">
-                    paciente
+                    Paciente
                   </span>
                   <div class="wrp_search">
                     <q-input
@@ -127,7 +124,7 @@
                         v-model="search"
                         >
                     </q-input>
-                    <q-btn rounded class="bg_botn_verde" text-color="white" icon-right="search" label="Buscar" />
+                    <q-btn rounded class="bg_botn_verde" @click="executeSearch" text-color="white" icon-right="search" label="Buscar" />
                   </div>
                 </div>
               </div>
@@ -136,24 +133,7 @@
                   <q-avatar size="42px">
                     <img src="https://cdn.quasar.dev/img/avatar2.jpg">
                   </q-avatar>
-                  <q-btn class="btn_user" color="primary" icon-right="keyboard_arrow_down" label="Nombre Usuario">
-                    <q-menu
-                      transition-show="rotate"
-                      transition-hide="rotate"
-                    >
-                      <q-list style="min-width: 100px">
-                        <q-item clickable>
-                          <q-item-section>Perfil</q-item-section>
-                        </q-item>
-                        <q-item clickable>
-                          <q-item-section>Ejemplo</q-item-section>
-                        </q-item>
-                        <q-separator />
-                        <q-item clickable>
-                          <q-item-section>Ejemplo</q-item-section>
-                        </q-item>
-                      </q-list>
-                    </q-menu>
+                  <q-btn class="btn_user" color="primary" icon-right="people" :label="user.names">
                   </q-btn>
                 </div>
               </div>
@@ -166,6 +146,7 @@
 </template>
 
 <script>
+import configServices from '../services/config'
 
 export default {
   name: 'pacientes',
@@ -173,8 +154,13 @@ export default {
     return {
       drawer: false,
       miniState: false,
-      search: ''
+      search: '',
+      user: ''
     }
+  },
+  created () {
+    this.user = JSON.parse(localStorage.getItem('user'))
+    console.log(this.user)
   },
   methods: {
     drawerClick (e) {
@@ -206,6 +192,28 @@ export default {
     },
     irDocumentos () {
       this.$router.push('/documentos')
+    },
+    executeSearch () {
+      var _this = this
+
+      if (this.search !== '') {
+        configServices.loadData(this, 'pacientes/json/?field_json_value=' + this.search, {
+          callBack: (data) => {
+            if (data.length === 0) {
+              return _this.$swal('Advertencia', 'No se encontraron pacientes relacionados a su búsqueda', 'error')
+            }
+            data.map((item, key) => {
+              var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
+              data[key].field_json = JSON.parse(json)
+            })
+
+            localStorage.setItem('patientDashboard', JSON.stringify(data))
+            _this.$router.push('pacientes')
+
+            _this.$q.loading.hide()
+          }
+        })
+      }
     }
   }
 }

@@ -31,7 +31,7 @@
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
             </p>
             <div class="buton_dash">
-              <q-btn rounded class="bg_botn_verde btn_crear"  text-color="white" icon-right="add" @click="irCrearRegistro" label="Crear Registro" />
+              <q-btn rounded class="bg_botn_verde btn_crear"  text-color="white" icon-right="add" @click="irCrearRegistro" label="Registros" />
             </div>
           </li>
           <li>
@@ -45,7 +45,7 @@
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
             </p>
             <div class="buton_dash">
-              <q-btn rounded class="bg_botn_verde btn_crear"  text-color="white" icon-right="add" @click="irCrearReporte" label="Crear Reporte" />
+              <q-btn rounded class="bg_botn_verde btn_crear"  text-color="white" icon-right="add" @click="irCrearReporte" label="Reportes" />
             </div>
           </li>
 
@@ -60,7 +60,7 @@
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
             </p>
             <div class="buton_dash">
-              <q-btn rounded class="bg_botn_verde btn_crear"  text-color="white" icon-right="add" @click="irCrearDocumento" label="Crear Documento" />
+              <q-btn rounded class="bg_botn_verde btn_crear"  text-color="white" icon-right="add" @click="irCrearDocumento" label="Documentos" />
             </div>
           </li>
         </ul>
@@ -88,7 +88,7 @@ export default {
       this.$router.push('/crear-paciente')
     },
     irCrearRegistro () {
-      this.$router.push('/crear-registro-vih')
+      this.$router.push('/registros')
     },
     irCrearDocumento () {
       this.$router.push('/documentos')

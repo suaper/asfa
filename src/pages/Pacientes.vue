@@ -59,7 +59,12 @@ export default {
     }
   },
   created () {
-    this.getPatients()
+    var patientDashboard = localStorage.getItem('patientDashboard')
+    if (typeof patientDashboard !== 'undefined' && patientDashboard !== '' && patientDashboard !== null) {
+      this.patients = JSON.parse(patientDashboard)
+    } else {
+      this.getPatients()
+    }
   },
   methods: {
     irCrearPaciente () {
