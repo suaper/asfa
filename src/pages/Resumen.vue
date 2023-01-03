@@ -47,10 +47,10 @@
                                     <a href="#" @click="goToStep($event, 'FirstStep')"><span>Información de mujeres gestantes</span>  <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                                 <li>
-                                    <a href="#" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'" @click="goToStep($event, 'SecondStep')"><span>Información de menores de 12 meses hijos o hijas de madres que viven con VIH </span><q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                    <a href="#" v-if="typeof data.pregnantWoman !== 'undefined' && '3' && data.pregnantWoman.id !== '9'" @click="goToStep($event, 'SecondStep')"><span>Información de menores de 12 meses hijos o hijas de madres que viven con VIH </span><q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                                 <li>
-                                    <a href="#" v-if="data.pregnantWoman.id !=='3' && data.pregnantWoman.id !== '9'" @click="goToStep($event, 'SecondStep')"><span>Información de personas con tuberculosis activa</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
+                                    <a href="#" v-if="typeof data.pregnantWoman !== 'undefined' && '3' && data.pregnantWoman.id !== '9'" @click="goToStep($event, 'SecondStep')"><span>Información de personas con tuberculosis activa</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
                                 </li>
                                 <li>
                                     <a href="#" @click="goToStep($event, 'ThirdStep')"><span>Información de personas que viven con VIH</span> <q-icon name="edit" class="blanco_iconos" size="25px" /></a>
@@ -88,7 +88,7 @@
                               </div>
                             </div>
                             <div class="item align_right cien q-mt-xl">
-                                <q-btn v-if="!auditor" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
+                                <q-btn v-if="!auditor && status !== 'Finalizado'" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                             </div>
                         </q-tab-panel>
 
@@ -150,7 +150,7 @@
                               </div>
                             </div>
                             <div class="item align_right cien q-mt-xl">
-                                <q-btn v-if="!auditor" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
+                                <q-btn v-if="!auditor && status !== 'Finalizado'" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                             </div>
                         </q-tab-panel>
 
@@ -194,7 +194,7 @@
                               </div>
                             </div>
                             <div class="item align_right cien q-mt-xl">
-                                <q-btn v-if="!auditor" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
+                                <q-btn v-if="!auditor && status !== 'Finalizado'" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                             </div>
                         </q-tab-panel>
                         <q-tab-panel name="registro_erc">
@@ -237,7 +237,7 @@
                               </div>
                             </div>
                             <div class="item align_right cien q-mt-xl">
-                                <q-btn v-if="!auditor" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
+                                <q-btn v-if="!auditor && status !== 'Finalizado'" rounded class="bg_botn_verde btn_crear" type="submit" text-color="white" icon-right="check_circle_outline" label="Finalizar" />
                             </div>
                         </q-tab-panel>
                     </q-tab-panels>
@@ -276,6 +276,7 @@ export default {
       auditor: false,
       loadedPatient: false,
       patient: {},
+      status: '',
       popperfil: false,
       data: {
         pregnantWoman: '',
@@ -324,6 +325,7 @@ export default {
 
       configServices.loadData(this, 'registros/json/' + this.registerNid, {
         callBack: (data) => {
+          _this.status = data[0].field_status
           data.map((item, key) => {
             var json = data[key].field_json.replace(/&quot;/g, '\\"').replaceAll('\\', '')
             data[key].field_json = JSON.parse(json)
@@ -333,6 +335,7 @@ export default {
           })
 
           _this.data = data[0].field_json
+          console.log(_this.data)
           _this.$q.loading.hide()
         }
       })

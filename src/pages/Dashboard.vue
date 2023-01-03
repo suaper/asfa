@@ -81,7 +81,7 @@ export default {
     }
   },
   created () {
-    this.getPatients()
+    localStorage.setItem('patientDashboard', '')
   },
   methods: {
     irCrearPacientes () {

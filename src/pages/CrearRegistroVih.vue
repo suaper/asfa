@@ -109,7 +109,7 @@
                           <FormularioErc :patient="patient" v-if="loadedPatient"/>
                         </q-tab-panel>
                     </q-tab-panels>
-                    <q-btn rounded class="bg_botn_naranja btn_crear q-mt-md"  text-color="white" icon-right="menu_book" label="Ver Resumen" />
+                    <q-btn rounded @click="goResumen" class="bg_botn_naranja btn_crear q-mt-md"  text-color="white" icon-right="menu_book" label="Ver Resumen" />
                 </q-card>
                 <q-dialog v-model="popperfil" full-width>
                     <q-card class="pop_perfil">
@@ -161,6 +161,9 @@ export default {
     }
   },
   methods: {
+    goResumen () {
+      this.$router.push('/resumen')
+    },
     editPage (nid) {
 
     },
