@@ -633,69 +633,69 @@
               </div>
               <div class="item">
                   <label>66.1 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte. </label>
-                    <q-select rounded standout v-model="data.medicamentoAntineplasicoReporte" :options="medicamentoAntineplasicoReporte" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_1" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
                   <label>66.2 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(2)  </label>
-                    <q-select rounded standout v-model="data.v66_2" :options="v66_2" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_2" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
                   <label>66.3 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(3) </label>
-                    <q-select rounded standout v-model="data.v66_3" :options="v66_3" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_3" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
                   <label>66.4 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(4)  </label>
-                    <q-select rounded standout v-model="data.v66_4" :options="v66_4" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_4" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
                   <label>66.5 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(5) </label>
-                    <q-select rounded standout v-model="data.v66_5" :options="v66_5" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_5" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
                   <label>66.6 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(6)  </label>
-                    <q-select rounded standout v-model="data.v66_6" :options="v66_6" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_6" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
-                  <label>66.7 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(7) </label>
-                    <q-select rounded standout v-model="data.v66_7" :options="v66_7" label="Seleccionar" />
+                  <label>66.7 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(7) </label>}
+                  <q-input rounded standout v-model="data.v66_7" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
                   <label>66.8 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(8)  </label>
-                    <q-select rounded standout v-model="data.v66_8" :options="v66_8" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_8" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
                   <label>66.9 Medicamento antineoplásico administrado al usuario- ÚLTIMO esquema del periodo de reporte.(9) </label>
-                    <q-select rounded standout v-model="data.v66_9" :options="v66_9" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v66_9" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
                   <label>67. Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -1 administrado al usuario- último esquema: </label>
-                    <q-select rounded standout v-model="data.v67" :options="v67" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v67" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
                   <label>68. Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -2 administrado al usuario- último esquema:</label>
-                    <q-select rounded standout v-model="data.v68" :options="v68" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v68" lazy-rules type="number"></q-input>
               </div>
           </div>
 
           <div class="row dos_items">
               <div class="item">
                   <label>69. Medicamento Antineoplásico o terapia hormonal para cáncer, adicional a los reportados en variables 66.1 a 66.9 -3 administrado al usuario- último esquema:</label>
-                    <q-select rounded standout v-model="data.v69" :options="v69" label="Seleccionar" />
+                  <q-input rounded standout v-model="data.v69" lazy-rules type="number"></q-input>
               </div>
               <div class="item">
                   <label>70. ¿Recibió quimioterapia intratecal en el último esquema de este periodo de reporte</label>
