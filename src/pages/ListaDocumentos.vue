@@ -17,7 +17,7 @@
         <div class="desc_seccion">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem</p>
         </div>
-        <div class="w_1200">
+        <div class="w_1200" v-if="loadedFolders">
           <div class="wrp_tree">
             <q-splitter
               v-model="splitterModel"
@@ -30,7 +30,6 @@
                     node-key="key"
                     selected-color="primary"
                     :selected.sync="selected"
-                    default-expand-all
                     @update:selected="updateSelected"
                   />
                 </div>
@@ -150,6 +149,7 @@ export default {
       selected: '',
       popSubir: false,
       popCrearCarpeta: false,
+      loadedFolders: false,
       nombre: '',
       simple: [
         {
@@ -263,13 +263,15 @@ export default {
     },
     updateSelected () {
       var _this = this
-      configServices.loadData(this, '/carpetas/pdfs/' + this.selected + '/json', {
-        callBack: (data) => {
-          _this.pdfs = data
+      if (typeof this.selected !== 'undefined') {
+        configServices.loadData(this, '/carpetas/pdfs/' + this.selected + '/json', {
+          callBack: (data) => {
+            _this.pdfs = data
 
-          _this.$q.loading.hide()
-        }
-      })
+            _this.$q.loading.hide()
+          }
+        })
+      }
     },
     createFolder () {
       var _this = this
@@ -294,6 +296,8 @@ export default {
     },
     getFolders () {
       var _this = this
+
+      _this.simple[0].children = []
 
       configServices.loadData(this, 'carpetas/' + this.patient.nid, {
         callBack: (data) => {
@@ -328,6 +332,12 @@ export default {
             folder.children.push(subFolder)
             folders.push(folder)
           })
+
+          if (data.length > 0) {
+            _this.loadedFolders = true
+          } else {
+            _this.loadedFolders = false
+          }
 
           _this.simple[0].children = folders
 

@@ -57,9 +57,6 @@ export default {
       search: ''
     }
   },
-  created () {
-    this.getPatients()
-  },
   methods: {
     irCrearPaciente () {
       localStorage.setItem('patientNid', '')
