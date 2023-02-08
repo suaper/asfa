@@ -17,6 +17,14 @@
         <div class="desc_seccion">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem</p>
         </div>
+        <div class="q-pa-md q-gutter-sm">
+          <q-tree
+            :nodes="lazy"
+            default-expand-all
+            node-key="label"
+            @lazy-load="onLazyLoad"
+          />
+        </div>
         <div class="w_1200" v-if="loadedFolders">
           <div class="wrp_tree">
             <q-splitter
@@ -29,6 +37,7 @@
                     :nodes="simple"
                     node-key="key"
                     selected-color="primary"
+                    accordion
                     :selected.sync="selected"
                     @update:selected="updateSelected"
                   />
@@ -130,7 +139,31 @@
   </template>
 <script>
 import configServices from '../services/config'
-
+import { ref } from 'vue'
+const nodes = [
+  {
+    label: 'Node 1',
+    children: [
+      { label: 'Node 1.1', lazy: true },
+      { label: 'Node 1.2', lazy: true }
+    ]
+  },
+  {
+    label: 'Node 2',
+    lazy: true
+  },
+  {
+    label: 'Lazy load empty',
+    lazy: true
+  },
+  {
+    label: 'Node is not expandable',
+    expandable: false,
+    children: [
+      { label: 'Some node' }
+    ]
+  }
+]
 export default {
   name: 'documentos',
   data () {
@@ -151,29 +184,50 @@ export default {
       popCrearCarpeta: false,
       loadedFolders: false,
       nombre: '',
+      lazy: ref(nodes),
       simple: [
         {
           label: '',
-          icon: 'folder_open',
           class: 'first',
           children: [
             {
               label: '2022',
-              icon: 'folder',
               children: [
                 {
-                  label: 'marzo',
-                  icon: 'folder_special'
+                  label: 'marzo'
                 },
                 {
-                  label: 'mayo',
-                  icon: 'folder'
+                  label: 'mayo'
                 }
               ]
             }
           ]
         }
-      ]
+      ],
+      onLazyLoad ({ node, key, done, fail }) {
+        // call fail() if any error occurs
+
+        setTimeout(() => {
+          // simulate loading and setting an empty node
+          if (key.indexOf('Lazy load empty') > -1) {
+            done([])
+            return
+          }
+
+          const label = node.label
+          done([
+            { label: `${label}.1` },
+            { label: `${label}.2`, lazy: true },
+            {
+              label: `${label}.3`,
+              children: [
+                { label: `${label}.3.1`, lazy: true },
+                { label: `${label}.3.2`, lazy: true }
+              ]
+            }
+          ])
+        }, 1000)
+      }
     }
   },
   created () {
@@ -315,7 +369,6 @@ export default {
 
             var folder = {
               label: nameFolder[0],
-              icon: 'folder',
               children: []
             }
 
@@ -325,7 +378,6 @@ export default {
 
             var subFolder = {
               label: item.title[0].value,
-              icon: 'folder',
               key: item.nid[0].value
             }
 
