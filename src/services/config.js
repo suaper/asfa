@@ -1,5 +1,5 @@
 const datosConfiguracion = {
-  apiUrl: 'http://saspdev.com/asfa/admin/',
+  apiUrl: 'https://cac.asfaips.com.co/asfa/admin/',
   mensajeErrorServer: 'Tenemos problemas en nuestro sistemas :( por favor envianos un pantallazo de este mensaje para seguir mejorando',
   mensajeNoInternet: 'Tenemos problemas en nuestro sistemas :( por favor envianos un pantallazo de este mensaje para seguir mejorando',
   user: 'asfa_api',
