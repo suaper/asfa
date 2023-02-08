@@ -139,7 +139,6 @@
   </template>
 <script>
 import configServices from '../services/config'
-import { ref } from 'vue'
 const nodes = [
   {
     label: 'Node 1',
@@ -184,7 +183,7 @@ export default {
       popCrearCarpeta: false,
       loadedFolders: false,
       nombre: '',
-      lazy: ref(nodes),
+      lazy: nodes,
       simple: [
         {
           label: '',
