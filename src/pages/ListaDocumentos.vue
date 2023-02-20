@@ -17,14 +17,6 @@
         <div class="desc_seccion">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem</p>
         </div>
-        <div class="q-pa-md q-gutter-sm">
-          <q-tree
-            :nodes="lazy"
-            default-expand-all
-            node-key="label"
-            @lazy-load="onLazyLoad"
-          />
-        </div>
         <div class="w_1200" v-if="loadedFolders">
           <div class="wrp_tree">
             <q-splitter
