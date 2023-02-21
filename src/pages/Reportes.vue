@@ -27,8 +27,8 @@
                     >
                     <q-tab name="registro_vih" label="VIH" />
                     <q-tab name="registro_cancer" label="Cancer"  />
-                    <!--<q-tab name="registro_reumatoide" label="Reumatoide"  />
-                    <q-tab name="registro_erc" label="ERC"  />-->
+                    <q-tab name="registro_reumatoide" label="Reumatoide"  />
+                    <q-tab name="registro_erc" label="ERC"  />
                     </q-tabs>
 
                     <q-separator />
@@ -96,6 +96,128 @@
                         </q-tab-panel>
 
                         <q-tab-panel name="registro_cancer">
+                          <div class="wrp_table tipo_grilla">
+                            <h4 class="aviso_busque">Listado Reportes</h4>
+                            <div class="w_60 flex-end">
+                              <div class="wrp_search rango_fechas">
+                                <div class="row dos_items">
+                                  <div class="item">
+                                    <label class="labele">Seleccionar fecha de inicio</label>
+                                    <q-input filled v-model="initialDate" >
+                                      <template v-slot:append>
+                                      <q-icon name="event" class="cursor-pointer">
+                                          <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale" ref="qDateInitial">
+                                          <q-date v-model="initialDate" @input="setFilter">
+                                              <div class="row items-center justify-end">
+                                              <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                                              </div>
+                                          </q-date>
+                                          </q-popup-proxy>
+                                      </q-icon>
+                                      </template>
+                                    </q-input>
+                                  </div>
+                                  <div class="item">
+                                    <label class="labele">Seleccionar fecha de final</label>
+                                    <q-input filled v-model="finalDate">
+                                      <template v-slot:append>
+                                      <q-icon name="event" class="cursor-pointer">
+                                          <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale" ref="qDateFinal">
+                                          <q-date v-model="finalDate" @input="setFilter">
+                                              <div class="row items-center justify-end">
+                                              <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                                              </div>
+                                          </q-date>
+                                          </q-popup-proxy>
+                                      </q-icon>
+                                      </template>
+                                    </q-input>
+                                  </div>
+                                  <div class="item">
+                                    <label class="labele">Paciente</label>
+                                    <q-input filled v-model="patientFilter">
+                                    </q-input>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <table class="grilla">
+                              <tr v-for="(item, key) in finishedCancer" :key="key">
+                                  <td>
+                                      <q-icon name="person" class="azul_iconos" size="25px" />
+                                      <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
+                                  </td>
+                                  <td class="action">
+                                      <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" :label="(!auditor) ? 'Ver Formulario' : 'Auditar'" />
+                                  </td>
+                                </tr>
+                            </table>
+                            </div>
+                            <q-btn @click="downloadExcel()" rounded class="bg_botn_green q-mt-xl" text-color="white" icon-right="file_download" label="Descargar Excel" />
+                        </q-tab-panel>
+
+                        <q-tab-panel name="registro_reumatoide">
+                          <div class="wrp_table tipo_grilla">
+                            <h4 class="aviso_busque">Listado Reportes</h4>
+                            <div class="w_60 flex-end">
+                              <div class="wrp_search rango_fechas">
+                                <div class="row dos_items">
+                                  <div class="item">
+                                    <label class="labele">Seleccionar fecha de inicio</label>
+                                    <q-input filled v-model="initialDate" >
+                                      <template v-slot:append>
+                                      <q-icon name="event" class="cursor-pointer">
+                                          <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale" ref="qDateInitial">
+                                          <q-date v-model="initialDate" @input="setFilter">
+                                              <div class="row items-center justify-end">
+                                              <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                                              </div>
+                                          </q-date>
+                                          </q-popup-proxy>
+                                      </q-icon>
+                                      </template>
+                                    </q-input>
+                                  </div>
+                                  <div class="item">
+                                    <label class="labele">Seleccionar fecha de final</label>
+                                    <q-input filled v-model="finalDate">
+                                      <template v-slot:append>
+                                      <q-icon name="event" class="cursor-pointer">
+                                          <q-popup-proxy cover transition-show="scale" mask="YYYY-MM-DD" transition-hide="scale" ref="qDateFinal">
+                                          <q-date v-model="finalDate" @input="setFilter">
+                                              <div class="row items-center justify-end">
+                                              <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                                              </div>
+                                          </q-date>
+                                          </q-popup-proxy>
+                                      </q-icon>
+                                      </template>
+                                    </q-input>
+                                  </div>
+                                  <div class="item">
+                                    <label class="labele">Paciente</label>
+                                    <q-input filled v-model="patientFilter">
+                                    </q-input>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <table class="grilla">
+                              <tr v-for="(item, key) in finishedCancer" :key="key">
+                                  <td>
+                                      <q-icon name="person" class="azul_iconos" size="25px" />
+                                      <span class="name_usuario">{{ item.field_json_1.identification }} - {{ item.title }}</span>
+                                  </td>
+                                  <td class="action">
+                                      <q-btn @click="editPage(item.nid, item.nid_1)" rounded class="bg_botn_azul" text-color="white" icon-right="visibility" :label="(!auditor) ? 'Ver Formulario' : 'Auditar'" />
+                                  </td>
+                                </tr>
+                            </table>
+                            </div>
+                            <q-btn @click="downloadExcel()" rounded class="bg_botn_green q-mt-xl" text-color="white" icon-right="file_download" label="Descargar Excel" />
+                        </q-tab-panel>
+
+                        <q-tab-panel name="registro_erc">
                           <div class="wrp_table tipo_grilla">
                             <h4 class="aviso_busque">Listado Reportes</h4>
                             <div class="w_60 flex-end">

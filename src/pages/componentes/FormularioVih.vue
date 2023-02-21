@@ -39,12 +39,12 @@
                       <q-select rounded standout v-model="data.v17" :options="optionsTuberculosis" label="Seleccionar" />
                   </div>
               </div>
-              <!--<div class="row un_item">
+              <div class="row un_item">
                   <div class="item">
-                      <label>Condición respecto al diagnóstico de infección por VIH</label>
-                      <q-select rounded standout v-model="model" :options="options" label="Seleccionar" />
+                      <label>18. Condición respecto al diagnóstico de infección por VIH</label>
+                      <q-select rounded standout v-model="data.v18" :options="v18" label="Seleccionar" />
                   </div>
-              </div>-->
+              </div>
               <div class="row dos_items" v-if="typeof data.v15 !== 'undefined' && data.v15.id !=='3' && data.v15.id !== '9' && data.v15.id !== ''">
                   <div class="item">
                       <label>19. Fecha del diagnóstico de la gestación reportada</label>
@@ -1297,7 +1297,7 @@
               <div class="row dos_items">
                   <div class="item">
                       <label>68.2 ¿La persona con coinfección TB/VIH recibe o recibió tratamiento para tuberculosis activa en los últimos 12 meses? </label>
-                      <q-select rounded standout v-model="data.v68_2" :optionsa="coinfeccionTuberculosisTratamiento12" label="Seleccionar" />
+                      <q-select rounded standout v-model="data.v68_2" :options="coinfeccionTuberculosisTratamiento12" label="Seleccionar" />
                   </div>
                   <div class="item">
                       <label>68.3 Fecha de inicio del tratamiento antituberculoso que recibe o recibió la persona con coinfección TB/VIH en los últimos 12 meses</label>
@@ -2137,6 +2137,13 @@ export default {
         { id: '2', label: 'Tuvo tuberculosis activa en el periodo de observación.' },
         { id: '3', label: 'No tuvo tuberculosis activa en el período de observación.' }
       ],
+      v18: [
+        { id: '1', label: 'Persona con diagnóstico confirmado de infección por el VIH (en cualquier estadío).' },
+        { id: '2', label: 'Persona a quien se le ha descartado la infección por VIH.' },
+        { id: '3', label: 'Persona que se encuentra en proceso de estudio, aún sin diagnóstico definitivo de infección por el VIH.' },
+        { id: '4', label: 'Persona que no ha sido estudiada para infección por el VIH.' },
+        { id: '5', label: 'Persona que ha rechazado la prueba de VIH' }
+      ],
       ageVihReported: [
         { id: '1', label: 'Si ya tenía diagnóstico de VIH confirmado previo a la gestación' },
         { id: '99', label: 'No aplica (hombre, mujer no gestante o gestante sin VIH)' }
@@ -2270,6 +2277,7 @@ export default {
         { id: '3', label: 'Desconocido' }
       ],
       verificacionCargaViral: [
+        { id: '1', label: 'Si se realizó.' },
         { id: '2', label: 'No se realizó.' },
         { id: '3', label: 'No se tiene porque el diagnóstico se hizo antes del año 2000.' },
         { id: '4', label: 'No se tiene porque el diagnóstico de VIH se hizo en una institución diferente a la que reporta' },
