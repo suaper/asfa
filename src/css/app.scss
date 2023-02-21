@@ -1259,6 +1259,17 @@ main.azul_fondo{
     }
   }
 }
+.pop_cambiarpsf{
+  .q-form{
+    .content_input_anota{
+      .q-field__control{
+        .q-field__prepend{
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 500px) and (min-width: 0px) {
   .wiew_reportes {
     .pxrw {
